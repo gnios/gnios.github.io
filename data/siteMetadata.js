@@ -1,22 +1,23 @@
 const siteMetadata = {
-  title: 'Blog | Parth Desai',
-  author: 'Parth Desai',
-  headerTitle: 'Mere Musings',
-  description: 'My personal blog where I share my musings',
-  snippets: 'Reuseable code snippets collected by Parth',
-  language: 'en-us',
+  title: 'Blog | Gnios',
+  author: 'Gnios',
+  headerTitle: 'Blog do Gnios',
+  description:
+    'Meu blog pessoal onde compartilho meus pensamentos sobre tecnologia, desenvolvimento e inovação',
+  snippets: 'Snippets de código reutilizáveis coletados por Gnios',
+  language: 'pt-br',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://musing.vercel.app',
-  siteRepo: 'https://github.com/pycoder2000/blog',
+  siteUrl: 'https://gnios.github.io',
+  siteRepo: 'https://github.com/gnios/gnios.github.io',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
-  email: 'desaiparth2000@gmail.com',
-  github: 'https://github.com/pycoder2000',
-  twitter: 'https://twitter.com/_ParthDesai_',
-  linkedin: 'https://www.linkedin.com/in/parth-desai-2bb1b0160/',
-  website: 'https://parthdesai.vercel.app',
-  locale: 'en-US',
+  email: 'contato@gnios.com',
+  github: 'https://github.com/gnios',
+  twitter: 'https://twitter.com/gnios',
+  linkedin: 'https://www.linkedin.com/in/gnios/',
+  website: 'https://gnios.github.io',
+  locale: 'pt-BR',
   analytics: {
     plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
     simpleAnalytics: false, // true or false
@@ -40,13 +41,13 @@ const siteMetadata = {
       // transparent_dark, preferred_color_scheme, custom
       theme: 'light',
       inputPosition: 'bottom',
-      lang: 'en',
+      lang: 'pt',
       darkTheme: 'dark',
       themeURL: '',
     },
   },
   socialAccount: {
-    twitter: '_ParthDesai_',
+    twitter: 'gnios',
   },
 }
 

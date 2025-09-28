@@ -54,6 +54,8 @@ const securityHeaders = [
 
 module.exports = withBundleAnalyzer({
   reactStrictMode: true,
+  // assetPrefix: process.env.NODE_ENV === 'production' ? '/gnios.github.io' : '',
+  // basePath: process.env.NODE_ENV === 'production' ? '/gnios.github.io' : '',
   images: {
     domains: [
       'i.scdn.co', // Spotify Album Art

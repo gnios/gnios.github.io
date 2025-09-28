@@ -1,13 +1,13 @@
 ---
-name: Parth Desai
+name: Gnios
 avatar: /static/images/avatar.png
-occupation: Data Engineer
-company: Accenture
-email: desaiparth2000@gmail.com
-twitter: https://twitter.com/_ParthDesai_
-linkedin: https://www.linkedin.com/in/parth-desai-2bb1b0160/
-github: https://github.com/pycoder2000
-text1: I am an India based Data Engineer with a bachelors in Computer Science. I am passionate about Data Science and Automation. I am also fascinated with Mathematics and wish to make a career out of it someday.
-text2:
-text3:
+occupation: Desenvolvedor Full Stack
+company: Freelancer
+email: contato@gnios.com
+twitter: https://twitter.com/gnios
+linkedin: https://www.linkedin.com/in/gnios/
+github: https://github.com/gnios
+text1: Sou um desenvolvedor apaixonado por tecnologia e inovação. Especializado em desenvolvimento full stack, sempre busco aprender novas tecnologias e compartilhar conhecimento através de artigos e projetos open source.
+text2: Minha jornada na tecnologia começou com curiosidade e hoje se transformou em uma paixão por criar soluções que fazem a diferença. Acredito no poder da tecnologia para transformar vidas e negócios.
+text3: Neste blog, compartilho experiências, tutoriais e insights sobre desenvolvimento, tecnologia e carreira. Seja bem-vindo e vamos aprender juntos!
 ---
