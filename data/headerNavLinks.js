@@ -4,7 +4,6 @@ const headerNavLinks = [
   { href: '/snippets', title: 'Snippets' },
   { href: '/projects', title: 'Projects' },
   { href: '/resume', title: 'Currículo' },
-  { href: '/about', title: 'About' },
   { href: '/guestbook', title: 'Guestbook' },
 ]
 
