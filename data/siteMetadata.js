@@ -47,7 +47,7 @@ const siteMetadata = {
     },
   },
   socialAccount: {
-    twitter: '_ParthDesai_',
+    twitter: 'gnios_dev',
   },
 }
 

@@ -60,17 +60,6 @@ export default function Home({ posts }) {
                 pensamentos, reflexões & tudo&nbsp;
               </RoughNotation>
               que está no meio. Boa leitura!{' '}
-              <div className="mt-8 text-slate-600 dark:text-slate-400">
-                <span className="text-sm">Pressione</span>{' '}
-                <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
-                  ⌘
-                </span>{' '}
-                <span className="text-sm">+ </span>
-                <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
-                  K
-                </span>{' '}
-                <span className="text-sm">para começar</span>
-              </div>
             </p>
           </div>
           <div className="flex items-center justify-center">

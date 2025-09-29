@@ -4,7 +4,6 @@ import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import { navigation } from '@/data/nav'
-import ClientOnlyCommandPalette from './ClientOnlyCommandPalette'
 import ThemeSwitch from './ThemeSwitch'
 import ClientOnlyTypewriter from './ClientOnlyTypewriter'
 import ClientOnlyRouter from './ClientOnlyRouter'
@@ -64,9 +63,6 @@ const LayoutWrapper = ({ children }) => {
                 </Link>
               ))}
             </div>
-            <NoSSR>
-              <ClientOnlyCommandPalette navigation={navigation} />
-            </NoSSR>
             <NoSSR>
               <ThemeSwitch />
             </NoSSR>
