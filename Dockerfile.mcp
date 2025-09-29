@@ -1,0 +1,38 @@
+# Dockerfile para MCP Browser Tools
+FROM node:18-alpine
+
+# Instalar dependências do sistema
+RUN apk add --no-cache \
+    chromium \
+    nss \
+    freetype \
+    freetype-dev \
+    harfbuzz \
+    ca-certificates \
+    ttf-freefont \
+    curl
+
+# Configurar variáveis de ambiente para o Chromium
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
+
+# Criar diretório de trabalho
+WORKDIR /app
+
+# Instalar MCP Browser Tools
+RUN npm install -g @modelcontextprotocol/server-browser-tools
+
+# Instalar dependências adicionais para captura de erros
+RUN npm install -g \
+    puppeteer \
+    playwright \
+    @playwright/test
+
+# Criar script de inicialização
+COPY mcp-browser-setup.js /app/mcp-browser-setup.js
+
+# Expor porta para comunicação
+EXPOSE 3001
+
+# Comando de inicialização
+CMD ["node", "/app/mcp-browser-setup.js"]
