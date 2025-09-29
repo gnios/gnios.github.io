@@ -35,6 +35,9 @@ jobs:
           echo "Number of files in out:"
           find out -type f | wc -l
 
+      - name: Create .nojekyll file
+        run: touch out/.nojekyll
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
