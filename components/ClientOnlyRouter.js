@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import translatePath from './PathTranslator'
 
 const ClientOnlyRouter = ({ children }) => {
   const [mounted, setMounted] = useState(false)
@@ -10,10 +11,11 @@ const ClientOnlyRouter = ({ children }) => {
   }, [])
 
   if (!mounted) {
-    return children('~/')
+    return children('~/início')
   }
 
-  return children(`~${router.asPath}`)
+  const translatedPath = translatePath(router.asPath)
+  return children(`~/${translatedPath}`)
 }
 
 export default ClientOnlyRouter

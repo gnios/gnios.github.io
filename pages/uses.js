@@ -6,18 +6,18 @@ import Link from '@/components/Link'
 export default function Uses() {
   return (
     <>
-      <PageSEO title={`Uses - ${siteMetadata.author}`} description="What I use" />
+      <PageSEO title={`Ferramentas - ${siteMetadata.author}`} description="O que eu uso" />
       <div className="mx-auto max-w-4xl divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Uses
+            Ferramentas
           </h1>
           <p className="text-md leading-7 text-gray-500 dark:text-gray-400">
-            Software and hardware collection of things I'm using daily.
+            Coleção de software e hardware que uso diariamente.
           </p>
           <div className="mb-3 mt-5 text-xs text-gray-500 dark:text-gray-400">
-            Note: This page contains links to buy or download the products. If you click through and
-            purchase, I do not receive any compensation for that purchase.
+            Nota: Esta página contém links para comprar ou baixar os produtos. Se você clicar e
+            comprar, não recebo nenhuma compensação por essa compra.
           </div>
         </div>
         <div className="container py-12">
@@ -60,8 +60,8 @@ export default function Uses() {
         </div>
         <div className="pt-10">
           <span className="text-base text-gray-500 dark:text-gray-400">
-            P.S. I am planning on remaking this site in the future, so stay around to see what I
-            come up with ;)
+            P.S. Estou planejando refazer este site no futuro, então fique por aqui para ver o que
+            eu invento ;)
           </span>
         </div>
       </div>

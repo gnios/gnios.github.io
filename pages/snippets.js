@@ -30,7 +30,7 @@ export default function Snippets({ posts, initialDisplayPosts, pagination }) {
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}
-        title="All Snippets"
+        title="Todos os Snippets"
       />
     </>
   )

@@ -5,7 +5,7 @@ import siteMetadata from '@/data/siteMetadata'
 export default function FourZeroFour() {
   return (
     <>
-      <PageSEO title={`Page Not Found - ${siteMetadata.title}`} />
+      <PageSEO title={`Página Não Encontrada - ${siteMetadata.title}`} />
       <div className="flex flex-col items-start justify-start md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6">
         <div className="space-x-2 pb-8 pt-6 md:space-y-5">
           <h1 className="text-6xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 md:px-3 md:text-8xl md:leading-14">
@@ -15,14 +15,14 @@ export default function FourZeroFour() {
         <div className="mx-auto max-w-2xl">
           <div className="md:border-l-2 md:px-6">
             <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">
-              Unavailable For Legal Reasons
+              Indisponível Por Motivos Legais
             </p>
             <p className="mb-4">
-              Why show a generic 404 when I can make it sound mysterious? It seems you've found
-              something that used to exist, or you spelled something wrong. I'm guessing you spelled
-              something wrong. Can you double check that URL?
+              Por que mostrar um 404 genérico quando posso torná-lo misterioso? Parece que você encontrou
+              algo que costumava existir, ou digitou algo errado. Acho que você digitou
+              algo errado. Pode verificar novamente essa URL?
             </p>
-            <p>But dont worry, you can find plenty of other things on our homepage.</p>
+            <p>Mas não se preocupe, você pode encontrar muitas outras coisas em nossa página inicial.</p>
           </div>
         </div>
       </div>
@@ -31,7 +31,7 @@ export default function FourZeroFour() {
           <button aria-label="Scroll To Top" type="button" className="pushable">
             <span className="shadow"></span>
             <span className="edgeblue"></span>
-            <span className="frontblue">Return to Homepage</span>
+            <span className="frontblue">Voltar à Página Inicial</span>
           </button>
         </Link>
       </div>

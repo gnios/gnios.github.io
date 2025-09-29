@@ -41,7 +41,7 @@ const siteMetadata = {
       // transparent_dark, preferred_color_scheme, custom
       theme: 'light',
       inputPosition: 'bottom',
-      lang: 'en',
+      lang: 'pt',
       darkTheme: 'dark',
       themeURL: '',
     },
