@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import Image from 'next/image'
 import resumeData from '@/data/resume.json'
 import ExperienceTimeline from '@/components/ExperienceTimeline'
 import experienceTimelineData from '@/data/experienceTimelineData'
@@ -128,9 +129,11 @@ export default function ReactResume() {
           <div className="flex flex-col items-center gap-6 md:flex-row md:items-start">
             {/* Avatar */}
             <div className="flex-shrink-0">
-              <img
+              <Image
                 src="https://media.licdn.com/dms/image/v2/C4D03AQEhphaJ_rl_9w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1650396933855?e=1761782400&v=beta&t=zwFREFXrqG3ISZgR3OQhZWNusKbfVGIKEFDw-OkRrf8"
                 alt={resumeData.basics.name}
+                width={128}
+                height={128}
                 className="h-32 w-32 rounded-full border-4 border-blue-600 object-cover shadow-lg dark:border-blue-400"
               />
             </div>

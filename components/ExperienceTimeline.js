@@ -2,6 +2,7 @@ import { FaBuilding, FaCode, FaGraduationCap, FaAward } from 'react-icons/fa'
 import { BsBriefcaseFill } from 'react-icons/bs'
 import { HiOutlineCode } from 'react-icons/hi'
 import Link from '@/components/Link'
+import Image from 'next/image'
 
 const ExperienceTimeline = ({ experiences }) => {
   const getIcon = (type) => {
@@ -90,9 +91,11 @@ const ExperienceTimeline = ({ experiences }) => {
                   {/* Logo da Empresa */}
                   {getCompanyLogo(experience.company) && (
                     <div className="flex-shrink-0">
-                      <img
+                      <Image
                         src={getCompanyLogo(experience.company)}
                         alt={`${experience.company} logo`}
+                        width={48}
+                        height={48}
                         className="h-12 w-12 rounded-lg border border-gray-200 bg-white object-contain p-1 shadow-sm dark:border-gray-600"
                         onError={(e) => {
                           e.target.style.display = 'none'
