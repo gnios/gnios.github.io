@@ -134,7 +134,7 @@ export default function ReactResume() {
                 className="h-32 w-32 rounded-full border-4 border-blue-600 object-cover shadow-lg dark:border-blue-400"
               />
             </div>
-            
+
             {/* Informações do Cabeçalho */}
             <div className="flex-1 text-center md:text-left">
               <h1 className="mb-2 text-4xl font-bold text-gray-900 dark:text-white">
@@ -143,11 +143,13 @@ export default function ReactResume() {
               <h2 className="mb-4 text-xl font-semibold text-blue-600 dark:text-blue-400">
                 {resumeData.basics.label}
               </h2>
-              
+
               {/* Redes Sociais */}
               <div className="mb-4 flex flex-wrap gap-4 text-sm">
                 {resumeData.basics.profiles
-                  .filter((profile) => profile.network === 'GitHub' || profile.network === 'LinkedIn')
+                  .filter(
+                    (profile) => profile.network === 'GitHub' || profile.network === 'LinkedIn'
+                  )
                   .map((profile, index) => (
                     <a
                       key={index}
@@ -163,7 +165,6 @@ export default function ReactResume() {
               </div>
             </div>
           </div>
-
         </div>
 
         {/* Resumo */}
@@ -231,7 +232,6 @@ export default function ReactResume() {
               ))}
             </div>
           </div>
-
 
           {/* Competências Técnicas */}
           <div>

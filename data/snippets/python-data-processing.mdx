@@ -1,0 +1,140 @@
+---
+title: Python Data Processing
+date: '2024-01-15'
+tags: [python, pandas, data-science]
+draft: false
+summary: Exemplo de processamento de dados com Python e Pandas
+images: []
+layout: PostSimple
+---
+
+```python showLineNumbers
+import pandas as pd
+import numpy as np
+from typing import List, Dict, Optional
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+class DataProcessor:
+    """Classe para processamento de dados com Pandas"""
+    
+    def __init__(self, data: pd.DataFrame):
+        self.data = data.copy()
+        self.original_shape = data.shape
+    
+    def clean_data(self) -> 'DataProcessor':
+        """Remove valores nulos e duplicatas"""
+        # Remove linhas com todos os valores nulos
+        self.data = self.data.dropna(how='all')
+        
+        # Remove duplicatas
+        self.data = self.data.drop_duplicates()
+        
+        print(f"Dados limpos: {self.original_shape} -> {self.data.shape}")
+        return self
+    
+    def handle_missing_values(self, strategy: str = 'mean') -> 'DataProcessor':
+        """Trata valores ausentes"""
+        numeric_columns = self.data.select_dtypes(include=[np.number]).columns
+        
+        if strategy == 'mean':
+            self.data[numeric_columns] = self.data[numeric_columns].fillna(
+                self.data[numeric_columns].mean()
+            )
+        elif strategy == 'median':
+            self.data[numeric_columns] = self.data[numeric_columns].fillna(
+                self.data[numeric_columns].median()
+            )
+        elif strategy == 'mode':
+            for col in numeric_columns:
+                mode_value = self.data[col].mode()
+                if not mode_value.empty:
+                    self.data[col] = self.data[col].fillna(mode_value[0])
+        
+        return self
+    
+    def create_features(self) -> 'DataProcessor':
+        """Cria novas features derivadas"""
+        # Exemplo: criar feature de idade a partir de data de nascimento
+        if 'birth_date' in self.data.columns:
+            self.data['age'] = (
+                pd.Timestamp.now() - pd.to_datetime(self.data['birth_date'])
+            ).dt.days // 365
+        
+        # Exemplo: categorizar valores numéricos
+        if 'score' in self.data.columns:
+            self.data['score_category'] = pd.cut(
+                self.data['score'],
+                bins=[0, 50, 70, 90, 100],
+                labels=['Baixo', 'Médio', 'Bom', 'Excelente']
+            )
+        
+        return self
+    
+    def get_summary_stats(self) -> Dict:
+        """Retorna estatísticas resumidas"""
+        return {
+            'shape': self.data.shape,
+            'missing_values': self.data.isnull().sum().to_dict(),
+            'numeric_summary': self.data.describe().to_dict(),
+            'categorical_summary': self.data.select_dtypes(include=['object']).describe().to_dict()
+        }
+    
+    def plot_distributions(self, columns: List[str], figsize: tuple = (12, 8)):
+        """Plota distribuições das colunas especificadas"""
+        n_cols = min(3, len(columns))
+        n_rows = (len(columns) + n_cols - 1) // n_cols
+        
+        fig, axes = plt.subplots(n_rows, n_cols, figsize=figsize)
+        axes = axes.flatten() if n_rows > 1 else [axes]
+        
+        for i, col in enumerate(columns):
+            if col in self.data.columns:
+                if self.data[col].dtype in ['object', 'category']:
+                    # Gráfico de barras para categorias
+                    self.data[col].value_counts().plot(kind='bar', ax=axes[i])
+                else:
+                    # Histograma para valores numéricos
+                    self.data[col].hist(ax=axes[i], bins=30)
+                axes[i].set_title(f'Distribuição de {col}')
+        
+        plt.tight_layout()
+        plt.show()
+
+# Exemplo de uso
+def process_sales_data(file_path: str) -> pd.DataFrame:
+    """Processa dados de vendas de um arquivo CSV"""
+    # Carrega os dados
+    df = pd.read_csv(file_path)
+    
+    # Processa os dados
+    processor = DataProcessor(df)
+    processed_data = (processor
+                     .clean_data()
+                     .handle_missing_values(strategy='mean')
+                     .create_features())
+    
+    # Gera relatório
+    summary = processor.get_summary_stats()
+    print("Resumo dos dados processados:")
+    for key, value in summary.items():
+        print(f"{key}: {value}")
+    
+    return processed_data.data
+
+# Exemplo de uso com dados fictícios
+if __name__ == "__main__":
+    # Cria dados de exemplo
+    np.random.seed(42)
+    data = pd.DataFrame({
+        'id': range(1000),
+        'name': [f'Cliente_{i}' for i in range(1000)],
+        'score': np.random.normal(75, 15, 1000),
+        'birth_date': pd.date_range('1950-01-01', periods=1000, freq='D'),
+        'category': np.random.choice(['A', 'B', 'C'], 1000)
+    })
+    
+    # Processa os dados
+    result = process_sales_data('dados_vendas.csv')
+    print(f"Dados finais: {result.shape}")
+```

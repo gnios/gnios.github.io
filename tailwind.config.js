@@ -101,7 +101,12 @@ module.exports = {
               color: theme('colors.gray.900'),
             },
             pre: {
-              backgroundColor: theme('colors.gray.800'),
+              backgroundColor: 'transparent',
+            },
+            'pre code': {
+              backgroundColor: 'transparent',
+              color: 'inherit',
+              padding: 0,
             },
             code: {
               color: theme('colors.green.500'),
@@ -111,6 +116,14 @@ module.exports = {
               paddingTop: '2px',
               paddingBottom: '2px',
               borderRadius: '0.25rem',
+            },
+            'pre[class*="language-"]': {
+              backgroundColor: 'transparent',
+            },
+            'pre[class*="language-"] code': {
+              backgroundColor: 'transparent',
+              color: 'inherit',
+              padding: 0,
             },
             'code::before': {
               content: 'none',
@@ -169,10 +182,23 @@ module.exports = {
               color: theme('colors.gray.100'),
             },
             pre: {
-              backgroundColor: theme('colors.gray.800'),
+              backgroundColor: 'transparent',
+            },
+            'pre code': {
+              backgroundColor: 'transparent',
+              color: 'inherit',
+              padding: 0,
             },
             code: {
               backgroundColor: theme('colors.gray.800'),
+            },
+            'pre[class*="language-"]': {
+              backgroundColor: 'transparent',
+            },
+            'pre[class*="language-"] code': {
+              backgroundColor: 'transparent',
+              color: 'inherit',
+              padding: 0,
             },
             details: {
               backgroundColor: theme('colors.gray.800'),

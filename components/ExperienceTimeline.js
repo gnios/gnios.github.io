@@ -19,14 +19,19 @@ const ExperienceTimeline = ({ experiences }) => {
 
   const getCompanyLogo = (companyName) => {
     const logos = {
-      'Stone': 'https://media.licdn.com/dms/image/v2/C4D0BAQGT_-yf7Xw9dw/company-logo_100_100/company-logo_100_100/0/1673960541253?e=1761782400&v=beta&t=DC-5Ofx0MT9bvo2fKBki5VyjlhcXOVIkXb9-KSF91XY',
-      'White Tents': 'https://media.licdn.com/dms/image/v2/C4D0BAQHC_WxT6Nuovw/company-logo_100_100/company-logo_100_100/0/1630581639541/whitetents_logo?e=1761782400&v=beta&t=QB558UUrCpvOxG4TssoNLh1ETHuyxDvmFPxv57iq7vo',
-      'Join Tecnologia & Design': 'https://media.licdn.com/dms/image/v2/D4D0BAQGhjQ-W24eT2A/company-logo_100_100/company-logo_100_100/0/1703195012178/join_ti_logo?e=1761782400&v=beta&t=KzcHH0Cs2VMpxtsGp0SOL1E-IPNtbxRtovKm-qM2uv4',
-      'Beblue': 'https://logo.clearbit.com/beblue.com.br',
-      'TOTVS': 'https://media.licdn.com/dms/image/v2/D4D0BAQEATHMUo8sshg/company-logo_100_100/B4DZd7OnTLHkAQ-/0/1750119118553/totvs_logo?e=1761782400&v=beta&t=x5gfQ0lvD3Yu5ineUC5nDHSfIF2v_ybtzqSfUo2jYaM',
-      'Ilevus': 'https://logo.clearbit.com/ilevus.com.br',
-      'UECE - Universidade Estadual do Ceará': 'https://www.uece.br/wp-content/uploads/2023/07/Logo_Uece_Nova_Brasa%CC%83o_Colorido.png',
-      'Universidade Estácio de Sá': 'https://logo.clearbit.com/estacio.br'
+      Stone:
+        'https://media.licdn.com/dms/image/v2/C4D0BAQGT_-yf7Xw9dw/company-logo_100_100/company-logo_100_100/0/1673960541253?e=1761782400&v=beta&t=DC-5Ofx0MT9bvo2fKBki5VyjlhcXOVIkXb9-KSF91XY',
+      'White Tents':
+        'https://media.licdn.com/dms/image/v2/C4D0BAQHC_WxT6Nuovw/company-logo_100_100/company-logo_100_100/0/1630581639541/whitetents_logo?e=1761782400&v=beta&t=QB558UUrCpvOxG4TssoNLh1ETHuyxDvmFPxv57iq7vo',
+      'Join Tecnologia & Design':
+        'https://media.licdn.com/dms/image/v2/D4D0BAQGhjQ-W24eT2A/company-logo_100_100/company-logo_100_100/0/1703195012178/join_ti_logo?e=1761782400&v=beta&t=KzcHH0Cs2VMpxtsGp0SOL1E-IPNtbxRtovKm-qM2uv4',
+      Beblue: 'https://logo.clearbit.com/beblue.com.br',
+      TOTVS:
+        'https://media.licdn.com/dms/image/v2/D4D0BAQEATHMUo8sshg/company-logo_100_100/B4DZd7OnTLHkAQ-/0/1750119118553/totvs_logo?e=1761782400&v=beta&t=x5gfQ0lvD3Yu5ineUC5nDHSfIF2v_ybtzqSfUo2jYaM',
+      Ilevus: 'https://logo.clearbit.com/ilevus.com.br',
+      'UECE - Universidade Estadual do Ceará':
+        'https://www.uece.br/wp-content/uploads/2023/07/Logo_Uece_Nova_Brasa%CC%83o_Colorido.png',
+      'Universidade Estácio de Sá': 'https://logo.clearbit.com/estacio.br',
     }
     return logos[companyName] || null
   }
@@ -88,17 +93,19 @@ const ExperienceTimeline = ({ experiences }) => {
                       <img
                         src={getCompanyLogo(experience.company)}
                         alt={`${experience.company} logo`}
-                        className="h-12 w-12 rounded-lg object-contain bg-white p-1 shadow-sm border border-gray-200 dark:border-gray-600"
+                        className="h-12 w-12 rounded-lg border border-gray-200 bg-white object-contain p-1 shadow-sm dark:border-gray-600"
                         onError={(e) => {
                           e.target.style.display = 'none'
                         }}
                       />
                     </div>
                   )}
-                  
+
                   {/* Informações da Empresa */}
                   <div className="flex-1">
-                    <h3 className="timeline-title text-gray-900 dark:text-white">{experience.title}</h3>
+                    <h3 className="timeline-title text-gray-900 dark:text-white">
+                      {experience.title}
+                    </h3>
                     <div className="timeline-company text-blue-600 dark:text-blue-400">
                       {experience.url ? (
                         <Link

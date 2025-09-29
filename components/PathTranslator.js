@@ -19,12 +19,12 @@ const pathTranslations = {
 const translatePath = (path) => {
   // Remove query parameters and hash
   const cleanPath = path.split('?')[0].split('#')[0]
-  
+
   // If it's an exact match, return the translation
   if (pathTranslations[cleanPath]) {
     return pathTranslations[cleanPath]
   }
-  
+
   // For dynamic routes like /blog/[slug], try to match the base path
   const pathSegments = cleanPath.split('/').filter(Boolean)
   if (pathSegments.length > 0) {
@@ -33,13 +33,13 @@ const translatePath = (path) => {
       return pathTranslations[basePath]
     }
   }
-  
+
   // For nested paths, translate each segment
-  const translatedSegments = pathSegments.map(segment => {
+  const translatedSegments = pathSegments.map((segment) => {
     const fullPath = `/${segment}`
     return pathTranslations[fullPath] || segment
   })
-  
+
   return translatedSegments.join('/')
 }
 

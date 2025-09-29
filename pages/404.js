@@ -18,11 +18,13 @@ export default function FourZeroFour() {
               Indisponível Por Motivos Legais
             </p>
             <p className="mb-4">
-              Por que mostrar um 404 genérico quando posso torná-lo misterioso? Parece que você encontrou
-              algo que costumava existir, ou digitou algo errado. Acho que você digitou
+              Por que mostrar um 404 genérico quando posso torná-lo misterioso? Parece que você
+              encontrou algo que costumava existir, ou digitou algo errado. Acho que você digitou
               algo errado. Pode verificar novamente essa URL?
             </p>
-            <p>Mas não se preocupe, você pode encontrar muitas outras coisas em nossa página inicial.</p>
+            <p>
+              Mas não se preocupe, você pode encontrar muitas outras coisas em nossa página inicial.
+            </p>
           </div>
         </div>
       </div>
