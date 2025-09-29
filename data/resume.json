@@ -1,0 +1,225 @@
+{
+  "basics": {
+    "name": "Gnios",
+    "label": "Desenvolvedor Full Stack",
+    "image": "/static/images/avatar.png",
+    "email": "contato@gnios.dev",
+    "phone": "",
+    "url": "https://gnios.github.io",
+    "summary": "Desenvolvedor full stack apaixonado por tecnologia e inovação. Especializado em criar soluções web modernas e eficientes, sempre buscando aprender novas tecnologias e compartilhar conhecimento através de projetos e blogs.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Brasil",
+      "countryCode": "BR",
+      "region": "Remoto"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "gnios",
+        "url": "https://github.com/gnios"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "gnios",
+        "url": "https://www.linkedin.com/in/gnios/"
+      },
+      {
+        "network": "Twitter",
+        "username": "gnios_dev",
+        "url": "https://twitter.com/gnios_dev"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Freelancer",
+      "position": "Desenvolvedor Full Stack",
+      "url": "https://github.com/gnios",
+      "startDate": "2022-01-01",
+      "summary": "Desenvolvimento de aplicações web completas utilizando tecnologias modernas como React, Node.js, Next.js e TypeScript.",
+      "highlights": [
+        "Criação de APIs RESTful e GraphQL, integração com bancos de dados (PostgreSQL, MongoDB) e implementação de autenticação e autorização",
+        "Trabalho com metodologias ágeis, versionamento Git e deploy em plataformas cloud como Vercel, Netlify e AWS",
+        "Desenvolvimento de interfaces de usuário responsivas e interativas utilizando React, Vue.js e tecnologias web modernas",
+        "Implementação de design systems, componentes reutilizáveis e otimização de performance para melhorar a experiência do usuário"
+      ]
+    },
+    {
+      "name": "Projetos Pessoais",
+      "position": "Desenvolvedor Frontend",
+      "url": "https://github.com/gnios",
+      "startDate": "2021-01-01",
+      "endDate": "2022-01-01",
+      "summary": "Desenvolvimento de interfaces de usuário responsivas e interativas utilizando React, Vue.js e tecnologias web modernas.",
+      "highlights": [
+        "Implementação de design systems, componentes reutilizáveis e otimização de performance para melhorar a experiência do usuário",
+        "Integração com APIs externas, gerenciamento de estado com Redux/Vuex e implementação de testes automatizados",
+        "Desenvolvimento de aplicações web modernas com foco em performance e acessibilidade"
+      ]
+    },
+    {
+      "name": "Autodidata",
+      "position": "Estudante de Desenvolvimento",
+      "url": "https://github.com/gnios",
+      "startDate": "2020-01-01",
+      "endDate": "2021-01-01",
+      "summary": "Aprendizado intensivo de programação através de cursos online, documentação oficial e projetos práticos.",
+      "highlights": [
+        "Foco em JavaScript, Python, HTML/CSS e fundamentos de programação orientada a objetos e funcional",
+        "Participação em comunidades de desenvolvedores, contribuição em projetos open source e desenvolvimento de projetos pessoais",
+        "Aprendizado de frameworks modernos como React, Vue.js e Node.js"
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Cursos Online e Autodidatismo",
+      "url": "",
+      "area": "Desenvolvimento Web Full Stack",
+      "studyType": "Autodidatismo",
+      "startDate": "2020-01-01",
+      "score": "",
+      "courses": [
+        "JavaScript Moderno (ES6+)",
+        "React e Ecossistema",
+        "Node.js e Backend Development",
+        "Bancos de Dados Relacionais e NoSQL",
+        "APIs REST e GraphQL",
+        "Deploy e DevOps Básico"
+      ]
+    },
+    {
+      "institution": "Cursos Técnicos e Certificações",
+      "url": "",
+      "area": "Tecnologia da Informação",
+      "studyType": "Cursos Técnicos",
+      "startDate": "2019-01-01",
+      "endDate": "2020-01-01",
+      "score": "",
+      "courses": [
+        "Fundamentos de Programação",
+        "Sistemas Operacionais",
+        "Redes de Computadores",
+        "Banco de Dados",
+        "Segurança da Informação"
+      ]
+    }
+  ],
+  "awards": [],
+  "certificates": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Linguagens de Programação",
+      "level": "Avançado",
+      "keywords": [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "HTML/CSS",
+        "SQL"
+      ]
+    },
+    {
+      "name": "Frameworks e Bibliotecas",
+      "level": "Avançado",
+      "keywords": [
+        "React",
+        "Next.js",
+        "Vue.js",
+        "Node.js",
+        "Express.js"
+      ]
+    },
+    {
+      "name": "Ferramentas e Tecnologias",
+      "level": "Intermediário",
+      "keywords": [
+        "Git",
+        "Docker",
+        "AWS",
+        "MongoDB",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "name": "Soft Skills",
+      "level": "Avançado",
+      "keywords": [
+        "Trabalho em Equipe",
+        "Comunicação",
+        "Resolução de Problemas",
+        "Aprendizado Contínuo",
+        "Gestão de Projetos"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Português",
+      "fluency": "Nativo"
+    },
+    {
+      "language": "Inglês",
+      "fluency": "Intermediário"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Desenvolvimento Web",
+      "keywords": [
+        "Frontend",
+        "Backend",
+        "Full Stack",
+        "Web Performance",
+        "User Experience"
+      ]
+    },
+    {
+      "name": "Tecnologias Emergentes",
+      "keywords": [
+        "Machine Learning",
+        "Inteligência Artificial",
+        "Blockchain",
+        "Cloud Computing",
+        "DevOps"
+      ]
+    },
+    {
+      "name": "Open Source",
+      "keywords": [
+        "Contribuições",
+        "Projetos Pessoais",
+        "Comunidade",
+        "Colaboração",
+        "Aprendizado"
+      ]
+    }
+  ],
+  "references": [],
+  "projects": [
+    {
+      "name": "Blog Pessoal",
+      "description": "Blog pessoal desenvolvido com Next.js, Tailwind CSS e MDX para compartilhar conhecimento e experiências em desenvolvimento web.",
+      "highlights": [
+        "Desenvolvido com Next.js e TypeScript",
+        "Design responsivo com Tailwind CSS",
+        "Sistema de blog com MDX",
+        "SEO otimizado",
+        "Deploy automático com GitHub Actions"
+      ],
+      "keywords": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "MDX"
+      ],
+      "url": "https://gnios.github.io",
+      "github": "https://github.com/gnios/gnios.github.io"
+    }
+  ]
+}

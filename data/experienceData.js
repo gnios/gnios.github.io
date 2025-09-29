@@ -1,29 +1,42 @@
 const experienceData = [
   {
-    title: 'Data Engineering Intern',
-    company: 'Accenture',
-    location: 'Ahmedabad, India',
-    range: 'January 2022 - May 2022',
-    url: 'https://www.accenture.com/gr-en/about/consulting-index',
+    title: 'Desenvolvedor Full Stack',
+    company: 'Freelancer',
+    location: 'Remoto',
+    range: '2022 - Presente',
+    url: 'https://github.com/gnios',
     text1:
-      'Helped with the digital transformation of BOAT by working on their platform called ByteETL.',
+      'Desenvolvimento de aplicações web completas utilizando tecnologias modernas como React, Node.js, Next.js e TypeScript.',
     text2:
-      'Built the encryption component for the platform using Scala and Spark which included 2 encoding functionalities : ENCRYPT and HASH.',
+      'Criação de APIs RESTful e GraphQL, integração com bancos de dados (PostgreSQL, MongoDB) e implementação de autenticação e autorização.',
     text3:
-      'Created JSON wrappers for the encryption components and automated and triggered the pipelines to run at specific intervals using CronJob.',
+      'Trabalho com metodologias ágeis, versionamento Git e deploy em plataformas cloud como Vercel, Netlify e AWS.',
   },
   {
-    title: 'Software Engineer Analytics',
-    company: 'HOPS Healthcare',
-    location: 'Ahmedabad, India',
-    range: 'March 2021 - June 2021',
-    url: 'https://hops.healthcare/',
+    title: 'Desenvolvedor Frontend',
+    company: 'Projetos Pessoais',
+    location: 'Remoto',
+    range: '2021 - 2022',
+    url: 'https://github.com/gnios',
     text1:
-      'Guided by Mr. Vivek Patel, to create a pipeline that extracts essential information from informal conversations.',
+      'Desenvolvimento de interfaces de usuário responsivas e interativas utilizando React, Vue.js e tecnologias web modernas.',
     text2:
-      'Worked on creating a web app for their healthcare system for doctors to analyze and save reports.',
+      'Implementação de design systems, componentes reutilizáveis e otimização de performance para melhorar a experiência do usuário.',
     text3:
-      'Developed functions for automatically extracting important elements from reports using BioBERT and Regex.',
+      'Integração com APIs externas, gerenciamento de estado com Redux/Vuex e implementação de testes automatizados.',
+  },
+  {
+    title: 'Estudante de Desenvolvimento',
+    company: 'Autodidata',
+    location: 'Remoto',
+    range: '2020 - 2021',
+    url: 'https://github.com/gnios',
+    text1:
+      'Aprendizado intensivo de programação através de cursos online, documentação oficial e projetos práticos.',
+    text2:
+      'Foco em JavaScript, Python, HTML/CSS e fundamentos de programação orientada a objetos e funcional.',
+    text3:
+      'Participação em comunidades de desenvolvedores, contribuição em projetos open source e desenvolvimento de projetos pessoais.',
   },
 ]
 

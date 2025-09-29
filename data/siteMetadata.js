@@ -1,9 +1,9 @@
 const siteMetadata = {
-  title: 'Blog | Gnios',
+  title: 'Gnios | Desenvolvedor Full Stack',
   author: 'Gnios',
-  headerTitle: 'Gnios Blog',
-  description: 'Meu blog pessoal onde compartilho meus pensamentos e experiências',
-  snippets: 'Snippets de código reutilizáveis coletados por Gnios',
+  headerTitle: 'Gnios - Desenvolvedor Full Stack',
+  description: 'Desenvolvedor Full Stack apaixonado por tecnologia. Blog pessoal com artigos sobre desenvolvimento web, projetos e experiências na área de tecnologia.',
+  snippets: 'Snippets de código reutilizáveis e tutoriais de programação por Gnios',
   language: 'pt-br',
   theme: 'system', // system, dark or light
   siteUrl: 'https://gnios.github.io',
@@ -11,10 +11,10 @@ const siteMetadata = {
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
-  email: 'seu-email@exemplo.com',
+  email: 'contato@gnios.dev',
   github: 'https://github.com/gnios',
-  twitter: 'https://twitter.com/seu_twitter',
-  linkedin: 'https://www.linkedin.com/in/seu-linkedin/',
+  twitter: 'https://twitter.com/gnios_dev',
+  linkedin: 'https://www.linkedin.com/in/gnios/',
   website: 'https://gnios.github.io',
   locale: 'pt-BR',
   analytics: {
