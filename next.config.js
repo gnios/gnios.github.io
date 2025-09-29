@@ -1,12 +1,6 @@
-// Configuração simplificada para GitHub Pages
-const isProd = process.env.NODE_ENV === 'production'
-const basePath = isProd ? '/gnios.github.io' : ''
-
+// Configuração para GitHub Pages
 module.exports = {
   reactStrictMode: true,
-  basePath: basePath,
-  assetPrefix: basePath || undefined,
-  output: isProd ? 'export' : undefined,
   trailingSlash: true,
   images: {
     unoptimized: true,

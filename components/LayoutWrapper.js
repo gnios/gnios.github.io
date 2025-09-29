@@ -14,7 +14,6 @@ import NoSSR from './NoSSR'
 // import MobileNav from './MobileNav'
 
 const LayoutWrapper = ({ children }) => {
-
   return (
     <SectionContainer>
       <div className="flex h-screen flex-col justify-between">
