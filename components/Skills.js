@@ -27,17 +27,17 @@ export default function Skills({ skillsData }) {
         {skillsData.map((category, categoryIndex) => (
           <div
             key={categoryIndex}
-            className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:shadow-md transition-shadow"
+            className="rounded-lg border border-gray-200 p-4 transition-shadow hover:shadow-md dark:border-gray-700"
           >
             <button
               onClick={() => toggleCategory(categoryIndex)}
-              className="w-full text-left flex justify-between items-center"
+              className="flex w-full items-center justify-between text-left"
             >
               <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                 {category.category}
               </h3>
               <svg
-                className={`w-5 h-5 transform transition-transform ${
+                className={`h-5 w-5 transform transition-transform ${
                   expandedCategory === categoryIndex ? 'rotate-180' : ''
                 }`}
                 fill="none"
@@ -52,15 +52,15 @@ export default function Skills({ skillsData }) {
                 />
               </svg>
             </button>
-            
+
             {expandedCategory === categoryIndex && (
-              <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2">
                 {category.skills.map((skill, skillIndex) => (
                   <div
                     key={skillIndex}
-                    className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg"
+                    className="flex items-center justify-between rounded-lg bg-gray-50 p-3 dark:bg-gray-800"
                   >
-                    <span className="text-gray-900 dark:text-gray-100 font-medium">
+                    <span className="font-medium text-gray-900 dark:text-gray-100">
                       {skill.name}
                     </span>
                     <div className="flex items-center space-x-2">
@@ -68,8 +68,13 @@ export default function Skills({ skillsData }) {
                         {[1, 2, 3].map((level) => (
                           <div
                             key={level}
-                            className={`w-2 h-2 rounded-full ${
-                              level <= (skill.level === 'Avançado' ? 3 : skill.level === 'Intermediário' ? 2 : 1)
+                            className={`h-2 w-2 rounded-full ${
+                              level <=
+                              (skill.level === 'Avançado'
+                                ? 3
+                                : skill.level === 'Intermediário'
+                                ? 2
+                                : 1)
                                 ? getLevelColor(skill.level)
                                 : 'bg-gray-300 dark:bg-gray-600'
                             }`}

@@ -12,7 +12,9 @@ export default function ResumeHTML({ className = '' }) {
             <h2 className="resume-title">{resumeData.basics.label}</h2>
             <div className="resume-contact">
               <p>{resumeData.basics.email}</p>
-              <p>{resumeData.basics.location.city}, {resumeData.basics.location.countryCode}</p>
+              <p>
+                {resumeData.basics.location.city}, {resumeData.basics.location.countryCode}
+              </p>
             </div>
           </div>
           <div className="resume-header-right">
@@ -46,7 +48,8 @@ export default function ResumeHTML({ className = '' }) {
                     <h5 className="resume-job-company">{job.name}</h5>
                   </div>
                   <span className="resume-job-date">
-                    {new Date(job.startDate).getFullYear()} - {job.endDate ? new Date(job.endDate).getFullYear() : 'Presente'}
+                    {new Date(job.startDate).getFullYear()} -{' '}
+                    {job.endDate ? new Date(job.endDate).getFullYear() : 'Presente'}
                   </span>
                 </div>
                 <p className="resume-job-description">{job.summary}</p>
@@ -72,7 +75,8 @@ export default function ResumeHTML({ className = '' }) {
                     <h5 className="resume-education-institution">{edu.institution}</h5>
                   </div>
                   <span className="resume-education-date">
-                    {new Date(edu.startDate).getFullYear()} - {edu.endDate ? new Date(edu.endDate).getFullYear() : 'Presente'}
+                    {new Date(edu.startDate).getFullYear()} -{' '}
+                    {edu.endDate ? new Date(edu.endDate).getFullYear() : 'Presente'}
                   </span>
                 </div>
               </div>

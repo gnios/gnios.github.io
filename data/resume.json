@@ -1,18 +1,18 @@
 {
   "basics": {
-    "name": "Gnios",
-    "label": "Desenvolvedor Full Stack",
+    "name": "Eugênio Tavares",
+    "label": "Staff Software Engineer",
     "image": "/static/images/avatar.png",
-    "email": "contato@gnios.dev",
-    "phone": "",
+    "email": "eugenio00@gmail.com",
+    "phone": "+55 85 99738-004",
     "url": "https://gnios.github.io",
-    "summary": "Desenvolvedor full stack apaixonado por tecnologia e inovação. Especializado em criar soluções web modernas e eficientes, sempre buscando aprender novas tecnologias e compartilhar conhecimento através de projetos e blogs.",
+    "summary": "Staff Software Engineer com 10+ anos de experiência em desenvolvimento de sistemas e aplicativos financeiros. Especializado em .NET Core, C#, React e arquiteturas de software. Apaixonado por tecnologia e inovação, sempre preparado para bons desafios. Experiência sólida em liderança técnica e desenvolvimento full stack.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Brasil",
+      "city": "São Paulo",
       "countryCode": "BR",
-      "region": "Remoto"
+      "region": "São Paulo, Brasil"
     },
     "profiles": [
       {
@@ -34,126 +34,199 @@
   },
   "work": [
     {
-      "name": "Freelancer",
+      "name": "Stone",
+      "position": "Staff Software Engineer",
+      "url": "https://www.stone.com.br",
+      "startDate": "2022-06-01",
+      "summary": "Liderança técnica e desenvolvimento de soluções financeiras inovadoras, atuando como Staff Software Engineer com foco em arquiteturas escaláveis e melhores práticas de desenvolvimento.",
+      "highlights": [
+        "Liderança técnica de equipes de desenvolvimento e definição de padrões arquiteturais",
+        "Desenvolvimento de aplicações financeiras utilizando .NET Core, C# e tecnologias modernas",
+        "Implementação de soluções GraphQL e APIs RESTful para integração de sistemas",
+        "Mentoria de desenvolvedores e promoção de boas práticas de desenvolvimento",
+        "Arquitetura de sistemas de alta performance e escalabilidade"
+      ]
+    },
+    {
+      "name": "White Tents",
+      "position": "Arquiteto de Software",
+      "url": "",
+      "startDate": "2020-11-01",
+      "endDate": "2022-05-01",
+      "summary": "Arquitetura e desenvolvimento de soluções de software, definindo padrões arquiteturais e liderando equipes de desenvolvimento.",
+      "highlights": [
+        "Definição de arquiteturas de software escaláveis e manuteníveis",
+        "Liderança técnica de equipes de desenvolvimento",
+        "Desenvolvimento de aplicações utilizando .NET Core, C# e React",
+        "Implementação de padrões de design e boas práticas de desenvolvimento",
+        "Mentoria de desenvolvedores e promoção de qualidade de código"
+      ]
+    },
+    {
+      "name": "Join Tecnologia & Design",
+      "position": "Desenvolvedor FullStack Sênior",
+      "url": "",
+      "startDate": "2020-04-01",
+      "endDate": "2020-11-01",
+      "summary": "Desenvolvimento full stack de aplicações web utilizando tecnologias modernas e melhores práticas de desenvolvimento.",
+      "highlights": [
+        "Desenvolvimento de aplicações web completas utilizando .NET Core e React",
+        "Implementação de APIs RESTful e integração com bancos de dados",
+        "Desenvolvimento de interfaces responsivas e interativas",
+        "Trabalho com metodologias ágeis e versionamento Git",
+        "Colaboração em equipes multidisciplinares"
+      ]
+    },
+    {
+      "name": "Beblue",
+      "position": "Desenvolvedor de .NET Sênior",
+      "url": "",
+      "startDate": "2019-08-01",
+      "endDate": "2020-04-01",
+      "summary": "Desenvolvimento de aplicações .NET com foco em soluções empresariais e integração de sistemas.",
+      "highlights": [
+        "Desenvolvimento de aplicações .NET Core e C#",
+        "Implementação de Web APIs e serviços de integração",
+        "Trabalho com Entity Framework e bancos de dados SQL Server",
+        "Desenvolvimento de soluções de integração entre sistemas",
+        "Manutenção e evolução de aplicações legadas"
+      ]
+    },
+    {
+      "name": "TOTVS",
+      "position": "Analista de Sistemas Sênior",
+      "url": "https://www.totvs.com",
+      "startDate": "2017-08-01",
+      "endDate": "2019-08-01",
+      "summary": "Análise e desenvolvimento de sistemas financeiros, incluindo Internet Banking e aplicações corporativas.",
+      "highlights": [
+        "Desenvolvimento da base do novo Internet Banking utilizando .NET Core 2.2",
+        "Desenvolvimento de aplicações utilizando C#, ASP.NET MVC, WebServices e NHibernate",
+        "Manutenção de projetos legados em ASP Clássico, .NET 2.0 e WebForms",
+        "Criação e manutenção de diagramas de banco de dados",
+        "Análise de requisitos e arquitetura de software"
+      ]
+    },
+    {
+      "name": "Ilevus",
       "position": "Desenvolvedor Full Stack",
-      "url": "https://github.com/gnios",
-      "startDate": "2022-01-01",
-      "summary": "Desenvolvimento de aplicações web completas utilizando tecnologias modernas como React, Node.js, Next.js e TypeScript.",
+      "url": "",
+      "startDate": "2017-09-01",
+      "endDate": "2019-04-01",
+      "summary": "Desenvolvimento full stack com liderança de equipe, foco em aplicações web e integração de sistemas.",
       "highlights": [
-        "Criação de APIs RESTful e GraphQL, integração com bancos de dados (PostgreSQL, MongoDB) e implementação de autenticação e autorização",
-        "Trabalho com metodologias ágeis, versionamento Git e deploy em plataformas cloud como Vercel, Netlify e AWS",
-        "Desenvolvimento de interfaces de usuário responsivas e interativas utilizando React, Vue.js e tecnologias web modernas",
-        "Implementação de design systems, componentes reutilizáveis e otimização de performance para melhorar a experiência do usuário"
-      ]
-    },
-    {
-      "name": "Projetos Pessoais",
-      "position": "Desenvolvedor Frontend",
-      "url": "https://github.com/gnios",
-      "startDate": "2021-01-01",
-      "endDate": "2022-01-01",
-      "summary": "Desenvolvimento de interfaces de usuário responsivas e interativas utilizando React, Vue.js e tecnologias web modernas.",
-      "highlights": [
-        "Implementação de design systems, componentes reutilizáveis e otimização de performance para melhorar a experiência do usuário",
-        "Integração com APIs externas, gerenciamento de estado com Redux/Vuex e implementação de testes automatizados",
-        "Desenvolvimento de aplicações web modernas com foco em performance e acessibilidade"
-      ]
-    },
-    {
-      "name": "Autodidata",
-      "position": "Estudante de Desenvolvimento",
-      "url": "https://github.com/gnios",
-      "startDate": "2020-01-01",
-      "endDate": "2021-01-01",
-      "summary": "Aprendizado intensivo de programação através de cursos online, documentação oficial e projetos práticos.",
-      "highlights": [
-        "Foco em JavaScript, Python, HTML/CSS e fundamentos de programação orientada a objetos e funcional",
-        "Participação em comunidades de desenvolvedores, contribuição em projetos open source e desenvolvimento de projetos pessoais",
-        "Aprendizado de frameworks modernos como React, Vue.js e Node.js"
+        "Liderança da equipe de desenvolvedores",
+        "Desenvolvimento frontend com React e backend em C#",
+        "Trabalho com MongoDB, ASP.NET Web API e AWS Infrastructure",
+        "Implementação de NFSe Eletrônica (Nota Fiscal de Serviço Eletrônica)",
+        "Implementação de meios de pagamento com Stripe",
+        "Criação e configuração de ambientes na AWS"
       ]
     }
   ],
   "volunteer": [],
   "education": [
     {
-      "institution": "Cursos Online e Autodidatismo",
-      "url": "",
-      "area": "Desenvolvimento Web Full Stack",
-      "studyType": "Autodidatismo",
-      "startDate": "2020-01-01",
+      "institution": "UECE - Universidade Estadual do Ceará",
+      "url": "https://www.uece.br",
+      "area": "Computer Software Engineering",
+      "studyType": "Pós-Graduação",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
       "score": "",
       "courses": [
-        "JavaScript Moderno (ES6+)",
-        "React e Ecossistema",
-        "Node.js e Backend Development",
-        "Bancos de Dados Relacionais e NoSQL",
-        "APIs REST e GraphQL",
-        "Deploy e DevOps Básico"
+        "Engenharia de Software",
+        "Arquitetura de Software",
+        "Metodologias de Desenvolvimento",
+        "Gestão de Projetos de Software"
       ]
     },
     {
-      "institution": "Cursos Técnicos e Certificações",
-      "url": "",
-      "area": "Tecnologia da Informação",
-      "studyType": "Cursos Técnicos",
-      "startDate": "2019-01-01",
-      "endDate": "2020-01-01",
+      "institution": "Universidade Estácio de Sá",
+      "url": "https://www.estacio.br",
+      "area": "Informática, Jogos Digitais, Mídias Interativas",
+      "studyType": "Graduação",
+      "startDate": "2008-01-01",
+      "endDate": "2011-01-01",
       "score": "",
       "courses": [
-        "Fundamentos de Programação",
-        "Sistemas Operacionais",
-        "Redes de Computadores",
-        "Banco de Dados",
-        "Segurança da Informação"
+        "Desenvolvimento de Software",
+        "Jogos Digitais",
+        "Mídias Interativas",
+        "Programação Orientada a Objetos",
+        "Banco de Dados"
       ]
     }
   ],
-  "awards": [],
+  "awards": [
+    {
+      "title": "4º Concurso de Desenvolvimento de Jogos Empreendedores do SEBRAE",
+      "date": "2011-01-01",
+      "awarder": "SEBRAE",
+      "summary": "Reconhecimento por desenvolvimento de jogo empreendedor no concurso promovido pelo SEBRAE, demonstrando habilidades em desenvolvimento de software e inovação."
+    }
+  ],
   "certificates": [],
   "publications": [],
   "skills": [
     {
       "name": "Linguagens de Programação",
       "level": "Avançado",
-      "keywords": [
-        "JavaScript",
-        "TypeScript",
-        "Python",
-        "HTML/CSS",
-        "SQL"
-      ]
+      "keywords": ["C#", "JavaScript", "TypeScript", "HTML/CSS", "SQL", "Bash/Shell"]
     },
     {
-      "name": "Frameworks e Bibliotecas",
+      "name": "Frameworks e Tecnologias .NET",
       "level": "Avançado",
       "keywords": [
-        "React",
-        "Next.js",
-        "Vue.js",
-        "Node.js",
-        "Express.js"
+        ".NET Core",
+        "ASP.NET Core",
+        "ASP.NET MVC",
+        "WebForms",
+        "WCF",
+        "Entity Framework",
+        "NHibernate"
       ]
     },
     {
-      "name": "Ferramentas e Tecnologias",
-      "level": "Intermediário",
+      "name": "Frontend e Bibliotecas",
+      "level": "Avançado",
+      "keywords": ["React", "jQuery", "Bootstrap", "KnockoutJS", "HTML5/CSS3", "JavaScript ES6+"]
+    },
+    {
+      "name": "Bancos de Dados",
+      "level": "Avançado",
+      "keywords": ["SQL Server", "MongoDB", "MySQL", "PostgreSQL", "Entity Framework", "NHibernate"]
+    },
+    {
+      "name": "Cloud e Infraestrutura",
+      "level": "Avançado",
+      "keywords": ["AWS", "Azure", "Docker", "CI/CD", "GitHub Actions", "TeamCity"]
+    },
+    {
+      "name": "Ferramentas e Metodologias",
+      "level": "Avançado",
       "keywords": [
         "Git",
-        "Docker",
-        "AWS",
-        "MongoDB",
-        "PostgreSQL"
+        "SVN",
+        "Jira",
+        "TeamCity",
+        "Source Monitor",
+        "Code Analysis",
+        "StyleCop",
+        "NUnit"
       ]
     },
     {
       "name": "Soft Skills",
       "level": "Avançado",
       "keywords": [
-        "Trabalho em Equipe",
+        "Liderança Técnica",
+        "Arquitetura de Software",
+        "Mentoria",
+        "Análise de Requisitos",
+        "Gestão de Equipes",
         "Comunicação",
-        "Resolução de Problemas",
-        "Aprendizado Contínuo",
-        "Gestão de Projetos"
+        "Resolução de Problemas"
       ]
     }
   ],
@@ -170,13 +243,7 @@
   "interests": [
     {
       "name": "Desenvolvimento Web",
-      "keywords": [
-        "Frontend",
-        "Backend",
-        "Full Stack",
-        "Web Performance",
-        "User Experience"
-      ]
+      "keywords": ["Frontend", "Backend", "Full Stack", "Web Performance", "User Experience"]
     },
     {
       "name": "Tecnologias Emergentes",
@@ -190,17 +257,53 @@
     },
     {
       "name": "Open Source",
-      "keywords": [
-        "Contribuições",
-        "Projetos Pessoais",
-        "Comunidade",
-        "Colaboração",
-        "Aprendizado"
-      ]
+      "keywords": ["Contribuições", "Projetos Pessoais", "Comunidade", "Colaboração", "Aprendizado"]
     }
   ],
   "references": [],
   "projects": [
+    {
+      "name": "Internet Banking - TOTVS",
+      "description": "Desenvolvimento da base do novo Internet Banking utilizando .NET Core 2.2, com foco em segurança e performance para aplicações financeiras.",
+      "highlights": [
+        "Desenvolvido com .NET Core 2.2 e C#",
+        "Arquitetura baseada em microserviços",
+        "Integração com sistemas bancários legados",
+        "Implementação de segurança financeira",
+        "Interface responsiva com React e Bootstrap"
+      ],
+      "keywords": [".NET Core", "C#", "React", "SQL Server", "Bootstrap"],
+      "url": "",
+      "github": ""
+    },
+    {
+      "name": "Sistema Core Financeiro - Fortes Tecnologia",
+      "description": "Sistema de gestão financeira desenvolvido com ASP.NET MVC, C#, Entity Framework e infraestrutura AWS para alta escalabilidade.",
+      "highlights": [
+        "Desenvolvido com ASP.NET MVC e C#",
+        "Entity Framework para ORM",
+        "Interface com jQuery e KnockoutJS",
+        "Infraestrutura escalável na AWS",
+        "Sistema de alta performance e disponibilidade"
+      ],
+      "keywords": ["ASP.NET MVC", "C#", "Entity Framework", "jQuery", "KnockoutJS", "AWS"],
+      "url": "",
+      "github": ""
+    },
+    {
+      "name": "NFSe Eletrônica - Ilevus",
+      "description": "Implementação de Nota Fiscal de Serviço Eletrônica com integração a sistemas de pagamento e infraestrutura AWS.",
+      "highlights": [
+        "Desenvolvimento backend em C# e ASP.NET Web API",
+        "Frontend desenvolvido com React",
+        "Integração com Stripe para pagamentos",
+        "Configuração de ambientes na AWS",
+        "Trabalho com MongoDB para persistência"
+      ],
+      "keywords": ["C#", "ASP.NET Web API", "React", "MongoDB", "Stripe", "AWS"],
+      "url": "",
+      "github": ""
+    },
     {
       "name": "Blog Pessoal",
       "description": "Blog pessoal desenvolvido com Next.js, Tailwind CSS e MDX para compartilhar conhecimento e experiências em desenvolvimento web.",
@@ -211,13 +314,7 @@
         "SEO otimizado",
         "Deploy automático com GitHub Actions"
       ],
-      "keywords": [
-        "Next.js",
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "MDX"
-      ],
+      "keywords": ["Next.js", "React", "TypeScript", "Tailwind CSS", "MDX"],
       "url": "https://gnios.github.io",
       "github": "https://github.com/gnios/gnios.github.io"
     }

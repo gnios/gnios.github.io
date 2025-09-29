@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile.mcp
     container_name: gnios-mcp-browser-tools
     ports:
-      - "3001:3001"
+      - '3001:3001'
     volumes:
       - ./logs:/app/logs
       - ./mcp-browser-setup.js:/app/mcp-browser-setup.js
@@ -24,7 +24,7 @@ services:
     image: nginx:alpine
     container_name: gnios-mcp-log-viewer
     ports:
-      - "8080:80"
+      - '8080:80'
     volumes:
       - ./logs:/usr/share/nginx/html/logs:ro
       - ./nginx.conf:/etc/nginx/nginx.conf:ro

@@ -33,6 +33,7 @@ public/
 ### 1. Visualizar o Currículo
 
 Acesse `/resume` no seu site para ver a versão web do currículo com:
+
 - **Seletor de temas** (Elegant, Modern, Kendall)
 - **Visualização direta** dos HTMLs gerados pelo JSON Resume
 - **Download de PDFs** para cada tema
@@ -54,6 +55,7 @@ npm run resume:generate
 ```
 
 Isso gerará arquivos nas pastas:
+
 - `public/resume/` - PDFs com temas JSON Resume
 - `public/resume-html/` - HTMLs com temas JSON Resume
 
@@ -105,10 +107,7 @@ Edite o arquivo `data/resume.json` seguindo o padrão JSON Resume:
       "startDate": "2020-01-01",
       "endDate": "",
       "summary": "Descrição do trabalho...",
-      "highlights": [
-        "Realização 1",
-        "Realização 2"
-      ]
+      "highlights": ["Realização 1", "Realização 2"]
     }
   ]
 }
@@ -119,6 +118,7 @@ Edite o arquivo `data/resume.json` seguindo o padrão JSON Resume:
 ### Adicionando Novos Temas
 
 1. Instale o tema:
+
 ```bash
 npm install --save-dev jsonresume-theme-nome-do-tema
 ```
@@ -196,6 +196,7 @@ npm run build
 ## 🌟 Funcionalidades Principais
 
 ### Visualização Web
+
 - ✅ **Temas JSON Resume oficiais** - Elegant, Modern, Kendall
 - ✅ **Seletor de temas** - Troque entre temas instantaneamente
 - ✅ **Visualização responsiva** - Funciona em desktop e mobile
@@ -204,12 +205,14 @@ npm run build
 - ✅ **Error handling** - Tratamento de erros elegante
 
 ### Geração de Arquivos
+
 - ✅ **PDFs com temas** - Geração automática de PDFs
 - ✅ **HTMLs com temas** - Geração de HTMLs para web
 - ✅ **Validação JSON** - Verificação de schema
 - ✅ **API de regeneração** - Atualização via interface web
 
 ### Integração
+
 - ✅ **API REST** - Endpoints para dados e regeneração
 - ✅ **Navegação integrada** - Link no menu principal
 - ✅ **SEO otimizado** - Meta tags apropriadas

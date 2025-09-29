@@ -8,36 +8,32 @@ export default function Education({ educationData }) {
         {educationData.map((education, index) => (
           <div
             key={index}
-            className="border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-md transition-shadow"
+            className="rounded-lg border border-gray-200 p-6 transition-shadow hover:shadow-md dark:border-gray-700"
           >
-            <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+            <div className="mb-4 flex flex-col md:flex-row md:items-start md:justify-between">
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
                   {education.degree}
                 </h3>
-                <p className="text-lg text-gray-700 dark:text-gray-300">
-                  {education.institution}
-                </p>
+                <p className="text-lg text-gray-700 dark:text-gray-300">{education.institution}</p>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   {education.location} • {education.period}
                 </p>
               </div>
             </div>
-            
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
-              {education.description}
-            </p>
-            
+
+            <p className="mb-4 text-gray-700 dark:text-gray-300">{education.description}</p>
+
             {education.courses && education.courses.length > 0 && (
               <div>
-                <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                <h4 className="mb-2 text-sm font-semibold text-gray-900 dark:text-gray-100">
                   Cursos e Especializações:
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {education.courses.map((course, courseIndex) => (
                     <span
                       key={courseIndex}
-                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full"
+                      className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800 dark:bg-blue-900 dark:text-blue-200"
                     >
                       {course}
                     </span>

@@ -1,0 +1,154 @@
+
+
+  
+Contato
+85 99738004 (Mobile)
+eugenio00@gmail.com
+www.linkedin.com/in/gnios
+(LinkedIn)
+Principais competências
+ASP.NET Core
+.NET Core
+GraphQL
+Honors-Awards
+4º Concurso de Desenvolvimento de
+Jogos Empreendedores do SEBRAE
+Eugênio Tavares
+Staff Software Engineer
+São Paulo, São Paulo, Brasil
+Resumo
+Já trabalhei como Analista de Sistemas e Desenvolvedor full
+stack, atuando na área há dez anos, principalmente, na criação e
+desenvolvimento de sistemas e aplicativos financeiros. Apaixonado
+por Tecnologia e inovação, sempre preparado para bons desafios.
+Experiência
+Stone
+3 anos 4 meses
+Staff Software Engineer
+outubro de 2023 - Present (2 anos)
+Rio de Janeiro, Brasil
+Líder técnico
+dezembro de 2022 - outubro de 2023 (11 meses)
+Remoto
+Engenheiro de software sênior
+junho de 2022 - janeiro de 2023 (8 meses)
+Remoto
+White Tents
+Arquiteto de software
+novembro de 2020 - maio de 2022 (1 ano 7 meses)
+Remoto
+Join Tecnologia & Design
+Desenvolvedor FullStack Sênior
+abril de 2020 - novembro de 2020 (8 meses)
+Fortaleza, Ceará, Brasil
+Beblue
+Desenvolvedor de .NET sênior
+agosto de 2019 - abril de 2020 (9 meses)
+Remoto
+ 
+Page 1 of 4
+
+  
+TOTVS
+Analista de sistemas sênior
+agosto de 2017 - agosto de 2019 (2 anos 1 mês)
+Fortaleza e Região, Brasil
+Análise de requisitos 
+Arquitetura de software 
+Desenvolvimento da base do novo Internet banking utilizando .Net Core 2.2.
+Desenvolvimento de  diversas aplicações utilizando C#, Asp.Net MVC,
+WebServices, Nhibernate, Jquery/UI, Bootstrap, 
+Manutenção de projetos legados em ASP Clássico, .Net 2.0, WebForms.
+Criação e manutenção de diagramas de banco de dados.
+Ilevus
+Desenvolvedor full stack
+setembro de 2017 - abril de 2019 (1 ano 8 meses)
+Remoto
+Liderança da equipe de desenvolvedores.
+Análise de requisitos 
+Arquitetura de software 
+Desenvolvimento frontend com REACT
+Desenvolvimento backend em C#, Javascript, MongoDB, Asp.net Web Api,
+AWS Infrastructure, NPM, AutoFac, AutoMapper.
+Implementação NFSe Eletrônica. (Nota Fiscal de serviço eletrônica)
+Implementação de meios pagamento com o Stripe.
+Criação e configuração do ambiente de produção e desenvolvimento na AWS
+Fortes Tecnologia em Sistemas
+Desenvolvedor full stack
+outubro de 2015 - fevereiro de 2017 (1 ano 5 meses)
+Fortaleza e Região, Brasil
+Como desenvolvedor na Fortes Tecnologia em Sistemas tenho a oportunidade
+de
+trabalhar no sistema de gestão financeira “Core Financeiro”. Um sistema
+desenvolvido com Asp.Net MVC, C#, Entity Framework, Jquery e KnockoutJS
+e para
+sua infraestrutura é utilizada o serviços de Amazon AWS para se tornar o
+produto
+escalavél e performático.
+Indra
+ 
+Page 2 of 4
+
+  
+Analista de Sistemas Pleno
+outubro de 2013 - outubro de 2015 (2 anos 1 mês)
+Fortaleza e Região, Brasil
+Atuei na equipe de sustenção do banco, equipe responsável por manter vários
+sistemas do BNB realizando manutenções preventivas e evolutivas nos
+mesmos,
+além de realizar pequenos projetos de integração entre os diversos sistemas
+do
+Banco do Nordeste. Nos diversos trabalhos no BNB além das IDES padrões
+utilizei
+as ferramentas source monitor, Code Analysis e StyleCop para a qualidade e
+padronização do codigo e IBM ClearCase, SVN e SourceSafe , IBM Clear
+Quest para
+versionamento e controle de tarefas.
+Instituto Atlântico
+Analista de Sistemas Pleno
+abril de 2013 - outubro de 2013 (7 meses)
+Responsável por programar sistemas utilizando Asp.Net MVC3, NUNIT,
+NHibernate e
+Fluent Validation de acordo com o processo de implementação estabelecido.
+Também atuei como projetista de sistema onde montei uma arquitetura
+baseada nas
+melhores práticas indicadas pela Microsoft. Atuei como Gerente de
+configuração
+onde fui responsável por configurar e gerir as ferramentas: Teamcity e Jira
+para
+facilitar o desenvolvimento em equipe.
+Politec
+Analista de sistema
+janeiro de 2012 - abril de 2013 (1 ano 4 meses)
+Fortaleza e Região, Brasil
+Alocado principalmente no projeto CrediAmigo (maior programa bancário de
+microcrédito da América latina), desenvolvendo casos de usos utilizando MVC
+3 com
+WCF ,NHibernate para persistência e banco de dados SQL SERVER 2008.
+Utilização de ferramentas de inspeção de código como Source Monitor, Code
+Analysis e StyleCop gerando um código limpo e reaproveitável dentro das
+normas de
+ 
+Page 3 of 4
+
+  
+aceitação do cliente.
+Grupo Aço Cearense
+Desenvolvedor .Net
+janeiro de 2009 - outubro de 2011 (2 anos 10 meses)
+Fortaleza e Região, Brasil
+Criei sistemas web para os diversos setores da Aço Cearense utilizando a
+tecnologia .NET (framework 2.0 , 3.5) WebForms.
+Os principais projetos que atuei foram: Nota fiscal eletrônica implementando
+atualizações de acordo com a lei vigente, Vendas On- line um sistema web
+utilizado
+por representantes para a solicitação de compra de materiais, Intranet com
+vários
+módulos referente a necessidade dos vários setores da empresa.
+Formação acadêmica
+UECE - Universidade Estadual do Ceará
+Computer Software Engineering · (2012 - 2013)
+Universidade Estácio de Sá
+Informatica, Jogos Digitais, Mídias Interativas · (2008 - 2011)
+ 
+Page 4 of 4

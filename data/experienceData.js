@@ -1,42 +1,37 @@
 const experienceData = [
   {
-    title: 'Desenvolvedor Full Stack',
-    company: 'Freelancer',
-    location: 'Remoto',
+    title: 'Staff Software Engineer',
+    company: 'Stone',
+    location: 'Rio de Janeiro, Brasil',
     range: '2022 - Presente',
-    url: 'https://github.com/gnios',
+    url: 'https://www.stone.com.br',
     text1:
-      'Desenvolvimento de aplicações web completas utilizando tecnologias modernas como React, Node.js, Next.js e TypeScript.',
+      'Liderança técnica e desenvolvimento de soluções financeiras inovadoras, atuando como Staff Software Engineer com foco em arquiteturas escaláveis.',
     text2:
-      'Criação de APIs RESTful e GraphQL, integração com bancos de dados (PostgreSQL, MongoDB) e implementação de autenticação e autorização.',
-    text3:
-      'Trabalho com metodologias ágeis, versionamento Git e deploy em plataformas cloud como Vercel, Netlify e AWS.',
+      'Desenvolvimento de aplicações financeiras utilizando .NET Core, C# e tecnologias modernas.',
+    text3: 'Implementação de soluções GraphQL e APIs RESTful para integração de sistemas.',
   },
   {
-    title: 'Desenvolvedor Frontend',
-    company: 'Projetos Pessoais',
+    title: 'Arquiteto de Software',
+    company: 'White Tents',
     location: 'Remoto',
-    range: '2021 - 2022',
-    url: 'https://github.com/gnios',
+    range: '2020 - 2022',
+    url: '',
     text1:
-      'Desenvolvimento de interfaces de usuário responsivas e interativas utilizando React, Vue.js e tecnologias web modernas.',
-    text2:
-      'Implementação de design systems, componentes reutilizáveis e otimização de performance para melhorar a experiência do usuário.',
-    text3:
-      'Integração com APIs externas, gerenciamento de estado com Redux/Vuex e implementação de testes automatizados.',
+      'Arquitetura e desenvolvimento de soluções de software, definindo padrões arquiteturais e liderando equipes de desenvolvimento.',
+    text2: 'Desenvolvimento de aplicações utilizando .NET Core, C# e React.',
+    text3: 'Implementação de padrões de design e boas práticas de desenvolvimento.',
   },
   {
-    title: 'Estudante de Desenvolvimento',
-    company: 'Autodidata',
-    location: 'Remoto',
-    range: '2020 - 2021',
-    url: 'https://github.com/gnios',
+    title: 'Desenvolvedor FullStack Sênior',
+    company: 'Join Tecnologia & Design',
+    location: 'Fortaleza, Ceará',
+    range: '2020 - 2020',
+    url: '',
     text1:
-      'Aprendizado intensivo de programação através de cursos online, documentação oficial e projetos práticos.',
-    text2:
-      'Foco em JavaScript, Python, HTML/CSS e fundamentos de programação orientada a objetos e funcional.',
-    text3:
-      'Participação em comunidades de desenvolvedores, contribuição em projetos open source e desenvolvimento de projetos pessoais.',
+      'Desenvolvimento full stack de aplicações web utilizando tecnologias modernas e melhores práticas de desenvolvimento.',
+    text2: 'Desenvolvimento de aplicações web completas utilizando .NET Core e React.',
+    text3: 'Implementação de APIs RESTful e integração com bancos de dados.',
   },
 ]
 

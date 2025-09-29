@@ -13,20 +13,20 @@ if (!fs.existsSync(outputDir)) {
 
 console.log('Gerando HTMLs do currículo...')
 
-themes.forEach(theme => {
+themes.forEach((theme) => {
   try {
     console.log(`Gerando HTML com tema ${theme}...`)
-    
+
     const outputPath = path.join(outputDir, `resume-${theme}.html`)
-    
+
     // Comando para gerar HTML usando resume-cli
     const command = `npx resume export ${outputPath} --theme ${theme} --resume ${resumePath} --format html`
-    
-    execSync(command, { 
+
+    execSync(command, {
       stdio: 'inherit',
-      cwd: path.join(__dirname, '..')
+      cwd: path.join(__dirname, '..'),
     })
-    
+
     console.log(`✅ HTML gerado com sucesso: ${outputPath}`)
   } catch (error) {
     console.error(`❌ Erro ao gerar HTML com tema ${theme}:`, error.message)

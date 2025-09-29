@@ -2,7 +2,8 @@ const siteMetadata = {
   title: 'Gnios | Desenvolvedor Full Stack',
   author: 'Gnios',
   headerTitle: 'Gnios - Desenvolvedor Full Stack',
-  description: 'Desenvolvedor Full Stack apaixonado por tecnologia. Blog pessoal com artigos sobre desenvolvimento web, projetos e experiências na área de tecnologia.',
+  description:
+    'Desenvolvedor Full Stack apaixonado por tecnologia. Blog pessoal com artigos sobre desenvolvimento web, projetos e experiências na área de tecnologia.',
   snippets: 'Snippets de código reutilizáveis e tutoriais de programação por Gnios',
   language: 'pt-br',
   theme: 'system', // system, dark or light

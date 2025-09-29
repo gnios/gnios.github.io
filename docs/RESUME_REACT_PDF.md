@@ -31,6 +31,7 @@ css/
 ### 1. Visualizar o Currículo
 
 Acesse `/resume` no seu site para:
+
 - Ver preview do currículo
 - Visualizar PDF completo no navegador
 - Baixar PDF para uso offline
@@ -60,10 +61,7 @@ Modifique o arquivo `data/resume.json` com suas informações:
       "position": "Cargo",
       "startDate": "2020-01-01",
       "summary": "Descrição do trabalho...",
-      "highlights": [
-        "Realização 1",
-        "Realização 2"
-      ]
+      "highlights": ["Realização 1", "Realização 2"]
     }
   ]
 }
@@ -72,6 +70,7 @@ Modifique o arquivo `data/resume.json` com suas informações:
 ### 3. Personalizar Design
 
 Edite `components/ResumePDF.js` para modificar:
+
 - Layout e estrutura
 - Cores e tipografia
 - Seções e organização
@@ -80,6 +79,7 @@ Edite `components/ResumePDF.js` para modificar:
 ## 🎨 **Características do Design**
 
 ### Layout PDF
+
 - **Formato A4** - Padrão profissional
 - **Duas colunas** - Otimização de espaço
 - **Tipografia limpa** - Helvetica para legibilidade
@@ -87,6 +87,7 @@ Edite `components/ResumePDF.js` para modificar:
 - **Seções organizadas** - Experiência, educação, habilidades
 
 ### Interface Web
+
 - **Header gradiente** - Visual moderno
 - **Botões interativos** - Ver PDF e Download
 - **Estatísticas** - Resumo visual
@@ -133,6 +134,7 @@ npm run lint
 ## 📋 **Estrutura do PDF**
 
 ### Seções Incluídas
+
 - **Header** - Nome, profissão, contato
 - **Resumo** - Descrição profissional
 - **Experiência** - Trabalhos e projetos
@@ -142,6 +144,7 @@ npm run lint
 - **Projetos** - Trabalhos pessoais
 
 ### Layout
+
 - **Coluna esquerda** - Experiência e educação
 - **Coluna direita** - Habilidades, idiomas e projetos
 - **Header** - Informações de contato
@@ -166,16 +169,19 @@ npm run lint
 ## 🔍 **Troubleshooting**
 
 ### PDF não carrega
+
 - Verifique se o React-PDF está instalado
 - Confirme se os dados JSON estão válidos
 - Verifique o console do navegador
 
 ### Estilos não aplicam
+
 - Confirme se o CSS está importado
 - Verifique se as classes Tailwind estão corretas
 - Teste em modo de desenvolvimento
 
 ### Download não funciona
+
 - Verifique se o navegador suporta downloads
 - Confirme se não há bloqueadores de popup
 - Teste em modo incógnito

@@ -10,13 +10,13 @@ export default function JSONResumeViewer() {
   const themes = [
     { id: 'elegant', name: 'Elegant', description: 'Design clássico e profissional' },
     { id: 'modern', name: 'Modern', description: 'Estilo contemporâneo' },
-    { id: 'kendall', name: 'Kendall', description: 'Layout moderno com cores' }
+    { id: 'kendall', name: 'Kendall', description: 'Layout moderno com cores' },
   ]
 
   const loadTheme = async (theme) => {
     setLoading(true)
     setError(null)
-    
+
     try {
       const response = await fetch(`/resume-html/resume-${theme}.html`)
       if (!response.ok) {
@@ -41,7 +41,7 @@ export default function JSONResumeViewer() {
     try {
       const pdfUrl = `/resume/resume-${theme}.pdf`
       const response = await fetch(pdfUrl, { method: 'HEAD' })
-      
+
       if (response.ok) {
         const link = document.createElement('a')
         link.href = pdfUrl
@@ -50,7 +50,9 @@ export default function JSONResumeViewer() {
         link.click()
         document.body.removeChild(link)
       } else {
-        alert(`PDF com tema ${theme} não encontrado. Execute 'npm run resume:generate' para gerar os arquivos.`)
+        alert(
+          `PDF com tema ${theme} não encontrado. Execute 'npm run resume:generate' para gerar os arquivos.`
+        )
       }
     } catch (error) {
       console.error('Erro ao baixar PDF:', error)
@@ -75,28 +77,28 @@ export default function JSONResumeViewer() {
 
   useEffect(() => {
     loadTheme(activeTheme)
-  }, [])
+  }, [activeTheme])
 
   return (
-    <div className="max-w-6xl mx-auto bg-white dark:bg-gray-900 shadow-lg">
+    <div className="mx-auto max-w-6xl bg-white shadow-lg dark:bg-gray-900">
       {/* Header com controles */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-white">
+        <div className="flex flex-col items-start justify-between gap-4 lg:flex-row lg:items-center">
           <div>
-            <h1 className="text-3xl font-bold mb-2">Currículo Profissional</h1>
+            <h1 className="mb-2 text-3xl font-bold">Currículo Profissional</h1>
             <p className="text-blue-200">Visualização interativa com temas JSON Resume</p>
           </div>
-          
+
           <div className="flex flex-wrap gap-3">
             {/* Seletor de Tema */}
             <div className="flex flex-col">
-              <label className="text-sm text-blue-200 mb-1">Tema:</label>
+              <label className="mb-1 text-sm text-blue-200">Tema:</label>
               <select
                 value={activeTheme}
                 onChange={(e) => handleThemeChange(e.target.value)}
-                className="bg-white/20 border border-white/30 rounded px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white/50"
+                className="rounded border border-white/30 bg-white/20 px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white/50"
               >
-                {themes.map(theme => (
+                {themes.map((theme) => (
                   <option key={theme.id} value={theme.id} className="text-gray-900">
                     {theme.name}
                   </option>
@@ -108,19 +110,19 @@ export default function JSONResumeViewer() {
             <div className="flex gap-2">
               <button
                 onClick={() => handleDownloadPDF(activeTheme)}
-                className="bg-white/20 hover:bg-white/30 border border-white/30 rounded px-4 py-2 flex items-center gap-2 transition-colors"
+                className="flex items-center gap-2 rounded border border-white/30 bg-white/20 px-4 py-2 transition-colors hover:bg-white/30"
                 title="Baixar PDF"
               >
-                <AiOutlineDownload className="w-4 h-4" />
+                <AiOutlineDownload className="h-4 w-4" />
                 PDF
               </button>
-              
+
               <button
                 onClick={handleRegenerate}
-                className="bg-white/20 hover:bg-white/30 border border-white/30 rounded px-4 py-2 flex items-center gap-2 transition-colors"
+                className="flex items-center gap-2 rounded border border-white/30 bg-white/20 px-4 py-2 transition-colors hover:bg-white/30"
                 title="Regenerar arquivos"
               >
-                <AiOutlineReload className="w-4 h-4" />
+                <AiOutlineReload className="h-4 w-4" />
                 Atualizar
               </button>
             </div>
@@ -128,12 +130,12 @@ export default function JSONResumeViewer() {
         </div>
 
         {/* Informações do tema ativo */}
-        <div className="mt-4 p-3 bg-white/10 rounded-lg">
-          <h3 className="font-semibold text-lg">
-            {themes.find(t => t.id === activeTheme)?.name}
+        <div className="mt-4 rounded-lg bg-white/10 p-3">
+          <h3 className="text-lg font-semibold">
+            {themes.find((t) => t.id === activeTheme)?.name}
           </h3>
-          <p className="text-blue-200 text-sm">
-            {themes.find(t => t.id === activeTheme)?.description}
+          <p className="text-sm text-blue-200">
+            {themes.find((t) => t.id === activeTheme)?.description}
           </p>
         </div>
       </div>
@@ -141,9 +143,9 @@ export default function JSONResumeViewer() {
       {/* Área de visualização */}
       <div className="relative">
         {loading && (
-          <div className="absolute inset-0 bg-white/80 dark:bg-gray-900/80 flex items-center justify-center z-10">
+          <div className="absolute inset-0 z-10 flex items-center justify-center bg-white/80 dark:bg-gray-900/80">
             <div className="text-center">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+              <div className="mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-b-2 border-blue-600"></div>
               <p className="text-gray-600 dark:text-gray-400">Carregando tema {activeTheme}...</p>
             </div>
           </div>
@@ -151,14 +153,14 @@ export default function JSONResumeViewer() {
 
         {error && (
           <div className="p-8 text-center">
-            <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-red-800 dark:text-red-200 mb-2">
+            <div className="rounded-lg border border-red-200 bg-red-50 p-6 dark:border-red-800 dark:bg-red-900/20">
+              <h3 className="mb-2 text-lg font-semibold text-red-800 dark:text-red-200">
                 Erro ao carregar tema
               </h3>
-              <p className="text-red-600 dark:text-red-400 mb-4">{error}</p>
+              <p className="mb-4 text-red-600 dark:text-red-400">{error}</p>
               <button
                 onClick={() => loadTheme(activeTheme)}
-                className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded transition-colors"
+                className="rounded bg-red-600 px-4 py-2 text-white transition-colors hover:bg-red-700"
               >
                 Tentar novamente
               </button>
@@ -168,7 +170,7 @@ export default function JSONResumeViewer() {
 
         {!loading && !error && htmlContent && (
           <div className="resume-container">
-            <div 
+            <div
               dangerouslySetInnerHTML={{ __html: htmlContent }}
               className="resume-html-content"
             />
@@ -177,11 +179,11 @@ export default function JSONResumeViewer() {
       </div>
 
       {/* Footer com informações */}
-      <div className="bg-gray-50 dark:bg-gray-800 p-4 text-center text-sm text-gray-600 dark:text-gray-400">
+      <div className="bg-gray-50 p-4 text-center text-sm text-gray-600 dark:bg-gray-800 dark:text-gray-400">
         <p>
-          Currículo gerado com <strong>JSON Resume</strong> • 
-          Tema: <strong>{themes.find(t => t.id === activeTheme)?.name}</strong> • 
-          Última atualização: {new Date().toLocaleString('pt-BR')}
+          Currículo gerado com <strong>JSON Resume</strong> • Tema:{' '}
+          <strong>{themes.find((t) => t.id === activeTheme)?.name}</strong> • Última atualização:{' '}
+          {new Date().toLocaleString('pt-BR')}
         </p>
       </div>
     </div>

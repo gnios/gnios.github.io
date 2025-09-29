@@ -120,50 +120,43 @@ export default function ReactResume() {
   }
 
   return (
-    <div className="mx-auto max-w-6xl overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-900">
+    <div className="mx-auto max-w-4xl overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-900">
       {/* Currículo */}
       <div id="resume-content" className="bg-white p-8 dark:bg-gray-900">
         {/* Header do Currículo */}
-        <div className="mb-8">
-          <div className="flex flex-col items-center gap-6 md:flex-row md:items-start">
-            {/* Avatar */}
-            <div className="flex-shrink-0">
-              <img
-                src="https://media.licdn.com/dms/image/v2/C4D03AQEhphaJ_rl_9w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1650396933855?e=1761782400&v=beta&t=zwFREFXrqG3ISZgR3OQhZWNusKbfVGIKEFDw-OkRrf8"
-                alt={resumeData.basics.name}
-                className="h-32 w-32 rounded-full border-4 border-blue-600 object-cover shadow-lg dark:border-blue-400"
-              />
-            </div>
-            
-            {/* Informações do Cabeçalho */}
-            <div className="flex-1 text-center md:text-left">
-              <h1 className="mb-2 text-4xl font-bold text-gray-900 dark:text-white">
-                {resumeData.basics.name}
-              </h1>
-              <h2 className="mb-4 text-xl font-semibold text-blue-600 dark:text-blue-400">
-                {resumeData.basics.label}
-              </h2>
-              
-              {/* Redes Sociais */}
-              <div className="mb-4 flex flex-wrap gap-4 text-sm">
-                {resumeData.basics.profiles
-                  .filter((profile) => profile.network === 'GitHub' || profile.network === 'LinkedIn')
-                  .map((profile, index) => (
-                    <a
-                      key={index}
-                      href={profile.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-blue-600 transition-opacity hover:opacity-80 dark:text-blue-400"
-                    >
-                      {getProfileIcon(profile.network)}
-                      <span>{profile.network}</span>
-                    </a>
-                  ))}
-              </div>
-            </div>
-          </div>
+        <div className="mb-8 text-center">
+          <h1 className="mb-2 text-4xl font-bold text-gray-900 dark:text-white">
+            {resumeData.basics.name}
+          </h1>
+          <h2 className="mb-4 text-xl font-semibold text-blue-600 dark:text-blue-400">
+            {resumeData.basics.label}
+          </h2>
 
+          {/* Informações de contato */}
+          <div className="flex flex-wrap justify-center gap-6 text-sm">
+            <div className="flex items-center gap-2">
+              <AiOutlineMail className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+              <span className="text-gray-600 dark:text-gray-300">{resumeData.basics.email}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <AiOutlineEnvironment className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+              <span className="text-gray-600 dark:text-gray-300">
+                {resumeData.basics.location.city}, {resumeData.basics.location.countryCode}
+              </span>
+            </div>
+            {resumeData.basics.profiles.map((profile, index) => (
+              <a
+                key={index}
+                href={profile.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-blue-600 transition-opacity hover:opacity-80 dark:text-blue-400"
+              >
+                {getProfileIcon(profile.network)}
+                <span>{profile.network}</span>
+              </a>
+            ))}
+          </div>
         </div>
 
         {/* Resumo */}
@@ -176,85 +169,80 @@ export default function ReactResume() {
           </div>
         </div>
 
-        {/* Layout principal em uma coluna */}
-        <div className="space-y-8">
-          {/* Timeline de Experiências Profissionais */}
-          <div>
-            <h3 className="mb-6 border-b-2 border-blue-600 pb-2 text-2xl font-bold text-gray-900 dark:border-blue-400 dark:text-white">
-              Experiência Profissional
-            </h3>
-            <ExperienceTimeline
-              experiences={experienceTimelineData.filter((exp) => exp.type === 'work')}
-            />
+        {/* Timeline de Experiências */}
+        <div className="mb-8">
+          <h3 className="mb-6 border-b-2 border-blue-600 pb-2 text-2xl font-bold text-gray-900 dark:border-blue-400 dark:text-white">
+            Trajetória Profissional e Acadêmica
+          </h3>
+          <ExperienceTimeline experiences={experienceTimelineData} />
+        </div>
+
+        {/* Layout em duas colunas para habilidades e projetos */}
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          {/* Habilidades */}
+          <div className="space-y-8">
+            <div>
+              <h3 className="mb-6 border-b-2 border-blue-600 pb-2 text-2xl font-bold text-gray-900 dark:border-blue-400 dark:text-white">
+                Habilidades
+              </h3>
+              <div className="space-y-4">
+                {resumeData.skills.map((skill, index) => (
+                  <div key={index}>
+                    <h4 className="mb-2 font-bold text-gray-900 dark:text-white">{skill.name}</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {skill.keywords.map((keyword, keywordIndex) => (
+                        <span
+                          key={keywordIndex}
+                          className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800 dark:bg-blue-900 dark:text-blue-200"
+                        >
+                          {keyword}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Idiomas */}
+            <div>
+              <h3 className="mb-6 border-b-2 border-blue-600 pb-2 text-2xl font-bold text-gray-900 dark:border-blue-400 dark:text-white">
+                Idiomas
+              </h3>
+              <div className="space-y-3">
+                {resumeData.languages.map((language, index) => (
+                  <div key={index} className="flex items-center justify-between">
+                    <span className="text-gray-900 dark:text-white">{language.language}</span>
+                    <span className="rounded bg-blue-100 px-2 py-1 text-sm text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                      {language.fluency}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
-          {/* Educação */}
-          <div>
-            <h3 className="mb-6 border-b-2 border-blue-600 pb-2 text-2xl font-bold text-gray-900 dark:border-blue-400 dark:text-white">
-              Educação
-            </h3>
-            <div className="space-y-4">
-              {resumeData.education.map((edu, index) => (
-                <div key={index} className="border-l-4 border-blue-600 pl-6 dark:border-blue-400">
-                  <div className="mb-2 flex flex-col md:flex-row md:items-start md:justify-between">
-                    <div>
-                      <h4 className="text-xl font-bold text-gray-900 dark:text-white">
-                        {edu.area}
+          {/* Projetos */}
+          <div className="space-y-8">
+            {resumeData.projects && resumeData.projects.length > 0 && (
+              <div>
+                <h3 className="mb-6 border-b-2 border-blue-600 pb-2 text-2xl font-bold text-gray-900 dark:border-blue-400 dark:text-white">
+                  Projetos
+                </h3>
+                <div className="space-y-4">
+                  {resumeData.projects.map((project, index) => (
+                    <div key={index}>
+                      <h4 className="mb-1 font-bold text-gray-900 dark:text-white">
+                        {project.name}
                       </h4>
-                      <h5 className="text-lg font-semibold text-blue-600 dark:text-blue-400">
-                        {edu.institution}
-                      </h5>
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
+                        {project.description}
+                      </p>
                     </div>
-                    <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
-                      <AiOutlineCalendar className="h-4 w-4" />
-                      <span>
-                        {formatDate(edu.startDate)} - {formatDate(edu.endDate)}
-                      </span>
-                    </div>
-                  </div>
-                  {edu.courses && edu.courses.length > 0 && (
-                    <div className="mt-3">
-                      <h6 className="mb-2 font-semibold text-gray-900 dark:text-white">Cursos:</h6>
-                      <div className="flex flex-wrap gap-2">
-                        {edu.courses.map((course, courseIndex) => (
-                          <span
-                            key={courseIndex}
-                            className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800 dark:bg-blue-900 dark:text-blue-200"
-                          >
-                            {course}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  )}
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
-
-
-          {/* Competências Técnicas */}
-          <div>
-            <h3 className="mb-6 border-b-2 border-blue-600 pb-2 text-2xl font-bold text-gray-900 dark:border-blue-400 dark:text-white">
-              Competências Técnicas
-            </h3>
-            <div className="space-y-4">
-              {resumeData.skills.map((skill, index) => (
-                <div key={index}>
-                  <h4 className="mb-2 font-bold text-gray-900 dark:text-white">{skill.name}</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {skill.keywords.map((keyword, keywordIndex) => (
-                      <span
-                        key={keywordIndex}
-                        className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-800 dark:bg-blue-900 dark:text-blue-200"
-                      >
-                        {keyword}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

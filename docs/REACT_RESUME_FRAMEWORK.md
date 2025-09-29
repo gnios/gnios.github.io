@@ -15,6 +15,7 @@ Um framework moderno e interativo para criação de currículos usando React, Ne
 ## 🎨 **Design**
 
 ### **Tema Moderno**
+
 - **Cores**: Azul (#2563eb, #1e40af)
 - **Estilo**: Limpo e profissional
 - **Tipografia**: Helvetica para melhor legibilidade
@@ -23,17 +24,20 @@ Um framework moderno e interativo para criação de currículos usando React, Ne
 ## 🚀 **Funcionalidades**
 
 ### **Interface Minimalista**
+
 - **Apenas Currículo** - Conteúdo em destaque
 - **Botão de Download** - Padrão do site, posicionado no final
 - **Sem Distrações** - Interface limpa e focada
 
 ### **Visualização**
+
 - **Layout Responsivo** - Duas colunas no desktop, uma no mobile
 - **Tipografia Moderna** - Fonte Inter para melhor legibilidade
 - **Ícones Integrados** - React Icons para visual profissional
 - **Animações Suaves** - Transições elegantes
 
 ### **Exportação**
+
 - **Download PDF** - Geração nativa com html2pdf.js
 - **Impressão** - Fallback para impressão do navegador
 - **Qualidade Alta** - PDF otimizado para impressão
@@ -89,10 +93,7 @@ css/
       "startDate": "2020-01-01",
       "endDate": "2022-12-31",
       "summary": "Descrição do trabalho",
-      "highlights": [
-        "Realização 1",
-        "Realização 2"
-      ]
+      "highlights": ["Realização 1", "Realização 2"]
     }
   ],
   "education": [
@@ -131,18 +132,15 @@ const themes = {
     accent: '#cor-destaque',
     background: '#cor-fundo',
     text: '#cor-texto',
-    textLight: '#cor-texto-claro'
-  }
+    textLight: '#cor-texto-claro',
+  },
 }
 ```
 
 ### **Aplicar Tema**
 
 ```jsx
-<select
-  value={selectedTheme}
-  onChange={(e) => setSelectedTheme(e.target.value)}
->
+<select value={selectedTheme} onChange={(e) => setSelectedTheme(e.target.value)}>
   <option value="meuTema">Meu Tema</option>
 </select>
 ```
@@ -150,15 +148,18 @@ const themes = {
 ## 📱 **Responsividade**
 
 ### **Desktop (1024px+)**
+
 - Layout em duas colunas
 - Experiência/Educação (esquerda)
 - Habilidades/Idiomas (direita)
 
 ### **Tablet (768px - 1023px)**
+
 - Layout adaptado
 - Espaçamentos otimizados
 
 ### **Mobile (< 768px)**
+
 - Layout em coluna única
 - Controles empilhados
 - Texto otimizado
@@ -173,24 +174,28 @@ const themes = {
 ## 🚀 **Como Usar**
 
 ### **1. Visualizar Currículo**
+
 ```bash
 # Acesse a página
 http://localhost:3000/resume
 ```
 
 ### **2. Editar Dados**
+
 ```bash
 # Edite o arquivo JSON
 data/resume.json
 ```
 
 ### **3. Personalizar Tema**
+
 ```bash
 # Modifique as cores
 components/ReactResume.js
 ```
 
 ### **4. Baixar PDF**
+
 ```bash
 # Clique em "Baixar PDF"
 # Ou use Ctrl+P para imprimir
@@ -199,6 +204,7 @@ components/ReactResume.js
 ## 🔍 **Recursos Avançados**
 
 ### **Markdown Support**
+
 - **Negrito**: `**texto**`
 - **Itálico**: `*texto*`
 - **Listas**: `- item`
@@ -206,12 +212,14 @@ components/ReactResume.js
 - **Código**: `` `código` ``
 
 ### **Ícones Disponíveis**
+
 - **Contato**: Mail, Phone, Environment
 - **Social**: LinkedIn, GitHub, Twitter
 - **Seções**: User, Trophy, Book, Code, Star
 - **Tempo**: Calendar
 
 ### **Animações**
+
 - **Fade In**: Aparecimento suave
 - **Slide In**: Deslizamento lateral
 - **Hover**: Efeitos de interação
@@ -237,16 +245,19 @@ components/ReactResume.js
 ## 🔧 **Troubleshooting**
 
 ### **PDF não gera**
+
 - Verifique se html2pdf.js está carregado
 - Use o fallback de impressão
 - Verifique o console para erros
 
 ### **Tema não aplica**
+
 - Confirme se o tema existe no objeto themes
 - Verifique se o estado selectedTheme está correto
 - Recarregue a página
 
 ### **Markdown não renderiza**
+
 - Verifique se react-markdown está instalado
 - Confirme se remark-gfm está configurado
 - Verifique a sintaxe Markdown
