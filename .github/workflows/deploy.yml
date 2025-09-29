@@ -45,7 +45,7 @@ jobs:
         run: npm ci
 
       - name: Build with Next.js
-        run: npx next build
+        run: npx next build && npx next export
 
       - name: Verify out directory
         run: |
