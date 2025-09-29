@@ -32,6 +32,13 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Verify out directory
+        run: |
+          echo "Contents of out directory:"
+          ls -la out/
+          echo "Number of files in out:"
+          find out -type f | wc -l
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
