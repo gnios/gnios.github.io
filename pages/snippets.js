@@ -1,7 +1,7 @@
-import { getAllFilesFrontMatter } from '@/lib/mdx'
-import siteMetadata from '@/data/siteMetadata'
-import SnippetsLayout from '@/layouts/SnippetsLayout'
 import { PageSEO } from '@/components/SEO'
+import siteMetadata from '@/data/siteMetadata'
+import { getAllFilesFrontMatter } from '@/lib/mdx'
+import SnippetsLayout from '@/layouts/SnippetsLayout'
 
 export const POSTS_PER_PAGE = 5
 
@@ -13,16 +13,19 @@ export async function getStaticProps() {
     totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),
   }
 
-  return { props: { initialDisplayPosts, posts, pagination } }
+  return {
+    props: {
+      posts,
+      initialDisplayPosts,
+      pagination,
+    },
+  }
 }
 
 export default function Snippets({ posts, initialDisplayPosts, pagination }) {
   return (
     <>
-      <PageSEO
-        title={`Snippets - ${siteMetadata.author}`}
-        description="Reuseable code snippets collected by Parth"
-      />
+      <PageSEO title={`Snippets - ${siteMetadata.author}`} description={siteMetadata.snippets} />
       <SnippetsLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}

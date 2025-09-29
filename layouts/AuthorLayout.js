@@ -25,7 +25,7 @@ export default function AuthorLayout({ children, frontMatter }) {
     <>
       <PageSEO title={`About - ${name}`} description={`A little trivia me`} />
       <div className="">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5 md:pl-16">
+        <div className="space-y-2 pb-8 pt-6 md:space-y-5 md:pl-16">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             About
           </h1>
@@ -41,7 +41,7 @@ export default function AuthorLayout({ children, frontMatter }) {
               placeholder="blur"
               blurDataURL="/static/images/SVG-placeholder.png"
             />
-            <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">{name}</h3>
+            <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">{name}</h3>
             <div className="text-gray-500 dark:text-gray-400">{occupation}</div>
             <div className="text-gray-500 dark:text-gray-400">{company}</div>
             <div className="flex flex-col pt-3">
@@ -52,12 +52,12 @@ export default function AuthorLayout({ children, frontMatter }) {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <AiOutlineTwitter className="mr-2 mb-0.5 inline h-5 w-5" />
+                <AiOutlineTwitter className="mb-0.5 mr-2 inline h-5 w-5" />
                 Say Hi!
               </a>
             </div>
           </div>
-          <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">
+          <div className="prose max-w-none pb-8 pt-8 dark:prose-dark xl:col-span-2">
             <p>
               <RoughNotation
                 type="bracket"
@@ -248,12 +248,12 @@ export default function AuthorLayout({ children, frontMatter }) {
           </div>
         </div>
         <div className="mt-10 md:pl-16">
-          <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+          <div className="space-y-2 pb-8 pt-6 md:space-y-5">
             <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
               Experience
             </h1>
           </div>
-          <div className="max-w-none pt-8 pb-8 xl:col-span-2">
+          <div className="max-w-none pb-8 pt-8 xl:col-span-2">
             {experienceData.map((d) => (
               <Experience
                 key={d.company}

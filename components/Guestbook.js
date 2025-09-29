@@ -104,7 +104,7 @@ export default function Guestbook({ fallbackData }) {
           <div className="flex flex-row">
             <a
               href="/api/auth/signin/github"
-              className="my-4 mx-2 flex h-20 w-1/2 items-center justify-center rounded bg-neutral-100 font-light text-gray-900 ring-gray-300 transition-all hover:ring-2 dark:bg-zinc-800 dark:text-gray-100"
+              className="mx-2 my-4 flex h-20 w-1/2 items-center justify-center rounded bg-neutral-100 font-light text-gray-900 ring-gray-300 transition-all hover:ring-2 dark:bg-zinc-800 dark:text-gray-100"
               onClick={(e) => {
                 e.preventDefault()
                 signIn('github')
@@ -124,7 +124,7 @@ export default function Guestbook({ fallbackData }) {
             </a>
             <a
               href="/api/auth/signin/google"
-              className="my-4 mx-2 flex h-20 w-1/2 items-center justify-center rounded bg-neutral-100 font-light text-gray-900 ring-gray-300 transition-all hover:ring-2 dark:bg-zinc-800 dark:text-gray-100"
+              className="mx-2 my-4 flex h-20 w-1/2 items-center justify-center rounded bg-neutral-100 font-light text-gray-900 ring-gray-300 transition-all hover:ring-2 dark:bg-zinc-800 dark:text-gray-100"
               onClick={(e) => {
                 e.preventDefault()
                 signIn('google')

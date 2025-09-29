@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script'
 import { useRouter } from 'next/router'
 import siteMetadata from '@/data/siteMetadata'
 
@@ -151,13 +152,14 @@ export const BlogSEO = ({
       <Head>
         {date && <meta property="article:published_time" content={publishedAt} />}
         {lastmod && <meta property="article:modified_time" content={modifiedAt} />}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData, null, 2),
-          }}
-        />
       </Head>
+      <Script
+        id="structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData, null, 2),
+        }}
+      />
     </>
   )
 }

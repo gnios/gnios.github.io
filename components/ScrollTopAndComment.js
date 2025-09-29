@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
-import { ClapButton } from '@lyket/react'
 import ScrollTop from '@/components/ScrollTop'
 
 const ScrollTopAndComment = () => {
   const [show, setShow] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
     const handleWindowScroll = () => {
       if (window.scrollY > 50) setShow(true)
       else setShow(false)
@@ -15,15 +16,14 @@ const ScrollTopAndComment = () => {
     return () => window.removeEventListener('scroll', handleWindowScroll)
   }, [])
 
+  // Prevent hydration mismatch by not rendering until mounted
+  if (!mounted) {
+    return <ScrollTop />
+  }
+
   return (
     <>
-      <div
-        className={`fixed right-8 bottom-9 hidden flex-col gap-6 ${show ? 'md:flex' : 'md:hidden'}`}
-      >
-        <button className="mb-16">
-          <ClapButton id="diy-fish-holder" namespace="post" hideCounterIfLessThan={1} />
-        </button>
-      </div>
+      {/* Botão de like removido para compatibilidade com GitHub Pages */}
       <ScrollTop />
     </>
   )

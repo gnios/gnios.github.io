@@ -2,7 +2,7 @@ import { Fragment, useState } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { motion } from 'framer-motion'
 import classNames from 'classnames'
-import { useSession, signIn, signOut } from 'next-auth/react'
+// Removido next-auth para compatibilidade com GitHub Pages
 import Link from './Link'
 import {
   CodeIcon,
@@ -29,7 +29,6 @@ import useSound from 'use-sound'
 
 export default function DropMenu() {
   const [isOpen, setIsOpen] = useState(false)
-  const { data: session } = useSession()
   const toggleIcon = () => {
     setIsOpen(!isOpen)
   }
@@ -167,51 +166,7 @@ export default function DropMenu() {
                 </Link>
               )}
             </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <>
-                  <Link>
-                    <a
-                      className={classNames(
-                        active
-                          ? 'cursor-pointer bg-gray-200 text-gray-700 dark:bg-zinc-700 dark:text-gray-300'
-                          : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
-                        'block cursor-pointer px-4 py-2 text-sm'
-                      )}
-                    >
-                      <div className="flex flex-row">
-                        {session ? (
-                          <>
-                            <div className="mr-2 flex flex-row items-center">
-                              {session.user?.image ? (
-                                // eslint-disable-next-line @next/next/no-img-element
-                                <img
-                                  className="h-6 w-6 cursor-pointer rounded-full"
-                                  src={session.user.image}
-                                  alt="User Profile Icon"
-                                />
-                              ) : (
-                                ''
-                              )}
-                            </div>
-                            <div className="" onClick={() => signOut()}>
-                              Sign Out
-                            </div>
-                          </>
-                        ) : (
-                          <>
-                            <EnterIcon />
-                            <div className="ml-4" onClick={() => signIn()}>
-                              Sign In
-                            </div>
-                          </>
-                        )}
-                      </div>
-                    </a>
-                  </Link>
-                </>
-              )}
-            </Menu.Item>
+            {/* Seção de autenticação removida para compatibilidade com GitHub Pages */}
           </div>
           <div className="py-1">
             <Menu.Item>

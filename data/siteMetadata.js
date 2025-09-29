@@ -1,9 +1,8 @@
 const siteMetadata = {
   title: 'Blog | Gnios',
   author: 'Gnios',
-  headerTitle: 'Blog do Gnios',
-  description:
-    'Meu blog pessoal onde compartilho meus pensamentos sobre tecnologia, desenvolvimento e inovação',
+  headerTitle: 'Gnios Blog',
+  description: 'Meu blog pessoal onde compartilho meus pensamentos e experiências',
   snippets: 'Snippets de código reutilizáveis coletados por Gnios',
   language: 'pt-br',
   theme: 'system', // system, dark or light
@@ -12,10 +11,10 @@ const siteMetadata = {
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
-  email: 'contato@gnios.com',
+  email: 'seu-email@exemplo.com',
   github: 'https://github.com/gnios',
-  twitter: 'https://twitter.com/gnios',
-  linkedin: 'https://www.linkedin.com/in/gnios/',
+  twitter: 'https://twitter.com/seu_twitter',
+  linkedin: 'https://www.linkedin.com/in/seu-linkedin/',
   website: 'https://gnios.github.io',
   locale: 'pt-BR',
   analytics: {
@@ -41,13 +40,13 @@ const siteMetadata = {
       // transparent_dark, preferred_color_scheme, custom
       theme: 'light',
       inputPosition: 'bottom',
-      lang: 'pt',
+      lang: 'en',
       darkTheme: 'dark',
       themeURL: '',
     },
   },
   socialAccount: {
-    twitter: 'gnios',
+    twitter: '_ParthDesai_',
   },
 }
 

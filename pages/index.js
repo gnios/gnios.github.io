@@ -7,6 +7,7 @@ import formatDate from '@/lib/utils/formatDate'
 import { RoughNotation } from 'react-rough-notation'
 import NewsletterForm from '@/components/NewsletterForm'
 import ViewCounter from '@/components/ViewCounter'
+import NoSSR from '@/components/NoSSR'
 
 const MAX_DISPLAY = 3
 
@@ -31,35 +32,43 @@ export default function Home({ posts }) {
               {`Welcome to ${siteMetadata.description}. I am a Data Engineer who is passionate about Data Science and Automation. In my free time, I like developing `}
               side projects and learning new technologies.
             </h2>
-            <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
-              This is my place for{' '}
-              <RoughNotation
-                animate="true"
-                type="box"
-                show={true}
-                color="#DE1D8D"
-                animationDelay={1000}
-                animationDuration={2500}
-                className="text-slate-200"
-              >
-                thoughts, reflections & everything&nbsp;
-              </RoughNotation>
-              in between. Have a good read!
-            </p>
-            <p className="hidden pt-10 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
-              This is my place for{' '}
-              <RoughNotation
-                animate="true"
-                type="highlight"
-                show={true}
-                color="#DE1D8D"
-                animationDelay={1000}
-                animationDuration={2500}
-                className="text-slate-200"
-              >
-                thoughts, reflections & everything&nbsp;
-              </RoughNotation>
-              in between. Have a good read!{' '}
+            <div className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
+              <span>
+                This is my place for{' '}
+                <NoSSR fallback={<span>thoughts, reflections & everything</span>}>
+                  <RoughNotation
+                    animate="true"
+                    type="box"
+                    show={true}
+                    color="#DE1D8D"
+                    animationDelay={1000}
+                    animationDuration={2500}
+                    className="text-slate-200"
+                  >
+                    thoughts, reflections & everything&nbsp;
+                  </RoughNotation>
+                </NoSSR>
+                in between. Have a good read!
+              </span>
+            </div>
+            <div className="hidden pt-10 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
+              <span>
+                This is my place for{' '}
+                <NoSSR fallback={<span>thoughts, reflections & everything</span>}>
+                  <RoughNotation
+                    animate="true"
+                    type="highlight"
+                    show={true}
+                    color="#DE1D8D"
+                    animationDelay={1000}
+                    animationDuration={2500}
+                    className="text-slate-200"
+                  >
+                    thoughts, reflections & everything&nbsp;
+                  </RoughNotation>
+                </NoSSR>
+                in between. Have a good read!
+              </span>
               <div className="mt-8 text-slate-600 dark:text-slate-400">
                 <span className="text-sm">Press</span>{' '}
                 <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
@@ -71,7 +80,7 @@ export default function Home({ posts }) {
                 </span>{' '}
                 <span className="text-sm">to start</span>
               </div>
-            </p>
+            </div>
           </div>
           {/* <div className="h-content sm:h-content-sm flex flex-col justify-around">
             <h1 className="sm:text-8.5xl tracking-tightest my-28 select-none text-center text-6xl font-extrabold leading-none sm:my-10">
@@ -219,7 +228,9 @@ export default function Home({ posts }) {
                         <dd className="text-sm font-normal leading-6 text-gray-500 dark:text-gray-400">
                           <time dateTime={date}>{formatDate(date)}</time>
                           {' • '}
-                          <ViewCounter className="mx-1" slug={slug} />
+                          <NoSSR fallback={<span>–––</span>}>
+                            <ViewCounter className="mx-1" slug={slug} />
+                          </NoSSR>
                           views
                         </dd>
                       </dl>

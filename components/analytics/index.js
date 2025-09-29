@@ -1,4 +1,4 @@
-import GA from './GoogleAnalytics'
+import GA from './ClientOnlyGoogleAnalytics'
 import Plausible from './Plausible'
 import SimpleAnalytics from './SimpleAnalytics'
 import Umami from './Umami'

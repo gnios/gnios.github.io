@@ -76,7 +76,7 @@ export default function Tweet({
           </svg>
         </a>
       </div>
-      <div className="mt-4 mb-1 whitespace-pre-wrap leading-normal  !text-gray-700 dark:!text-gray-200">
+      <div className="mb-1 mt-4 whitespace-pre-wrap leading-normal  !text-gray-700 dark:!text-gray-200">
         {formattedText}
       </div>
       {media && media.length ? (

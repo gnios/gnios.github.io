@@ -2,9 +2,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  experimental: {
-    optimizeUniversalDefaults: true,
-  },
+  // Removido experimental feature para evitar warnings
   content: [
     './pages/**/*.js',
     './components/**/*.js',

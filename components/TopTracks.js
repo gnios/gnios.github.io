@@ -1,15 +1,8 @@
-import useSWR from 'swr'
-import fetcher from '@/lib/fetcher'
-import Track from '@/components/Track'
-
+// Componente simplificado para GitHub Pages - sem integração com Spotify
 export default function TopTracks() {
-  const { data } = useSWR('/api/top-tracks', fetcher)
-
-  if (!data) {
-    return null
-  }
-
-  return data.tracks.map((track, index) => (
-    <Track ranking={index + 1} key={track.songUrl} {...track} />
-  ))
+  return (
+    <div className="text-center text-gray-500 dark:text-gray-400">
+      <p>Top tracks não disponível no GitHub Pages</p>
+    </div>
+  )
 }
