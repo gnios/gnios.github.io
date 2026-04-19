@@ -13,6 +13,7 @@ export default function Topbar() {
         {/* Left: Hamburger + Logo + Search */}
         <div className="flex items-center gap-4">
           <button
+            type="button"
             onClick={toggleSidebar}
             className="hidden h-8 w-8 flex-col items-center justify-center gap-[4px] rounded hover:bg-wash dark:hover:bg-[#292929] lg:flex"
             aria-label="Toggle sidebar"
