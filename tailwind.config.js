@@ -97,17 +97,16 @@ module.exports = {
             h2: { fontWeight: '700', letterSpacing: '-0.01em', color: '#191919', fontSize: '26px', lineHeight: '1.3', fontFamily: "Georgia, 'Charter', serif" },
             h3: { fontWeight: '700', color: '#191919', fontSize: '22px', lineHeight: '1.3', fontFamily: "Georgia, 'Charter', serif" },
             'h4,h5,h6': { color: '#191919' },
-            pre: { backgroundColor: 'transparent' },
-            'pre code': { backgroundColor: 'transparent', color: 'inherit', padding: 0 },
-            code: {
+            // Allow Prism syntax highlighting to work - don't override pre/code styles
+            'code:not([class])': {
               color: '#191919',
               backgroundColor: '#F2F2F2',
               paddingLeft: '4px', paddingRight: '4px',
               paddingTop: '2px', paddingBottom: '2px',
               borderRadius: '0.25rem',
             },
-            'code::before': { content: 'none' },
-            'code::after':  { content: 'none' },
+            'code:not([class])::before': { content: 'none' },
+            'code:not([class])::after':  { content: 'none' },
             hr:   { borderColor: '#E6E6E6' },
             'ol li::marker': { fontWeight: '600', color: '#6B6B6B' },
             'ul li::marker': { backgroundColor: '#6B6B6B' },
@@ -128,9 +127,8 @@ module.exports = {
             h2: { color: '#FAFAFA', fontFamily: "Georgia, 'Charter', serif" },
             h3: { color: '#FAFAFA', fontFamily: "Georgia, 'Charter', serif" },
             'h4,h5,h6': { color: '#FAFAFA' },
-            pre: { backgroundColor: 'transparent' },
-            'pre code': { backgroundColor: 'transparent', color: 'inherit', padding: 0 },
-            code: { backgroundColor: '#292929' },
+            // Allow Prism syntax highlighting to work - don't override pre/code styles
+            'code:not([class])': { backgroundColor: '#2D3748' },
             hr: { borderColor: '#292929' },
             'ol li::marker': { color: '#B3B3B3' },
             'ul li::marker': { backgroundColor: '#B3B3B3' },
