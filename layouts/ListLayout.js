@@ -23,7 +23,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           <h1 className="font-serif text-[32px] font-bold text-ink dark:text-wash-subtle">
             {title}
           </h1>
-          <div className="flex items-center gap-2 rounded-full bg-wash px-4 py-2.5 dark:bg-[#1A1A1A] max-w-sm">
+          <div className="flex max-w-sm items-center gap-2 rounded-full bg-wash px-4 py-2.5 dark:bg-[#1A1A1A]">
             <svg
               className="h-4 w-4 shrink-0 text-ink-faint"
               xmlns="http://www.w3.org/2000/svg"
@@ -96,12 +96,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                 {thumbnail && (
                   <Link href={`/blog/${slug}`} className="shrink-0">
                     <div className="relative h-[72px] w-24 overflow-hidden rounded">
-                      <Image
-                        src={thumbnail}
-                        alt={postTitle}
-                        layout="fill"
-                        objectFit="cover"
-                      />
+                      <Image src={thumbnail} alt={postTitle} layout="fill" objectFit="cover" />
                     </div>
                   </Link>
                 )}

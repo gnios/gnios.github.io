@@ -9,7 +9,6 @@ export default function Topbar() {
   return (
     <header className="fixed left-0 right-0 top-0 z-50 h-16 border-b border-stroke bg-white dark:border-[#292929] dark:bg-[#111111]">
       <div className="flex h-full items-center justify-between px-6">
-
         {/* Left: Hamburger + Logo + Search */}
         <div className="flex items-center gap-4">
           <button
@@ -70,7 +69,6 @@ export default function Topbar() {
             <span className="font-sans text-xs font-bold text-white dark:text-ink">G</span>
           </div>
         </div>
-
       </div>
     </header>
   )

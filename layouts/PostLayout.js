@@ -16,15 +16,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
 
   return (
     <>
-      <BlogSEO
-        url={postUrl}
-        authorDetails={authorDetails}
-        {...frontMatter}
-      />
+      <BlogSEO url={postUrl} authorDetails={authorDetails} {...frontMatter} />
       <ScrollTopAndComment />
 
       <article className="mx-auto max-w-[740px] px-6 py-12">
-
         {/* ── Header ── */}
         <header className="mb-8">
           <h1 className="font-serif text-[42px] font-bold leading-[1.15] tracking-[-0.5px] text-ink dark:text-wash-subtle">
@@ -65,22 +60,14 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
 
         {/* ── Featured Image ── */}
         {featuredImage && (
-          <div className="relative mb-10 -mx-6 aspect-[16/9] overflow-hidden">
-            <Image
-              src={featuredImage}
-              alt={title}
-              layout="fill"
-              objectFit="cover"
-              priority
-            />
+          <div className="relative -mx-6 mb-10 aspect-[16/9] overflow-hidden">
+            <Image src={featuredImage} alt={title} layout="fill" objectFit="cover" priority />
           </div>
         )}
 
         {/* ── Body ── */}
         {/* prose (not prose-lg) — Tailwind config sets 21px/1.8 Georgia in DEFAULT */}
-        <div className="prose max-w-none dark:prose-dark">
-          {children}
-        </div>
+        <div className="prose max-w-none dark:prose-dark">{children}</div>
 
         {/* ── Tags ── */}
         {tags && tags.length > 0 && (
@@ -100,26 +87,41 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             url={postUrl}
             title={title}
             via={siteMetadata.socialAccount?.twitter}
-            className="flex items-center overflow-hidden rounded-full hover:scale-110 transition-transform"
+            className="flex items-center overflow-hidden rounded-full transition-transform hover:scale-110"
           >
-            <SocialIcon network="twitter" style={{ height: 32, width: 32 }} fgColor="#fff" bgColor="#1da1f2" />
+            <SocialIcon
+              network="twitter"
+              style={{ height: 32, width: 32 }}
+              fgColor="#fff"
+              bgColor="#1da1f2"
+            />
           </TwitterShareButton>
           <LinkedinShareButton
             summary={summary}
             title={title}
             source={siteMetadata.siteUrl}
             url={postUrl}
-            className="flex items-center overflow-hidden rounded-full hover:scale-110 transition-transform"
+            className="flex items-center overflow-hidden rounded-full transition-transform hover:scale-110"
           >
-            <SocialIcon network="linkedin" style={{ height: 32, width: 32 }} fgColor="#fff" bgColor="#0072b1" />
+            <SocialIcon
+              network="linkedin"
+              style={{ height: 32, width: 32 }}
+              fgColor="#fff"
+              bgColor="#0072b1"
+            />
           </LinkedinShareButton>
           <WhatsappShareButton
             title={title}
             separator=" : "
             url={postUrl}
-            className="flex items-center overflow-hidden rounded-full hover:scale-110 transition-transform"
+            className="flex items-center overflow-hidden rounded-full transition-transform hover:scale-110"
           >
-            <SocialIcon network="whatsapp" style={{ height: 32, width: 32 }} fgColor="#fff" bgColor="#25D366" />
+            <SocialIcon
+              network="whatsapp"
+              style={{ height: 32, width: 32 }}
+              fgColor="#fff"
+              bgColor="#25D366"
+            />
           </WhatsappShareButton>
         </div>
 
