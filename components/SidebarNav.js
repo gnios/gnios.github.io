@@ -1,5 +1,6 @@
 import Link from './Link'
 import { useRouter } from 'next/router'
+import { useSidebar } from './SidebarContext'
 
 const navItems = [
   {
@@ -8,7 +9,7 @@ const navItems = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5 shrink-0"
+        className="h-[18px] w-[18px] shrink-0"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -20,19 +21,19 @@ const navItems = [
     ),
   },
   {
-    name: 'Sobre',
-    href: '/resume',
+    name: 'Blog',
+    href: '/blog',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5 shrink-0"
+        className="h-[18px] w-[18px] shrink-0"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
         strokeWidth="2"
       >
-        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-        <circle cx="12" cy="7" r="4" />
+        <path d="M12 20h9" />
+        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
       </svg>
     ),
   },
@@ -42,7 +43,7 @@ const navItems = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5 shrink-0"
+        className="h-[18px] w-[18px] shrink-0"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -59,7 +60,7 @@ const navItems = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5 shrink-0"
+        className="h-[18px] w-[18px] shrink-0"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -73,12 +74,29 @@ const navItems = [
     ),
   },
   {
+    name: 'Sobre',
+    href: '/resume',
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-[18px] w-[18px] shrink-0"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth="2"
+      >
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+        <circle cx="12" cy="7" r="4" />
+      </svg>
+    ),
+  },
+  {
     name: 'Contato',
     href: '/contact',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5 shrink-0"
+        className="h-[18px] w-[18px] shrink-0"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -93,29 +111,46 @@ const navItems = [
 
 export default function SidebarNav() {
   const router = useRouter()
+  const { isCollapsed } = useSidebar()
 
   return (
     <nav
-      className="fixed left-0 top-16 z-40 hidden w-[260px] bg-white dark:bg-[#111111] lg:block"
+      className={`fixed left-0 top-16 z-40 hidden overflow-hidden bg-white transition-[width] duration-[250ms] ease-in-out dark:bg-[#111111] lg:block ${
+        isCollapsed ? 'w-16' : 'w-[260px]'
+      }`}
       style={{ height: 'calc(100vh - 64px)' }}
     >
-      <ul className="mt-6 flex flex-col gap-1">
+      <ul className="mt-5 flex flex-col">
         {navItems.map((item) => {
           const isActive =
             router.pathname === item.href ||
             (item.href !== '/' && router.pathname.startsWith(item.href))
+
           return (
             <li key={item.name}>
               <Link
                 href={item.href}
-                className={`flex items-center border-l-[3px] py-3 pl-6 pr-6 text-[15px] transition-colors ${
+                title={isCollapsed ? item.name : undefined}
+                className={`mx-2 flex items-center gap-3 rounded-md py-[9px] text-[14px] transition-colors ${
+                  isCollapsed ? 'justify-center px-2' : 'px-[14px]'
+                } ${
                   isActive
-                    ? 'border-[#191919] font-bold text-[#191919] dark:border-[#FAFAFA] dark:text-[#FAFAFA]'
-                    : 'border-transparent font-normal text-[#6B6B6B] hover:text-[#191919] dark:text-[#6B6B6B] dark:hover:text-[#FAFAFA]'
+                    ? 'font-semibold text-[#191919] dark:text-[#fafafa]'
+                    : 'font-normal text-[#6b6b6b] hover:bg-wash hover:text-[#333] dark:text-[#888] dark:hover:bg-[#252525] dark:hover:text-[#fafafa]'
                 }`}
               >
-                <span className="flex items-center gap-3">
+                <span
+                  className={`shrink-0 transition-opacity duration-[250ms] ${
+                    isActive ? 'opacity-100' : 'opacity-50'
+                  }`}
+                >
                   {item.icon}
+                </span>
+                <span
+                  className={`overflow-hidden whitespace-nowrap transition-[max-width,opacity] duration-[250ms] ease-in-out ${
+                    isCollapsed ? 'max-w-0 opacity-0' : 'max-w-[200px] opacity-100'
+                  }`}
+                >
                   {item.name}
                 </span>
               </Link>
