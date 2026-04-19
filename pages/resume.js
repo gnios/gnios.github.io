@@ -22,21 +22,23 @@ export default function About() {
 
         <div className="space-y-4 text-[15px] leading-relaxed text-ink-light dark:text-[#aaa]">
           <p>
-            Engenheiro de software com mais de 10 anos de experiência construindo sistemas e
-            aplicações financeiras. Trabalho hoje como Staff Engineer na Stone, onde lidero
-            iniciativas técnicas, defino padrões arquiteturais e ajudo times a entregar software de
-            qualidade em escala.
+            Com mais de 17 anos de trajetória no mercado de tecnologia, atualmente atuo como Staff
+            Software Engineer na Stone, onde lidero a definição de padrões arquiteturais e a
+            construção de ecossistemas financeiros de alta criticidade. Minha abordagem é
+            fundamentada nos princípios de Domain-Driven Design (DDD), garantindo que a
+            complexidade do negócio seja traduzida em softwares escaláveis, sustentáveis e
+            tecnicamente robustos.
           </p>
           <p>
-            Meu background é forte em .NET / C# e ecossistema Microsoft, mas me sinto igualmente à
-            vontade com React, APIs GraphQL e arquiteturas distribuídas. Tenho expertise em
-            Inteligência Artificial, Liderança Técnica, DDD (Domain-Driven Design) e Arquitetura
-            de Software. Gosto de problemas difíceis, de mentorar engenheiros e de simplificar o
-            que parece complicado.
+            Sou especialista no ecossistema .NET (ASP.NET Core / .NET Core), com sólido histórico
+            no desenvolvimento de soluções para o setor financeiro. Minha atuação vai além da
+            escrita de código: foco na modelagem de domínios complexos, implementação de
+            arquiteturas orientadas a eventos e na mentoria técnica de times para elevar a
+            maturidade da engenharia.
           </p>
-          <p>
-            Formado em Engenharia da Computação pela UECE (Universidade Estadual do Ceará) e
-            baseado em São Paulo, Brasil.
+          <p className="font-semibold text-ink">
+            Core Skills: Domain-Driven Design (Strategic &amp; Tactical), Event-Driven
+            Architecture, Microservices, Clean Architecture.
           </p>
           <p>Esse blog é onde compartilho o que aprendo no dia a dia.</p>
         </div>
