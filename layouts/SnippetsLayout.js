@@ -52,9 +52,8 @@ export default function SnippetsLayout({ posts, title, initialDisplayPosts = [],
           {displayPosts.map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
             return (
-              <Link
+              <div
                 key={slug}
-                href={`/snippets/${slug}`}
                 className="bg-day·dark:bg-night·group group relative flex transform cursor-pointer flex-wrap border border-gray-200 bg-opacity-50 p-px py-px transition duration-200 hover:scale-105 dark:border-gray-700 dark:bg-opacity-50"
               >
                 <div className="absolute bottom-0 left-0 h-0.5 w-full origin-left scale-x-0 transform bg-primary-500 duration-200 group-hover:scale-x-100" />
@@ -84,7 +83,7 @@ export default function SnippetsLayout({ posts, title, initialDisplayPosts = [],
                     </div>
                   </article>
                 </div>
-              </Link>
+              </div>
             )
           })}
         </div>
