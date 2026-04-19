@@ -8,7 +8,7 @@ const navItems = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-4 w-4 shrink-0"
+        className="h-5 w-5 shrink-0"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -25,7 +25,7 @@ const navItems = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-4 w-4 shrink-0"
+        className="h-5 w-5 shrink-0"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -42,7 +42,7 @@ const navItems = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-4 w-4 shrink-0"
+        className="h-5 w-5 shrink-0"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -59,7 +59,7 @@ const navItems = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-4 w-4 shrink-0"
+        className="h-5 w-5 shrink-0"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -78,7 +78,7 @@ const navItems = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-4 w-4 shrink-0"
+        className="h-5 w-5 shrink-0"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -96,10 +96,10 @@ export default function SidebarNav() {
 
   return (
     <nav
-      className="fixed left-0 top-16 z-40 hidden w-[280px] overflow-y-auto border-r border-stroke bg-white dark:border-[#292929] dark:bg-[#111111] lg:block"
+      className="fixed left-0 top-16 z-40 hidden w-[240px] bg-white dark:bg-[#111111] lg:block"
       style={{ height: 'calc(100vh - 64px)' }}
     >
-      <ul className="pt-3">
+      <ul className="pt-4">
         {navItems.map((item) => {
           const isActive =
             router.pathname === item.href ||
@@ -108,13 +108,13 @@ export default function SidebarNav() {
             <li key={item.name}>
               <Link
                 href={item.href}
-                className={`flex items-center gap-2.5 px-5 py-2.5 text-[14px] transition-colors hover:bg-wash dark:hover:bg-[#1A1A1A] ${
+                className={`flex items-center gap-3 py-[10px] pr-6 text-[15px] transition-colors ${
                   isActive
-                    ? 'bg-wash font-semibold text-ink dark:bg-[#292929] dark:text-wash-subtle'
-                    : 'font-normal text-ink-light dark:text-ink-faint'
+                    ? 'border-l-[3px] border-ink pl-[21px] font-bold text-ink dark:border-wash-subtle dark:text-wash-subtle'
+                    : 'border-l-[3px] border-transparent pl-[21px] font-normal text-ink-light hover:text-ink dark:text-ink-faint dark:hover:text-wash-subtle'
                 }`}
               >
-                <span className="flex items-center gap-2.5">
+                <span className="flex items-center gap-3">
                   {item.icon}
                   {item.name}
                 </span>
