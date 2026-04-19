@@ -21,7 +21,7 @@ const navItems = [
     ),
   },
   {
-    name: 'Blog',
+    name: 'Artigos',
     href: '/blog',
     icon: (
       <svg

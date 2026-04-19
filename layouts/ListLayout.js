@@ -1,11 +1,13 @@
 import Link from '@/components/Link'
 import Image from '@/components/Image'
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 import Pagination from '@/components/Pagination'
 import formatDate from '@/lib/utils/formatDate'
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
   const [searchValue, setSearchValue] = useState('')
+  const router = useRouter()
 
   const filteredPosts = posts.filter((fm) => {
     const content = fm.title + (fm.summary || '') + (fm.tags || []).join(' ')
@@ -60,7 +62,8 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           return (
             <li
               key={slug}
-              className="border-b border-stroke py-6 last:border-b-0 dark:border-[#292929]"
+              className="cursor-pointer border-b border-stroke py-6 last:border-b-0 dark:border-[#292929]"
+              onClick={() => router.push(`/blog/${slug}`)}
             >
               <div className="flex items-start justify-between gap-5">
                 {/* Text block */}

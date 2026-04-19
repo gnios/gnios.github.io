@@ -1,80 +1,74 @@
 import { useState } from 'react'
 import Link from './Link'
-import headerNavLinks from '@/data/headerNavLinks'
+
+const navLinks = [
+  { href: '/', title: 'Home' },
+  { href: '/blog', title: 'Artigos' },
+  { href: '/snippets', title: 'Snippets' },
+  { href: '/resume', title: 'Sobre' },
+]
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
 
   const onToggleNav = () => {
     setNavShow((status) => {
-      if (status) {
-        document.body.style.overflow = 'auto'
-      } else {
-        // Prevent scrolling
-        document.body.style.overflow = 'hidden'
-      }
+      document.body.style.overflow = status ? 'auto' : 'hidden'
       return !status
     })
   }
 
   return (
-    <div className="sm:hidden">
+    <div className="lg:hidden">
       <button
         type="button"
-        className="ml-1 mr-1 h-8 w-8 rounded py-1"
-        aria-label="Toggle Menu"
+        className="flex h-8 w-8 flex-col items-center justify-center gap-[4px] rounded hover:bg-wash dark:hover:bg-[#292929]"
+        aria-label="Abrir menu"
         onClick={onToggleNav}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          className="text-gray-900 dark:text-gray-100"
-        >
-          <path
-            fillRule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-            clipRule="evenodd"
-          />
-        </svg>
+        <span className="block h-[1.5px] w-4 rounded bg-ink-light dark:bg-[#888]" />
+        <span className="block h-[1.5px] w-4 rounded bg-ink-light dark:bg-[#888]" />
+        <span className="block h-[1.5px] w-4 rounded bg-ink-light dark:bg-[#888]" />
       </button>
+
       <div
-        className={`fixed left-0 top-0 z-10 h-full w-full transform bg-gray-200 opacity-95 duration-300 ease-in-out dark:bg-gray-800 ${
-          navShow ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed inset-0 z-50 transform bg-white transition-transform duration-300 ease-in-out dark:bg-[#111111] ${
+          navShow ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="flex justify-end">
+        <div className="flex h-16 items-center justify-between border-b border-stroke px-6 dark:border-[#292929]">
+          <span className="text-xl font-extrabold tracking-[-0.3px] text-ink dark:text-wash-subtle">
+            Gnios
+          </span>
           <button
             type="button"
-            className="mr-5 mt-11 h-8 w-8 rounded"
-            aria-label="Toggle Menu"
+            className="flex h-8 w-8 items-center justify-center rounded hover:bg-wash dark:hover:bg-[#292929]"
+            aria-label="Fechar menu"
             onClick={onToggleNav}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="text-gray-900 dark:text-gray-100"
+              className="h-5 w-5 text-ink-light dark:text-[#888]"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
             >
-              <path
-                fillRule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
-        <nav className="fixed mt-8 h-full">
-          {headerNavLinks.map((link) => (
-            <div key={link.title} className="px-12 py-4">
-              <Link
-                href={link.href}
-                className="border-b border-gray-400 pb-1 text-2xl font-semibold tracking-widest text-gray-700 hover:text-black dark:border-gray-300 dark:text-gray-300 dark:hover:text-white"
-                onClick={onToggleNav}
-              >
-                {link.title}
-              </Link>
-            </div>
+
+        <nav className="mt-4">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="flex items-center px-6 py-4 text-[17px] font-medium text-ink-light hover:text-ink dark:text-[#888] dark:hover:text-[#fafafa]"
+              onClick={onToggleNav}
+            >
+              {link.title}
+            </Link>
           ))}
         </nav>
       </div>

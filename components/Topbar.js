@@ -1,6 +1,7 @@
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import ThemeSwitch from './ThemeSwitch'
+import MobileNav from './MobileNav'
 import { useSidebar } from './SidebarContext'
 
 export default function Topbar() {
@@ -9,8 +10,9 @@ export default function Topbar() {
   return (
     <header className="fixed left-0 right-0 top-0 z-50 h-16 border-b border-stroke bg-white dark:border-[#292929] dark:bg-[#111111]">
       <div className="flex h-full items-center justify-between px-6">
-        {/* Left: Hamburger + Logo + Search */}
+        {/* Left: Hamburger (desktop) / MobileNav (mobile) + Logo + Search */}
         <div className="flex items-center gap-4">
+          <MobileNav />
           <button
             type="button"
             onClick={toggleSidebar}
