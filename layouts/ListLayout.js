@@ -16,7 +16,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
     initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredPosts
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-12">
+    <div className="px-8 py-10">
       {/* Header — only shown when title is non-empty (i.e. /blog, not homepage) */}
       {title && (
         <div className="mb-10 space-y-5">
