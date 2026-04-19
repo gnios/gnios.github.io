@@ -1,15 +1,11 @@
 import { useState } from 'react'
 import Link from './Link'
-
-const navLinks = [
-  { href: '/', title: 'Home' },
-  { href: '/blog', title: 'Artigos' },
-  { href: '/snippets', title: 'Snippets' },
-  { href: '/resume', title: 'Sobre' },
-]
+import { useRouter } from 'next/router'
+import { navItems } from '@/data/navItems'
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
+  const router = useRouter()
 
   const onToggleNav = () => {
     setNavShow((status) => {
@@ -32,10 +28,11 @@ const MobileNav = () => {
       </button>
 
       <div
-        className={`fixed inset-0 z-50 transform bg-white transition-transform duration-300 ease-in-out dark:bg-[#111111] ${
+        className={`fixed inset-0 z-50 transform bg-white transition-transform duration-[250ms] ease-in-out dark:bg-[#111111] ${
           navShow ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
+        {/* Header */}
         <div className="flex h-16 items-center justify-between border-b border-stroke px-6 dark:border-[#292929]">
           <span className="text-xl font-extrabold tracking-[-0.3px] text-ink dark:text-wash-subtle">
             Gnios
@@ -59,18 +56,35 @@ const MobileNav = () => {
           </button>
         </div>
 
-        <nav className="mt-4">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="flex items-center px-6 py-4 text-[17px] font-medium text-ink-light hover:text-ink dark:text-[#888] dark:hover:text-[#fafafa]"
-              onClick={onToggleNav}
-            >
-              {link.title}
-            </Link>
-          ))}
-        </nav>
+        {/* Nav — same style as SidebarNav */}
+        <ul className="mt-5 flex flex-col">
+          {navItems.map((item) => {
+            const isActive =
+              router.pathname === item.href ||
+              (item.href !== '/' && router.pathname.startsWith(item.href))
+
+            return (
+              <li key={item.name}>
+                <Link href={item.href} passHref>
+                  <a
+                    aria-current={isActive ? 'page' : undefined}
+                    onClick={onToggleNav}
+                    className={`mx-2 flex items-center gap-3 rounded-md px-[14px] py-[9px] text-[14px] transition-colors ${
+                      isActive
+                        ? 'font-semibold text-[#191919] hover:bg-wash dark:text-[#fafafa] dark:hover:bg-[#252525]'
+                        : 'font-normal text-[#6b6b6b] hover:bg-wash hover:text-[#333] dark:text-[#888] dark:hover:bg-[#252525] dark:hover:text-[#fafafa]'
+                    }`}
+                  >
+                    <span className={`shrink-0 ${isActive ? 'opacity-100' : 'opacity-50'}`}>
+                      {item.icon}
+                    </span>
+                    <span>{item.name}</span>
+                  </a>
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
       </div>
     </div>
   )
