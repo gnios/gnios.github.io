@@ -52,7 +52,7 @@ export default function Topbar() {
         <div className="flex items-center gap-3">
           <ThemeSwitch />
           <button
-            className="rounded-full p-2 text-ink-light hover:bg-wash dark:text-ink-faint dark:hover:bg-[#292929]"
+            className="hidden rounded-full p-2 text-ink-light hover:bg-wash dark:text-ink-faint dark:hover:bg-[#292929]"
             aria-label="Notificações"
           >
             <svg
