@@ -24,6 +24,12 @@ public/sitemap.xml
 # misc
 .DS_Store
 
+# tooling artifacts
+.playwright-mcp/
+.superpowers/
+*.png
+!public/**/*.png
+
 # debug
 *.log
 npm-debug.log*
