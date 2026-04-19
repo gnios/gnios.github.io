@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 import frases from '@/data/suassuna'
 
 export default function Footer() {
   const [frase, setFrase] = useState(null)
+  const router = useRouter()
 
   useEffect(() => {
     setFrase(frases[Math.floor(Math.random() * frases.length)])
-  }, [])
+  }, [router.asPath])
 
   return (
     <footer className="mt-16 border-t border-stroke px-8 py-10 dark:border-[#292929]">
