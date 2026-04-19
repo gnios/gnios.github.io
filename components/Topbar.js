@@ -67,9 +67,6 @@ export default function Topbar() {
               <path d="M13.73 21a2 2 0 0 1-3.46 0" />
             </svg>
           </button>
-          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-ink dark:bg-wash-subtle">
-            <span className="font-sans text-xs font-bold text-white dark:text-ink">G</span>
-          </div>
         </div>
       </div>
     </header>
