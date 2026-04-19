@@ -1,0 +1,1464 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "Skip to content":
+      - /url: "#main-content"
+    - generic [ref=e3]:
+      - link "DEV Community Home" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "DEV Community" [ref=e5]
+      - search [ref=e7]:
+        - generic [ref=e9]:
+          - textbox "Search..." [ref=e10]
+          - button "Search" [ref=e11] [cursor=pointer]:
+            - img
+          - link "Powered by Algolia" [ref=e12] [cursor=pointer]:
+            - /url: https://www.algolia.com/developers/?utm_source=devto&utm_medium=referral
+            - text: Powered by Algolia
+            - img [ref=e13]
+      - generic [ref=e16]:
+        - link "Log in" [ref=e18] [cursor=pointer]:
+          - /url: https://dev.to/enter?signup_subforem=1
+        - link "Create account" [ref=e19] [cursor=pointer]:
+          - /url: https://dev.to/enter?signup_subforem=1&state=new-user
+  - generic [ref=e23]:
+    - complementary "Primary sidebar" [ref=e25]:
+      - generic [ref=e26]:
+        - heading "DEV Community is a community of 3,854,136 amazing developers" [level=2] [ref=e27]
+        - paragraph [ref=e28]: We're a place where coders share, stay up-to-date and grow their careers.
+        - generic [ref=e29]:
+          - link "Create new account" [ref=e30] [cursor=pointer]:
+            - /url: https://dev.to/enter?signup_subforem=1&state=new-user
+            - text: Create account
+          - link "Log in" [ref=e31] [cursor=pointer]:
+            - /url: https://dev.to/enter?signup_subforem=1
+      - navigation "DEV Community" [ref=e32]:
+        - list [ref=e33]:
+          - listitem [ref=e34]:
+            - link "Home" [ref=e35] [cursor=pointer]:
+              - /url: /
+              - img [ref=e37]
+              - text: Home
+          - listitem [ref=e47]:
+            - link "DEV++" [ref=e48] [cursor=pointer]:
+              - /url: /++
+              - img [ref=e50]
+              - text: DEV++
+          - listitem [ref=e53]:
+            - link "Videos" [ref=e54] [cursor=pointer]:
+              - /url: /videos
+              - img [ref=e56]
+              - text: Videos
+          - listitem [ref=e62]:
+            - link "DEV Education Tracks" [ref=e63] [cursor=pointer]:
+              - /url: /deved
+              - img [ref=e65]
+              - text: DEV Education Tracks
+          - listitem [ref=e86]:
+            - link "DEV Challenges" [ref=e87] [cursor=pointer]:
+              - /url: /challenges
+              - img [ref=e89]
+              - text: DEV Challenges
+          - listitem [ref=e94]:
+            - link "DEV Help" [ref=e95] [cursor=pointer]:
+              - /url: /help
+              - img [ref=e97]
+              - text: DEV Help
+          - listitem [ref=e104]:
+            - link "Advertise on DEV" [ref=e105] [cursor=pointer]:
+              - /url: /advertise
+              - img [ref=e107]
+              - text: Advertise on DEV
+          - listitem [ref=e109]:
+            - link "Organization Accounts" [ref=e110] [cursor=pointer]:
+              - /url: /organizations
+              - img [ref=e112]
+              - text: Organization Accounts
+          - listitem [ref=e122]:
+            - link "DEV Showcase" [ref=e123] [cursor=pointer]:
+              - /url: /showcase
+              - img [ref=e125]
+              - text: DEV Showcase
+          - listitem [ref=e128]:
+            - link "About" [ref=e129] [cursor=pointer]:
+              - /url: /about
+              - img [ref=e131]
+              - text: About
+          - listitem [ref=e141]:
+            - link "Contact" [ref=e142] [cursor=pointer]:
+              - /url: /contact
+              - img [ref=e144]
+              - text: Contact
+          - listitem [ref=e149]:
+            - link "Free Postgres Database" [ref=e150] [cursor=pointer]:
+              - /url: /free-postgres-database-tier
+              - img [ref=e152]
+              - text: Free Postgres Database
+          - listitem [ref=e167]:
+            - link "Forem Shop" [ref=e168] [cursor=pointer]:
+              - /url: https://shop.forem.com/
+              - img [ref=e170]
+              - text: Forem Shop
+          - listitem [ref=e175]:
+            - link "mlh-logo-color-dark MLH" [ref=e176] [cursor=pointer]:
+              - /url: https://mlh.io/
+              - img "mlh-logo-color-dark" [ref=e178]
+              - text: MLH
+      - navigation "Other" [ref=e188]:
+        - heading "Other" [level=2] [ref=e189]
+        - list [ref=e190]:
+          - listitem [ref=e191]:
+            - link "Code of Conduct" [ref=e192] [cursor=pointer]:
+              - /url: /code-of-conduct
+              - img [ref=e194]
+              - text: Code of Conduct
+          - listitem [ref=e198]:
+            - link "Privacy Policy" [ref=e199] [cursor=pointer]:
+              - /url: /privacy
+              - img [ref=e201]
+              - text: Privacy Policy
+          - listitem [ref=e209]:
+            - link "Terms of Use" [ref=e210] [cursor=pointer]:
+              - /url: /terms
+              - img [ref=e212]
+              - text: Terms of Use
+      - generic [ref=e224]:
+        - link "Twitter" [ref=e225] [cursor=pointer]:
+          - /url: https://x.com/thepracticaldev
+          - img "Twitter" [ref=e226]
+        - link "Facebook" [ref=e228] [cursor=pointer]:
+          - /url: https://facebook.com/thepracticaldev
+          - img "Facebook" [ref=e229]
+        - link "Github" [ref=e231] [cursor=pointer]:
+          - /url: https://github.com/forem
+          - img "Github" [ref=e232]
+        - link "Instagram" [ref=e234] [cursor=pointer]:
+          - /url: https://instagram.com/thepracticaldev
+          - img "Instagram" [ref=e235]
+        - link "Twitch" [ref=e237] [cursor=pointer]:
+          - /url: https://twitch.com/thepracticaldev
+          - img "Twitch" [ref=e238]
+        - link "Mastodon" [ref=e240] [cursor=pointer]:
+          - /url: https://fosstodon.org/@thepracticaldev
+          - img "Mastodon" [ref=e241]
+        - link "Bluesky" [ref=e243] [cursor=pointer]:
+          - /url: https://bsky.app/profile/dev.to
+          - img "Bluesky" [ref=e244]
+      - navigation "Secondary sidebar nav" [ref=e246]:
+        - heading "Popular Tags" [level=3] [ref=e247]
+        - generic [ref=e248]:
+          - link "#ai" [ref=e250] [cursor=pointer]:
+            - /url: /t/ai
+          - link "#webdev" [ref=e252] [cursor=pointer]:
+            - /url: /t/webdev
+          - link "#programming" [ref=e254] [cursor=pointer]:
+            - /url: /t/programming
+          - link "#productivity" [ref=e256] [cursor=pointer]:
+            - /url: /t/productivity
+          - link "#javascript" [ref=e258] [cursor=pointer]:
+            - /url: /t/javascript
+          - link "#tutorial" [ref=e260] [cursor=pointer]:
+            - /url: /t/tutorial
+          - link "#beginners" [ref=e262] [cursor=pointer]:
+            - /url: /t/beginners
+          - link "#python" [ref=e264] [cursor=pointer]:
+            - /url: /t/python
+          - link "#devops" [ref=e266] [cursor=pointer]:
+            - /url: /t/devops
+          - link "#opensource" [ref=e268] [cursor=pointer]:
+            - /url: /t/opensource
+          - link "#security" [ref=e270] [cursor=pointer]:
+            - /url: /t/security
+          - link "#blockchain" [ref=e272] [cursor=pointer]:
+            - /url: /t/blockchain
+          - link "#career" [ref=e274] [cursor=pointer]:
+            - /url: /t/career
+          - link "#machinelearning" [ref=e276] [cursor=pointer]:
+            - /url: /t/machinelearning
+          - link "#automation" [ref=e278] [cursor=pointer]:
+            - /url: /t/automation
+          - link "#react" [ref=e280] [cursor=pointer]:
+            - /url: /t/react
+          - link "#web3" [ref=e282] [cursor=pointer]:
+            - /url: /t/web3
+          - link "#architecture" [ref=e284] [cursor=pointer]:
+            - /url: /t/architecture
+          - link "#api" [ref=e286] [cursor=pointer]:
+            - /url: /t/api
+          - link "#discuss" [ref=e288] [cursor=pointer]:
+            - /url: /t/discuss
+          - link "#typescript" [ref=e290] [cursor=pointer]:
+            - /url: /t/typescript
+          - link "#aws" [ref=e292] [cursor=pointer]:
+            - /url: /t/aws
+          - link "#startup" [ref=e294] [cursor=pointer]:
+            - /url: /t/startup
+          - link "#showdev" [ref=e296] [cursor=pointer]:
+            - /url: /t/showdev
+          - link "#database" [ref=e298] [cursor=pointer]:
+            - /url: /t/database
+          - link "#java" [ref=e300] [cursor=pointer]:
+            - /url: /t/java
+          - link "#node" [ref=e302] [cursor=pointer]:
+            - /url: /t/node
+          - link "#cloud" [ref=e304] [cursor=pointer]:
+            - /url: /t/cloud
+          - link "#cybersecurity" [ref=e306] [cursor=pointer]:
+            - /url: /t/cybersecurity
+          - link "#news" [ref=e308] [cursor=pointer]:
+            - /url: /t/news
+      - generic [ref=e312]:
+        - paragraph [ref=e313]: 💎 DEV Diamond Sponsors
+        - paragraph [ref=e314]: Thank you to our Diamond Sponsors for supporting the DEV Community
+        - generic [ref=e315]:
+          - generic [ref=e316]:
+            - link "Google AI - Official AI Model and Platform Partner" [ref=e317] [cursor=pointer]:
+              - /url: https://aistudio.google.com/?utm_source=partner&utm_medium=partner&utm_campaign=FY25-Global-DEVpartnership-sponsorship-AIS&utm_content=-&utm_term=-&bb=228024
+              - img "Google AI - Official AI Model and Platform Partner" [ref=e318]
+            - paragraph [ref=e319]: Google AI is the official AI Model and Platform Partner of DEV
+          - generic [ref=e320]:
+            - link "Neon - Official Database Partner" [ref=e321] [cursor=pointer]:
+              - /url: https://neon.tech/?ref=devto&bb=228024
+              - img "Neon - Official Database Partner" [ref=e322]
+            - paragraph [ref=e323]: Neon is the official database partner of DEV
+          - generic [ref=e324]:
+            - link "Algolia - Official Search Partner" [ref=e325] [cursor=pointer]:
+              - /url: https://www.algolia.com/developers/?utm_source=devto&utm_medium=referral&bb=228024
+              - img "Algolia - Official Search Partner" [ref=e326]
+            - paragraph [ref=e327]: Algolia is the official search partner of DEV
+      - generic [ref=e330]:
+        - generic [ref=e331]:
+          - generic [ref=e332]: DEV Community
+          - button "Toggle dropdown menu" [ref=e333] [cursor=pointer]:
+            - img "Dropdown menu"
+        - paragraph [ref=e335]:
+          - link "Join the Community!" [ref=e336] [cursor=pointer]:
+            - /url: https://dev.to/enter?state=new-user&bb=877
+            - img "Join the Community!" [ref=e337]
+      - generic [ref=e338]:
+        - paragraph [ref=e339]:
+          - link "DEV Community Home" [ref=e340] [cursor=pointer]:
+            - /url: /
+            - text: DEV Community
+          - text: A space to discuss and keep up software development and manage your software career
+        - paragraph [ref=e341]:
+          - text: Built on
+          - link "Forem" [ref=e342] [cursor=pointer]:
+            - /url: https://www.forem.com
+          - text: — the
+          - link "open source" [ref=e343] [cursor=pointer]:
+            - /url: https://dev.to/t/opensource
+          - text: software that powers
+          - link "DEV" [ref=e344] [cursor=pointer]:
+            - /url: https://dev.to
+          - text: and other inclusive communities.
+        - paragraph [ref=e345]:
+          - text: Made with love and
+          - link "Ruby on Rails" [ref=e346] [cursor=pointer]:
+            - /url: https://dev.to/t/rails
+          - text: . DEV Community © 2016 - 2026.
+    - main [ref=e347]:
+      - generic [ref=e348]:
+        - heading "Posts" [level=1] [ref=e349]
+        - navigation "View posts by" [ref=e350]:
+          - list [ref=e351]:
+            - listitem [ref=e352]:
+              - link "Relevant" [ref=e353] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e354]:
+              - link "Latest" [ref=e355] [cursor=pointer]:
+                - /url: /latest
+            - listitem [ref=e356]:
+              - link "Top" [ref=e357] [cursor=pointer]:
+                - /url: /top/week
+      - generic [ref=e359]:
+        - generic [ref=e360]:
+          - generic [ref=e361]:
+            - generic [ref=e362]: 🎓 DEV Education Tracks
+            - button "Toggle dropdown menu" [ref=e363] [cursor=pointer]:
+              - img "Dropdown menu"
+          - button "x" [ref=e364] [cursor=pointer]:
+            - img "x"
+        - generic [ref=e366]:
+          - paragraph [ref=e367]:
+            - link "build multi-agent systems with adk" [ref=e368] [cursor=pointer]:
+              - /url: https://dev.to/devteam/introducing-our-next-dev-education-track-build-multi-agent-systems-with-adk-4bg8?bb=261441
+              - img "build multi-agent systems with adk" [ref=e369]
+          - heading "Add a new badge to your DEV profile" [level=3] [ref=e370]:
+            - link:
+              - /url: "#add-a-new-badge-to-your-dev-profile"
+            - text: Add a new badge to your DEV profile
+          - generic [ref=e371]:
+            - link "The DEV Team" [ref=e372] [cursor=pointer]:
+              - /url: /devteam?bb=261441
+              - img "The DEV Team" [ref=e374]
+            - 'link "Introducing Our Next DEV Education Track: \"Build Multi-Agent Systems with ADK\" Jess Lee for The DEV Team ・ Feb 17 #agents #gemini #ai #buildmultiagents" [ref=e376] [cursor=pointer]':
+              - /url: https://dev.to/devteam/introducing-our-next-dev-education-track-build-multi-agent-systems-with-adk-4bg8?bb=261441
+              - generic [ref=e377]:
+                - 'heading "Introducing Our Next DEV Education Track: \"Build Multi-Agent Systems with ADK\"" [level=2] [ref=e378]'
+                - heading "Jess Lee for The DEV Team ・ Feb 17" [level=3] [ref=e379]
+                - generic [ref=e380]: "#agents #gemini #ai #buildmultiagents"
+          - paragraph [ref=e381]: Happy Learning!
+      - generic [ref=e382]:
+        - link "Join our DEV Weekend Challenge — $1,000 in Prizes Across TEN winners! Submissions Due April 20 at 6:59 AM UTC.":
+          - /url: https://dev.to/devteam/join-our-dev-weekend-challenge-1000-in-prizes-across-ten-winners-submissions-due-april-20-at-47i1
+        - generic [ref=e383]:
+          - link "Earth Day theme and specific tech categories" [ref=e384] [cursor=pointer]:
+            - /url: https://dev.to/devteam/join-our-dev-weekend-challenge-1000-in-prizes-across-ten-winners-submissions-due-april-20-at-47i1
+            - paragraph [ref=e385]: Earth Day theme and specific tech categories
+          - generic [ref=e386]:
+            - generic [ref=e387]:
+              - generic [ref=e388]:
+                - link "The DEV Team logo" [ref=e389] [cursor=pointer]:
+                  - /url: /devteam
+                  - img "The DEV Team logo" [ref=e390]
+                - link "jess profile" [ref=e391] [cursor=pointer]:
+                  - /url: /jess
+                  - img "jess profile" [ref=e392]
+              - generic [ref=e393]:
+                - generic [ref=e394]:
+                  - button "Jess Lee profile details" [ref=e396] [cursor=pointer]:
+                    - text: Jess Lee
+                    - link "Subscriber":
+                      - /url: /++
+                      - img "Subscriber"
+                  - generic [ref=e397]:
+                    - text: for
+                    - link "The DEV Team" [ref=e398] [cursor=pointer]:
+                      - /url: /devteam
+                - link "Apr 17" [ref=e399] [cursor=pointer]:
+                  - /url: https://dev.to/devteam/join-our-dev-weekend-challenge-1000-in-prizes-across-ten-winners-submissions-due-april-20-at-47i1
+                  - time [ref=e400]: Apr 17
+            - generic [ref=e401]:
+              - img [ref=e402]
+              - text: Pinned
+          - generic [ref=e404]:
+            - heading "Join our DEV Weekend Challenge — $1,000 in Prizes Across TEN winners! Submissions Due April 20 at 6:59 AM UTC." [level=2] [ref=e405]:
+              - link "Join our DEV Weekend Challenge — $1,000 in Prizes Across TEN winners! Submissions Due April 20 at 6:59 AM UTC." [ref=e406] [cursor=pointer]:
+                - /url: https://dev.to/devteam/join-our-dev-weekend-challenge-1000-in-prizes-across-ten-winners-submissions-due-april-20-at-47i1
+            - generic [ref=e407]:
+              - link "# devchallenge" [ref=e408] [cursor=pointer]:
+                - /url: /t/devchallenge
+                - generic [ref=e409]: "#"
+                - text: devchallenge
+              - link "# weekendchallenge" [ref=e410] [cursor=pointer]:
+                - /url: /t/weekendchallenge
+                - generic [ref=e411]: "#"
+                - text: weekendchallenge
+            - generic [ref=e412]:
+              - generic [ref=e413]:
+                - link "Add a comment to post - Join our DEV Weekend Challenge — $1,000 in Prizes Across TEN winners! Submissions Due April 20 at 6:59 AM UTC." [ref=e414] [cursor=pointer]:
+                  - /url: https://dev.to/devteam/join-our-dev-weekend-challenge-1000-in-prizes-across-ten-winners-submissions-due-april-20-at-47i1
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img
+                      - generic:
+                        - img
+                      - generic:
+                        - img
+                    - generic: 97 reactions
+                - link "Add a comment to post - Join our DEV Weekend Challenge — $1,000 in Prizes Across TEN winners! Submissions Due April 20 at 6:59 AM UTC." [ref=e415] [cursor=pointer]:
+                  - /url: https://dev.to/devteam/join-our-dev-weekend-challenge-1000-in-prizes-across-ten-winners-submissions-due-april-20-at-47i1#comments
+                  - img "Comments"
+                  - text: "46"
+                  - generic: comments
+              - generic [ref=e416]:
+                - generic [ref=e417]: 4 min read
+                - button "Save post Join our DEV Weekend Challenge — $1,000 in Prizes Across TEN winners! Submissions Due April 20 at 6:59 AM UTC. to reading list" [ref=e418] [cursor=pointer]:
+                  - generic:
+                    - img
+      - generic [ref=e419]:
+        - link "Congrats to the Notion MCP Challenge Winners!":
+          - /url: https://dev.to/devteam/congrats-to-the-notion-mcp-challenge-winners-28ab
+        - link "article" [ref=e421] [cursor=pointer]:
+          - /url: https://dev.to/devteam/congrats-to-the-notion-mcp-challenge-winners-28ab
+          - img "Cover image for Congrats to the Notion MCP Challenge Winners!" [ref=e422]
+        - generic [ref=e423]:
+          - link "AI-powered workspace and GitHub automation" [ref=e424] [cursor=pointer]:
+            - /url: https://dev.to/devteam/congrats-to-the-notion-mcp-challenge-winners-28ab
+            - paragraph [ref=e425]: AI-powered workspace and GitHub automation
+          - generic [ref=e427]:
+            - generic [ref=e428]:
+              - link "The DEV Team logo" [ref=e429] [cursor=pointer]:
+                - /url: /devteam
+                - img "The DEV Team logo" [ref=e430]
+              - link "jess profile" [ref=e431] [cursor=pointer]:
+                - /url: /jess
+                - img "jess profile" [ref=e432]
+            - generic [ref=e433]:
+              - generic [ref=e434]:
+                - button "Jess Lee profile details" [ref=e436] [cursor=pointer]:
+                  - text: Jess Lee
+                  - link "Subscriber":
+                    - /url: /++
+                    - img "Subscriber"
+                - generic [ref=e437]:
+                  - text: for
+                  - link "The DEV Team" [ref=e438] [cursor=pointer]:
+                    - /url: /devteam
+              - link "Apr 17" [ref=e439] [cursor=pointer]:
+                - /url: https://dev.to/devteam/congrats-to-the-notion-mcp-challenge-winners-28ab
+                - time [ref=e440]: Apr 17
+          - generic [ref=e441]:
+            - heading "Congrats to the Notion MCP Challenge Winners!" [level=2] [ref=e442]:
+              - link "Congrats to the Notion MCP Challenge Winners!" [ref=e443] [cursor=pointer]:
+                - /url: https://dev.to/devteam/congrats-to-the-notion-mcp-challenge-winners-28ab
+            - generic [ref=e444]:
+              - link "# devchallenge" [ref=e445] [cursor=pointer]:
+                - /url: /t/devchallenge
+                - generic [ref=e446]: "#"
+                - text: devchallenge
+              - link "# notionchallenge" [ref=e447] [cursor=pointer]:
+                - /url: /t/notionchallenge
+                - generic [ref=e448]: "#"
+                - text: notionchallenge
+              - link "# mcp" [ref=e449] [cursor=pointer]:
+                - /url: /t/mcp
+                - generic [ref=e450]: "#"
+                - text: mcp
+              - link "# ai" [ref=e451] [cursor=pointer]:
+                - /url: /t/ai
+                - generic [ref=e452]: "#"
+                - text: ai
+            - generic [ref=e453]:
+              - generic [ref=e454]:
+                - link "Add a comment to post - Congrats to the Notion MCP Challenge Winners!" [ref=e455] [cursor=pointer]:
+                  - /url: https://dev.to/devteam/congrats-to-the-notion-mcp-challenge-winners-28ab
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img
+                      - generic:
+                        - img
+                      - generic:
+                        - img
+                    - generic: 78 reactions
+                - link "Add a comment to post - Congrats to the Notion MCP Challenge Winners!" [ref=e456] [cursor=pointer]:
+                  - /url: https://dev.to/devteam/congrats-to-the-notion-mcp-challenge-winners-28ab#comments
+                  - img "Comments"
+                  - text: "17"
+                  - generic: comments
+              - generic [ref=e457]:
+                - generic [ref=e458]: 3 min read
+                - button "Save post Congrats to the Notion MCP Challenge Winners! to reading list" [ref=e459] [cursor=pointer]:
+                  - generic:
+                    - img
+      - generic [ref=e460]:
+        - generic [ref=e461]:
+          - link "Defluffer - reduce token usage 📉 by 45% using this one simple trick! [Earthday challenge]":
+            - /url: https://dev.to/grahamthedev/defluffer-reduce-token-usage-by-45-26jj
+          - generic [ref=e462]:
+            - 'link "DEV Weekend Challenge: Earth Day" [ref=e463] [cursor=pointer]':
+              - /url: https://dev.to/grahamthedev/defluffer-reduce-token-usage-by-45-26jj
+              - paragraph [ref=e464]: "DEV Weekend Challenge: Earth Day"
+            - generic [ref=e466]:
+              - link "grahamthedev profile" [ref=e468] [cursor=pointer]:
+                - /url: /grahamthedev
+                - img "grahamthedev profile" [ref=e469]
+              - generic [ref=e470]:
+                - button "GrahamTheDev profile details" [ref=e473] [cursor=pointer]: GrahamTheDev
+                - link "Apr 18" [ref=e474] [cursor=pointer]:
+                  - /url: https://dev.to/grahamthedev/defluffer-reduce-token-usage-by-45-26jj
+                  - time [ref=e475]: Apr 18
+            - generic [ref=e476]:
+              - heading "Defluffer - reduce token usage 📉 by 45% using this one simple trick! [Earthday challenge]" [level=2] [ref=e477]:
+                - link "Defluffer - reduce token usage 📉 by 45% using this one simple trick! [Earthday challenge]" [ref=e478] [cursor=pointer]:
+                  - /url: https://dev.to/grahamthedev/defluffer-reduce-token-usage-by-45-26jj
+              - generic [ref=e479]:
+                - link "# devchallenge" [ref=e480] [cursor=pointer]:
+                  - /url: /t/devchallenge
+                  - generic [ref=e481]: "#"
+                  - text: devchallenge
+                - link "# weekendchallenge" [ref=e482] [cursor=pointer]:
+                  - /url: /t/weekendchallenge
+                  - generic [ref=e483]: "#"
+                  - text: weekendchallenge
+                - link "# javascript" [ref=e484] [cursor=pointer]:
+                  - /url: /t/javascript
+                  - generic [ref=e485]: "#"
+                  - text: javascript
+                - link "# ai" [ref=e486] [cursor=pointer]:
+                  - /url: /t/ai
+                  - generic [ref=e487]: "#"
+                  - text: ai
+              - generic [ref=e488]:
+                - generic [ref=e489]:
+                  - link "Add a comment to post - Defluffer - reduce token usage 📉 by 45% using this one simple trick! [Earthday challenge]" [ref=e490] [cursor=pointer]:
+                    - /url: https://dev.to/grahamthedev/defluffer-reduce-token-usage-by-45-26jj
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                        - generic:
+                          - img
+                        - generic:
+                          - img
+                      - generic: 27 reactions
+                  - link "Add a comment to post - Defluffer - reduce token usage 📉 by 45% using this one simple trick! [Earthday challenge]" [ref=e491] [cursor=pointer]:
+                    - /url: https://dev.to/grahamthedev/defluffer-reduce-token-usage-by-45-26jj#comments
+                    - img "Comments"
+                    - text: "8"
+                    - generic: comments
+                - generic [ref=e492]:
+                  - generic [ref=e493]: 5 min read
+                  - button "Save post Defluffer - reduce token usage 📉 by 45% using this one simple trick! [Earthday challenge] to reading list" [ref=e494] [cursor=pointer]:
+                    - generic:
+                      - img
+        - generic [ref=e495]:
+          - link "Every climate chatbot is amnesiac. So I built Aura — a stateful climate coach on Backboard + Gemini":
+            - /url: https://dev.to/dev_rajput_2d46f92f8a3418/every-climate-chatbot-is-amnesiac-so-i-built-aura-a-stateful-climate-coach-on-backboard-gemini-4kih
+          - generic [ref=e496]:
+            - 'link "DEV Weekend Challenge: Earth Day" [ref=e497] [cursor=pointer]':
+              - /url: https://dev.to/dev_rajput_2d46f92f8a3418/every-climate-chatbot-is-amnesiac-so-i-built-aura-a-stateful-climate-coach-on-backboard-gemini-4kih
+              - paragraph [ref=e498]: "DEV Weekend Challenge: Earth Day"
+            - generic [ref=e500]:
+              - link "dev_rajput_2d46f92f8a3418 profile" [ref=e502] [cursor=pointer]:
+                - /url: /dev_rajput_2d46f92f8a3418
+                - img "dev_rajput_2d46f92f8a3418 profile" [ref=e503]
+              - generic [ref=e504]:
+                - button "Dev Rajput profile details" [ref=e507] [cursor=pointer]: Dev Rajput
+                - link "Apr 19" [ref=e508] [cursor=pointer]:
+                  - /url: https://dev.to/dev_rajput_2d46f92f8a3418/every-climate-chatbot-is-amnesiac-so-i-built-aura-a-stateful-climate-coach-on-backboard-gemini-4kih
+                  - time [ref=e509]: Apr 19
+            - generic [ref=e510]:
+              - heading "Every climate chatbot is amnesiac. So I built Aura — a stateful climate coach on Backboard + Gemini" [level=2] [ref=e511]:
+                - link "Every climate chatbot is amnesiac. So I built Aura — a stateful climate coach on Backboard + Gemini" [ref=e512] [cursor=pointer]:
+                  - /url: https://dev.to/dev_rajput_2d46f92f8a3418/every-climate-chatbot-is-amnesiac-so-i-built-aura-a-stateful-climate-coach-on-backboard-gemini-4kih
+              - generic [ref=e513]:
+                - link "# weekendchallenge" [ref=e514] [cursor=pointer]:
+                  - /url: /t/weekendchallenge
+                  - generic [ref=e515]: "#"
+                  - text: weekendchallenge
+                - link "# webdev" [ref=e516] [cursor=pointer]:
+                  - /url: /t/webdev
+                  - generic [ref=e517]: "#"
+                  - text: webdev
+                - link "# ai" [ref=e518] [cursor=pointer]:
+                  - /url: /t/ai
+                  - generic [ref=e519]: "#"
+                  - text: ai
+                - link "# devchallenge" [ref=e520] [cursor=pointer]:
+                  - /url: /t/devchallenge
+                  - generic [ref=e521]: "#"
+                  - text: devchallenge
+              - generic [ref=e522]:
+                - generic [ref=e523]:
+                  - link "Add a comment to post - Every climate chatbot is amnesiac. So I built Aura — a stateful climate coach on Backboard + Gemini" [ref=e524] [cursor=pointer]:
+                    - /url: https://dev.to/dev_rajput_2d46f92f8a3418/every-climate-chatbot-is-amnesiac-so-i-built-aura-a-stateful-climate-coach-on-backboard-gemini-4kih
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                        - generic:
+                          - img
+                        - generic:
+                          - img
+                      - generic: 4 reactions
+                  - link "Add a comment to post - Every climate chatbot is amnesiac. So I built Aura — a stateful climate coach on Backboard + Gemini" [ref=e525] [cursor=pointer]:
+                    - /url: https://dev.to/dev_rajput_2d46f92f8a3418/every-climate-chatbot-is-amnesiac-so-i-built-aura-a-stateful-climate-coach-on-backboard-gemini-4kih#comments
+                    - img "Comments"
+                    - text: "2"
+                    - generic: comments
+                - generic [ref=e526]:
+                  - generic [ref=e527]: 6 min read
+                  - button "Save post Every climate chatbot is amnesiac. So I built Aura — a stateful climate coach on Backboard + Gemini to reading list" [ref=e528] [cursor=pointer]:
+                    - generic:
+                      - img
+        - generic [ref=e529]:
+          - 'link "Building a Smarter Hiring Engine: AI Recruiter with RAG, Memory & Web Search"':
+            - /url: https://dev.to/ranjancse/building-a-smarter-hiring-engine-ai-recruiter-with-rag-memory-web-search-4fpe
+          - generic [ref=e530]:
+            - generic [ref=e532]:
+              - link "ranjancse profile" [ref=e534] [cursor=pointer]:
+                - /url: /ranjancse
+                - img "ranjancse profile" [ref=e535]
+              - generic [ref=e536]:
+                - button "Ranjan Dailata profile details" [ref=e539] [cursor=pointer]: Ranjan Dailata
+                - link "Apr 19" [ref=e540] [cursor=pointer]:
+                  - /url: https://dev.to/ranjancse/building-a-smarter-hiring-engine-ai-recruiter-with-rag-memory-web-search-4fpe
+                  - time [ref=e541]: Apr 19
+            - generic [ref=e542]:
+              - 'heading "Building a Smarter Hiring Engine: AI Recruiter with RAG, Memory & Web Search" [level=2] [ref=e543]':
+                - 'link "Building a Smarter Hiring Engine: AI Recruiter with RAG, Memory & Web Search" [ref=e544] [cursor=pointer]':
+                  - /url: https://dev.to/ranjancse/building-a-smarter-hiring-engine-ai-recruiter-with-rag-memory-web-search-4fpe
+              - generic [ref=e545]:
+                - link "# devchallenge" [ref=e546] [cursor=pointer]:
+                  - /url: /t/devchallenge
+                  - generic [ref=e547]: "#"
+                  - text: devchallenge
+                - link "# weekendchallenge" [ref=e548] [cursor=pointer]:
+                  - /url: /t/weekendchallenge
+                  - generic [ref=e549]: "#"
+                  - text: weekendchallenge
+                - link "# ai" [ref=e550] [cursor=pointer]:
+                  - /url: /t/ai
+                  - generic [ref=e551]: "#"
+                  - text: ai
+                - link "# python" [ref=e552] [cursor=pointer]:
+                  - /url: /t/python
+                  - generic [ref=e553]: "#"
+                  - text: python
+              - generic [ref=e554]:
+                - generic [ref=e555]:
+                  - 'link "Add a comment to post - Building a Smarter Hiring Engine: AI Recruiter with RAG, Memory & Web Search" [ref=e556] [cursor=pointer]':
+                    - /url: https://dev.to/ranjancse/building-a-smarter-hiring-engine-ai-recruiter-with-rag-memory-web-search-4fpe
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                        - generic:
+                          - img
+                        - generic:
+                          - img
+                      - generic: 9 reactions
+                  - 'link "Add a comment to post - Building a Smarter Hiring Engine: AI Recruiter with RAG, Memory & Web Search" [ref=e557] [cursor=pointer]':
+                    - /url: https://dev.to/ranjancse/building-a-smarter-hiring-engine-ai-recruiter-with-rag-memory-web-search-4fpe#comments
+                    - img "Comments"
+                    - generic: Add Comment
+                - generic [ref=e558]:
+                  - generic [ref=e559]: 6 min read
+                  - 'button "Save post Building a Smarter Hiring Engine: AI Recruiter with RAG, Memory & Web Search to reading list" [ref=e560] [cursor=pointer]':
+                    - generic:
+                      - img
+        - generic [ref=e561]:
+          - 'link "EM Operating System: Your Brain Is a Terrible Database"':
+            - /url: https://dev.to/alexr/em-operating-system-your-brain-is-a-terrible-database-1bce
+          - generic [ref=e562]:
+            - link "Building a local Second Brain with Obsidian" [ref=e563] [cursor=pointer]:
+              - /url: https://dev.to/alexr/em-operating-system-your-brain-is-a-terrible-database-1bce
+              - paragraph [ref=e564]: Building a local Second Brain with Obsidian
+            - generic [ref=e566]:
+              - link "alexr profile" [ref=e568] [cursor=pointer]:
+                - /url: /alexr
+                - img "alexr profile" [ref=e569]
+              - generic [ref=e570]:
+                - button "Alex (The Engineering Bolt) ⚡ profile details" [ref=e573] [cursor=pointer]: Alex (The Engineering Bolt) ⚡
+                - link "Apr 19" [ref=e574] [cursor=pointer]:
+                  - /url: https://dev.to/alexr/em-operating-system-your-brain-is-a-terrible-database-1bce
+                  - time [ref=e575]: Apr 19
+            - generic [ref=e576]:
+              - 'heading "EM Operating System: Your Brain Is a Terrible Database" [level=2] [ref=e577]':
+                - 'link "EM Operating System: Your Brain Is a Terrible Database" [ref=e578] [cursor=pointer]':
+                  - /url: https://dev.to/alexr/em-operating-system-your-brain-is-a-terrible-database-1bce
+              - generic [ref=e579]:
+                - link "# ai" [ref=e580] [cursor=pointer]:
+                  - /url: /t/ai
+                  - generic [ref=e581]: "#"
+                  - text: ai
+                - link "# programming" [ref=e582] [cursor=pointer]:
+                  - /url: /t/programming
+                  - generic [ref=e583]: "#"
+                  - text: programming
+                - link "# productivity" [ref=e584] [cursor=pointer]:
+                  - /url: /t/productivity
+                  - generic [ref=e585]: "#"
+                  - text: productivity
+                - link "# tutorial" [ref=e586] [cursor=pointer]:
+                  - /url: /t/tutorial
+                  - generic [ref=e587]: "#"
+                  - text: tutorial
+              - generic [ref=e588]:
+                - generic [ref=e589]:
+                  - 'link "Add a comment to post - EM Operating System: Your Brain Is a Terrible Database" [ref=e590] [cursor=pointer]':
+                    - /url: https://dev.to/alexr/em-operating-system-your-brain-is-a-terrible-database-1bce
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                        - generic:
+                          - img
+                        - generic:
+                          - img
+                      - generic: 40 reactions
+                  - 'link "Add a comment to post - EM Operating System: Your Brain Is a Terrible Database" [ref=e591] [cursor=pointer]':
+                    - /url: https://dev.to/alexr/em-operating-system-your-brain-is-a-terrible-database-1bce#comments
+                    - img "Comments"
+                    - text: "5"
+                    - generic: comments
+                - generic [ref=e592]:
+                  - generic [ref=e593]: 4 min read
+                  - 'button "Save post EM Operating System: Your Brain Is a Terrible Database to reading list" [ref=e594] [cursor=pointer]':
+                    - generic:
+                      - img
+        - generic [ref=e595]:
+          - 'link "Join the OpenClaw Challenge: $1,200 Prize Pool!"':
+            - /url: https://dev.to/devteam/join-the-openclaw-challenge-1200-prize-pool-5682
+          - generic [ref=e596]:
+            - link "Share your OpenClaw experience" [ref=e597] [cursor=pointer]:
+              - /url: https://dev.to/devteam/join-the-openclaw-challenge-1200-prize-pool-5682
+              - paragraph [ref=e598]: Share your OpenClaw experience
+            - generic [ref=e600]:
+              - generic [ref=e601]:
+                - link "The DEV Team logo" [ref=e602] [cursor=pointer]:
+                  - /url: /devteam
+                  - img "The DEV Team logo" [ref=e603]
+                - link "jess profile" [ref=e604] [cursor=pointer]:
+                  - /url: /jess
+                  - img "jess profile" [ref=e605]
+              - generic [ref=e606]:
+                - generic [ref=e607]:
+                  - button "Jess Lee profile details" [ref=e609] [cursor=pointer]:
+                    - text: Jess Lee
+                    - link "Subscriber":
+                      - /url: /++
+                      - img "Subscriber"
+                  - generic [ref=e610]:
+                    - text: for
+                    - link "The DEV Team" [ref=e611] [cursor=pointer]:
+                      - /url: /devteam
+                - link "Apr 16" [ref=e612] [cursor=pointer]:
+                  - /url: https://dev.to/devteam/join-the-openclaw-challenge-1200-prize-pool-5682
+                  - time [ref=e613]: Apr 16
+            - generic [ref=e614]:
+              - 'heading "Join the OpenClaw Challenge: $1,200 Prize Pool!" [level=2] [ref=e615]':
+                - 'link "Join the OpenClaw Challenge: $1,200 Prize Pool!" [ref=e616] [cursor=pointer]':
+                  - /url: https://dev.to/devteam/join-the-openclaw-challenge-1200-prize-pool-5682
+              - generic [ref=e617]:
+                - link "# devchallenge" [ref=e618] [cursor=pointer]:
+                  - /url: /t/devchallenge
+                  - generic [ref=e619]: "#"
+                  - text: devchallenge
+                - link "# openclawchallenge" [ref=e620] [cursor=pointer]:
+                  - /url: /t/openclawchallenge
+                  - generic [ref=e621]: "#"
+                  - text: openclawchallenge
+                - link "# openclaw" [ref=e622] [cursor=pointer]:
+                  - /url: /t/openclaw
+                  - generic [ref=e623]: "#"
+                  - text: openclaw
+                - link "# ai" [ref=e624] [cursor=pointer]:
+                  - /url: /t/ai
+                  - generic [ref=e625]: "#"
+                  - text: ai
+              - generic [ref=e626]:
+                - generic [ref=e627]:
+                  - 'link "Add a comment to post - Join the OpenClaw Challenge: $1,200 Prize Pool!" [ref=e628] [cursor=pointer]':
+                    - /url: https://dev.to/devteam/join-the-openclaw-challenge-1200-prize-pool-5682
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                        - generic:
+                          - img
+                        - generic:
+                          - img
+                      - generic: 114 reactions
+                  - 'link "Add a comment to post - Join the OpenClaw Challenge: $1,200 Prize Pool!" [ref=e629] [cursor=pointer]':
+                    - /url: https://dev.to/devteam/join-the-openclaw-challenge-1200-prize-pool-5682#comments
+                    - img "Comments"
+                    - text: "20"
+                    - generic: comments
+                - generic [ref=e630]:
+                  - generic [ref=e631]: 4 min read
+                  - 'button "Save post Join the OpenClaw Challenge: $1,200 Prize Pool! to reading list" [ref=e632] [cursor=pointer]':
+                    - generic:
+                      - img
+        - generic [ref=e633]:
+          - link "I Had No Weekend Plans… So I Let Earth Tell Its Story 🌍":
+            - /url: https://dev.to/hadil/i-had-no-weekend-plans-so-i-let-earth-tell-its-story-1no8
+          - generic [ref=e634]:
+            - 'link "DEV Weekend Challenge: Earth Day" [ref=e635] [cursor=pointer]':
+              - /url: https://dev.to/hadil/i-had-no-weekend-plans-so-i-let-earth-tell-its-story-1no8
+              - paragraph [ref=e636]: "DEV Weekend Challenge: Earth Day"
+            - generic [ref=e638]:
+              - link "hadil profile" [ref=e640] [cursor=pointer]:
+                - /url: /hadil
+                - img "hadil profile" [ref=e641]
+              - generic [ref=e642]:
+                - button "Hadil Ben Abdallah profile details" [ref=e645] [cursor=pointer]: Hadil Ben Abdallah
+                - link "Apr 19" [ref=e646] [cursor=pointer]:
+                  - /url: https://dev.to/hadil/i-had-no-weekend-plans-so-i-let-earth-tell-its-story-1no8
+                  - time [ref=e647]: Apr 19
+            - generic [ref=e648]:
+              - heading "I Had No Weekend Plans… So I Let Earth Tell Its Story 🌍" [level=2] [ref=e649]:
+                - link "I Had No Weekend Plans… So I Let Earth Tell Its Story 🌍" [ref=e650] [cursor=pointer]:
+                  - /url: https://dev.to/hadil/i-had-no-weekend-plans-so-i-let-earth-tell-its-story-1no8
+              - generic [ref=e651]:
+                - link "# devchallenge" [ref=e652] [cursor=pointer]:
+                  - /url: /t/devchallenge
+                  - generic [ref=e653]: "#"
+                  - text: devchallenge
+                - link "# weekendchallenge" [ref=e654] [cursor=pointer]:
+                  - /url: /t/weekendchallenge
+                  - generic [ref=e655]: "#"
+                  - text: weekendchallenge
+                - link "# webdev" [ref=e656] [cursor=pointer]:
+                  - /url: /t/webdev
+                  - generic [ref=e657]: "#"
+                  - text: webdev
+                - link "# frontend" [ref=e658] [cursor=pointer]:
+                  - /url: /t/frontend
+                  - generic [ref=e659]: "#"
+                  - text: frontend
+              - generic [ref=e660]:
+                - generic [ref=e661]:
+                  - link "Add a comment to post - I Had No Weekend Plans… So I Let Earth Tell Its Story 🌍" [ref=e662] [cursor=pointer]:
+                    - /url: https://dev.to/hadil/i-had-no-weekend-plans-so-i-let-earth-tell-its-story-1no8
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                        - generic:
+                          - img
+                        - generic:
+                          - img
+                      - generic: 21 reactions
+                  - link "Add a comment to post - I Had No Weekend Plans… So I Let Earth Tell Its Story 🌍" [ref=e663] [cursor=pointer]:
+                    - /url: https://dev.to/hadil/i-had-no-weekend-plans-so-i-let-earth-tell-its-story-1no8#comments
+                    - img "Comments"
+                    - text: "4"
+                    - generic: comments
+                - generic [ref=e664]:
+                  - generic [ref=e665]: 3 min read
+                  - button "Save post I Had No Weekend Plans… So I Let Earth Tell Its Story 🌍 to reading list" [ref=e666] [cursor=pointer]:
+                    - generic:
+                      - img
+        - generic [ref=e667]:
+          - 'link "I Built OxyTrack: Turning Small Daily Habits Into Real Environmental Impact 🌱"':
+            - /url: https://dev.to/ajitekom/i-built-oxytrack-turning-small-daily-habits-into-real-environmental-impact-1nj9
+          - generic [ref=e668]:
+            - 'link "DEV Weekend Challenge: Earth Day" [ref=e669] [cursor=pointer]':
+              - /url: https://dev.to/ajitekom/i-built-oxytrack-turning-small-daily-habits-into-real-environmental-impact-1nj9
+              - paragraph [ref=e670]: "DEV Weekend Challenge: Earth Day"
+            - generic [ref=e672]:
+              - link "ajitekom profile" [ref=e674] [cursor=pointer]:
+                - /url: /ajitekom
+                - img "ajitekom profile" [ref=e675]
+              - generic [ref=e676]:
+                - button "Setiaji profile details" [ref=e679] [cursor=pointer]: Setiaji
+                - link "Apr 19" [ref=e680] [cursor=pointer]:
+                  - /url: https://dev.to/ajitekom/i-built-oxytrack-turning-small-daily-habits-into-real-environmental-impact-1nj9
+                  - time [ref=e681]: Apr 19
+            - generic [ref=e682]:
+              - 'heading "I Built OxyTrack: Turning Small Daily Habits Into Real Environmental Impact 🌱" [level=2] [ref=e683]':
+                - 'link "I Built OxyTrack: Turning Small Daily Habits Into Real Environmental Impact 🌱" [ref=e684] [cursor=pointer]':
+                  - /url: https://dev.to/ajitekom/i-built-oxytrack-turning-small-daily-habits-into-real-environmental-impact-1nj9
+              - generic [ref=e685]:
+                - link "# devchallenge" [ref=e686] [cursor=pointer]:
+                  - /url: /t/devchallenge
+                  - generic [ref=e687]: "#"
+                  - text: devchallenge
+                - link "# weekendchallenge" [ref=e688] [cursor=pointer]:
+                  - /url: /t/weekendchallenge
+                  - generic [ref=e689]: "#"
+                  - text: weekendchallenge
+              - generic [ref=e690]:
+                - generic [ref=e691]:
+                  - 'link "Add a comment to post - I Built OxyTrack: Turning Small Daily Habits Into Real Environmental Impact 🌱" [ref=e692] [cursor=pointer]':
+                    - /url: https://dev.to/ajitekom/i-built-oxytrack-turning-small-daily-habits-into-real-environmental-impact-1nj9
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                        - generic:
+                          - img
+                        - generic:
+                          - img
+                      - generic: 3 reactions
+                  - 'link "Add a comment to post - I Built OxyTrack: Turning Small Daily Habits Into Real Environmental Impact 🌱" [ref=e693] [cursor=pointer]':
+                    - /url: https://dev.to/ajitekom/i-built-oxytrack-turning-small-daily-habits-into-real-environmental-impact-1nj9#comments
+                    - img "Comments"
+                    - generic: Add Comment
+                - generic [ref=e694]:
+                  - generic [ref=e695]: 2 min read
+                  - 'button "Save post I Built OxyTrack: Turning Small Daily Habits Into Real Environmental Impact 🌱 to reading list" [ref=e696] [cursor=pointer]':
+                    - generic:
+                      - img
+        - generic [ref=e697]:
+          - link "I built a closed-loop WhatsApp advisor for 100M+ Indian farmers — fully serverless on AWS":
+            - /url: https://dev.to/prasadt1/i-built-a-closed-loop-whatsapp-advisor-for-100m-indian-farmers-fully-serverless-on-aws-20n9
+          - generic [ref=e698]:
+            - generic [ref=e700]:
+              - link "prasadt1 profile" [ref=e702] [cursor=pointer]:
+                - /url: /prasadt1
+                - img "prasadt1 profile" [ref=e703]
+              - generic [ref=e704]:
+                - button "PRASAD TILLOO profile details" [ref=e707] [cursor=pointer]: PRASAD TILLOO
+                - link "Apr 19" [ref=e708] [cursor=pointer]:
+                  - /url: https://dev.to/prasadt1/i-built-a-closed-loop-whatsapp-advisor-for-100m-indian-farmers-fully-serverless-on-aws-20n9
+                  - time [ref=e709]: Apr 19
+            - generic [ref=e710]:
+              - heading "I built a closed-loop WhatsApp advisor for 100M+ Indian farmers — fully serverless on AWS" [level=2] [ref=e711]:
+                - link "I built a closed-loop WhatsApp advisor for 100M+ Indian farmers — fully serverless on AWS" [ref=e712] [cursor=pointer]:
+                  - /url: https://dev.to/prasadt1/i-built-a-closed-loop-whatsapp-advisor-for-100m-indian-farmers-fully-serverless-on-aws-20n9
+              - generic [ref=e713]:
+                - link "# showdev" [ref=e714] [cursor=pointer]:
+                  - /url: /t/showdev
+                  - generic [ref=e715]: "#"
+                  - text: showdev
+                - link "# architecture" [ref=e716] [cursor=pointer]:
+                  - /url: /t/architecture
+                  - generic [ref=e717]: "#"
+                  - text: architecture
+                - link "# aws" [ref=e718] [cursor=pointer]:
+                  - /url: /t/aws
+                  - generic [ref=e719]: "#"
+                  - text: aws
+                - link "# serverless" [ref=e720] [cursor=pointer]:
+                  - /url: /t/serverless
+                  - generic [ref=e721]: "#"
+                  - text: serverless
+              - generic [ref=e722]:
+                - link "Add a comment to post - I built a closed-loop WhatsApp advisor for 100M+ Indian farmers — fully serverless on AWS" [ref=e724] [cursor=pointer]:
+                  - /url: https://dev.to/prasadt1/i-built-a-closed-loop-whatsapp-advisor-for-100m-indian-farmers-fully-serverless-on-aws-20n9#comments
+                  - img "Comments"
+                  - text: "2"
+                  - generic: comments
+                - generic [ref=e725]:
+                  - generic [ref=e726]: 1 min read
+                  - button "Save post I built a closed-loop WhatsApp advisor for 100M+ Indian farmers — fully serverless on AWS to reading list" [ref=e727] [cursor=pointer]:
+                    - generic:
+                      - img
+        - generic [ref=e728]:
+          - link "How I built Footy Kits Battle with Next.js, Supabase, and Gemini image-to-image (as a 16-year-old)":
+            - /url: https://dev.to/footykitsbattle/how-i-built-footy-kits-battle-with-nextjs-supabase-and-gemini-image-to-image-as-a-16-year-old-12f
+          - generic [ref=e729]:
+            - generic [ref=e731]:
+              - link "footykitsbattle profile" [ref=e733] [cursor=pointer]:
+                - /url: /footykitsbattle
+                - img "footykitsbattle profile" [ref=e734]
+              - generic [ref=e735]:
+                - button "Footykitsbattle Team profile details" [ref=e738] [cursor=pointer]: Footykitsbattle Team
+                - link "Apr 19" [ref=e739] [cursor=pointer]:
+                  - /url: https://dev.to/footykitsbattle/how-i-built-footy-kits-battle-with-nextjs-supabase-and-gemini-image-to-image-as-a-16-year-old-12f
+                  - time [ref=e740]: Apr 19
+            - generic [ref=e741]:
+              - heading "How I built Footy Kits Battle with Next.js, Supabase, and Gemini image-to-image (as a 16-year-old)" [level=2] [ref=e742]:
+                - link "How I built Footy Kits Battle with Next.js, Supabase, and Gemini image-to-image (as a 16-year-old)" [ref=e743] [cursor=pointer]:
+                  - /url: https://dev.to/footykitsbattle/how-i-built-footy-kits-battle-with-nextjs-supabase-and-gemini-image-to-image-as-a-16-year-old-12f
+              - generic [ref=e744]:
+                - link "# showdev" [ref=e745] [cursor=pointer]:
+                  - /url: /t/showdev
+                  - generic [ref=e746]: "#"
+                  - text: showdev
+                - link "# nextjs" [ref=e747] [cursor=pointer]:
+                  - /url: /t/nextjs
+                  - generic [ref=e748]: "#"
+                  - text: nextjs
+                - link "# supabase" [ref=e749] [cursor=pointer]:
+                  - /url: /t/supabase
+                  - generic [ref=e750]: "#"
+                  - text: supabase
+                - link "# webdev" [ref=e751] [cursor=pointer]:
+                  - /url: /t/webdev
+                  - generic [ref=e752]: "#"
+                  - text: webdev
+              - generic [ref=e753]:
+                - link "Add a comment to post - How I built Footy Kits Battle with Next.js, Supabase, and Gemini image-to-image (as a 16-year-old)" [ref=e755] [cursor=pointer]:
+                  - /url: https://dev.to/footykitsbattle/how-i-built-footy-kits-battle-with-nextjs-supabase-and-gemini-image-to-image-as-a-16-year-old-12f#comments
+                  - img "Comments"
+                  - generic: Add Comment
+                - generic [ref=e756]:
+                  - generic [ref=e757]: 4 min read
+                  - button "Save post How I built Footy Kits Battle with Next.js, Supabase, and Gemini image-to-image (as a 16-year-old) to reading list" [ref=e758] [cursor=pointer]:
+                    - generic:
+                      - img
+        - generic [ref=e759]:
+          - link "What was your win this week?!":
+            - /url: https://dev.to/devteam/what-was-your-win-this-week-28fb
+          - generic [ref=e760]:
+            - link "AI talk news and office coffee upgrades" [ref=e761] [cursor=pointer]:
+              - /url: https://dev.to/devteam/what-was-your-win-this-week-28fb
+              - paragraph [ref=e762]: AI talk news and office coffee upgrades
+            - generic [ref=e764]:
+              - generic [ref=e765]:
+                - link "The DEV Team logo" [ref=e766] [cursor=pointer]:
+                  - /url: /devteam
+                  - img "The DEV Team logo" [ref=e767]
+                - link "jess profile" [ref=e768] [cursor=pointer]:
+                  - /url: /jess
+                  - img "jess profile" [ref=e769]
+              - generic [ref=e770]:
+                - generic [ref=e771]:
+                  - button "Jess Lee profile details" [ref=e773] [cursor=pointer]:
+                    - text: Jess Lee
+                    - link "Subscriber":
+                      - /url: /++
+                      - img "Subscriber"
+                  - generic [ref=e774]:
+                    - text: for
+                    - link "The DEV Team" [ref=e775] [cursor=pointer]:
+                      - /url: /devteam
+                - link "Apr 17" [ref=e776] [cursor=pointer]:
+                  - /url: https://dev.to/devteam/what-was-your-win-this-week-28fb
+                  - time [ref=e777]: Apr 17
+            - generic [ref=e778]:
+              - heading "What was your win this week?!" [level=2] [ref=e779]:
+                - link "What was your win this week?!" [ref=e780] [cursor=pointer]:
+                  - /url: https://dev.to/devteam/what-was-your-win-this-week-28fb
+              - generic [ref=e781]:
+                - link "# discuss" [ref=e782] [cursor=pointer]:
+                  - /url: /t/discuss
+                  - generic [ref=e783]: "#"
+                  - text: discuss
+                - link "# weeklyretro" [ref=e784] [cursor=pointer]:
+                  - /url: /t/weeklyretro
+                  - generic [ref=e785]: "#"
+                  - text: weeklyretro
+              - generic [ref=e786]:
+                - generic [ref=e787]:
+                  - link "Add a comment to post - What was your win this week?!" [ref=e788] [cursor=pointer]:
+                    - /url: https://dev.to/devteam/what-was-your-win-this-week-28fb
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                        - generic:
+                          - img
+                        - generic:
+                          - img
+                      - generic: 58 reactions
+                  - link "Add a comment to post - What was your win this week?!" [ref=e789] [cursor=pointer]:
+                    - /url: https://dev.to/devteam/what-was-your-win-this-week-28fb#comments
+                    - img "Comments"
+                    - text: "30"
+                    - generic: comments
+                - generic [ref=e790]:
+                  - generic [ref=e791]: 1 min read
+                  - button "Save post What was your win this week?! to reading list" [ref=e792] [cursor=pointer]:
+                    - generic:
+                      - img
+        - generic [ref=e793]:
+          - link "Why random.randint(300, 850) is a bad fake credit score":
+            - /url: https://dev.to/crd/why-randomrandint300-850-is-a-bad-fake-credit-score-53jk
+          - generic [ref=e794]:
+            - generic [ref=e796]:
+              - link "crd profile" [ref=e798] [cursor=pointer]:
+                - /url: /crd
+                - img "crd profile" [ref=e799]
+              - generic [ref=e800]:
+                - button "Cory profile details" [ref=e803] [cursor=pointer]: Cory
+                - link "Apr 18" [ref=e804] [cursor=pointer]:
+                  - /url: https://dev.to/crd/why-randomrandint300-850-is-a-bad-fake-credit-score-53jk
+                  - time [ref=e805]: Apr 18
+            - generic [ref=e806]:
+              - heading "Why random.randint(300, 850) is a bad fake credit score" [level=2] [ref=e807]:
+                - link "Why random.randint(300, 850) is a bad fake credit score" [ref=e808] [cursor=pointer]:
+                  - /url: https://dev.to/crd/why-randomrandint300-850-is-a-bad-fake-credit-score-53jk
+              - generic [ref=e809]:
+                - link "# python" [ref=e810] [cursor=pointer]:
+                  - /url: /t/python
+                  - generic [ref=e811]: "#"
+                  - text: python
+                - link "# testing" [ref=e812] [cursor=pointer]:
+                  - /url: /t/testing
+                  - generic [ref=e813]: "#"
+                  - text: testing
+                - link "# fintech" [ref=e814] [cursor=pointer]:
+                  - /url: /t/fintech
+                  - generic [ref=e815]: "#"
+                  - text: fintech
+                - link "# faker" [ref=e816] [cursor=pointer]:
+                  - /url: /t/faker
+                  - generic [ref=e817]: "#"
+                  - text: faker
+              - generic [ref=e818]:
+                - link "Add a comment to post - Why random.randint(300, 850) is a bad fake credit score" [ref=e820] [cursor=pointer]:
+                  - /url: https://dev.to/crd/why-randomrandint300-850-is-a-bad-fake-credit-score-53jk#comments
+                  - img "Comments"
+                  - text: "2"
+                  - generic: comments
+                - generic [ref=e821]:
+                  - generic [ref=e822]: 2 min read
+                  - button "Save post Why random.randint(300, 850) is a bad fake credit score to reading list" [ref=e823] [cursor=pointer]:
+                    - generic:
+                      - img
+        - generic [ref=e824]:
+          - link "I Built a Free Screen Resolution Checker — Here's What I Learned":
+            - /url: https://dev.to/alex_mercer_22/i-built-a-free-screen-resolution-checker-heres-what-i-learned-3736
+          - generic [ref=e825]:
+            - generic [ref=e827]:
+              - link "alex_mercer_22 profile" [ref=e829] [cursor=pointer]:
+                - /url: /alex_mercer_22
+                - img "alex_mercer_22 profile" [ref=e830]
+              - generic [ref=e831]:
+                - button "Alex Mercer profile details" [ref=e834] [cursor=pointer]: Alex Mercer
+                - link "Apr 19" [ref=e835] [cursor=pointer]:
+                  - /url: https://dev.to/alex_mercer_22/i-built-a-free-screen-resolution-checker-heres-what-i-learned-3736
+                  - time [ref=e836]: Apr 19
+            - generic [ref=e837]:
+              - heading "I Built a Free Screen Resolution Checker — Here's What I Learned" [level=2] [ref=e838]:
+                - link "I Built a Free Screen Resolution Checker — Here's What I Learned" [ref=e839] [cursor=pointer]:
+                  - /url: https://dev.to/alex_mercer_22/i-built-a-free-screen-resolution-checker-heres-what-i-learned-3736
+              - generic [ref=e840]:
+                - link "# webdev" [ref=e841] [cursor=pointer]:
+                  - /url: /t/webdev
+                  - generic [ref=e842]: "#"
+                  - text: webdev
+                - link "# javascript" [ref=e843] [cursor=pointer]:
+                  - /url: /t/javascript
+                  - generic [ref=e844]: "#"
+                  - text: javascript
+                - link "# beginners" [ref=e845] [cursor=pointer]:
+                  - /url: /t/beginners
+                  - generic [ref=e846]: "#"
+                  - text: beginners
+                - link "# productivity" [ref=e847] [cursor=pointer]:
+                  - /url: /t/productivity
+                  - generic [ref=e848]: "#"
+                  - text: productivity
+              - generic [ref=e849]:
+                - generic [ref=e850]:
+                  - link "Add a comment to post - I Built a Free Screen Resolution Checker — Here's What I Learned" [ref=e851] [cursor=pointer]:
+                    - /url: https://dev.to/alex_mercer_22/i-built-a-free-screen-resolution-checker-heres-what-i-learned-3736
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                      - generic: 1 reaction
+                  - link "Add a comment to post - I Built a Free Screen Resolution Checker — Here's What I Learned" [ref=e852] [cursor=pointer]:
+                    - /url: https://dev.to/alex_mercer_22/i-built-a-free-screen-resolution-checker-heres-what-i-learned-3736#comments
+                    - img "Comments"
+                    - generic: Add Comment
+                - generic [ref=e853]:
+                  - generic [ref=e854]: 2 min read
+                  - button "Save post I Built a Free Screen Resolution Checker — Here's What I Learned to reading list" [ref=e855] [cursor=pointer]:
+                    - generic:
+                      - img
+        - generic [ref=e856]:
+          - link "I thought I had a bug":
+            - /url: https://dev.to/michael_trifonov_0cb74f99/i-thought-i-had-a-bug-2kmc
+          - generic [ref=e857]:
+            - generic [ref=e859]:
+              - link "michael_trifonov_0cb74f99 profile" [ref=e861] [cursor=pointer]:
+                - /url: /michael_trifonov_0cb74f99
+                - img "michael_trifonov_0cb74f99 profile" [ref=e862]
+              - generic [ref=e863]:
+                - button "Michael Trifonov profile details" [ref=e866] [cursor=pointer]: Michael Trifonov
+                - link "Apr 18" [ref=e867] [cursor=pointer]:
+                  - /url: https://dev.to/michael_trifonov_0cb74f99/i-thought-i-had-a-bug-2kmc
+                  - time [ref=e868]: Apr 18
+            - generic [ref=e869]:
+              - heading "I thought I had a bug" [level=2] [ref=e870]:
+                - link "I thought I had a bug" [ref=e871] [cursor=pointer]:
+                  - /url: https://dev.to/michael_trifonov_0cb74f99/i-thought-i-had-a-bug-2kmc
+              - generic [ref=e872]:
+                - link "# discuss" [ref=e873] [cursor=pointer]:
+                  - /url: /t/discuss
+                  - generic [ref=e874]: "#"
+                  - text: discuss
+                - link "# ai" [ref=e875] [cursor=pointer]:
+                  - /url: /t/ai
+                  - generic [ref=e876]: "#"
+                  - text: ai
+                - link "# llm" [ref=e877] [cursor=pointer]:
+                  - /url: /t/llm
+                  - generic [ref=e878]: "#"
+                  - text: llm
+                - link "# agents" [ref=e879] [cursor=pointer]:
+                  - /url: /t/agents
+                  - generic [ref=e880]: "#"
+                  - text: agents
+              - generic [ref=e881]:
+                - generic [ref=e882]:
+                  - link "Add a comment to post - I thought I had a bug" [ref=e883] [cursor=pointer]:
+                    - /url: https://dev.to/michael_trifonov_0cb74f99/i-thought-i-had-a-bug-2kmc
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                        - generic:
+                          - img
+                      - generic: 3 reactions
+                  - link "Add a comment to post - I thought I had a bug" [ref=e884] [cursor=pointer]:
+                    - /url: https://dev.to/michael_trifonov_0cb74f99/i-thought-i-had-a-bug-2kmc#comments
+                    - img "Comments"
+                    - text: "1"
+                    - generic: comment
+                - generic [ref=e885]:
+                  - generic [ref=e886]: 9 min read
+                  - button "Save post I thought I had a bug to reading list" [ref=e887] [cursor=pointer]:
+                    - generic:
+                      - img
+        - generic [ref=e888]:
+          - 'link "Stop Rebooting Linux Just in Case: Practical `needrestart` After APT Upgrades"':
+            - /url: https://dev.to/lyraalishaikh/stop-rebooting-linux-just-in-case-practical-needrestart-after-apt-upgrades-58j6
+          - generic [ref=e889]:
+            - generic [ref=e891]:
+              - link "lyraalishaikh profile" [ref=e893] [cursor=pointer]:
+                - /url: /lyraalishaikh
+                - img "lyraalishaikh profile" [ref=e894]
+              - generic [ref=e895]:
+                - button "Lyra profile details" [ref=e898] [cursor=pointer]: Lyra
+                - link "Apr 19" [ref=e899] [cursor=pointer]:
+                  - /url: https://dev.to/lyraalishaikh/stop-rebooting-linux-just-in-case-practical-needrestart-after-apt-upgrades-58j6
+                  - time [ref=e900]: Apr 19
+            - generic [ref=e901]:
+              - 'heading "Stop Rebooting Linux Just in Case: Practical `needrestart` After APT Upgrades" [level=2] [ref=e902]':
+                - 'link "Stop Rebooting Linux Just in Case: Practical `needrestart` After APT Upgrades" [ref=e903] [cursor=pointer]':
+                  - /url: https://dev.to/lyraalishaikh/stop-rebooting-linux-just-in-case-practical-needrestart-after-apt-upgrades-58j6
+              - generic [ref=e904]:
+                - link "# linux" [ref=e905] [cursor=pointer]:
+                  - /url: /t/linux
+                  - generic [ref=e906]: "#"
+                  - text: linux
+                - link "# automation" [ref=e907] [cursor=pointer]:
+                  - /url: /t/automation
+                  - generic [ref=e908]: "#"
+                  - text: automation
+                - link "# devops" [ref=e909] [cursor=pointer]:
+                  - /url: /t/devops
+                  - generic [ref=e910]: "#"
+                  - text: devops
+                - link "# opensource" [ref=e911] [cursor=pointer]:
+                  - /url: /t/opensource
+                  - generic [ref=e912]: "#"
+                  - text: opensource
+              - generic [ref=e913]:
+                - 'link "Add a comment to post - Stop Rebooting Linux Just in Case: Practical `needrestart` After APT Upgrades" [ref=e915] [cursor=pointer]':
+                  - /url: https://dev.to/lyraalishaikh/stop-rebooting-linux-just-in-case-practical-needrestart-after-apt-upgrades-58j6#comments
+                  - img "Comments"
+                  - generic: Add Comment
+                - generic [ref=e916]:
+                  - generic [ref=e917]: 5 min read
+                  - 'button "Save post Stop Rebooting Linux Just in Case: Practical `needrestart` After APT Upgrades to reading list" [ref=e918] [cursor=pointer]':
+                    - generic:
+                      - img
+        - generic [ref=e919]:
+          - link "Clinic-CoPilot":
+            - /url: https://dev.to/dhoni_yedhuru/clinic-copilot-58g5
+          - generic [ref=e920]:
+            - generic [ref=e922]:
+              - link "dhoni_yedhuru profile" [ref=e924] [cursor=pointer]:
+                - /url: /dhoni_yedhuru
+                - img "dhoni_yedhuru profile" [ref=e925]
+              - generic [ref=e926]:
+                - button "Dhoni Yedhuru profile details" [ref=e929] [cursor=pointer]: Dhoni Yedhuru
+                - link "Apr 19" [ref=e930] [cursor=pointer]:
+                  - /url: https://dev.to/dhoni_yedhuru/clinic-copilot-58g5
+                  - time [ref=e931]: Apr 19
+            - generic [ref=e932]:
+              - heading "Clinic-CoPilot" [level=2] [ref=e933]:
+                - link "Clinic-CoPilot" [ref=e934] [cursor=pointer]:
+                  - /url: https://dev.to/dhoni_yedhuru/clinic-copilot-58g5
+              - generic [ref=e935]:
+                - link "# ai" [ref=e936] [cursor=pointer]:
+                  - /url: /t/ai
+                  - generic [ref=e937]: "#"
+                  - text: ai
+                - link "# webdev" [ref=e938] [cursor=pointer]:
+                  - /url: /t/webdev
+                  - generic [ref=e939]: "#"
+                  - text: webdev
+                - link "# programming" [ref=e940] [cursor=pointer]:
+                  - /url: /t/programming
+                  - generic [ref=e941]: "#"
+                  - text: programming
+                - link "# javascript" [ref=e942] [cursor=pointer]:
+                  - /url: /t/javascript
+                  - generic [ref=e943]: "#"
+                  - text: javascript
+              - generic [ref=e944]:
+                - link "Add a comment to post - Clinic-CoPilot" [ref=e946] [cursor=pointer]:
+                  - /url: https://dev.to/dhoni_yedhuru/clinic-copilot-58g5#comments
+                  - img "Comments"
+                  - generic: Add Comment
+                - generic [ref=e947]:
+                  - generic [ref=e948]: 4 min read
+                  - button "Save post Clinic-CoPilot to reading list" [ref=e949] [cursor=pointer]:
+                    - generic:
+                      - img
+        - generic [ref=e950]:
+          - link "I Asked AI to Show Me My Life in 2050 — It Was Terrifying":
+            - /url: https://dev.to/smkulkarni/i-asked-ai-to-show-me-my-life-in-2050-it-was-terrifying-418o
+          - generic [ref=e951]:
+            - 'link "DEV Weekend Challenge: Earth Day" [ref=e952] [cursor=pointer]':
+              - /url: https://dev.to/smkulkarni/i-asked-ai-to-show-me-my-life-in-2050-it-was-terrifying-418o
+              - paragraph [ref=e953]: "DEV Weekend Challenge: Earth Day"
+            - generic [ref=e955]:
+              - link "smkulkarni profile" [ref=e957] [cursor=pointer]:
+                - /url: /smkulkarni
+                - img "smkulkarni profile" [ref=e958]
+              - generic [ref=e959]:
+                - button "Sushil Kulkarni profile details" [ref=e962] [cursor=pointer]: Sushil Kulkarni
+                - link "Apr 19" [ref=e963] [cursor=pointer]:
+                  - /url: https://dev.to/smkulkarni/i-asked-ai-to-show-me-my-life-in-2050-it-was-terrifying-418o
+                  - time [ref=e964]: Apr 19
+            - generic [ref=e965]:
+              - heading "I Asked AI to Show Me My Life in 2050 — It Was Terrifying" [level=2] [ref=e966]:
+                - link "I Asked AI to Show Me My Life in 2050 — It Was Terrifying" [ref=e967] [cursor=pointer]:
+                  - /url: https://dev.to/smkulkarni/i-asked-ai-to-show-me-my-life-in-2050-it-was-terrifying-418o
+              - generic [ref=e968]:
+                - link "# devchallenge" [ref=e969] [cursor=pointer]:
+                  - /url: /t/devchallenge
+                  - generic [ref=e970]: "#"
+                  - text: devchallenge
+                - link "# weekendchallenge" [ref=e971] [cursor=pointer]:
+                  - /url: /t/weekendchallenge
+                  - generic [ref=e972]: "#"
+                  - text: weekendchallenge
+                - link "# gemini" [ref=e973] [cursor=pointer]:
+                  - /url: /t/gemini
+                  - generic [ref=e974]: "#"
+                  - text: gemini
+                - link "# auth0challenge" [ref=e975] [cursor=pointer]:
+                  - /url: /t/auth0challenge
+                  - generic [ref=e976]: "#"
+                  - text: auth0challenge
+              - generic [ref=e977]:
+                - generic [ref=e978]:
+                  - link "Add a comment to post - I Asked AI to Show Me My Life in 2050 — It Was Terrifying" [ref=e979] [cursor=pointer]:
+                    - /url: https://dev.to/smkulkarni/i-asked-ai-to-show-me-my-life-in-2050-it-was-terrifying-418o
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                        - generic:
+                          - img
+                      - generic: 7 reactions
+                  - link "Add a comment to post - I Asked AI to Show Me My Life in 2050 — It Was Terrifying" [ref=e980] [cursor=pointer]:
+                    - /url: https://dev.to/smkulkarni/i-asked-ai-to-show-me-my-life-in-2050-it-was-terrifying-418o#comments
+                    - img "Comments"
+                    - text: "3"
+                    - generic: comments
+                - generic [ref=e981]:
+                  - generic [ref=e982]: 3 min read
+                  - button "Save post I Asked AI to Show Me My Life in 2050 — It Was Terrifying to reading list" [ref=e983] [cursor=pointer]:
+                    - generic:
+                      - img
+        - generic [ref=e984]:
+          - 'link "Angle Computer del B-52: navegación por estrellas antes del GPS"':
+            - /url: https://dev.to/lu1tr0n/angle-computer-del-b-52-navegacion-por-estrellas-antes-del-gps-3l57
+          - generic [ref=e985]:
+            - generic [ref=e987]:
+              - link "lu1tr0n profile" [ref=e989] [cursor=pointer]:
+                - /url: /lu1tr0n
+                - img "lu1tr0n profile" [ref=e990]
+              - generic [ref=e991]:
+                - button "lu1tr0n profile details" [ref=e994] [cursor=pointer]: lu1tr0n
+                - link "Apr 18" [ref=e995] [cursor=pointer]:
+                  - /url: https://dev.to/lu1tr0n/angle-computer-del-b-52-navegacion-por-estrellas-antes-del-gps-3l57
+                  - time [ref=e996]: Apr 18
+            - generic [ref=e997]:
+              - 'heading "Angle Computer del B-52: navegación por estrellas antes del GPS" [level=2] [ref=e998]':
+                - 'link "Angle Computer del B-52: navegación por estrellas antes del GPS" [ref=e999] [cursor=pointer]':
+                  - /url: https://dev.to/lu1tr0n/angle-computer-del-b-52-navegacion-por-estrellas-antes-del-gps-3l57
+              - generic [ref=e1000]:
+                - link "# discuss" [ref=e1001] [cursor=pointer]:
+                  - /url: /t/discuss
+                  - generic [ref=e1002]: "#"
+                  - text: discuss
+                - link "# technology" [ref=e1003] [cursor=pointer]:
+                  - /url: /t/technology
+                  - generic [ref=e1004]: "#"
+                  - text: technology
+                - link "# science" [ref=e1005] [cursor=pointer]:
+                  - /url: /t/science
+                  - generic [ref=e1006]: "#"
+                  - text: science
+                - link "# programming" [ref=e1007] [cursor=pointer]:
+                  - /url: /t/programming
+                  - generic [ref=e1008]: "#"
+                  - text: programming
+              - generic [ref=e1009]:
+                - 'link "Add a comment to post - Angle Computer del B-52: navegación por estrellas antes del GPS" [ref=e1011] [cursor=pointer]':
+                  - /url: https://dev.to/lu1tr0n/angle-computer-del-b-52-navegacion-por-estrellas-antes-del-gps-3l57#comments
+                  - img "Comments"
+                  - generic: Add Comment
+                - generic [ref=e1012]:
+                  - generic [ref=e1013]: 10 min read
+                  - 'button "Save post Angle Computer del B-52: navegación por estrellas antes del GPS to reading list" [ref=e1014] [cursor=pointer]':
+                    - generic:
+                      - img
+      - generic [ref=e1015]: loading...
+    - complementary [ref=e1017]:
+      - generic [ref=e1018]:
+        - generic [ref=e1019]:
+          - generic [ref=e1020]: 👋 What's happening this week
+          - button "Toggle dropdown menu" [ref=e1021] [cursor=pointer]:
+            - img "Dropdown menu"
+        - generic [ref=e1022]:
+          - heading "Challenges 🤗" [level=3] [ref=e1023]
+          - generic [ref=e1024]:
+            - paragraph [ref=e1025]: Just Launched 🚀
+            - link [ref=e1026] [cursor=pointer]:
+              - /url: https://dev.to/devteam/join-our-dev-weekend-challenge-1000-in-prizes-across-ten-winners-submissions-due-april-20-at-47i1?bb=263088
+              - img [ref=e1027]
+            - paragraph [ref=e1028]:
+              - strong [ref=e1029]:
+                - link "Join our DEV Weekend Challenge — $1,000 in Prizes Across TEN winners!" [ref=e1030] [cursor=pointer]:
+                  - /url: https://dev.to/devteam/join-our-dev-weekend-challenge-1000-in-prizes-across-ten-winners-submissions-due-april-20-at-47i1?bb=263088
+            - paragraph [ref=e1031]:
+              - emphasis [ref=e1032]: Build something inspired by the planet.
+          - generic [ref=e1033]:
+            - paragraph [ref=e1034]: April 16 - 26
+            - link [ref=e1035] [cursor=pointer]:
+              - /url: https://dev.to/devteam/join-the-openclaw-challenge-1200-prize-pool-5682?bb=263088
+              - img [ref=e1036]
+            - paragraph [ref=e1037]:
+              - strong [ref=e1038]:
+                - 'link "Join the OpenClaw Challenge: $1,200 Prize Pool!" [ref=e1039] [cursor=pointer]':
+                  - /url: https://dev.to/devteam/join-the-openclaw-challenge-1200-prize-pool-5682?bb=263088
+            - paragraph [ref=e1040]:
+              - emphasis [ref=e1041]: Share your OpenClaw experience!
+          - heading "Have a great week ❤️" [level=4] [ref=e1042]
+      - generic [ref=e1043]:
+        - generic [ref=e1044]:
+          - heading "#discuss" [level=3] [ref=e1045]:
+            - link "#discuss" [ref=e1046] [cursor=pointer]:
+              - /url: /t/discuss
+          - generic [ref=e1047]: Discussion threads targeting the whole community!
+        - generic [ref=e1048]:
+          - link "🚀 Crack Any Pattern Question in Interviews - The Ultimate Logic Guide New" [ref=e1049] [cursor=pointer]:
+            - /url: https://dev.to/chiragx309/crack-any-pattern-question-in-interviews-the-ultimate-logic-guide-4i8
+            - text: 🚀 Crack Any Pattern Question in Interviews - The Ultimate Logic Guide
+            - generic [ref=e1051]: New
+          - link "Embarrassment is cheap. Token spend isn't. 2 comments" [ref=e1052] [cursor=pointer]:
+            - /url: https://dev.to/jon_at_backboardio/embarrassment-is-cheap-token-spend-isnt-40b3
+            - text: Embarrassment is cheap. Token spend isn't.
+            - generic [ref=e1053]: 2 comments
+          - link "The Opus 4.7 Tokenizer Ate Your Budget (30-Second Fix) New" [ref=e1054] [cursor=pointer]:
+            - /url: https://dev.to/devtorres_/the-opus-47-tokenizer-ate-your-budget-30-second-fix-1l13
+            - text: The Opus 4.7 Tokenizer Ate Your Budget (30-Second Fix)
+            - generic [ref=e1056]: New
+          - link "What was your win this week?! 30 comments" [ref=e1057] [cursor=pointer]:
+            - /url: https://dev.to/devteam/what-was-your-win-this-week-28fb
+            - text: What was your win this week?!
+            - generic [ref=e1058]: 30 comments
+          - 'link "aIR-Jumper: exfiltran datos de redes air-gap vía cámaras IR New" [ref=e1059] [cursor=pointer]':
+            - /url: https://dev.to/lu1tr0n/air-jumper-exfiltran-datos-de-redes-air-gap-via-camaras-ir-2ap0
+            - text: "aIR-Jumper: exfiltran datos de redes air-gap vía cámaras IR"
+            - generic [ref=e1061]: New
+      - generic [ref=e1062]:
+        - heading "trending guides/resources" [level=4] [ref=e1064]
+        - generic [ref=e1066]:
+          - 'link "MiroFish: The Open-Source AI Engine That Builds Digital Worlds to Predict the Future" [ref=e1067] [cursor=pointer]':
+            - /url: /arshtechpro/mirofish-the-open-source-ai-engine-that-builds-digital-worlds-to-predict-the-future-ki8
+          - 'link "The Great Claude Code Leak of 2026: Accident, Incompetence, or the Best PR Stunt in AI History?" [ref=e1068] [cursor=pointer]':
+            - /url: /varshithvhegde/the-great-claude-code-leak-of-2026-accident-incompetence-or-the-best-pr-stunt-in-ai-history-3igm
+          - link "I found Leetcode for System Design, and it's Awesome" [ref=e1069] [cursor=pointer]:
+            - /url: /somadevtoo/i-found-leetcode-for-system-design-and-its-awesome-2h7f
+          - link "Will AI Replace Software Developers?" [ref=e1070] [cursor=pointer]:
+            - /url: /empiree/will-ai-replace-software-developers-1fo0
+          - 'link "Everything You Need to Know About MiroFish: The AI Swarm Engine Predicting Everything" [ref=e1071] [cursor=pointer]':
+            - /url: /therealmrmumba/everything-you-need-to-know-about-mirofish-the-ai-swarm-engine-predicting-everything-5fp3
+          - link "You’re a Real Software Developer Only If…" [ref=e1072] [cursor=pointer]:
+            - /url: /sylwia-lask/youre-a-real-software-developer-only-if-2mo8
+          - 'link "Agentic Platform Engineering: How to Build an Agent Infrastructure That Scales From Your Laptop t..." [ref=e1073] [cursor=pointer]':
+            - /url: /sarony11/agentic-platform-engineering-how-to-build-an-agent-infrastructure-that-scales-from-your-laptop-to-11np
+          - 'link "TurboQuant: What Developers Need to Know About Google''s KV Cache Compression" [ref=e1074] [cursor=pointer]':
+            - /url: /arshtechpro/turboquant-what-developers-need-to-know-about-googles-kv-cache-compression-eeg
+          - link "[AutoBe] Qwen 3.5-27B Just Built Complete Backends from Scratch — 100% Compilation, 25x Cheaper" [ref=e1075] [cursor=pointer]:
+            - /url: /samchon/autobe-qwen-35-27b-just-built-complete-backends-from-scratch-100-compilation-25x-cheaper-lmd
+          - link "Join the 2026 WeCoded Challenge and Celebrate Underrepresented Voices in Tech Through Writing & F..." [ref=e1076] [cursor=pointer]:
+            - /url: /devteam/join-the-2026-wecoded-challenge-and-celebrate-underrepresented-voices-in-tech-through-writing--4828
+          - 'link "The Secret Life of Claude Code: Reading Code You Didn''t Write" [ref=e1077] [cursor=pointer]':
+            - /url: /aaron_rose_0787cc8b4775a0/the-secret-life-of-claude-code-reading-code-you-didnt-write-1ljb
+          - 'link "Gemma 4: A Practical Guide for Developers" [ref=e1078] [cursor=pointer]':
+            - /url: /arshtechpro/gemma-4-a-practical-guide-for-developers-2co5
+          - link "I Made Claude Code Think Before It Codes. Here's the Prompt." [ref=e1079] [cursor=pointer]:
+            - /url: /_vjk/i-made-claude-code-think-before-it-codes-heres-the-prompt-bf
+          - link "Claude's 2x Usage Boost Is Live — Here's How to Maximize It (March 13–28, 2026)" [ref=e1080] [cursor=pointer]:
+            - /url: /sivarampg/claudes-2x-usage-boost-is-live-heres-how-to-maximize-it-march-13-28-2026-31d0
+          - 'link "AutoBE vs. Claude Code: 3rd-gen coding agent developer''s review of the leaked source code" [ref=e1081] [cursor=pointer]':
+            - /url: /samchon/autobe-vs-claude-code-3rd-gen-coding-agent-developers-review-of-the-leaked-source-code-313b
+          - 'link "Google Maps for Codebases: Paste a GitHub URL, Ask Anything" [ref=e1082] [cursor=pointer]':
+            - /url: /copilotkit/google-maps-for-codebases-paste-a-github-url-ask-anything-3hk8
+          - link "How to Create Your Own AI Coding Agent" [ref=e1083] [cursor=pointer]:
+            - /url: /wyattdave/how-to-create-your-own-ai-coding-agent-2h1o
+          - link "What's the Best Model to use with OpenCode" [ref=e1084] [cursor=pointer]:
+            - /url: /mxro/whats-the-best-model-to-use-with-opencode-27i3
+          - 'link "Claude Code Telegram Plugin: Complete Setup Guide 2026" [ref=e1085] [cursor=pointer]':
+            - /url: /czmilo/claude-code-telegram-plugin-complete-setup-guide-2026-3j0p
+          - 'link "Building Agent Teams in OpenCode: Architecture of Multi-Agent Coordination" [ref=e1086] [cursor=pointer]':
+            - /url: /uenyioha/porting-claude-codes-agent-teams-to-opencode-4hol

@@ -20,7 +20,16 @@
       "Bash(git add *)",
       "Bash(git reset *)",
       "Bash(git commit -m ' *)",
-      "mcp__plugin_playwright_playwright__browser_navigate"
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_run_code",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_evaluate",
+      "Bash(netstat -ano)",
+      "Bash(findstr :300)",
+      "Bash(C:\\\\Users\\\\eugen\\\\.claude\\\\plugins\\\\cache\\\\claude-plugins-official\\\\superpowers\\\\5.0.7\\\\scripts\\\\start-server.sh --project-dir d:/proj/gnios.github.io)",
+      "Bash(\"/c/Users/eugen/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/scripts/start-server.sh\" --project-dir \"d:/proj/gnios.github.io\")",
+      "Read(//c/Users/eugen/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/scripts/**)",
+      "Bash(dir \"C:\\\\Users\\\\eugen\\\\.claude\\\\plugins\\\\cache\\\\claude-plugins-official\\\\superpowers\\\\5.0.7\\\\scripts\")"
     ]
   }
 }

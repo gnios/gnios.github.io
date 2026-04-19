@@ -1,0 +1,169 @@
+- generic [active]:
+  - alert [ref=e1]
+  - dialog "Server Error" [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - navigation [ref=e8]:
+          - button [disabled] [ref=e9]:
+            - img [ref=e10]
+          - button [disabled] [ref=e12]:
+            - img [ref=e13]
+          - generic [ref=e15]: 1 of 1 unhandled error
+        - heading "Server Error" [level=1] [ref=e16]
+        - paragraph [ref=e17]:
+          - text: "Error: Multiple children were passed to <Link> with `href` of `/` but only one child is supported"
+          - link "https://nextjs.org/docs/messages/link-multiple-children" [ref=e18] [cursor=pointer]:
+            - /url: https://nextjs.org/docs/messages/link-multiple-children
+        - generic [ref=e19]: This error happened while generating the page. Any console logs will be displayed in the terminal window.
+      - generic [ref=e20]:
+        - heading "Call Stack" [level=5] [ref=e21]
+        - generic [ref=e22]:
+          - heading "LinkComponent" [level=6] [ref=e23]
+          - generic [ref=e25]: node_modules\next\dist\client\link.js (216:22)
+        - generic [ref=e26]:
+          - heading "renderWithHooks" [level=6] [ref=e27]
+          - generic [ref=e29]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (5658:16)
+        - generic [ref=e30]:
+          - heading "renderForwardRef" [level=6] [ref=e31]
+          - generic [ref=e33]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (5853:18)
+        - generic [ref=e34]:
+          - heading "renderElement" [level=6] [ref=e35]
+          - generic [ref=e37]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6016:11)
+        - generic [ref=e38]:
+          - heading "renderNodeDestructiveImpl" [level=6] [ref=e39]
+          - generic [ref=e41]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6115:11)
+        - generic [ref=e42]:
+          - heading "renderNodeDestructive" [level=6] [ref=e43]
+          - generic [ref=e45]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6087:14)
+        - generic [ref=e46]:
+          - heading "renderIndeterminateComponent" [level=6] [ref=e47]
+          - generic [ref=e49]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (5786:7)
+        - generic [ref=e50]:
+          - heading "renderElement" [level=6] [ref=e51]
+          - generic [ref=e53]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (5957:7)
+        - generic [ref=e54]:
+          - heading "renderNodeDestructiveImpl" [level=6] [ref=e55]
+          - generic [ref=e57]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6115:11)
+        - generic [ref=e58]:
+          - heading "renderNodeDestructive" [level=6] [ref=e59]
+          - generic [ref=e61]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6087:14)
+        - generic [ref=e62]:
+          - heading "renderNode" [level=6] [ref=e63]
+          - generic [ref=e65]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6270:12)
+        - generic [ref=e66]:
+          - heading "renderHostElement" [level=6] [ref=e67]
+          - generic [ref=e69]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (5642:3)
+        - generic [ref=e70]:
+          - heading "renderElement" [level=6] [ref=e71]
+          - generic [ref=e73]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (5963:5)
+        - generic [ref=e74]:
+          - heading "renderNodeDestructiveImpl" [level=6] [ref=e75]
+          - generic [ref=e77]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6115:11)
+        - generic [ref=e78]:
+          - heading "renderNodeDestructive" [level=6] [ref=e79]
+          - generic [ref=e81]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6087:14)
+        - generic [ref=e82]:
+          - heading "renderNode" [level=6] [ref=e83]
+          - generic [ref=e85]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6270:12)
+        - generic [ref=e86]:
+          - heading "renderChildrenArray" [level=6] [ref=e87]
+          - generic [ref=e89]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6222:7)
+        - generic [ref=e90]:
+          - heading "renderNodeDestructiveImpl" [level=6] [ref=e91]
+          - generic [ref=e93]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6152:7)
+        - generic [ref=e94]:
+          - heading "renderNodeDestructive" [level=6] [ref=e95]
+          - generic [ref=e97]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6087:14)
+        - generic [ref=e98]:
+          - heading "renderNode" [level=6] [ref=e99]
+          - generic [ref=e101]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6270:12)
+        - generic [ref=e102]:
+          - heading "renderHostElement" [level=6] [ref=e103]
+          - generic [ref=e105]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (5642:3)
+        - generic [ref=e106]:
+          - heading "renderElement" [level=6] [ref=e107]
+          - generic [ref=e109]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (5963:5)
+        - generic [ref=e110]:
+          - heading "renderNodeDestructiveImpl" [level=6] [ref=e111]
+          - generic [ref=e113]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6115:11)
+        - generic [ref=e114]:
+          - heading "renderNodeDestructive" [level=6] [ref=e115]
+          - generic [ref=e117]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6087:14)
+        - generic [ref=e118]:
+          - heading "renderNode" [level=6] [ref=e119]
+          - generic [ref=e121]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6270:12)
+        - generic [ref=e122]:
+          - heading "renderHostElement" [level=6] [ref=e123]
+          - generic [ref=e125]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (5642:3)
+        - generic [ref=e126]:
+          - heading "renderElement" [level=6] [ref=e127]
+          - generic [ref=e129]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (5963:5)
+        - generic [ref=e130]:
+          - heading "renderNodeDestructiveImpl" [level=6] [ref=e131]
+          - generic [ref=e133]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6115:11)
+        - generic [ref=e134]:
+          - heading "renderNodeDestructive" [level=6] [ref=e135]
+          - generic [ref=e137]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6087:14)
+        - generic [ref=e138]:
+          - heading "renderIndeterminateComponent" [level=6] [ref=e139]
+          - generic [ref=e141]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (5786:7)
+        - generic [ref=e142]:
+          - heading "renderElement" [level=6] [ref=e143]
+          - generic [ref=e145]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (5957:7)
+        - generic [ref=e146]:
+          - heading "renderNodeDestructiveImpl" [level=6] [ref=e147]
+          - generic [ref=e149]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6115:11)
+        - generic [ref=e150]:
+          - heading "renderNodeDestructive" [level=6] [ref=e151]
+          - generic [ref=e153]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6087:14)
+        - generic [ref=e154]:
+          - heading "renderNode" [level=6] [ref=e155]
+          - generic [ref=e157]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6270:12)
+        - generic [ref=e158]:
+          - heading "renderChildrenArray" [level=6] [ref=e159]
+          - generic [ref=e161]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6222:7)
+        - generic [ref=e162]:
+          - heading "renderNodeDestructiveImpl" [level=6] [ref=e163]
+          - generic [ref=e165]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6152:7)
+        - generic [ref=e166]:
+          - heading "renderNodeDestructive" [level=6] [ref=e167]
+          - generic [ref=e169]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6087:14)
+        - generic [ref=e170]:
+          - heading "renderElement" [level=6] [ref=e171]
+          - generic [ref=e173]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (5982:9)
+        - generic [ref=e174]:
+          - heading "renderNodeDestructiveImpl" [level=6] [ref=e175]
+          - generic [ref=e177]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6115:11)
+        - generic [ref=e178]:
+          - heading "renderNodeDestructive" [level=6] [ref=e179]
+          - generic [ref=e181]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6087:14)
+        - generic [ref=e182]:
+          - heading "renderIndeterminateComponent" [level=6] [ref=e183]
+          - generic [ref=e185]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (5786:7)
+        - generic [ref=e186]:
+          - heading "renderElement" [level=6] [ref=e187]
+          - generic [ref=e189]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (5957:7)
+        - generic [ref=e190]:
+          - heading "renderNodeDestructiveImpl" [level=6] [ref=e191]
+          - generic [ref=e193]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6115:11)
+        - generic [ref=e194]:
+          - heading "renderNodeDestructive" [level=6] [ref=e195]
+          - generic [ref=e197]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6087:14)
+        - generic [ref=e198]:
+          - heading "renderNode" [level=6] [ref=e199]
+          - generic [ref=e201]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6270:12)
+        - generic [ref=e202]:
+          - heading "renderChildrenArray" [level=6] [ref=e203]
+          - generic [ref=e205]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6222:7)
+        - generic [ref=e206]:
+          - heading "renderNodeDestructiveImpl" [level=6] [ref=e207]
+          - generic [ref=e209]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6152:7)
+        - generic [ref=e210]:
+          - heading "renderNodeDestructive" [level=6] [ref=e211]
+          - generic [ref=e213]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6087:14)
+        - generic [ref=e214]:
+          - heading "renderNode" [level=6] [ref=e215]
+          - generic [ref=e217]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6270:12)
+        - generic [ref=e218]:
+          - heading "renderChildrenArray" [level=6] [ref=e219]
+          - generic [ref=e221]: file:///D:/proj/gnios.github.io/node_modules/react-dom/cjs/react-dom-server.browser.development.js (6222:7)

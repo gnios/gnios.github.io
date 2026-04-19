@@ -1,0 +1,233 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - link "Gnios" [ref=e6] [cursor=pointer]:
+            - /url: /
+          - generic [ref=e7]:
+            - img [ref=e8]
+            - generic [ref=e11]: Buscar artigos...
+        - generic [ref=e12]:
+          - button "Toggle Dark Mode" [ref=e14] [cursor=pointer]:
+            - img [ref=e15]
+          - button "Notificações" [ref=e17] [cursor=pointer]:
+            - img [ref=e18]
+          - generic [ref=e22]: G
+    - navigation [ref=e23]:
+      - list [ref=e24]:
+        - listitem [ref=e25]:
+          - generic [ref=e26]:
+            - img [ref=e27]
+            - text: Home
+        - listitem [ref=e30]:
+          - generic [ref=e31]:
+            - img [ref=e32]
+            - text: Sobre
+        - listitem [ref=e35]:
+          - generic [ref=e36]:
+            - img [ref=e37]
+            - text: Snippets
+        - listitem [ref=e40]:
+          - generic [ref=e41]:
+            - img [ref=e42]
+            - text: Projetos
+        - listitem [ref=e47]:
+          - generic [ref=e48]:
+            - img [ref=e49]
+            - text: Contato
+    - generic [ref=e52]:
+      - main [ref=e53]:
+        - article [ref=e54]:
+          - generic [ref=e55]:
+            - heading "How to get the Spotify Refresh Token" [level=1] [ref=e56]
+            - paragraph [ref=e57]: Getting the Spotify Refresh Token doesn't need to be a hassle any longer.
+            - generic [ref=e58]:
+              - generic [ref=e59]:
+                - img [ref=e61]
+                - img "Gnios" [ref=e62]
+              - generic [ref=e63]:
+                - text: Gnios
+                - generic [ref=e64]:
+                  - text: ·
+                  - time [ref=e65]: 11 de julho de 2022
+                  - text: · 7 min read
+          - generic [ref=e66]:
+            - img "Spotify Logo" [ref=e67]
+            - paragraph [ref=e68]: In this blog, I'll show you 2 approaches to generate the Spotify Refresh Token and then use that to programmatically create an access token when needed.
+            - paragraph [ref=e69]:
+              - text: I needed the Spotify Refresh Token for my blog site in which I could display my
+              - link "Top 10 Tracks" [ref=e70] [cursor=pointer]:
+                - /url: https://musing.vercel.app/stats
+              - text: as well as display the currently playing track in the footer section.
+            - heading "First Approach" [level=1] [ref=e71]
+            - separator [ref=e72]
+            - 'heading "Step 1: Generate your Spotify client_id and client_secret" [level=2] [ref=e73]':
+              - text: "Step 1: Generate your Spotify"
+              - code [ref=e74]: client_id
+              - text: and
+              - code [ref=e75]: client_secret
+            - list [ref=e76]:
+              - listitem [ref=e77]:
+                - paragraph [ref=e78]:
+                  - text: Go to
+                  - link "Spotify developers dashboard" [ref=e79] [cursor=pointer]:
+                    - /url: https://developer.spotify.com/dashboard/
+                  - text: .
+              - listitem [ref=e80]:
+                - paragraph [ref=e81]: Then select or create your app.
+              - listitem [ref=e82]:
+                - paragraph [ref=e83]: Note down your Client ID and Client Secret in a convenient location to use in Step 3.
+            - 'heading "Step 2: Add Redirect URIs to your Spotify app" [level=2] [ref=e84]':
+              - text: "Step 2: Add"
+              - code [ref=e85]: Redirect URIs
+              - text: to your Spotify app
+            - list [ref=e86]:
+              - listitem [ref=e87]:
+                - paragraph [ref=e88]: Open settings for your app.
+              - listitem [ref=e89]:
+                - paragraph [ref=e90]:
+                  - text: Add
+                  - code [ref=e91]: https://getyourspotifyrefreshtoken.herokuapp.com/callback
+                  - text: to your
+                  - code [ref=e92]: Redirect URIs
+                  - text: as shown in the image.
+              - listitem [ref=e93]:
+                - paragraph [ref=e94]: Click on save
+            - img "Spotify Settings" [ref=e96]
+            - 'heading "Step 3: Get your Spotify refresh Token" [level=2] [ref=e97]'
+            - list [ref=e98]:
+              - listitem [ref=e99]:
+                - paragraph [ref=e100]:
+                  - text: Go to
+                  - link "this site" [ref=e101] [cursor=pointer]:
+                    - /url: https://getyourspotifyrefreshtoken.herokuapp.com/
+                  - text: made by
+                  - link "Alec Chen" [ref=e102] [cursor=pointer]:
+                    - /url: https://alecchendev.medium.com/get-your-spotify-refresh-token-with-this-simple-web-app-d942dad05847
+              - listitem [ref=e103]:
+                - paragraph [ref=e104]:
+                  - text: Add your
+                  - code [ref=e105]: Client ID
+                  - text: and
+                  - code [ref=e106]: Client Secret
+                  - text: to the form and select the
+                  - code [ref=e107]: scope
+                  - text: for your project. More information about the scope can be found in the
+                  - link "documentation" [ref=e108] [cursor=pointer]:
+                    - /url: https://developer.spotify.com/documentation/general/guides/authorization/scopes/
+              - listitem [ref=e109]:
+                - paragraph [ref=e110]: Click on Submit to get your refresh token.
+            - heading "Second Approach (Longer)" [level=1] [ref=e111]
+            - separator [ref=e112]
+            - 'heading "Step 1: Generate your Spotify client_id and client_secret" [level=2] [ref=e113]':
+              - text: "Step 1: Generate your Spotify"
+              - code [ref=e114]: client_id
+              - text: and
+              - code [ref=e115]: client_secret
+            - list [ref=e116]:
+              - listitem [ref=e117]:
+                - text: Follow the steps from Approach 1 till step 2 and add
+                - code [ref=e118]: <website>/callback
+                - text: to your
+                - code [ref=e119]: Redirect URIs
+                - text: . Eg.
+                - code [ref=e120]: http://musing.vercel.app/callback
+            - 'heading "Step 2: Create URI for access code" [level=2] [ref=e121]'
+            - list [ref=e122]:
+              - listitem [ref=e123]:
+                - paragraph [ref=e124]:
+                  - text: In the URL below, replace
+                  - code [ref=e125]: $CLIENT_ID
+                  - text: ","
+                  - code [ref=e126]: $SCOPE
+                  - text: ", and"
+                  - code [ref=e127]: $REDIRECT_URI
+                  - text: with the information you noted in Step 1.
+                  - strong [ref=e128]:
+                    - text: Make sure the
+                    - code [ref=e129]: $REDIRECT_URI
+                    - text: is
+                    - link "URL encoded" [ref=e130] [cursor=pointer]:
+                      - /url: https://meyerweb.com/eric/tools/dencoder/
+                    - text: .
+                - code [ref=e133]: https://accounts.spotify.com/authorize?response_type=code&client_id=$CLIENT_ID&scope=$SCOPE&redirect_uri=$REDIRECT_URI
+              - listitem [ref=e134]:
+                - paragraph [ref=e135]: This is how mine looked like.
+                - code [ref=e138]: https://accounts.spotify.com/authorize?response_type=code&client_id=CLIENT_ID&scope=SCOPE&redirect_uri=https%3A%2F%2Fmusing.vercel.app%2Fcallback
+            - 'heading "Step 3: Get access code from the redirect URI" [level=2] [ref=e139]'
+            - list [ref=e140]:
+              - listitem [ref=e141]:
+                - paragraph [ref=e142]:
+                  - text: You will be redirected to your redirect URI which in my case was set to
+                  - emphasis [ref=e143]: https://musing.vercel.app/callback
+                  - text: .
+              - listitem [ref=e144]:
+                - paragraph [ref=e145]:
+                  - text: In the address bar you will find a huge URL string similar to the one below. In place of
+                  - code [ref=e146]: $ACCESSCODE
+                  - text: there will be a long string of characters. Note down that string for the next step.
+                - code [ref=e149]: https://musing.vercel.app/callback?code=$ACCESSCODE
+            - 'heading "Step 4: Get the refresh token" [level=2] [ref=e150]'
+            - list [ref=e151]:
+              - listitem [ref=e152]:
+                - paragraph [ref=e153]:
+                  - text: "Type the following CURL command in your terminal and replaces all the variables with the information you noted in Step 1 and Step 3 :"
+                  - code [ref=e154]: $CILENT_ID
+                  - text: ","
+                  - code [ref=e155]: $CLIENT_SECRET
+                  - text: ","
+                  - code [ref=e156]: $CODE
+                  - text: ", and"
+                  - code [ref=e157]: $REDIRECT_URI
+                  - text: .
+                - code [ref=e160]: curl -d client_id=$CLIENT_ID -d client_secret=$CLIENT_SECRET -d grant_type=authorization_code -d code=$CODE -d redirect_uri=$REDIRECT_URI https://accounts.spotify.com/api/token
+              - listitem [ref=e161]:
+                - paragraph [ref=e162]:
+                  - text: The resulting JSON string will look something like this. Note down the
+                  - code [ref=e163]: refresh_token
+                  - text: . This token will last for a very long time and can be used to generate a fresh
+                  - code [ref=e164]: access_token
+                  - text: whenever it is needed.
+                - code [ref=e167]: "{ \"access_token\": \"ACCESS_TOKEN\", \"token_type\": \"Bearer\", \"expires_in\": 3600, \"refresh_token\": \"REFRESH_TOKEN\", \"scope\": \"playlist-modify-private\" }"
+          - generic [ref=e168]:
+            - link "spotify" [ref=e169] [cursor=pointer]:
+              - /url: /tags/spotify/
+            - link "hacks" [ref=e170] [cursor=pointer]:
+              - /url: /tags/hacks/
+          - generic [ref=e171]:
+            - generic [ref=e172]: "Compartilhar:"
+            - button "twitter" [ref=e173] [cursor=pointer]:
+              - generic "twitter" [ref=e174]:
+                - img [ref=e176]
+            - button "linkedin" [ref=e183] [cursor=pointer]:
+              - generic "linkedin" [ref=e184]:
+                - img [ref=e186]
+            - button "whatsapp" [ref=e193] [cursor=pointer]:
+              - generic "whatsapp" [ref=e194]:
+                - img [ref=e196]
+          - generic [ref=e203]:
+            - generic [ref=e204]:
+              - img [ref=e206]
+              - img "Gnios" [ref=e207]
+            - generic [ref=e208]:
+              - paragraph [ref=e209]: Gnios
+              - paragraph [ref=e210]: Desenvolvedor Full Stack apaixonado por tecnologia. Blog pessoal com artigos sobre desenvolvimento web, projetos e experiências na área de tecnologia.
+          - generic [ref=e212]:
+            - paragraph [ref=e213]: ← Anterior
+            - link "Apple doesn't care about privacy, and it's showing." [ref=e214] [cursor=pointer]:
+              - /url: /blog/Apple-Privacy/
+          - link "← Voltar para o blog" [ref=e216] [cursor=pointer]:
+            - /url: /blog/
+          - button "Load Comments" [ref=e219] [cursor=pointer]
+      - contentinfo [ref=e220]:
+        - generic [ref=e222]:
+          - link "Gnios © 2026" [ref=e224] [cursor=pointer]:
+            - /url: https://gnios.github.io
+          - text: •
+          - link "Have a good domingo!" [ref=e226] [cursor=pointer]:
+            - /url: https://qod.shakiltech.com/
+          - text: •
+          - link "Contact" [ref=e228] [cursor=pointer]:
+            - /url: /contact/
+  - alert [ref=e229]

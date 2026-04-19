@@ -1,0 +1,391 @@
+- generic [ref=e4]:
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - tooltip "Sidebar menu" [ref=e9]:
+        - button "Sidebar menu" [ref=e11] [cursor=pointer]:
+          - generic [ref=e12]: Sidebar menu
+          - img [ref=e13]
+      - link "Homepage" [ref=e15] [cursor=pointer]:
+        - /url: https://medium.com/?source=post_page---top_nav_layout_nav-----------------------------------------
+        - img "Medium Logo" [ref=e16]
+      - generic [ref=e19]:
+        - listbox
+        - img [ref=e21]
+        - combobox "search" [ref=e23]
+    - button "Get the Medium app" [ref=e25] [cursor=pointer]:
+      - img [ref=e26]
+      - generic [ref=e29]: Get app
+    - link "Write" [ref=e31] [cursor=pointer]:
+      - /url: https://medium.com/new-story?source=post_page---top_nav_layout_nav-----------------------------------------
+      - generic [ref=e32]:
+        - img [ref=e33]
+        - text: Write
+    - tooltip "Notifications 3" [ref=e38]:
+      - link "Notifications 3" [ref=e40] [cursor=pointer]:
+        - /url: https://medium.com/me/notifications?source=post_page---top_nav_layout_nav-----------------------------------------
+        - generic [ref=e41]:
+          - img [ref=e42]
+          - generic [ref=e45]: Notifications
+          - generic [ref=e46]: "3"
+    - tooltip "user options menu" [ref=e49]:
+      - button "user options menu" [ref=e51] [cursor=pointer]:
+        - img "eugenio tavares" [ref=e54]
+  - generic [ref=e56]:
+    - generic [ref=e60]:
+      - generic [ref=e61]:
+        - tooltip "Home" [ref=e64]:
+          - link "Home" [ref=e66] [cursor=pointer]:
+            - /url: https://medium.com/?source=post_page---sidebar_menu-----------------------------------------
+            - img [ref=e67]
+            - generic [ref=e69]: Home
+        - tooltip "Library" [ref=e71]:
+          - link "Library" [ref=e73] [cursor=pointer]:
+            - /url: https://medium.com/me/lists?source=post_page---sidebar_menu-----------------------------------------
+            - img [ref=e74]
+            - generic [ref=e77]: Library
+        - tooltip "Profile" [ref=e79]:
+          - link "Profile" [ref=e81] [cursor=pointer]:
+            - /url: https://medium.com/@eugenio00?source=post_page---sidebar_menu-----------------------------------------
+            - img [ref=e82]
+            - generic [ref=e85]: Profile
+        - tooltip "Stories" [ref=e87]:
+          - link "Stories" [ref=e89] [cursor=pointer]:
+            - /url: https://medium.com/me/stories?source=post_page---sidebar_menu-----------------------------------------
+            - img [ref=e90]
+            - generic [ref=e93]: Stories
+        - tooltip "Stats" [ref=e95]:
+          - link "Stats" [ref=e97] [cursor=pointer]:
+            - /url: https://medium.com/me/stats?source=post_page---sidebar_menu-----------------------------------------
+            - img [ref=e98]
+            - generic [ref=e100]: Stats
+      - generic [ref=e102]:
+        - tooltip "Following" [ref=e104]:
+          - link "Following" [ref=e106] [cursor=pointer]:
+            - /url: https://medium.com/me/following-feed/writers?source=post_page---sidebar_menu-----------------------------------------
+            - img [ref=e107]
+            - generic [ref=e109]: Following
+        - tooltip "Ana Carolyne Ana Carolyne" [ref=e111]:
+          - link "Ana Carolyne Ana Carolyne" [ref=e113] [cursor=pointer]:
+            - /url: https://medium.com/me/following-feed/writers/6aba6eb7f692?source=post_page---sidebar_menu_following------------------------------following_badge-----------
+            - img "Ana Carolyne" [ref=e116]
+            - generic [ref=e118]: Ana Carolyne
+        - tooltip "The Medium Blog The Medium Blog" [ref=e121]:
+          - link "The Medium Blog The Medium Blog" [ref=e123] [cursor=pointer]:
+            - /url: https://medium.com/me/following-feed/publications/15f753907972?source=post_page---sidebar_menu_following------------------------------following_badge-----------
+            - img "The Medium Blog" [ref=e126]
+            - generic [ref=e128]: The Medium Blog
+        - tooltip "Four Four" [ref=e131]:
+          - link "Four Four" [ref=e133] [cursor=pointer]:
+            - /url: https://medium.com/me/following-feed/writers/50247edbd94d?source=post_page---sidebar_menu_following-----------------------------------------
+            - img "Four" [ref=e136]
+            - generic [ref=e138]: Four
+        - tooltip "Matheus Luis Matheus Luis" [ref=e140]:
+          - link "Matheus Luis Matheus Luis" [ref=e142] [cursor=pointer]:
+            - /url: https://medium.com/me/following-feed/writers/fe219377f374?source=post_page---sidebar_menu_following-----------------------------------------
+            - img "Matheus Luis" [ref=e145]
+            - generic [ref=e147]: Matheus Luis
+        - tooltip "Martin Hochel Martin Hochel" [ref=e149]:
+          - link "Martin Hochel Martin Hochel" [ref=e151] [cursor=pointer]:
+            - /url: https://medium.com/me/following-feed/writers/b9e31d4262c1?source=post_page---sidebar_menu_following-----------------------------------------
+            - img "Martin Hochel" [ref=e154]
+            - generic [ref=e156]: Martin Hochel
+        - generic [ref=e157]:
+          - img [ref=e159]
+          - generic [ref=e161]:
+            - paragraph [ref=e162]: Find writers and publications to follow.
+            - link "See suggestions" [ref=e164] [cursor=pointer]:
+              - /url: https://medium.com/me/following/suggestions?source=post_page---sidebar_menu_following-----------------------------------------
+    - generic [ref=e166]:
+      - generic:
+        - dialog
+      - article [ref=e168]:
+        - generic [ref=e172]:
+          - tooltip "Member-only story" [ref=e179]:
+            - generic [ref=e181] [cursor=pointer]:
+              - img [ref=e182]
+              - paragraph [ref=e184]: Member-only story
+          - generic [ref=e185]:
+            - generic [ref=e187]:
+              - heading "kicker paragraph" [level=2] [ref=e188]: Design in 2026
+              - heading "Vibe Coding is OVER." [level=1] [ref=e190]
+              - generic [ref=e191]:
+                - heading "Here’s What Comes Next." [level=2] [ref=e192]
+                - generic [ref=e195]:
+                  - generic [ref=e196]:
+                    - generic [ref=e197]:
+                      - tooltip "Michal Malewicz" [ref=e200]:
+                        - link "Michal Malewicz" [ref=e202] [cursor=pointer]:
+                          - /url: /?source=post_page---byline--5a84da799e0d---------------------------------------
+                          - img "Michal Malewicz" [ref=e205]
+                      - generic [ref=e209]:
+                        - tooltip "Michal Malewicz" [ref=e212]:
+                          - link "Michal Malewicz" [ref=e215] [cursor=pointer]:
+                            - /url: /?source=post_page---byline--5a84da799e0d---------------------------------------
+                        - img [ref=e219]
+                        - button "Follow" [ref=e223] [cursor=pointer]:
+                          - generic [ref=e225]: Follow
+                    - generic [ref=e228]:
+                      - generic [ref=e229]: 12 min read
+                      - generic [ref=e231]: ·
+                      - generic [ref=e232]: Mar 24, 2026
+                  - generic [ref=e233]:
+                    - generic [ref=e235]:
+                      - generic [ref=e237]:
+                        - tooltip "clap" [ref=e241]:
+                          - button "clap" [ref=e243] [cursor=pointer]:
+                            - img "clap"
+                        - tooltip "6.3K" [ref=e246]:
+                          - paragraph [ref=e248]:
+                            - button "6.3K" [ref=e249] [cursor=pointer]: 6.3K
+                      - tooltip "responses" [ref=e252]:
+                        - button "responses" [ref=e254] [cursor=pointer]:
+                          - img [ref=e255]
+                          - paragraph [ref=e257]: "245"
+                    - generic [ref=e258]:
+                      - tooltip "Add to list bookmark button" [ref=e261]:
+                        - button "Add to list bookmark button" [ref=e264] [cursor=pointer]:
+                          - img [ref=e265]
+                      - link "Listen" [ref=e273] [cursor=pointer]:
+                        - /url: https://medium.com/plans?dimension=post_audio_button&postId=5a84da799e0d&source=upgrade_membership---post_audio_button-----------------------------------------
+                        - tooltip "Listen" [ref=e275]:
+                          - button "Listen" [ref=e277]:
+                            - img [ref=e278]
+                      - tooltip "Share Post" [ref=e282]:
+                        - button "Share Post" [ref=e284] [cursor=pointer]:
+                          - img [ref=e285]
+                      - tooltip "More options" [ref=e290]:
+                        - button "More options" [ref=e292] [cursor=pointer]:
+                          - img [ref=e293]
+            - figure "Everything blends together." [ref=e298]:
+              - button "Press enter or click to view image in full size Vibe Coding is Over illustration of three ai generated landing pages with the words IT’S OVER written at the top in large text" [ref=e299]:
+                - generic [ref=e300]: Press enter or click to view image in full size
+                - img "Vibe Coding is Over illustration of three ai generated landing pages with the words IT’S OVER written at the top in large text" [ref=e303]
+              - generic [ref=e304]: Everything blends together.
+            - generic [ref=e306]:
+              - paragraph [ref=e307]: "Take a look at these three landing pages. What do they have in common? And most importantly: will you remember any of them 30 minutes from now? All were made extremely fast."
+              - paragraph [ref=e308]: This isn’t variety. This isn’t a brand voice. It’s converging websites into a commodity. Everyone’s work is becoming an equivalent of the famous Ikea LACK coffee table. With sawdust filling inside a plastic wrap.
+              - figure "An AI generated table would probably be called PROMPTA" [ref=e309]:
+                - button "Press enter or click to view image in full size Ikea table assembly instructions" [ref=e310]:
+                  - generic [ref=e311]: Press enter or click to view image in full size
+                  - img "Ikea table assembly instructions" [ref=e314]
+                - generic [ref=e315]: An AI generated table would probably be called PROMPTA
+              - paragraph [ref=e316]:
+                - text: It’s functional, but soulless. It blends into the background, obstructing the message in the process. Nobody knows what you sell. Nobody cares. Another blob in the header with
+                - emphasis [ref=e317]: seamless streamlined effortless automation
+                - text: .
+              - paragraph [ref=e318]: We’re at a point where we out-vibed sanity. I don’t even mean slop anymore. It’s more like SPAM. When everybody can build without effort, the value of building also decreases.
+              - paragraph [ref=e319]: The mythical “end consumers” are already overwhelmed. There’s exactly 192 of anything. And by the time you read this article it’s gonna be 193.
+              - blockquote [ref=e320]:
+                - paragraph [ref=e321]: Chances ANYBODY needs your brilliant idea are extremely slim. People just…
+      - contentinfo [ref=e322]:
+        - generic [ref=e326]:
+          - generic [ref=e327]:
+            - generic [ref=e330]:
+              - tooltip "clap" [ref=e334]:
+                - button "clap" [ref=e336] [cursor=pointer]:
+                  - img "clap"
+              - tooltip "6.3K" [ref=e339]:
+                - paragraph [ref=e341]:
+                  - button "6.3K" [ref=e342] [cursor=pointer]
+            - tooltip "responses" [ref=e345]:
+              - button "responses" [ref=e347] [cursor=pointer]:
+                - img [ref=e348]
+                - paragraph [ref=e350]: "245"
+          - generic [ref=e351]:
+            - tooltip "Add to list bookmark button" [ref=e354]:
+              - button "Add to list bookmark button" [ref=e357] [cursor=pointer]:
+                - img [ref=e358]
+            - tooltip "Share Post" [ref=e363]:
+              - button "Share Post" [ref=e365] [cursor=pointer]:
+                - img [ref=e366]
+            - tooltip "More options" [ref=e371]:
+              - button "More options" [ref=e373] [cursor=pointer]:
+                - img [ref=e374]
+      - generic [ref=e379]:
+        - link "Michal Malewicz" [ref=e382] [cursor=pointer]:
+          - /url: /?source=post_page---post_author_info--5a84da799e0d---------------------------------------
+          - img "Michal Malewicz" [ref=e384]
+        - generic [ref=e387]:
+          - link "Written by Michal Malewicz" [ref=e388] [cursor=pointer]:
+            - /url: /?source=post_page---post_author_info--5a84da799e0d---------------------------------------
+            - heading "Written by Michal Malewicz" [level=2] [ref=e389]:
+              - generic [ref=e390]: Written by Michal Malewicz
+            - tooltip [ref=e393]:
+              - img [ref=e397]
+          - generic [ref=e400]:
+            - link "125K followers" [ref=e403] [cursor=pointer]:
+              - /url: /followers?source=post_page---post_author_info--5a84da799e0d---------------------------------------
+            - generic [ref=e404]:
+              - generic [ref=e405]: ·
+              - link "72 following" [ref=e406] [cursor=pointer]:
+                - /url: /following?source=post_page---post_author_info--5a84da799e0d---------------------------------------
+          - paragraph [ref=e408]:
+            - text: I share my secrets
+            - link "https://squareblackblueprint.com" [ref=e409] [cursor=pointer]:
+              - /url: https://squareblackblueprint.com
+            - text: → run
+            - link "https://squareblack.com" [ref=e410] [cursor=pointer]:
+              - /url: https://squareblack.com
+            - text: → CEO at
+            - link "https://deliberatelydefiant.com" [ref=e411] [cursor=pointer]:
+              - /url: https://deliberatelydefiant.com
+            - text: → Longevity
+            - link "https://longevitydeck.com" [ref=e412] [cursor=pointer]:
+              - /url: https://longevitydeck.com
+        - button "Follow" [ref=e416] [cursor=pointer]:
+          - generic [ref=e418]: Follow
+      - generic [ref=e422]:
+        - generic [ref=e423]:
+          - heading "Responses (245)" [level=2] [ref=e424]
+          - tooltip "Shield with a checkmark" [ref=e427]:
+            - link "Shield with a checkmark" [ref=e429] [cursor=pointer]:
+              - /url: https://policy.medium.com/medium-rules-30e5502c4eb4?source=post_page---post_responses--5a84da799e0d---------------------------------------
+              - img "Shield with a checkmark" [ref=e430]
+        - generic [ref=e436]:
+          - generic [ref=e437]:
+            - img "eugenio tavares" [ref=e440]
+            - generic [ref=e444]: eugenio tavares
+          - generic [ref=e446]:
+            - textbox [ref=e448]:
+              - paragraph [ref=e450]:
+                - generic:
+                  - generic:
+                    - generic: What are your thoughts?
+            - generic:
+              - generic [ref=e451]:
+                - tooltip "Bold (⌘B)" [ref=e453]:
+                  - button "Bold (⌘B)" [ref=e455]:
+                    - img [ref=e456]
+                - tooltip "Italic (⌘I)" [ref=e459]:
+                  - button "Italic (⌘I)" [ref=e461]:
+                    - img [ref=e462]
+              - generic:
+                - button "Cancel" [ref=e464]
+                - button "Respond" [disabled] [ref=e465]
+        - generic [ref=e468]:
+          - generic [ref=e469]:
+            - generic [ref=e470]:
+              - tooltip "Octavio Ortega" [ref=e472]:
+                - link "Octavio Ortega" [ref=e474] [cursor=pointer]:
+                  - /url: https://tavo048.medium.com/?source=post_page---post_responses--5a84da799e0d----0-----------------------------------
+                  - generic [ref=e475]:
+                    - img "Octavio Ortega" [ref=e477]
+                    - img [ref=e479]
+              - generic [ref=e482]:
+                - tooltip "Octavio Ortega" [ref=e485]:
+                  - link "Octavio Ortega" [ref=e487] [cursor=pointer]:
+                    - /url: https://tavo048.medium.com/?source=post_page---post_responses--5a84da799e0d----0-----------------------------------
+                    - paragraph [ref=e489]: Octavio Ortega
+                - link "Mar 25" [ref=e490] [cursor=pointer]:
+                  - /url: https://tavo048.medium.com/always-do-that-49122935cc35?source=post_page---post_responses--5a84da799e0d----0-----------------------------------
+                  - paragraph [ref=e491]: Mar 25
+            - button [ref=e493] [cursor=pointer]:
+              - img [ref=e494]
+          - button "You type what you want into a box, add “and make no mistakes” at the end and press enter." [ref=e496] [cursor=pointer]:
+            - paragraph [ref=e497]:
+              - mark [ref=e498]: You type what you want into a box, add “and make no mistakes” at the end and press enter.
+          - generic [ref=e503]: 😂always do that
+          - generic [ref=e505]:
+            - generic [ref=e506]:
+              - generic [ref=e508]:
+                - img "clap"
+              - paragraph [ref=e510]: "--"
+            - button "responses 3 replies" [ref=e511] [cursor=pointer]:
+              - img "responses" [ref=e512]
+              - paragraph [ref=e514]: 3 replies
+            - paragraph [ref=e515]:
+              - button "Reply" [ref=e516] [cursor=pointer]
+        - generic [ref=e519]:
+          - generic [ref=e520]:
+            - generic [ref=e521]:
+              - tooltip "Kris Zwart" [ref=e523]:
+                - link "Kris Zwart" [ref=e525] [cursor=pointer]:
+                  - /url: https://medium.com/@kristianzwart?source=post_page---post_responses--5a84da799e0d----1-----------------------------------
+                  - generic [ref=e526]:
+                    - img "Kris Zwart" [ref=e528]
+                    - img [ref=e530]
+              - generic [ref=e533]:
+                - tooltip "Kris Zwart" [ref=e536]:
+                  - link "Kris Zwart" [ref=e538] [cursor=pointer]:
+                    - /url: https://medium.com/@kristianzwart?source=post_page---post_responses--5a84da799e0d----1-----------------------------------
+                    - paragraph [ref=e540]: Kris Zwart
+                - link "Mar 24 (edited)" [ref=e541] [cursor=pointer]:
+                  - /url: https://medium.com/@kristianzwart/well-said-as-usual-michel-you-have-the-voice-of-authority-sanity-and-skill-in-this-ai-era-of-10b1310a15a0?source=post_page---post_responses--5a84da799e0d----1-----------------------------------
+                  - paragraph [ref=e542]: Mar 24 (edited)
+            - button [ref=e544] [cursor=pointer]:
+              - img [ref=e545]
+          - generic [ref=e551]:
+            - text: Well said as usual Michel, you have the voice of authority , sanity and skill in this AI era of slop 2026.
+            - text: Comment "PROMPT" for my human to just be human again. ;)
+          - generic [ref=e553]:
+            - generic [ref=e554]:
+              - generic [ref=e556]:
+                - img "clap"
+              - paragraph [ref=e558]: "--"
+            - button "responses 3 replies" [ref=e559] [cursor=pointer]:
+              - img "responses" [ref=e560]
+              - paragraph [ref=e562]: 3 replies
+            - paragraph [ref=e563]:
+              - button "Reply" [ref=e564] [cursor=pointer]
+        - generic [ref=e567]:
+          - generic [ref=e568]:
+            - generic [ref=e569]:
+              - tooltip "Radhika Malhotra" [ref=e571]:
+                - link "Radhika Malhotra" [ref=e573] [cursor=pointer]:
+                  - /url: https://medium.com/@radhikauxdesign?source=post_page---post_responses--5a84da799e0d----2-----------------------------------
+                  - generic [ref=e574]:
+                    - img "Radhika Malhotra" [ref=e576]
+                    - img [ref=e578]
+              - generic [ref=e581]:
+                - tooltip "Radhika Malhotra" [ref=e584]:
+                  - link "Radhika Malhotra" [ref=e586] [cursor=pointer]:
+                    - /url: https://medium.com/@radhikauxdesign?source=post_page---post_responses--5a84da799e0d----2-----------------------------------
+                    - paragraph [ref=e588]: Radhika Malhotra
+                - link "Mar 25" [ref=e589] [cursor=pointer]:
+                  - /url: https://medium.com/@radhikauxdesign/love-your-articles-they-are-very-inspiring-0c5caa32c0cc?source=post_page---post_responses--5a84da799e0d----2-----------------------------------
+                  - paragraph [ref=e590]: Mar 25
+            - button [ref=e592] [cursor=pointer]:
+              - img [ref=e593]
+          - generic [ref=e599]: Love your articles. They are very inspiring!
+          - generic [ref=e601]:
+            - generic [ref=e602]:
+              - generic [ref=e604]:
+                - img "clap"
+              - paragraph [ref=e606]: "--"
+            - button "responses 1 reply" [ref=e607] [cursor=pointer]:
+              - img "responses" [ref=e608]
+              - paragraph [ref=e610]: 1 reply
+            - paragraph [ref=e611]:
+              - button "Reply" [ref=e612] [cursor=pointer]
+        - button "See all responses" [ref=e614]
+      - generic [ref=e620]:
+        - link "Help" [ref=e622] [cursor=pointer]:
+          - /url: https://help.medium.com/hc/en-us?source=post_page-----5a84da799e0d---------------------------------------
+          - paragraph [ref=e623]: Help
+        - link "Status" [ref=e625] [cursor=pointer]:
+          - /url: https://status.medium.com/?source=post_page-----5a84da799e0d---------------------------------------
+          - paragraph [ref=e626]: Status
+        - link "About" [ref=e628] [cursor=pointer]:
+          - /url: https://medium.com/about?autoplay=1&source=post_page-----5a84da799e0d---------------------------------------
+          - paragraph [ref=e629]: About
+        - link "Careers" [ref=e631] [cursor=pointer]:
+          - /url: https://medium.com/jobs-at-medium/work-at-medium-959d1a85284e?source=post_page-----5a84da799e0d---------------------------------------
+          - paragraph [ref=e632]: Careers
+        - link "Press" [ref=e634] [cursor=pointer]:
+          - /url: mailto:pressinquiries@medium.com
+          - paragraph [ref=e635]: Press
+        - link "Blog" [ref=e637] [cursor=pointer]:
+          - /url: https://blog.medium.com/?source=post_page-----5a84da799e0d---------------------------------------
+          - paragraph [ref=e638]: Blog
+        - link "Privacy" [ref=e640] [cursor=pointer]:
+          - /url: https://policy.medium.com/medium-privacy-policy-f03bf92035c9?source=post_page-----5a84da799e0d---------------------------------------
+          - paragraph [ref=e641]: Privacy
+        - link "Rules" [ref=e643] [cursor=pointer]:
+          - /url: https://policy.medium.com/medium-rules-30e5502c4eb4?source=post_page-----5a84da799e0d---------------------------------------
+          - paragraph [ref=e644]: Rules
+        - link "Terms" [ref=e646] [cursor=pointer]:
+          - /url: https://policy.medium.com/medium-terms-of-service-9db0094a1e0f?source=post_page-----5a84da799e0d---------------------------------------
+          - paragraph [ref=e647]: Terms
+        - link "Text to speech" [ref=e649] [cursor=pointer]:
+          - /url: https://speechify.com/medium?source=post_page-----5a84da799e0d---------------------------------------
+          - paragraph [ref=e650]: Text to speech

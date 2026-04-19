@@ -1,0 +1,112 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - link "Gnios" [ref=e6] [cursor=pointer]:
+            - /url: /
+          - generic [ref=e7]:
+            - img [ref=e8]
+            - generic [ref=e11]: Buscar artigos...
+        - generic [ref=e12]:
+          - button "Toggle Dark Mode" [ref=e14] [cursor=pointer]:
+            - img [ref=e15]
+          - button "Notificações" [ref=e17] [cursor=pointer]:
+            - img [ref=e18]
+    - navigation [ref=e22]:
+      - list [ref=e23]:
+        - listitem [ref=e24]:
+          - generic [ref=e25]:
+            - img [ref=e26]
+            - text: Home
+        - listitem [ref=e29]:
+          - generic [ref=e30]:
+            - img [ref=e31]
+            - text: Sobre
+        - listitem [ref=e34]:
+          - generic [ref=e35]:
+            - img [ref=e36]
+            - text: Snippets
+        - listitem [ref=e39]:
+          - generic [ref=e40]:
+            - img [ref=e41]
+            - text: Projetos
+        - listitem [ref=e46]:
+          - generic [ref=e47]:
+            - img [ref=e48]
+            - text: Contato
+    - generic [ref=e51]:
+      - main [ref=e52]:
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - heading "Todos os Posts" [level=1] [ref=e55]
+            - generic [ref=e56]:
+              - textbox "Buscar artigos" [ref=e57]:
+                - /placeholder: Buscar artigos...
+              - img [ref=e58]
+          - list [ref=e61]:
+            - listitem [ref=e62]:
+              - article [ref=e63]:
+                - generic [ref=e65]:
+                  - time [ref=e67]: 11 de julho de 2022
+                  - heading "How to get the Spotify Refresh Token" [level=2] [ref=e68]:
+                    - link "How to get the Spotify Refresh Token" [ref=e69] [cursor=pointer]:
+                      - /url: /blog/spotify-refresh-token/
+                  - paragraph [ref=e70]: Getting the Spotify Refresh Token doesn't need to be a hassle any longer.
+                  - generic [ref=e71]:
+                    - link "spotify" [ref=e72] [cursor=pointer]:
+                      - /url: /tags/spotify/
+                    - link "hacks" [ref=e73] [cursor=pointer]:
+                      - /url: /tags/hacks/
+            - listitem [ref=e74]:
+              - article [ref=e75]:
+                - generic [ref=e77]:
+                  - time [ref=e79]: 5 de julho de 2022
+                  - heading "Apple doesn't care about privacy, and it's showing." [level=2] [ref=e80]:
+                    - link "Apple doesn't care about privacy, and it's showing." [ref=e81] [cursor=pointer]:
+                      - /url: /blog/Apple-Privacy/
+                  - paragraph [ref=e82]: Apple announced that it would begin checking content uploaded to iCloud Photos, against a list of known CSAM material. This is fine on it's own, however the system could easily be abused.
+                  - generic [ref=e83]:
+                    - link "apple" [ref=e84] [cursor=pointer]:
+                      - /url: /tags/apple/
+                    - link "tech" [ref=e85] [cursor=pointer]:
+                      - /url: /tags/tech/
+                    - link "privacy" [ref=e86] [cursor=pointer]:
+                      - /url: /tags/privacy/
+            - listitem [ref=e87]:
+              - article [ref=e88]:
+                - generic [ref=e90]:
+                  - time [ref=e92]: 4 de junho de 2022
+                  - heading "WWDC 2022 Wishlist" [level=2] [ref=e93]:
+                    - link "WWDC 2022 Wishlist" [ref=e94] [cursor=pointer]:
+                      - /url: /blog/WWDC22/
+                  - paragraph [ref=e95]: Even though I don't use any of their products myself, here's the features I hope Apple will announce.
+                  - generic [ref=e96]:
+                    - link "tech" [ref=e97] [cursor=pointer]:
+                      - /url: /tags/tech/
+                    - link "apple" [ref=e98] [cursor=pointer]:
+                      - /url: /tags/apple/
+            - listitem [ref=e99]:
+              - article [ref=e100]:
+                - generic [ref=e102]:
+                  - time [ref=e104]: 22 de setembro de 2021
+                  - heading "Apple and the case for competition." [level=2] [ref=e105]:
+                    - link "Apple and the case for competition." [ref=e106] [cursor=pointer]:
+                      - /url: /blog/Apple-Competition/
+                  - paragraph [ref=e107]: The EU announced plans to force all devices – including iPhones – to use a common charging port.
+                  - generic [ref=e108]:
+                    - link "apple" [ref=e109] [cursor=pointer]:
+                      - /url: /tags/apple/
+                    - link "tech" [ref=e110] [cursor=pointer]:
+                      - /url: /tags/tech/
+      - contentinfo [ref=e111]:
+        - generic [ref=e113]:
+          - link "Gnios © 2026" [ref=e115] [cursor=pointer]:
+            - /url: https://gnios.github.io
+          - text: •
+          - link "Have a good domingo!" [ref=e117] [cursor=pointer]:
+            - /url: https://qod.shakiltech.com/
+          - text: •
+          - link "Contact" [ref=e119] [cursor=pointer]:
+            - /url: /contact/
+  - alert [ref=e120]

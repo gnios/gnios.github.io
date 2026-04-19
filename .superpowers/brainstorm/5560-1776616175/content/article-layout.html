@@ -1,0 +1,55 @@
+<h2>Página do artigo: largura e TOC</h2>
+<p class="subtitle">O Medium foca 100% no texto — coluna central estreita (~740px), sem sidebar. O seu site atual tem um índice (TOC) à direita. Qual prefere?</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="centered" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#fff; padding:20px 24px; border-bottom:1px solid #eee; font-family:Georgia,serif; overflow:hidden;">
+      <div style="max-width:340px; margin:0 auto;">
+        <div style="font-size:22px; font-weight:700; color:#191919; line-height:1.25; margin-bottom:8px;">Como construí meu blog com Next.js</div>
+        <div style="font-size:13px; color:#6B6B6B; margin-bottom:12px; font-family:-apple-system,sans-serif;">Gnios · 11 jul · 7 min de leitura</div>
+        <div style="background:#e8e8e8; height:100px; border-radius:4px; margin-bottom:12px; display:flex; align-items:center; justify-content:center;">
+          <span style="font-family:-apple-system,sans-serif; font-size:11px; color:#aaa;">Imagem do artigo</span>
+        </div>
+        <div style="font-size:14px; line-height:1.8; color:#292929;">
+          Next.js revolucionou a forma como desenvolvemos. Neste artigo, vamos explorar as melhores práticas...
+        </div>
+        <div style="margin-top:10px; font-size:13px; font-weight:700; color:#191919;">Por que usar MDX?</div>
+        <div style="font-size:13px; line-height:1.7; color:#292929; margin-top:4px;">MDX combina Markdown com JSX, permitindo componentes React...</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Coluna central — idêntico ao Medium</h3>
+      <p>740px centralizado, sem sidebar. Foco total no texto. Leitura limpa como o Medium real. TOC removido.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="toc" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#fff; padding:20px 20px; border-bottom:1px solid #eee; font-family:Georgia,serif; overflow:hidden;">
+      <div style="display:flex; gap:12px;">
+        <!-- Artigo -->
+        <div style="flex:1; min-width:0;">
+          <div style="font-size:18px; font-weight:700; color:#191919; line-height:1.25; margin-bottom:6px;">Como construí meu blog com Next.js</div>
+          <div style="font-size:11px; color:#6B6B6B; margin-bottom:8px; font-family:-apple-system,sans-serif;">Gnios · 11 jul · 7 min</div>
+          <div style="background:#e8e8e8; height:60px; border-radius:4px; margin-bottom:8px;"></div>
+          <div style="font-size:12px; line-height:1.7; color:#292929;">Next.js revolucionou a forma como desenvolvemos...</div>
+          <div style="margin-top:8px; font-size:12px; font-weight:700; color:#191919;">Por que usar MDX?</div>
+          <div style="font-size:12px; line-height:1.7; color:#292929; margin-top:3px;">MDX combina Markdown com JSX...</div>
+        </div>
+        <!-- TOC -->
+        <div style="width:100px; flex-shrink:0; border-left:1px solid #f0f0f0; padding-left:10px;">
+          <div style="font-family:-apple-system,sans-serif; font-size:9px; text-transform:uppercase; letter-spacing:.5px; color:#aaa; margin-bottom:8px; font-weight:600;">Neste artigo</div>
+          <div style="font-size:10px; color:#6B6B6B; margin-bottom:5px; line-height:1.3;">Introdução</div>
+          <div style="font-size:10px; color:#6B6B6B; margin-bottom:5px; line-height:1.3;">Por que MDX?</div>
+          <div style="font-size:10px; color:#6B6B6B; margin-bottom:5px; line-height:1.3;">Configuração</div>
+          <div style="font-size:10px; color:#6B6B6B; line-height:1.3;">Conclusão</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Artigo + TOC lateral — atual</h3>
+      <p>Mantém o índice do artigo à direita. Útil para artigos longos, mas menos puro que o Medium.</p>
+    </div>
+  </div>
+
+</div>

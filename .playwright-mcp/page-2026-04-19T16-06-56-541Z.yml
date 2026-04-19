@@ -1,0 +1,217 @@
+- generic [ref=e4]:
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - tooltip "Sidebar menu" [ref=e9]:
+        - button "Sidebar menu" [ref=e11] [cursor=pointer]:
+          - generic [ref=e12]: Sidebar menu
+          - img [ref=e13]
+      - link "Homepage" [ref=e15] [cursor=pointer]:
+        - /url: /?source=home---two_column_layout_nav-----------------------------------------
+        - img "Medium Logo" [ref=e16]
+      - generic [ref=e19]:
+        - listbox
+        - img [ref=e21]
+        - combobox "search" [ref=e23]
+    - button "Get the Medium app" [ref=e25] [cursor=pointer]:
+      - img [ref=e26]
+      - generic [ref=e29]: Get app
+    - link "Write" [ref=e31] [cursor=pointer]:
+      - /url: https://medium.com/new-story?source=home---two_column_layout_nav-----------------------------------------
+      - generic [ref=e32]:
+        - img [ref=e33]
+        - text: Write
+    - tooltip "Notifications" [ref=e38]:
+      - link "Notifications" [ref=e40] [cursor=pointer]:
+        - /url: /me/notifications?source=home---two_column_layout_nav-----------------------------------------
+        - generic [ref=e41]:
+          - img [ref=e42]
+          - generic [ref=e45]: Notifications
+    - tooltip "user options menu" [ref=e48]:
+      - button "user options menu" [ref=e50] [cursor=pointer]:
+        - img "eugenio tavares" [ref=e53]
+  - generic [ref=e55]:
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - tooltip "Home" [ref=e63]:
+          - button "Home" [ref=e65] [cursor=pointer]:
+            - img [ref=e67]
+            - generic [ref=e70]: Home
+        - tooltip "Library" [ref=e72]:
+          - link "Library" [ref=e74] [cursor=pointer]:
+            - /url: /me/lists?source=home---sidebar_menu-----------------------------------------
+            - img [ref=e75]
+            - generic [ref=e78]: Library
+        - tooltip "Profile" [ref=e80]:
+          - link "Profile" [ref=e82] [cursor=pointer]:
+            - /url: /@eugenio00?source=home---sidebar_menu-----------------------------------------
+            - img [ref=e83]
+            - generic [ref=e86]: Profile
+        - tooltip "Stories" [ref=e88]:
+          - link "Stories" [ref=e90] [cursor=pointer]:
+            - /url: /me/stories?source=home---sidebar_menu-----------------------------------------
+            - img [ref=e91]
+            - generic [ref=e94]: Stories
+        - tooltip "Stats" [ref=e96]:
+          - link "Stats" [ref=e98] [cursor=pointer]:
+            - /url: /me/stats?source=home---sidebar_menu-----------------------------------------
+            - img [ref=e99]
+            - generic [ref=e101]: Stats
+      - generic [ref=e103]:
+        - tooltip "Following" [ref=e105]:
+          - link "Following" [ref=e107] [cursor=pointer]:
+            - /url: /me/following-feed/writers?source=home---sidebar_menu-----------------------------------------
+            - img [ref=e108]
+            - generic [ref=e110]: Following
+        - tooltip "Ana Carolyne Ana Carolyne" [ref=e112]:
+          - link "Ana Carolyne Ana Carolyne" [ref=e114] [cursor=pointer]:
+            - /url: /me/following-feed/writers/6aba6eb7f692?source=home---sidebar_menu_following------------------------------following_badge-----------
+            - img "Ana Carolyne" [ref=e117]
+            - generic [ref=e119]: Ana Carolyne
+        - tooltip "The Medium Blog The Medium Blog" [ref=e122]:
+          - link "The Medium Blog The Medium Blog" [ref=e124] [cursor=pointer]:
+            - /url: /me/following-feed/publications/15f753907972?source=home---sidebar_menu_following------------------------------following_badge-----------
+            - img "The Medium Blog" [ref=e127]
+            - generic [ref=e129]: The Medium Blog
+        - tooltip "Four Four" [ref=e132]:
+          - link "Four Four" [ref=e134] [cursor=pointer]:
+            - /url: /me/following-feed/writers/50247edbd94d?source=home---sidebar_menu_following-----------------------------------------
+            - img "Four" [ref=e137]
+            - generic [ref=e139]: Four
+        - tooltip "Matheus Luis Matheus Luis" [ref=e141]:
+          - link "Matheus Luis Matheus Luis" [ref=e143] [cursor=pointer]:
+            - /url: /me/following-feed/writers/fe219377f374?source=home---sidebar_menu_following-----------------------------------------
+            - img "Matheus Luis" [ref=e146]
+            - generic [ref=e148]: Matheus Luis
+        - tooltip "Martin Hochel Martin Hochel" [ref=e150]:
+          - link "Martin Hochel Martin Hochel" [ref=e152] [cursor=pointer]:
+            - /url: /me/following-feed/writers/b9e31d4262c1?source=home---sidebar_menu_following-----------------------------------------
+            - img "Martin Hochel" [ref=e155]
+            - generic [ref=e157]: Martin Hochel
+        - generic [ref=e158]:
+          - img [ref=e160]
+          - generic [ref=e162]:
+            - paragraph [ref=e163]: Find writers and publications to follow.
+            - link "See suggestions" [ref=e165] [cursor=pointer]:
+              - /url: /me/following/suggestions?source=home---sidebar_menu_following-----------------------------------------
+    - generic [ref=e166]:
+      - generic [ref=e168]:
+        - generic [ref=e169]:
+          - img [ref=e171]
+          - generic [ref=e173]:
+            - generic [ref=e174]: Get unlimited access to the best of Medium for less than $1/week.
+            - link "Become a member" [ref=e176] [cursor=pointer]:
+              - /url: /plans?source=upgrade_membership---two_column_layout_upsell-----------------------------------------
+              - generic [ref=e177]: Become a member
+        - button "close" [ref=e181] [cursor=pointer]:
+          - img [ref=e182]
+      - generic [ref=e184]:
+        - main [ref=e185]
+        - generic [ref=e225]:
+          - generic [ref=e227]:
+            - link "Staff Picks" [ref=e229] [cursor=pointer]:
+              - /url: /@MediumStaff/list/staff-picks-c7bc6e1ee00f?source=home---list_module-----------------------------------------
+              - heading "Staff Picks" [level=2] [ref=e230]
+            - generic [ref=e231]:
+              - generic [ref=e233]:
+                - generic [ref=e234]:
+                  - tooltip "Counter Arts" [ref=e237]:
+                    - link "Counter Arts" [ref=e239] [cursor=pointer]:
+                      - /url: https://medium.com/counterarts?source=home---list_module-----------------------------------------
+                      - img "Counter Arts" [ref=e241]
+                  - paragraph [ref=e244]: In
+                  - tooltip "Counter Arts" [ref=e247]:
+                    - link "Counter Arts" [ref=e249] [cursor=pointer]:
+                      - /url: https://medium.com/counterarts?source=home---list_module-----------------------------------------
+                      - paragraph [ref=e250]: Counter Arts
+                  - paragraph [ref=e252]: by
+                  - tooltip "Alan Baseden" [ref=e254]:
+                    - link "Alan Baseden" [ref=e256] [cursor=pointer]:
+                      - /url: /@alanbaseden?source=home---list_module-----------------------------------------
+                      - paragraph [ref=e257]: Alan Baseden
+                - 'link "Dear Debra: Postcards from Indiana Dunes, Part 1/2 4d ago" [ref=e258] [cursor=pointer]':
+                  - /url: /counterarts/dear-debra-postcards-from-indiana-dunes-part-1-2-989c79d4a5c0?source=home---list_module-----------------------------------------
+                  - 'heading "Dear Debra: Postcards from Indiana Dunes, Part 1/2" [level=2] [ref=e260]'
+                  - generic [ref=e262]: 4d ago
+              - generic [ref=e264]:
+                - generic [ref=e265]:
+                  - tooltip "Sharing Food" [ref=e268]:
+                    - link "Sharing Food" [ref=e270] [cursor=pointer]:
+                      - /url: https://medium.com/sharing-food?source=home---list_module-----------------------------------------
+                      - img "Sharing Food" [ref=e272]
+                  - paragraph [ref=e275]: In
+                  - tooltip "Sharing Food" [ref=e278]:
+                    - link "Sharing Food" [ref=e280] [cursor=pointer]:
+                      - /url: https://medium.com/sharing-food?source=home---list_module-----------------------------------------
+                      - paragraph [ref=e281]: Sharing Food
+                  - paragraph [ref=e283]: by
+                  - tooltip "Kitano Komachi" [ref=e285]:
+                    - link "Kitano Komachi" [ref=e287] [cursor=pointer]:
+                      - /url: /@kitano-komachi?source=home---list_module-----------------------------------------
+                      - paragraph [ref=e288]: Kitano Komachi
+                - link "The Real Reason Your Food Doesn’t Taste Right Member-only story Nov 23, 2025" [ref=e289] [cursor=pointer]:
+                  - /url: /sharing-food/the-real-reason-your-food-doesnt-taste-right-f891dc4d2d87?source=home---list_module-----------------------------------------
+                  - heading "The Real Reason Your Food Doesn’t Taste Right" [level=2] [ref=e291]
+                  - generic [ref=e292]:
+                    - button "Member-only story" [ref=e294]:
+                      - tooltip [ref=e297]:
+                        - img [ref=e299]
+                    - generic [ref=e301]: Nov 23, 2025
+              - generic [ref=e303]:
+                - generic [ref=e304]:
+                  - tooltip "Southern Winds" [ref=e307]:
+                    - link "Southern Winds" [ref=e309] [cursor=pointer]:
+                      - /url: https://medium.com/southern-winds?source=home---list_module-----------------------------------------
+                      - img "Southern Winds" [ref=e311]
+                  - paragraph [ref=e314]: In
+                  - tooltip "Southern Winds" [ref=e317]:
+                    - link "Southern Winds" [ref=e319] [cursor=pointer]:
+                      - /url: https://medium.com/southern-winds?source=home---list_module-----------------------------------------
+                      - paragraph [ref=e320]: Southern Winds
+                  - paragraph [ref=e322]: by
+                  - tooltip "Roberto Suarez" [ref=e324]:
+                    - link "Roberto Suarez" [ref=e326] [cursor=pointer]:
+                      - /url: /@bobzeraus?source=home---list_module-----------------------------------------
+                      - paragraph [ref=e327]: Roberto Suarez
+                      - img [ref=e331]
+                - link "Who Counts the Rain Member-only story Apr 10" [ref=e334] [cursor=pointer]:
+                  - /url: /southern-winds/who-counts-the-rain-285689caceca?source=home---list_module-----------------------------------------
+                  - heading "Who Counts the Rain" [level=2] [ref=e336]
+                  - generic [ref=e337]:
+                    - button "Member-only story" [ref=e339]:
+                      - tooltip [ref=e342]:
+                        - img [ref=e344]
+                    - generic [ref=e346]: Apr 10
+            - paragraph [ref=e347]:
+              - link "See the full list" [ref=e348] [cursor=pointer]:
+                - /url: /@MediumStaff/list/staff-picks-c7bc6e1ee00f?source=home---list_module-----------------------------------------
+          - generic [ref=e359]:
+            - link "Help" [ref=e361] [cursor=pointer]:
+              - /url: https://help.medium.com/hc/en-us?source=home--------------------------------------------
+              - paragraph [ref=e362]: Help
+            - link "Status" [ref=e364] [cursor=pointer]:
+              - /url: https://status.medium.com/?source=home--------------------------------------------
+              - paragraph [ref=e365]: Status
+            - link "About" [ref=e367] [cursor=pointer]:
+              - /url: /about?autoplay=1&source=home--------------------------------------------
+              - paragraph [ref=e368]: About
+            - link "Careers" [ref=e370] [cursor=pointer]:
+              - /url: /jobs-at-medium/work-at-medium-959d1a85284e?source=home--------------------------------------------
+              - paragraph [ref=e371]: Careers
+            - link "Press" [ref=e373] [cursor=pointer]:
+              - /url: mailto:pressinquiries@medium.com
+              - paragraph [ref=e374]: Press
+            - link "Blog" [ref=e376] [cursor=pointer]:
+              - /url: https://blog.medium.com/?source=home--------------------------------------------
+              - paragraph [ref=e377]: Blog
+            - link "Privacy" [ref=e379] [cursor=pointer]:
+              - /url: https://policy.medium.com/medium-privacy-policy-f03bf92035c9?source=home--------------------------------------------
+              - paragraph [ref=e380]: Privacy
+            - link "Rules" [ref=e382] [cursor=pointer]:
+              - /url: https://policy.medium.com/medium-rules-30e5502c4eb4?source=home--------------------------------------------
+              - paragraph [ref=e383]: Rules
+            - link "Terms" [ref=e385] [cursor=pointer]:
+              - /url: https://policy.medium.com/medium-terms-of-service-9db0094a1e0f?source=home--------------------------------------------
+              - paragraph [ref=e386]: Terms
+            - link "Text to speech" [ref=e388] [cursor=pointer]:
+              - /url: https://speechify.com/medium?source=home--------------------------------------------
+              - paragraph [ref=e389]: Text to speech

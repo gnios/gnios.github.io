@@ -1,0 +1,119 @@
+<h2>Seção 2 — Topbar + Sidebar</h2>
+<p class="subtitle">Menus mantidos. Estilo atualizado para Medium puro. Feather icons já implementados.</p>
+
+<div class="section">
+  <h3>Topbar (64px, fixo)</h3>
+  <div style="border:1px solid #e6e6e6; border-radius:8px; overflow:hidden; margin-top:12px;">
+    <!-- Light mode -->
+    <div style="background:#fff; padding:0 24px; height:64px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e6e6e6;">
+      <div style="display:flex; align-items:center; gap:32px;">
+        <span style="font-family:-apple-system,sans-serif; font-size:20px; font-weight:800; color:#191919; letter-spacing:-.3px;">Gnios</span>
+        <div style="display:flex; align-items:center; gap:8px; background:#f2f2f2; border-radius:100px; padding:8px 16px; width:220px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B3B3B3" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span style="font-family:-apple-system,sans-serif; font-size:13px; color:#B3B3B3;">Buscar artigos...</span>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:16px;">
+        <!-- Theme toggle -->
+        <div style="width:32px; height:32px; border-radius:100px; background:#f2f2f2; display:flex; align-items:center; justify-content:center;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B6B6B" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
+        </div>
+        <!-- Bell -->
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B6B6B" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        <!-- Avatar -->
+        <div style="width:36px; height:36px; border-radius:100px; background:#191919; display:flex; align-items:center; justify-content:center;">
+          <span style="font-family:-apple-system,sans-serif; font-size:12px; font-weight:700; color:#fff;">G</span>
+        </div>
+      </div>
+    </div>
+    <!-- Dark mode preview -->
+    <div style="background:#191919; padding:0 24px; height:64px; display:flex; align-items:center; justify-content:space-between;">
+      <div style="display:flex; align-items:center; gap:32px;">
+        <span style="font-family:-apple-system,sans-serif; font-size:20px; font-weight:800; color:#FAFAFA; letter-spacing:-.3px;">Gnios</span>
+        <div style="display:flex; align-items:center; gap:8px; background:#292929; border-radius:100px; padding:8px 16px; width:220px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B6B6B" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span style="font-family:-apple-system,sans-serif; font-size:13px; color:#6B6B6B;">Buscar artigos...</span>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:16px;">
+        <div style="width:32px; height:32px; border-radius:100px; background:#292929; display:flex; align-items:center; justify-content:center;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B3B3B3" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B3B3B3" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        <div style="width:36px; height:36px; border-radius:100px; background:#FAFAFA; display:flex; align-items:center; justify-content:center;">
+          <span style="font-family:-apple-system,sans-serif; font-size:12px; font-weight:700; color:#191919;">G</span>
+        </div>
+      </div>
+    </div>
+    <div style="padding:8px 16px; background:#f5f5f5; font-family:-apple-system,sans-serif; font-size:11px; color:#888;">Light mode (cima) · Dark mode (baixo)</div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Sidebar (272px, fixo, menus inalterados)</h3>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:12px;">
+
+    <!-- Light sidebar -->
+    <div style="border:1px solid #e6e6e6; border-radius:8px; overflow:hidden;">
+      <div style="background:#fff; padding:24px 0; border-right:1px solid #e6e6e6; min-height:280px;">
+        <!-- Nav items -->
+        <div style="padding:10px 20px; display:flex; align-items:center; gap:10px; background:#f2f2f2;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#191919" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span style="font-family:-apple-system,sans-serif; font-size:14px; font-weight:600; color:#191919;">Home</span>
+        </div>
+        <div style="padding:10px 20px; display:flex; align-items:center; gap:10px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B6B6B" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span style="font-family:-apple-system,sans-serif; font-size:14px; color:#6B6B6B;">Sobre</span>
+        </div>
+        <div style="padding:10px 20px; display:flex; align-items:center; gap:10px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B6B6B" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          <span style="font-family:-apple-system,sans-serif; font-size:14px; color:#6B6B6B;">Snippets</span>
+        </div>
+        <div style="padding:10px 20px; display:flex; align-items:center; gap:10px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B6B6B" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span style="font-family:-apple-system,sans-serif; font-size:14px; color:#6B6B6B;">Projetos</span>
+        </div>
+        <div style="padding:10px 20px; display:flex; align-items:center; gap:10px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B6B6B" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span style="font-family:-apple-system,sans-serif; font-size:14px; color:#6B6B6B;">Contato</span>
+        </div>
+      </div>
+      <div style="padding:6px 12px; background:#f5f5f5; font-family:-apple-system,sans-serif; font-size:11px; color:#888;">Light mode</div>
+    </div>
+
+    <!-- Dark sidebar -->
+    <div style="border:1px solid #333; border-radius:8px; overflow:hidden;">
+      <div style="background:#191919; padding:24px 0; min-height:280px;">
+        <div style="padding:10px 20px; display:flex; align-items:center; gap:10px; background:#292929;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FAFAFA" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span style="font-family:-apple-system,sans-serif; font-size:14px; font-weight:600; color:#FAFAFA;">Home</span>
+        </div>
+        <div style="padding:10px 20px; display:flex; align-items:center; gap:10px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B3B3B3" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span style="font-family:-apple-system,sans-serif; font-size:14px; color:#B3B3B3;">Sobre</span>
+        </div>
+        <div style="padding:10px 20px; display:flex; align-items:center; gap:10px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B3B3B3" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          <span style="font-family:-apple-system,sans-serif; font-size:14px; color:#B3B3B3;">Snippets</span>
+        </div>
+        <div style="padding:10px 20px; display:flex; align-items:center; gap:10px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B3B3B3" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span style="font-family:-apple-system,sans-serif; font-size:14px; color:#B3B3B3;">Projetos</span>
+        </div>
+        <div style="padding:10px 20px; display:flex; align-items:center; gap:10px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B3B3B3" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span style="font-family:-apple-system,sans-serif; font-size:14px; color:#B3B3B3;">Contato</span>
+        </div>
+      </div>
+      <div style="padding:6px 12px; background:#292929; font-family:-apple-system,sans-serif; font-size:11px; color:#6B6B6B;">Dark mode</div>
+    </div>
+  </div>
+
+  <div style="margin-top:12px; padding:12px 16px; background:#f5f5f5; border-radius:8px; font-size:12px; color:#555; font-family:-apple-system,sans-serif;">
+    <strong>Item ativo:</strong> fundo #F2F2F2 (light) / #292929 (dark), texto #191919 (light) / #FAFAFA (dark), sem cor de acento. Avatar mostra inicial "G" sobre fundo escuro/claro.
+  </div>
+</div>
+
+<div style="margin-top:20px; padding:14px 18px; background:#fff8e1; border-radius:8px; border-left:3px solid #f0c040; font-size:13px; color:#555; font-family:-apple-system,sans-serif;">
+  <strong>Esta seção está correta?</strong> Confirme para avançar para Seção 3 — Feed de artigos (homepage + lista).
+</div>
