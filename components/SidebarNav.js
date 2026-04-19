@@ -55,25 +55,6 @@ const navItems = [
     ),
   },
   {
-    name: 'Projetos',
-    href: '/projects',
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-[18px] w-[18px] shrink-0"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth="2"
-      >
-        <rect x="3" y="3" width="7" height="7" />
-        <rect x="14" y="3" width="7" height="7" />
-        <rect x="14" y="14" width="7" height="7" />
-        <rect x="3" y="14" width="7" height="7" />
-      </svg>
-    ),
-  },
-  {
     name: 'Sobre',
     href: '/resume',
     icon: (
@@ -87,23 +68,6 @@ const navItems = [
       >
         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
         <circle cx="12" cy="7" r="4" />
-      </svg>
-    ),
-  },
-  {
-    name: 'Contato',
-    href: '/contact',
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-[18px] w-[18px] shrink-0"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth="2"
-      >
-        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-        <polyline points="22,6 12,13 2,6" />
       </svg>
     ),
   },
