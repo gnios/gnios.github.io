@@ -23,7 +23,8 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'system-ui', ...defaultTheme.fontFamily.sans],
+        serif: ['Georgia', 'Charter', 'Iowan Old Style', ...defaultTheme.fontFamily.serif],
       },
       gradientColorStops: {
         // https://coolors.co/2d00f7-6a00f4-8900f2-a100f2-b100e8-bc00dd-d100d1-db00b6-e500a4-f20089
@@ -35,6 +36,13 @@ module.exports = {
         'gradient-3-end': '#2D00F7',
       },
       colors: {
+        ink:           '#191919',
+        'ink-body':    '#292929',
+        'ink-light':   '#6B6B6B',
+        'ink-faint':   '#B3B3B3',
+        stroke:        '#E6E6E6',
+        wash:          '#F2F2F2',
+        'wash-subtle': '#FAFAFA',
         primary: {
           100: '#FDD1D9',
           200: '#FBA4BC',
@@ -72,160 +80,62 @@ module.exports = {
         green: colors.emerald,
         gray: colors.neutral,
       },
-      typography: (theme) => ({
+      typography: () => ({
         DEFAULT: {
           css: {
-            color: theme('colors.gray.700'),
+            color: '#292929',
+            fontSize: '21px',
+            lineHeight: '1.8',
+            fontFamily: "Georgia, 'Charter', serif",
             a: {
-              color: theme('colors.primary.500'),
-              '&:hover': {
-                color: `${theme('colors.primary.500')}`,
-              },
-              code: { color: theme('colors.primary.400') },
+              color: '#191919',
+              textDecoration: 'underline',
+              '&:hover': { color: '#191919' },
+              code: { color: '#191919' },
             },
-            h1: {
-              fontWeight: '700',
-              letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.900'),
-            },
-            h2: {
-              fontWeight: '700',
-              letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.900'),
-            },
-            h3: {
-              fontWeight: '600',
-              color: theme('colors.gray.900'),
-            },
-            'h4,h5,h6': {
-              color: theme('colors.gray.900'),
-            },
-            pre: {
-              backgroundColor: 'transparent',
-            },
-            'pre code': {
-              backgroundColor: 'transparent',
-              color: 'inherit',
-              padding: 0,
-            },
+            h1: { fontWeight: '700', letterSpacing: '-0.02em', color: '#191919', fontFamily: "Georgia, 'Charter', serif" },
+            h2: { fontWeight: '700', letterSpacing: '-0.01em', color: '#191919', fontSize: '26px', lineHeight: '1.3', fontFamily: "Georgia, 'Charter', serif" },
+            h3: { fontWeight: '700', color: '#191919', fontSize: '22px', lineHeight: '1.3', fontFamily: "Georgia, 'Charter', serif" },
+            'h4,h5,h6': { color: '#191919' },
+            pre: { backgroundColor: 'transparent' },
+            'pre code': { backgroundColor: 'transparent', color: 'inherit', padding: 0 },
             code: {
-              color: theme('colors.green.500'),
-              backgroundColor: theme('colors.gray.100'),
-              paddingLeft: '4px',
-              paddingRight: '4px',
-              paddingTop: '2px',
-              paddingBottom: '2px',
+              color: '#191919',
+              backgroundColor: '#F2F2F2',
+              paddingLeft: '4px', paddingRight: '4px',
+              paddingTop: '2px', paddingBottom: '2px',
               borderRadius: '0.25rem',
             },
-            'pre[class*="language-"]': {
-              backgroundColor: 'transparent',
-            },
-            'pre[class*="language-"] code': {
-              backgroundColor: 'transparent',
-              color: 'inherit',
-              padding: 0,
-            },
-            'code::before': {
-              content: 'none',
-            },
-            'code::after': {
-              content: 'none',
-            },
-            details: {
-              backgroundColor: theme('colors.gray.100'),
-              paddingLeft: '4px',
-              paddingRight: '4px',
-              paddingTop: '2px',
-              paddingBottom: '2px',
-              borderRadius: '0.25rem',
-            },
-            hr: { borderColor: theme('colors.gray.200') },
-            'ol li::marker': {
-              fontWeight: '600',
-              color: theme('colors.gray.500'),
-            },
-            'ul li::marker': {
-              backgroundColor: theme('colors.gray.500'),
-            },
-            strong: { color: theme('colors.gray.600') },
-            blockquote: {
-              color: theme('colors.gray.900'),
-              borderLeftColor: theme('colors.gray.200'),
-            },
+            'code::before': { content: 'none' },
+            'code::after':  { content: 'none' },
+            hr:   { borderColor: '#E6E6E6' },
+            'ol li::marker': { fontWeight: '600', color: '#6B6B6B' },
+            'ul li::marker': { backgroundColor: '#6B6B6B' },
+            strong:     { color: '#191919' },
+            blockquote: { color: '#6B6B6B', borderLeftColor: '#E6E6E6' },
           },
         },
         dark: {
           css: {
-            color: theme('colors.gray.300'),
+            color: '#E6E6E6',
+            fontFamily: "Georgia, 'Charter', serif",
             a: {
-              color: theme('colors.primary.500'),
-              '&:hover': {
-                color: `${theme('colors.primary.500')} `,
-              },
-              code: { color: theme('colors.primary.400') },
+              color: '#FAFAFA',
+              '&:hover': { color: '#FAFAFA' },
+              code: { color: '#FAFAFA' },
             },
-            h1: {
-              fontWeight: '700',
-              letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.100'),
-            },
-            h2: {
-              fontWeight: '700',
-              letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.100'),
-            },
-            h3: {
-              fontWeight: '600',
-              color: theme('colors.gray.100'),
-            },
-            'h4,h5,h6': {
-              color: theme('colors.gray.100'),
-            },
-            pre: {
-              backgroundColor: 'transparent',
-            },
-            'pre code': {
-              backgroundColor: 'transparent',
-              color: 'inherit',
-              padding: 0,
-            },
-            code: {
-              backgroundColor: theme('colors.gray.800'),
-            },
-            'pre[class*="language-"]': {
-              backgroundColor: 'transparent',
-            },
-            'pre[class*="language-"] code': {
-              backgroundColor: 'transparent',
-              color: 'inherit',
-              padding: 0,
-            },
-            details: {
-              backgroundColor: theme('colors.gray.800'),
-            },
-            hr: { borderColor: theme('colors.gray.700') },
-            'ol li::marker': {
-              fontWeight: '600',
-              color: theme('colors.gray.400'),
-            },
-            'ul li::marker': {
-              backgroundColor: theme('colors.gray.400'),
-            },
-            strong: { color: theme('colors.gray.100') },
-            thead: {
-              th: {
-                color: theme('colors.gray.100'),
-              },
-            },
-            tbody: {
-              tr: {
-                borderBottomColor: theme('colors.gray.700'),
-              },
-            },
-            blockquote: {
-              color: theme('colors.gray.100'),
-              borderLeftColor: theme('colors.gray.700'),
-            },
+            h1: { color: '#FAFAFA', fontFamily: "Georgia, 'Charter', serif" },
+            h2: { color: '#FAFAFA', fontFamily: "Georgia, 'Charter', serif" },
+            h3: { color: '#FAFAFA', fontFamily: "Georgia, 'Charter', serif" },
+            'h4,h5,h6': { color: '#FAFAFA' },
+            pre: { backgroundColor: 'transparent' },
+            'pre code': { backgroundColor: 'transparent', color: 'inherit', padding: 0 },
+            code: { backgroundColor: '#292929' },
+            hr: { borderColor: '#292929' },
+            'ol li::marker': { color: '#B3B3B3' },
+            'ul li::marker': { backgroundColor: '#B3B3B3' },
+            strong:     { color: '#FAFAFA' },
+            blockquote: { color: '#B3B3B3', borderLeftColor: '#292929' },
           },
         },
       }),
