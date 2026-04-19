@@ -23,9 +23,6 @@ export default function Footer() {
         </blockquote>
       )}
 
-      <p className="text-center font-sans text-[12px] text-ink-faint dark:text-[#555]">
-        Gnios © {new Date().getFullYear()}
-      </p>
     </footer>
   )
 }
