@@ -96,10 +96,10 @@ export default function SidebarNav() {
 
   return (
     <nav
-      className="fixed left-0 top-16 z-40 hidden w-[240px] bg-white dark:bg-[#111111] lg:block"
+      className="fixed left-0 top-16 z-40 hidden w-[260px] bg-white dark:bg-[#111111] lg:block"
       style={{ height: 'calc(100vh - 64px)' }}
     >
-      <ul className="pt-4">
+      <ul className="mt-6 flex flex-col gap-1">
         {navItems.map((item) => {
           const isActive =
             router.pathname === item.href ||
@@ -108,10 +108,10 @@ export default function SidebarNav() {
             <li key={item.name}>
               <Link
                 href={item.href}
-                className={`flex items-center gap-3 py-[10px] pr-6 text-[15px] transition-colors ${
+                className={`flex items-center border-l-[3px] py-3 pl-6 pr-6 text-[15px] transition-colors ${
                   isActive
-                    ? 'border-l-[3px] border-ink pl-[21px] font-bold text-ink dark:border-wash-subtle dark:text-wash-subtle'
-                    : 'border-l-[3px] border-transparent pl-[21px] font-normal text-ink-light hover:text-ink dark:text-ink-faint dark:hover:text-wash-subtle'
+                    ? 'border-[#191919] font-bold text-[#191919] dark:border-[#FAFAFA] dark:text-[#FAFAFA]'
+                    : 'border-transparent font-normal text-[#6B6B6B] hover:text-[#191919] dark:text-[#6B6B6B] dark:hover:text-[#FAFAFA]'
                 }`}
               >
                 <span className="flex items-center gap-3">

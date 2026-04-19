@@ -7,7 +7,7 @@ const LayoutWrapper = ({ children }) => {
     <>
       <Topbar />
       <SidebarNav />
-      <div className="min-h-screen pt-16 lg:ml-[240px]">
+      <div className="min-h-screen pt-16 lg:ml-[260px]">
         <main className="mb-auto">{children}</main>
         <Footer />
       </div>
