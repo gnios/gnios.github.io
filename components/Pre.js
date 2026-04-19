@@ -90,12 +90,9 @@ const Pre = (props) => {
                   {line.map((token, key) => {
                     const tokenProps = getTokenProps({ token, key })
                     return (
-                      <span
-                        key={key}
-                        className={tokenProps.className}
-                        style={tokenProps.style}
-                        children={tokenProps.children}
-                      />
+                      <span key={key} className={tokenProps.className} style={tokenProps.style}>
+                        {tokenProps.children}
+                      </span>
                     )
                   })}
                 </div>

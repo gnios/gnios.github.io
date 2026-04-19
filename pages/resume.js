@@ -25,20 +25,19 @@ export default function About() {
             Com mais de 17 anos de trajetória no mercado de tecnologia, atualmente atuo como Staff
             Software Engineer na Stone, onde lidero a definição de padrões arquiteturais e a
             construção de ecossistemas financeiros de alta criticidade. Minha abordagem é
-            fundamentada nos princípios de Domain-Driven Design (DDD), garantindo que a
-            complexidade do negócio seja traduzida em softwares escaláveis, sustentáveis e
-            tecnicamente robustos.
+            fundamentada nos princípios de Domain-Driven Design (DDD), garantindo que a complexidade
+            do negócio seja traduzida em softwares escaláveis, sustentáveis e tecnicamente robustos.
           </p>
           <p>
-            Sou especialista no ecossistema .NET (ASP.NET Core / .NET Core), com sólido histórico
-            no desenvolvimento de soluções para o setor financeiro. Minha atuação vai além da
-            escrita de código: foco na modelagem de domínios complexos, implementação de
-            arquiteturas orientadas a eventos e na mentoria técnica de times para elevar a
-            maturidade da engenharia.
+            Sou especialista no ecossistema .NET (ASP.NET Core / .NET Core), com sólido histórico no
+            desenvolvimento de soluções para o setor financeiro. Minha atuação vai além da escrita
+            de código: foco na modelagem de domínios complexos, implementação de arquiteturas
+            orientadas a eventos e na mentoria técnica de times para elevar a maturidade da
+            engenharia.
           </p>
           <p className="font-semibold text-ink">
-            Core Skills: Domain-Driven Design (Strategic &amp; Tactical), Event-Driven
-            Architecture, Microservices, Clean Architecture.
+            Core Skills: Domain-Driven Design (Strategic &amp; Tactical), Event-Driven Architecture,
+            Microservices, Clean Architecture.
           </p>
           <p>Esse blog é onde compartilho o que aprendo no dia a dia.</p>
         </div>
