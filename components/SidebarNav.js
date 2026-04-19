@@ -96,10 +96,10 @@ export default function SidebarNav() {
 
   return (
     <nav
-      className="fixed left-0 top-16 hidden w-[280px] border-r border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-950 lg:block"
+      className="fixed left-0 top-16 z-40 hidden w-[280px] overflow-y-auto border-r border-stroke bg-white dark:border-[#292929] dark:bg-[#111111] lg:block"
       style={{ height: 'calc(100vh - 64px)' }}
     >
-      <ul className="py-6">
+      <ul className="py-8">
         {navItems.map((item) => {
           const isActive =
             router.pathname === item.href ||
@@ -108,7 +108,7 @@ export default function SidebarNav() {
             <li key={item.name}>
               <Link
                 href={item.href}
-                className={`flex items-center gap-3 px-6 py-3 text-[15px] transition-colors hover:bg-wash dark:hover:bg-[#1A1A1A] ${
+                className={`flex items-center gap-3 px-6 py-3.5 text-[15px] transition-colors hover:bg-wash dark:hover:bg-[#1A1A1A] ${
                   isActive
                     ? 'bg-wash font-semibold text-ink dark:bg-[#292929] dark:text-wash-subtle'
                     : 'text-ink-light dark:text-ink-faint'
