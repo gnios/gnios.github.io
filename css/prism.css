@@ -22,6 +22,15 @@
   @apply -mx-4 block border-l-4 border-transparent pl-4 pr-4;
 }
 
+/* Ensure pre inherits language class from code for Prism */
+pre > code[class*='language-'] {
+  display: block;
+}
+
+pre[class*='language-'] > code {
+  background: transparent !important;
+}
+
 .code-line.inserted {
   @apply bg-green-500 bg-opacity-20;
 }
