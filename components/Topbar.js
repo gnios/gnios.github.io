@@ -1,3 +1,5 @@
+import { useRef } from 'react'
+import { useRouter } from 'next/router'
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import ThemeSwitch from './ThemeSwitch'
@@ -6,6 +8,17 @@ import { useSidebar } from './SidebarContext'
 
 export default function Topbar() {
   const { toggleSidebar } = useSidebar()
+  const router = useRouter()
+  const inputRef = useRef(null)
+
+  const handleSearch = (e) => {
+    if (e.key === 'Enter') {
+      const q = e.target.value.trim()
+      const base = router.pathname.startsWith('/snippets') ? '/snippets' : '/blog'
+      router.push(q ? `${base}?q=${encodeURIComponent(q)}` : base)
+      inputRef.current?.blur()
+    }
+  }
 
   return (
     <header className="fixed left-0 right-0 top-0 z-50 h-16 border-b border-stroke bg-white dark:border-[#292929] dark:bg-[#111111]">
@@ -35,7 +48,7 @@ export default function Topbar() {
           <div className="hidden items-center gap-2 rounded-full bg-wash px-4 py-2 dark:bg-[#1A1A1A] sm:flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 text-ink-faint"
+              className="h-4 w-4 shrink-0 text-ink-faint"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -44,7 +57,13 @@ export default function Topbar() {
               <circle cx="11" cy="11" r="8" />
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
-            <span className="text-sm text-ink-faint">Buscar artigos...</span>
+            <input
+              ref={inputRef}
+              type="text"
+              placeholder="Buscar artigos..."
+              onKeyDown={handleSearch}
+              className="w-40 bg-transparent text-sm text-ink outline-none placeholder:text-ink-faint dark:text-wash-subtle"
+            />
           </div>
         </div>
 

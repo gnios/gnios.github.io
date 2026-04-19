@@ -1,13 +1,17 @@
 import Link from '@/components/Link'
 import Image from '@/components/Image'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Pagination from '@/components/Pagination'
 import formatDate from '@/lib/utils/formatDate'
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
-  const [searchValue, setSearchValue] = useState('')
   const router = useRouter()
+  const [searchValue, setSearchValue] = useState('')
+
+  useEffect(() => {
+    if (router.query.q) setSearchValue(String(router.query.q))
+  }, [router.query.q])
 
   const filteredPosts = posts.filter((fm) => {
     const content = fm.title + (fm.summary || '') + (fm.tags || []).join(' ')
@@ -40,6 +44,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
             <input
               aria-label="Buscar artigos"
               type="text"
+              value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
               placeholder="Buscar artigos..."
               className="w-full bg-transparent text-sm text-ink outline-none placeholder:text-ink-faint dark:text-wash-subtle"

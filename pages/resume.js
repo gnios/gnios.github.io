@@ -28,9 +28,15 @@ export default function About() {
             qualidade em escala.
           </p>
           <p>
-            Tenho background forte em .NET / C# e ecossistema Microsoft, mas me sinto igualmente em
-            casa com React, APIs GraphQL e arquiteturas distribuídas. Gosto de problemas difíceis,
-            de mentorar engenheiros e de simplificar o que parece complicado.
+            Meu background é forte em .NET / C# e ecossistema Microsoft, mas me sinto igualmente à
+            vontade com React, APIs GraphQL e arquiteturas distribuídas. Tenho expertise em
+            Inteligência Artificial, Liderança Técnica, DDD (Domain-Driven Design) e Arquitetura
+            de Software. Gosto de problemas difíceis, de mentorar engenheiros e de simplificar o
+            que parece complicado.
+          </p>
+          <p>
+            Formado em Engenharia da Computação pela UECE (Universidade Estadual do Ceará) e
+            baseado em São Paulo, Brasil.
           </p>
           <p>Esse blog é onde compartilho o que aprendo no dia a dia.</p>
         </div>
