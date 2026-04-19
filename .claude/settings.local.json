@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import sys; open\\('.graphify_python', 'w'\\).write\\(sys.executable\\)\")",
+      "Read(//d D:/proj/**)",
+      "Bash(python -c ' *)",
+      "Bash(cd \"D:\\\\\\\\proj\\\\\\\\gnios.github.io\")",
+      "Bash(python *)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(tail -f C:\\\\\\\\Users\\\\\\\\eugen\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\claude\\\\\\\\D--proj-gnios-github-io\\\\\\\\f22f380f-9321-43f5-ab7b-0df9308319da\\\\\\\\tasks\\\\\\\\be7n81hxv.output)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(curl -s http://localhost:3002/)",
+      "Bash(curl -s http://localhost:3004/)",
+      "Bash(curl -s http://localhost:3004/blog)",
+      "Bash(curl -s http://localhost:3004/tags)",
+      "Bash(awk '{print $2}')",
+      "Bash(xargs -r kill -9)",
+      "Bash(git add *)",
+      "Bash(git reset *)",
+      "Bash(git commit -m ' *)",
+      "mcp__plugin_playwright_playwright__browser_navigate"
+    ]
+  }
+}

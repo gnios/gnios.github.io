@@ -1,0 +1,260 @@
+{
+  "version": 2,
+  "skills": {
+    "coding-guidelines": {
+      "name": "coding-guidelines",
+      "source": "local",
+      "contentHash": "28a414c715d3c41aae28a25e2f109813ec3f246f76b5567c1e7d6a128cd289ff",
+      "installedAt": "2026-04-19T14:54:43.289Z",
+      "updatedAt": "2026-04-19T14:54:44.034Z",
+      "agents": [
+        "cursor",
+        "claude-code",
+        "github-copilot",
+        "gemini",
+        "antigravity"
+      ],
+      "method": "symlink",
+      "global": false
+    },
+    "create-adr": {
+      "name": "create-adr",
+      "source": "local",
+      "contentHash": "47ec663c849e8c1620c6f33a7be0055acdcf838c27ab7c16f44260244b80195a",
+      "installedAt": "2026-04-19T14:54:43.296Z",
+      "updatedAt": "2026-04-19T14:54:44.040Z",
+      "agents": [
+        "cursor",
+        "claude-code",
+        "github-copilot",
+        "gemini",
+        "antigravity"
+      ],
+      "method": "symlink",
+      "global": false
+    },
+    "create-rfc": {
+      "name": "create-rfc",
+      "source": "local",
+      "contentHash": "3f391b6c4397bb1590bbad511eca95c297dd0467e65385fa28b3724851c42ea8",
+      "installedAt": "2026-04-19T14:54:43.304Z",
+      "updatedAt": "2026-04-19T14:54:44.047Z",
+      "agents": [
+        "cursor",
+        "claude-code",
+        "github-copilot",
+        "gemini",
+        "antigravity"
+      ],
+      "method": "symlink",
+      "global": false
+    },
+    "excalidraw-studio": {
+      "name": "excalidraw-studio",
+      "source": "local",
+      "contentHash": "08f4964859a421cccfc52314f2e5b3484b1163ecf558ccdbb6746127229b9399",
+      "installedAt": "2026-04-19T14:54:43.320Z",
+      "updatedAt": "2026-04-19T14:54:44.063Z",
+      "agents": [
+        "cursor",
+        "claude-code",
+        "github-copilot",
+        "gemini",
+        "antigravity"
+      ],
+      "method": "symlink",
+      "global": false
+    },
+    "figma": {
+      "name": "figma",
+      "source": "local",
+      "contentHash": "5da2000639e7aee302556408a161168b8955758da0da3305842e14a93a40a7b7",
+      "installedAt": "2026-04-19T14:54:43.326Z",
+      "updatedAt": "2026-04-19T14:54:44.071Z",
+      "agents": [
+        "cursor",
+        "claude-code",
+        "github-copilot",
+        "gemini",
+        "antigravity"
+      ],
+      "method": "symlink",
+      "global": false
+    },
+    "gh-address-comments": {
+      "name": "gh-address-comments",
+      "source": "local",
+      "contentHash": "a1808fb136b7118a7bdac65415e9a40a7982953f8b3339c97087fc0807865d88",
+      "installedAt": "2026-04-19T14:54:43.332Z",
+      "updatedAt": "2026-04-19T14:54:44.078Z",
+      "agents": [
+        "cursor",
+        "claude-code",
+        "github-copilot",
+        "gemini",
+        "antigravity"
+      ],
+      "method": "symlink",
+      "global": false
+    },
+    "gh-fix-ci": {
+      "name": "gh-fix-ci",
+      "source": "local",
+      "contentHash": "f032610bcbf7f7a7b6b13d20de360608c10328b7a9e507610323e843d613f1f4",
+      "installedAt": "2026-04-19T14:54:43.348Z",
+      "updatedAt": "2026-04-19T14:54:44.085Z",
+      "agents": [
+        "cursor",
+        "claude-code",
+        "github-copilot",
+        "gemini",
+        "antigravity"
+      ],
+      "method": "symlink",
+      "global": false
+    },
+    "mermaid-studio": {
+      "name": "mermaid-studio",
+      "source": "local",
+      "contentHash": "8a240b980cee9287a20ec6ea1e4837c5d6e43c756ab17fcebbf6b1087a609815",
+      "installedAt": "2026-04-19T14:54:43.361Z",
+      "updatedAt": "2026-04-19T14:54:44.098Z",
+      "agents": [
+        "cursor",
+        "claude-code",
+        "github-copilot",
+        "gemini",
+        "antigravity"
+      ],
+      "method": "symlink",
+      "global": false
+    },
+    "modular-decomposition": {
+      "name": "modular-decomposition",
+      "source": "local",
+      "contentHash": "b536c1851c862516e5fc111502311343b952073a992ea07c9f8f9b42fbbc2a44",
+      "installedAt": "2026-04-19T14:54:43.375Z",
+      "updatedAt": "2026-04-19T14:54:44.125Z",
+      "agents": [
+        "cursor",
+        "claude-code",
+        "github-copilot",
+        "gemini",
+        "antigravity"
+      ],
+      "method": "symlink",
+      "global": false
+    },
+    "modular-design-principles": {
+      "name": "modular-design-principles",
+      "source": "local",
+      "contentHash": "d53fdca7ae18205376956c39a3a1729edfae843f63e5f2a6c5dd2c64ccd8a576",
+      "installedAt": "2026-04-19T14:54:43.382Z",
+      "updatedAt": "2026-04-19T14:54:44.138Z",
+      "agents": [
+        "cursor",
+        "claude-code",
+        "github-copilot",
+        "gemini",
+        "antigravity"
+      ],
+      "method": "symlink",
+      "global": false
+    },
+    "react-native-expert": {
+      "name": "react-native-expert",
+      "source": "local",
+      "contentHash": "9da108258c0a93cd04b57d94a5a7788e6c37c704ca4322ca9b6bedce8e3ff683",
+      "installedAt": "2026-04-19T14:54:43.401Z",
+      "updatedAt": "2026-04-19T14:54:44.151Z",
+      "agents": [
+        "cursor",
+        "claude-code",
+        "github-copilot",
+        "gemini",
+        "antigravity"
+      ],
+      "method": "symlink",
+      "global": false
+    },
+    "skill-architect": {
+      "name": "skill-architect",
+      "source": "local",
+      "contentHash": "349b256153447631c3ed356996c3a62fec52493d07ba75e37b12c458f9fbf6bb",
+      "installedAt": "2026-04-19T14:54:43.409Z",
+      "updatedAt": "2026-04-19T14:54:44.160Z",
+      "agents": [
+        "cursor",
+        "claude-code",
+        "github-copilot",
+        "gemini",
+        "antigravity"
+      ],
+      "method": "symlink",
+      "global": false
+    },
+    "technical-design-doc-creator": {
+      "name": "technical-design-doc-creator",
+      "source": "local",
+      "contentHash": "d05974df076f695f96b4e4c263ad19f2aaffe8ee6248c1b07a634dd9ed0ea51e",
+      "installedAt": "2026-04-19T14:54:43.415Z",
+      "updatedAt": "2026-04-19T14:54:44.166Z",
+      "agents": [
+        "cursor",
+        "claude-code",
+        "github-copilot",
+        "gemini",
+        "antigravity"
+      ],
+      "method": "symlink",
+      "global": false
+    },
+    "the-fool": {
+      "name": "the-fool",
+      "source": "local",
+      "contentHash": "b761f983e21e00173ac42760f478095a3e8c733862c20d9f711d10d962f407cc",
+      "installedAt": "2026-04-19T14:54:43.426Z",
+      "updatedAt": "2026-04-19T14:54:44.177Z",
+      "agents": [
+        "cursor",
+        "claude-code",
+        "github-copilot",
+        "gemini",
+        "antigravity"
+      ],
+      "method": "symlink",
+      "global": false
+    },
+    "tlc-spec-driven": {
+      "name": "tlc-spec-driven",
+      "source": "local",
+      "contentHash": "79d0e1b750dfc70820ac0152d9ca78927c398f669397e9cdb8bb812ceca2fbc6",
+      "installedAt": "2026-04-19T14:54:43.442Z",
+      "updatedAt": "2026-04-19T14:54:44.203Z",
+      "agents": [
+        "cursor",
+        "claude-code",
+        "github-copilot",
+        "gemini",
+        "antigravity"
+      ],
+      "method": "symlink",
+      "global": false
+    },
+    "web-design-guidelines": {
+      "name": "web-design-guidelines",
+      "source": "local",
+      "contentHash": "213a23fff251b12ddfec648bda148bf10704ef6617e162eb9329cc83963dd138",
+      "installedAt": "2026-04-19T14:54:43.449Z",
+      "updatedAt": "2026-04-19T14:54:44.019Z",
+      "agents": [
+        "cursor",
+        "claude-code",
+        "github-copilot",
+        "gemini"
+      ],
+      "method": "symlink",
+      "global": false
+    }
+  }
+}

@@ -61,7 +61,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       href={`/snippets/${prev.slug}`}
                       className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                     >
-                      &larr; {prev.title}
+                      <span>&larr; {prev.title}</span>
                     </Link>
                   </div>
                 )}
@@ -71,7 +71,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       href={`/snippets/${next.slug}`}
                       className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                     >
-                      {next.title} &rarr;
+                      <span>{next.title} &rarr;</span>
                     </Link>
                   </div>
                 )}
