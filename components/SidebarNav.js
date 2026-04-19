@@ -10,7 +10,7 @@ export default function SidebarNav() {
   return (
     <nav
       className={`fixed left-0 top-16 z-40 hidden overflow-hidden bg-white transition-[width] duration-[250ms] ease-in-out dark:bg-[#111111] lg:block ${
-        isCollapsed ? 'w-16' : 'w-[260px]'
+        isCollapsed ? 'w-16' : 'w-56'
       }`}
       style={{ height: 'calc(100vh - 64px)' }}
     >

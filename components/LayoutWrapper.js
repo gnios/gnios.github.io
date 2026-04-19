@@ -12,7 +12,7 @@ function LayoutInner({ children }) {
       <SidebarNav />
       <div
         className={`min-h-screen pt-16 transition-[margin-left] duration-[250ms] ease-in-out ${
-          isCollapsed ? 'lg:ml-16' : 'lg:ml-[260px]'
+          isCollapsed ? 'lg:ml-16' : 'lg:ml-56'
         }`}
       >
         <main className="mb-auto">{children}</main>
