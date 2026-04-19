@@ -1,7 +1,7 @@
 import { Fragment, useState } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { motion } from 'framer-motion'
-import classNames from 'classnames'
+import classNames from '@/lib/classnames'
 // Removido next-auth para compatibilidade com GitHub Pages
 import Link from './Link'
 import {
@@ -78,73 +78,69 @@ export default function DropMenu() {
           <div className="py-1">
             <Menu.Item>
               {({ active }) => (
-                <Link href="/">
-                  <a
-                    className={classNames(
-                      active
-                        ? 'bg-gray-200 text-gray-700 dark:bg-zinc-700 dark:text-gray-300'
-                        : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
-                      'block px-4 py-2 text-sm'
-                    )}
-                  >
-                    <div className="flex flex-row">
-                      <HomeIcon className="mr-4 mt-0.5" /> Home
-                    </div>
-                  </a>
+                <Link
+                  href="/"
+                  className={classNames(
+                    active
+                      ? 'bg-gray-200 text-gray-700 dark:bg-zinc-700 dark:text-gray-300'
+                      : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
+                    'block px-4 py-2 text-sm'
+                  )}
+                >
+                  <div className="flex flex-row">
+                    <HomeIcon className="mr-4 mt-0.5" /> Home
+                  </div>
                 </Link>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
-                <Link href="/blog">
-                  <a
-                    className={classNames(
-                      active
-                        ? 'bg-gray-200 text-gray-700 dark:bg-zinc-700 dark:text-gray-300'
-                        : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
-                      'block px-4 py-2 text-sm'
-                    )}
-                  >
-                    <div className="flex flex-row">
-                      <Pencil1Icon className="mr-4 mt-0.5" /> Blog
-                    </div>
-                  </a>
+                <Link
+                  href="/blog"
+                  className={classNames(
+                    active
+                      ? 'bg-gray-200 text-gray-700 dark:bg-zinc-700 dark:text-gray-300'
+                      : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
+                    'block px-4 py-2 text-sm'
+                  )}
+                >
+                  <div className="flex flex-row">
+                    <Pencil1Icon className="mr-4 mt-0.5" /> Blog
+                  </div>
                 </Link>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
-                <Link href="/snippets">
-                  <a
-                    className={classNames(
-                      active
-                        ? 'bg-gray-200 text-gray-700 dark:bg-zinc-700 dark:text-gray-300'
-                        : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
-                      'block px-4 py-2 text-sm'
-                    )}
-                  >
-                    <div className="flex flex-row">
-                      <CodeIcon className="mr-4 mt-0.5" /> Snippets
-                    </div>
-                  </a>
+                <Link
+                  href="/snippets"
+                  className={classNames(
+                    active
+                      ? 'bg-gray-200 text-gray-700 dark:bg-zinc-700 dark:text-gray-300'
+                      : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
+                    'block px-4 py-2 text-sm'
+                  )}
+                >
+                  <div className="flex flex-row">
+                    <CodeIcon className="mr-4 mt-0.5" /> Snippets
+                  </div>
                 </Link>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
-                <Link href="/projects">
-                  <a
-                    className={classNames(
-                      active
-                        ? 'bg-gray-200 text-gray-700 dark:bg-zinc-700 dark:text-gray-300'
-                        : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
-                      'block px-4 py-2 text-sm'
-                    )}
-                  >
-                    <div className="flex flex-row">
-                      <ArchiveIcon className="mr-4 mt-0.5" /> Projects
-                    </div>
-                  </a>
+                <Link
+                  href="/projects"
+                  className={classNames(
+                    active
+                      ? 'bg-gray-200 text-gray-700 dark:bg-zinc-700 dark:text-gray-300'
+                      : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
+                    'block px-4 py-2 text-sm'
+                  )}
+                >
+                  <div className="flex flex-row">
+                    <ArchiveIcon className="mr-4 mt-0.5" /> Projects
+                  </div>
                 </Link>
               )}
             </Menu.Item>
@@ -153,37 +149,35 @@ export default function DropMenu() {
           <div className="py-1">
             <Menu.Item>
               {({ active }) => (
-                <Link href="/resume">
-                  <a
-                    className={classNames(
-                      active
-                        ? 'bg-gray-200 text-gray-700 dark:bg-zinc-700 dark:text-gray-300'
-                        : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
-                      'block px-4 py-2 text-sm'
-                    )}
-                  >
-                    <div className="flex flex-row">
-                      <PersonIcon className="mr-4 mt-0.5" /> Sobre Mim
-                    </div>
-                  </a>
+                <Link
+                  href="/resume"
+                  className={classNames(
+                    active
+                      ? 'bg-gray-200 text-gray-700 dark:bg-zinc-700 dark:text-gray-300'
+                      : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
+                    'block px-4 py-2 text-sm'
+                  )}
+                >
+                  <div className="flex flex-row">
+                    <PersonIcon className="mr-4 mt-0.5" /> Sobre Mim
+                  </div>
                 </Link>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
-                <Link href="/tags">
-                  <a
-                    className={classNames(
-                      active
-                        ? 'bg-gray-200 text-gray-700 dark:bg-zinc-700 dark:text-gray-300'
-                        : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
-                      'block px-4 py-2 text-sm'
-                    )}
-                  >
-                    <div className="flex flex-row">
-                      <FrameIcon className="mr-4 mt-0.5" /> Tags
-                    </div>
-                  </a>
+                <Link
+                  href="/tags"
+                  className={classNames(
+                    active
+                      ? 'bg-gray-200 text-gray-700 dark:bg-zinc-700 dark:text-gray-300'
+                      : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
+                    'block px-4 py-2 text-sm'
+                  )}
+                >
+                  <div className="flex flex-row">
+                    <FrameIcon className="mr-4 mt-0.5" /> Tags
+                  </div>
                 </Link>
               )}
             </Menu.Item>

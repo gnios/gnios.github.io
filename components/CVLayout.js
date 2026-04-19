@@ -45,8 +45,8 @@ export default function CVLayout({ children, frontMatter }) {
               <Image
                 src={avatar}
                 alt="avatar"
-                width="120px"
-                height="120px"
+                width={120}
+                height={120}
                 className="h-30 w-30 rounded-full border-4 border-white"
                 placeholder="blur"
                 blurDataURL="/static/images/SVG-placeholder.png"

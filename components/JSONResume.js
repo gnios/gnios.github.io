@@ -111,8 +111,8 @@ export default function JSONResume({ resumeData }) {
             <Image
               src={resumeData.basics.image}
               alt={resumeData.basics.name}
-              width="120px"
-              height="120px"
+              width={120}
+              height={120}
               className="rounded-full border-4 border-gray-200 dark:border-gray-700"
               placeholder="blur"
               blurDataURL="/static/images/SVG-placeholder.png"

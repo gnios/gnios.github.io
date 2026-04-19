@@ -6,14 +6,20 @@ export default function Track(track) {
       <div className="flex justify-self-auto">
         <div className="flex flex-col pl-3">
           {track.imageUrl ? (
-            <Image className="rounded-lg" src={track.imageUrl} width={48} height={48} alt="" />
+            <Image
+              className="rounded-lg"
+              src={track.imageUrl}
+              width={48}
+              height={48}
+              alt={track.title}
+            />
           ) : (
             <Image
               className="rounded-lg"
               src="/static/images/spotify.jpeg"
               width={48}
               height={48}
-              alt=""
+              alt={track.title}
               placeholder="blur"
               blurDataURL="/static/images/SVG-placeholder.png"
             />
