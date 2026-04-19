@@ -130,12 +130,13 @@ export default function SidebarNav() {
             <li key={item.name}>
               <Link
                 href={item.href}
+                aria-current={isActive ? 'page' : undefined}
                 title={isCollapsed ? item.name : undefined}
                 className={`mx-2 flex items-center gap-3 rounded-md py-[9px] text-[14px] transition-colors ${
                   isCollapsed ? 'justify-center px-2' : 'px-[14px]'
                 } ${
                   isActive
-                    ? 'font-semibold text-[#191919] dark:text-[#fafafa]'
+                    ? 'font-semibold text-[#191919] hover:bg-wash dark:text-[#fafafa] dark:hover:bg-[#252525]'
                     : 'font-normal text-[#6b6b6b] hover:bg-wash hover:text-[#333] dark:text-[#888] dark:hover:bg-[#252525] dark:hover:text-[#fafafa]'
                 }`}
               >
