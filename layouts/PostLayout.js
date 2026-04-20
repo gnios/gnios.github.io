@@ -190,7 +190,6 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             ← Voltar para o blog
           </Link>
         </div>
-
       </article>
     </>
   )
