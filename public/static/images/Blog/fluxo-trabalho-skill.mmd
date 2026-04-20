@@ -1,0 +1,29 @@
+%%{init: {'theme': 'base', 'themeVariables': {
+  'primaryColor': '#4f46e5', 'primaryTextColor': '#ffffff',
+  'primaryBorderColor': '#3730a3', 'lineColor': '#4f46e5',
+  'secondaryColor': '#f1f5f9', 'tertiaryColor': '#fef3c7',
+  'background': '#ffffff', 'mainBkg': '#4f46e5',
+  'nodeBorder': '#3730a3', 'clusterBkg': '#f1f5f9',
+  'clusterBorder': '#cbd5e1', 'titleColor': '#1e293b',
+  'edgeLabelBackground': '#ffffff', 'textColor': '#1e293b',
+  'nodeTextColor': '#ffffff'
+}}}%%
+flowchart TD
+    inicio([Tarefa a executar]) --> contexto[Compartilhe o contexto]
+    contexto --> passo[Peça um passo de cada vez]
+    passo --> executa[IA executa]
+    executa --> revisa{Resultado correto?}
+    revisa -->|Não| corrige[Você corrige]
+    corrige --> ajusta[IA ajusta] --> executa
+    revisa -->|Sim| mais{Mais passos?}
+    mais -->|Sim| passo
+    mais -->|Não| padrao[Padrão emergiu]
+
+    subgraph resultado [O que fica registrado]
+        padrao --> p1[Steps que funcionam]
+        padrao --> p2[Correções feitas]
+        padrao --> p3[Formatos reais de entrada e saída]
+        padrao --> p4[Especificidades do projeto]
+    end
+
+    p1 & p2 & p3 & p4 --> skill([Peça a skill])
