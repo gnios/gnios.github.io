@@ -23,7 +23,7 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'system-ui', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter', '"Helvetica Neue"', 'Helvetica', 'Arial', ...defaultTheme.fontFamily.sans],
         serif: ['Georgia', 'Charter', 'Iowan Old Style', ...defaultTheme.fontFamily.serif],
       },
       gradientColorStops: {
@@ -84,8 +84,8 @@ module.exports = {
         DEFAULT: {
           css: {
             color: '#292929',
-            fontSize: '21px',
-            lineHeight: '1.8',
+            fontSize: '18px',
+            lineHeight: '1.58',
             fontFamily: "Georgia, 'Charter', serif",
             a: {
               color: '#191919',
@@ -93,9 +93,9 @@ module.exports = {
               '&:hover': { color: '#191919' },
               code: { color: '#191919' },
             },
-            h1: { fontWeight: '700', letterSpacing: '-0.02em', color: '#191919', fontFamily: "Georgia, 'Charter', serif" },
-            h2: { fontWeight: '700', letterSpacing: '-0.01em', color: '#191919', fontSize: '26px', lineHeight: '1.3', fontFamily: "Georgia, 'Charter', serif" },
-            h3: { fontWeight: '700', color: '#191919', fontSize: '22px', lineHeight: '1.3', fontFamily: "Georgia, 'Charter', serif" },
+            h1: { fontWeight: '700', letterSpacing: '-0.02em', color: '#191919', fontFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif" },
+            h2: { fontWeight: '700', letterSpacing: '-0.01em', color: '#191919', fontSize: '26px', lineHeight: '1.3', fontFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif" },
+            h3: { fontWeight: '700', color: '#191919', fontSize: '22px', lineHeight: '1.3', fontFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif" },
             'h4,h5,h6': { color: '#191919' },
             // Allow Prism syntax highlighting to work - don't override pre/code styles
             'code:not([class])': {
@@ -123,9 +123,9 @@ module.exports = {
               '&:hover': { color: '#FAFAFA' },
               code: { color: '#FAFAFA' },
             },
-            h1: { color: '#FAFAFA', fontFamily: "Georgia, 'Charter', serif" },
-            h2: { color: '#FAFAFA', fontFamily: "Georgia, 'Charter', serif" },
-            h3: { color: '#FAFAFA', fontFamily: "Georgia, 'Charter', serif" },
+            h1: { color: '#FAFAFA', fontFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif" },
+            h2: { color: '#FAFAFA', fontFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif" },
+            h3: { color: '#FAFAFA', fontFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif" },
             'h4,h5,h6': { color: '#FAFAFA' },
             // Allow Prism syntax highlighting to work - don't override pre/code styles
             'code:not([class])': { backgroundColor: '#2D3748' },

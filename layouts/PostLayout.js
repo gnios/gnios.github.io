@@ -3,7 +3,6 @@ import { BlogSEO } from '@/components/SEO'
 import Image from '@/components/Image'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
-import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import { TwitterShareButton, LinkedinShareButton, WhatsappShareButton } from 'react-share'
 import { SocialIcon } from 'react-social-icons'
@@ -22,7 +21,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
       <article className="mx-auto max-w-[740px] px-6 py-12">
         {/* ── Header ── */}
         <header className="mb-8">
-          <h1 className="font-serif text-[42px] font-bold leading-[1.15] tracking-[-0.5px] text-ink dark:text-wash-subtle">
+          <h1 className="font-sans text-[42px] font-bold leading-[52px] tracking-[-0.5px] text-ink dark:text-wash-subtle">
             {title}
           </h1>
 
@@ -192,7 +191,6 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
           </Link>
         </div>
 
-        <Comments frontMatter={frontMatter} />
       </article>
     </>
   )

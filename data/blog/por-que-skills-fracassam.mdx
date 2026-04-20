@@ -1,0 +1,316 @@
+---
+title: Por que as Skills Fracassam (e Como Não Fracassar)
+date: '2026-04-19'
+tags: [skills, ai-agents, boas-praticas, arquitetura, context-engineering]
+draft: false
+summary: Skills fracassam porque são criadas fora de contexto. A IA gera genérico quando não tem exemplos, padrões e edge cases específicos do seu domínio. Três pilares para criar skills que as pessoas confiem.
+images: ['/static/images/Blog/por-que-skills-fracassam.jpg']
+---
+
+Uma skill ruim gera código ruim em escala. Uma skill boa gera código bom em escala. A diferença entre as duas não está na ferramenta — está em como a skill foi construída. Quando uma skill é criada sem contexto suficiente, a IA passa a alucinar sistematicamente: gera código tecnicamente válido, mas semanticamente errado. E faz isso toda vez que a skill é chamada, para todo mundo que a usa.
+
+Percebi esse padrão nos times que comecei a acompanhar. Quando alguém pedia "cria uma skill para automatizar X", a IA gerava algo que tecnicamente tinha instruções, mas faltava... tudo. Faltavam exemplos. Faltavam templates. Faltavam os gotchas — aqueles detalhinhos que só quem já fez o trabalho conhece. O resultado era uma skill genérica que, quando testada em produção, alucinava.
+
+---
+
+## O Padrão que Observei
+
+Isso começou a fazer sentido quando comecei a notar os sinais de uma skill ruim:
+
+- **Falta exemplos na instrução.** A skill descreve o que deveria acontecer em prosa, mas não mostra nenhum exemplo de entrada/saída real.
+- **Falta templates e scripts.** Tarefas repetitivas que deveriam ter um template pronto aparecem como descrições genéricas tipo "execute o comando apropriado".
+- **Alucinações semânticas.** O que a skill gera é tecnicamente válido — roda sem erro — mas viola regras de negócio que ninguém formalizou.
+
+A questão que comecei a fazer era: por que isso acontece? A IA não é burra. A ferramenta não é fraca. Qual é o problema de verdade?
+
+A resposta que fui encontrando é tão simples que quase passa despercebida: **skills fracassam porque são criadas fora de contexto.**
+
+Quando você pede pra IA "cria uma skill para X", ela não tem:
+- Os steps que funcionaram (porque esse trabalho ainda não foi feito)
+- As correções necessárias (porque ninguém descobriu ainda onde as coisas erram)
+- Os edge cases específicos (porque ninguém os encontrou ainda)
+- O padrão reutilizável (porque ele só emerge depois de executar a tarefa de verdade)
+
+A IA, sem esse contexto, gera genérico. E genérico em engenharia de software é quase sinônimo de inútil.
+
+---
+
+## Pilar 1: Contexto é Descoberta (não criação)
+
+A descoberta vem primeiro. A skill vem depois.
+
+E aqui é onde a virada é interessante: você não precisa descobrir sozinho. Você descobre **junto com a IA**, na mesma sessão onde o trabalho acontece.
+
+Imagine que você precisa atualizar descrições de PRs em escala — adicionar tags, reestruturar o formato. A forma errada é abrir uma conversa e pedir "cria uma skill que atualiza PRs". A forma certa é fazer o trabalho de verdade primeiro, deixar a descoberta acontecer, e só então pedir a skill.
+
+Na prática, o fluxo que funciona é esse:
+
+**Primeiro, compartilhe o contexto que você já tem.** Antes de começar, traga pra conversa o que existe: documentação, runbooks, style guides, comentários de code review, trechos do git history onde isso foi feito antes. Isso não substitui a fase exploratória — mas reduz o tempo de descoberta. A IA começa com menos suposições.
+
+**Depois, execute o trabalho passo a passo com a IA.** Não peça "faz tudo". Peça "me ajuda a atualizar esse PR conforme os padrões". Deixa acontecer. A IA vai tentar, você vai corrigir onde errar, a IA vai ajustar. Nesse processo, um padrão começa a emergir — os steps que funcionam, as correções que você fez, os formatos reais de entrada e saída, as coisas específicas do projeto que você teve que explicar.
+
+**Agora, com esse contexto da sessão ainda vivo, peça a skill.** "Com base no que acabamos de fazer aqui, cria uma skill que automatiza isso."
+
+Esse é o ponto que muda tudo. Naquele momento, a IA sabe exatamente o que funcionou. Sabe onde errou e foi corrigida. Sabe qual é o padrão real — não o padrão genérico que ela inferiria do zero. A skill que sai daí carrega toda aquela aprendizagem da sessão.
+
+**Por último, teste a skill em casos reais e itere.** A primeira versão quase sempre precisa de ajuste. Rode alguns casos, observe os traces de execução (não só o output final — veja se a IA está gastando tempo em passos improdutivos), e volte pra skill com o que aprendeu.
+
+A mudança de perspectiva é essa: você e a IA descobrem juntos, em modo conversacional, com contexto compartilhado. Skills não nascem prontas do nada. Elas nascem do trabalho exploratório que precede a criação.
+
+---
+
+## Pilar 2: Exemplos e Padrões (reduzem alucinações)
+
+Uma skill é um prompt no final. E prompts bons têm estrutura, não só descrição em prosa.
+
+Conforme examinei skills que funcionavam bem, percebi o que tinham em comum: estrutura concreta. Não "faça isso de forma apropriada". Era "faça exatamente assim, com esse padrão, e se encontrar isso, faça aquilo".
+
+Abaixo estão os padrões que descobri que fazem diferença. Nem toda skill precisa de todos eles — use o que fizer sentido para o que a sua skill precisa resolver.
+
+### Seção de Gotchas
+
+A seção mais valiosa de uma skill. Não são boas práticas genéricas tipo "sempre valide o input". São fatos específicos da skill que desafiam suposições razoáveis — correções concretas para erros que o agente comete naturalmente sem ser avisado.
+
+Para uma skill de atualizar descrição de PR, os gotchas seriam completamente diferentes:
+
+```markdown
+## Gotchas
+
+- Use `gh pr edit` para atualizar a descrição — não `git commit --amend`.
+- O corpo do PR aceita markdown, mas a linha de título não — evite
+  caracteres especiais como `**` ou `#` no título.
+- Verifique autenticação com `gh auth status` antes de qualquer operação.
+  Tokens expirados retornam erro silencioso em alguns ambientes.
+```
+
+Quando o agente errar durante o uso da skill e você corrigir, adicione a correção aqui. Essa é uma das formas mais diretas de melhorar uma skill iterativamente.
+
+### Templates para o Formato de Saída
+
+Estruturas concretas funcionam melhor do que descrição em prosa. Agentes fazem bom pattern-matching contra templates.
+
+```markdown
+## Estrutura do Relatório
+
+Use este template, adaptando as seções conforme necessário:
+
+# [Título da Análise]
+
+## Resumo Executivo
+[Um parágrafo com os principais achados]
+
+## Achados Principais
+- Achado 1 com dado que sustenta
+- Achado 2 com dado que sustenta
+
+## Recomendações
+1. Recomendação acionável e específica
+2. Recomendação acionável e específica
+```
+
+Muito melhor que "escreva um relatório bem estruturado com resumo e achados".
+
+### Checklists para Workflows com Múltiplos Passos
+
+Ajuda o agente a não pular etapas, especialmente quando existem dependências entre elas.
+
+```markdown
+## Workflow de Processamento
+
+- [ ] Passo 1: Analisa o formulário (`scripts/analyze_form.py`)
+- [ ] Passo 2: Cria o mapeamento de campos (`fields.json`)
+- [ ] Passo 3: Valida o mapeamento (`scripts/validate_fields.py`)
+- [ ] Passo 4: Preenche o formulário (`scripts/fill_form.py`)
+- [ ] Passo 5: Verifica o output (`scripts/verify_output.py`)
+```
+
+### Loops de Validação
+
+Instrui o agente a validar o próprio trabalho antes de seguir em frente. Cria um feedback loop que corrige erros antes de propagarem.
+
+```markdown
+## Workflow de Edição
+
+1. Faça as edições
+2. Rode a validação: `python scripts/validate.py output/`
+3. Se falhar:
+   - Leia a mensagem de erro
+   - Corrija os problemas
+   - Rode a validação de novo
+4. Só avança quando a validação passar
+```
+
+### Planejar → Validar → Executar
+
+Para operações destrutivas ou irreversíveis, o agente cria um plano intermediário, valida contra source of truth, e só então executa. A mágica está no passo de validação — erros claros permitem que o agente se autocorrija antes de causar dano.
+
+### Scripts Reutilizáveis
+
+Se você percebe que o agente reinventa a mesma lógica toda vez (parsing, geração de relatórios, validação de output), escreva o script testado uma vez e empacote em `scripts/`. O agente usa o script em vez de reinventar.
+
+Tudo isso junto reduz a necessidade do agente adivinhar. Templates eliminam interpretação. Scripts reutilizáveis evitam reinvenção. Loops de validação corrigem antes de propagar.
+
+---
+
+## Pilar 3: Progressive Disclosure (reutilização sem reescrita)
+
+Uma skill bem-feita é reutilizável. Não porque hardcoda tudo — mas porque separa o que sempre carrega do que carrega só quando precisa.
+
+O princípio é simples: mantenha o `SKILL.md` pequeno — abaixo de 500 linhas, abaixo de 5k tokens. Só as instruções core que o agente precisa em toda execução. Conteúdo detalhado vai para arquivos separados em `references/`, `assets/`, `scripts/`, e só é carregado sob demanda.
+
+O que faz a diferença não é ter os arquivos separados — é **dizer ao agente quando carregar cada um**:
+
+```markdown
+## Tratamento de Erros da API
+
+Se a API retornar status diferente de 200, leia `references/api-errors.md`
+para os passos de troubleshooting específicos de cada código de erro.
+```
+
+Em vez de:
+
+```markdown
+## Tratamento de Erros da API
+
+Aqui estão todos os erros possíveis: [lista de 50 erros]
+```
+
+O segundo gasta tokens com informação irrelevante na maioria das execuções. O primeiro carrega só quando o cenário ocorre. Menos ruído, mais atenção no que importa agora.
+
+### Configuração por contexto
+
+Quando uma skill precisa se adaptar a diferentes times ou projetos — qual board do Jira, qual projeto, qual ambiente — use arquivos de config em vez de hardcodar valores. Similar ao `appsettings.json` do .NET: a skill lê o arquivo uma vez e usa para toda a execução.
+
+```yaml
+# jira.config
+board_id: "PROJ-123"
+team: "backend"
+project_key: "PROJ"
+```
+
+Muda o contexto? Muda o config. A lógica da skill não é tocada. E o arquivo pode ficar versionado no projeto, sem precisar editar a skill em si.
+
+Uma abordagem que funciona bem é incluir um passo de setup na própria skill: se o arquivo de config não existir, a skill faz as perguntas necessárias, cria o arquivo com as respostas e segue a execução. Na próxima vez que for chamada, o arquivo já existe — e ela vai direto ao trabalho, sem perguntar nada.
+
+---
+
+## Calibrando a Especificidade
+
+Nem toda instrução numa skill precisa do mesmo nível de rigidez. E essa calibração faz diferença.
+
+O que percebi: quando a operação é frágil ou precisa ser exatamente de um jeito, ser prescritivo ajuda — "rode exatamente esse comando", "não modifique as flags". Quando múltiplas abordagens são válidas, dar liberdade e explicar o *porquê* em vez de só o *o quê* tende a funcionar melhor. Um agente que entende a intenção por trás da instrução toma decisões melhores em contexto.
+
+**Dê um default com escape hatch, em vez de uma lista de opções.**
+
+Quando a skill apresenta muitas alternativas equivalentes, o agente pode gastar tempo escolhendo em vez de executando. Apontar um caminho padrão — e mencionar brevemente quando usar outro — tende a funcionar melhor:
+
+Evite:
+```
+Você pode usar pdfplumber, pypdf, PyMuPDF, ou pdf2image...
+```
+
+Prefira:
+```
+Use pdfplumber para extração de texto.
+Para documentos escaneados que precisam de OCR, use pdf2image com pytesseract.
+```
+
+**Prefira procedimentos a declarações específicas.**
+
+Instruções que descrevem um caso concreto só funcionam para aquele caso. Instruções que descrevem um método funcionam para qualquer situação similar:
+
+Evite:
+```
+Junte orders com customers em customer_id, filtre por region = 'EMEA',
+e some a coluna amount.
+```
+
+Prefira:
+```
+1. Leia o schema em `references/schema.yaml` para identificar as tabelas relevantes
+2. Faça o join usando a convenção de foreign key `_id`
+3. Aplique os filtros do usuário como cláusulas WHERE
+4. Agregue colunas numéricas e formate como tabela markdown
+```
+
+No primeiro, o agente resolve exatamente essa query — e para qualquer outra precisaria de uma nova instrução. No segundo, ele tem um método que generaliza para qualquer query analítica que aparecer.
+
+---
+
+## O Que a Skill Não Precisa Saber
+
+Toda instrução que você escreve compete por atenção no context window. Tokens gastos com o óbvio são tokens que faltam para o que importa.
+
+A pergunta guia que uso: "O agente erraria isso sem essa instrução?" Se a resposta for não — corta.
+
+Evite (agente já sabe o que é PDF):
+```
+PDF (Portable Document Format) é um formato de arquivo comum
+que contém texto, imagens e outros conteúdos. Para extrair texto...
+```
+
+Prefira (vai direto ao que o agente não saberia sozinho):
+```
+Use pdfplumber para extração de texto.
+Para documentos escaneados, use pdf2image com pytesseract.
+```
+
+Quanto mais a skill foca no que é específico — convenções do projeto, edge cases do domínio, padrões não-óbvios — menos espaço sobra para alucinação.
+
+---
+
+## Uma Skill com um Propósito
+
+Uma skill deve encapsular uma unidade coerente de trabalho. Pensa como uma função: faz uma coisa bem, compõe com outras skills, pode ser testada independentemente.
+
+Muito estreita força o agente a carregar múltiplas skills para uma tarefa simples, com risco de instruções conflitantes. Muito ampla é difícil de ativar com precisão e tende a gerar instruções que se contradizem.
+
+Evite (estreita demais — fragmenta o que é uma tarefa só):
+```
+Skill: buscar PRs abertos
+Skill: formatar descrição de PR
+Skill: atualizar PR via CLI
+```
+
+O agente precisaria encadear três skills para fazer uma coisa só. Quanto mais skills envolvidas, maior a chance de instruções conflitantes.
+
+Prefira (coerente — cobre uma unidade de trabalho completa):
+```
+Skill: revisar e atualizar descrições de PRs abertos
+→ busca, formata e atualiza em um fluxo só
+```
+
+Evite (ampla demais — mistura domínios diferentes):
+```
+Skill: gerenciar PRs e configurar repositório
+→ atualiza descrições, define branch protection rules,
+  configura webhooks, adiciona colaboradores...
+```
+
+Domínios diferentes numa skill só tornam a ativação imprecisa e as instruções tendem a se contradizer conforme a skill cresce.
+
+---
+
+## O Que Isso Muda
+
+Se você leva esses três pilares a sério, muda quando e como skills são criadas.
+
+Não é mais "quando preciso dessa funcionalidade". É "depois que já executei o trabalho com a IA, tenho o contexto da sessão, exemplos concretos, templates e os edge cases que apareceram".
+
+Parece mais lento. Na prática, poupa tempo. Skill criada fora de contexto quase sempre precisa ser reescrita. Skill criada com contexto funciona — e quando precisar de ajuste, você sabe exatamente onde mexer.
+
+E tem uma provocação que fica: se você não consegue identificar um padrão repetível depois de executar uma tarefa algumas vezes com a IA, talvez a tarefa ainda seja ambígua demais para virar skill. Ou o domínio ainda não está suficientemente entendido.
+
+Porque a pergunta que importa não é "conseguimos criar skills?". É "conseguimos criar skills que as pessoas confiem?"
+
+Porque uma skill ruim não erra uma vez — erra toda vez. Gera código ruim em escala, para todo mundo que a usa. Uma skill boa faz o oposto: multiplica o que foi bem descoberto, bem estruturado, bem testado.
+
+---
+
+## Referências
+
+- **Best Practices for Skill Creators** — agentskills.io
+  [https://agentskills.io/skill-creation/best-practices](https://agentskills.io/skill-creation/best-practices)
+
+- **Skill-Architect Framework** — tech-leads-club/agent-skills
+  [https://github.com/tech-leads-club/agent-skills](https://github.com/tech-leads-club/agent-skills/tree/main/packages/skills-catalog/skills/(creation)/skill-architect)
