@@ -1,9 +1,9 @@
 const siteMetadata = {
-  title: 'Gnios | Desenvolvedor Full Stack',
+  title: 'Gnios | Staff Engineer',
   author: 'Gnios',
-  headerTitle: 'Gnios - Desenvolvedor Full Stack',
+  headerTitle: 'Gnios - Staff Engineer',
   description:
-    'Desenvolvedor Full Stack apaixonado por tecnologia. Blog pessoal com artigos sobre desenvolvimento web, projetos e experiências na área de tecnologia.',
+    'Com Eugenio, Staff Engineer. Reflexões práticas sobre engenharia de software, contextos reais, arquitetura, automação e o que aprendi construindo sistemas que funcionam de verdade. Sem clichês, só o que é útil na prática.',
   snippets: 'Snippets de código reutilizáveis e tutoriais de programação por Gnios',
   language: 'pt-br',
   theme: 'system', // system, dark or light
@@ -12,7 +12,7 @@ const siteMetadata = {
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
-  email: 'contato@gnios.dev',
+  email: 'eugenio00@gmail.com',
   github: 'https://github.com/gnios',
   twitter: 'https://twitter.com/gnios_dev',
   linkedin: 'https://www.linkedin.com/in/gnios/',
