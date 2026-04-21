@@ -14,7 +14,7 @@ const siteMetadata = {
   socialBanner: '/static/images/twitter-card.png',
   email: 'eugenio00@gmail.com',
   github: 'https://github.com/gnios',
-  twitter: 'https://twitter.com/gnios_dev',
+  twitter: 'https://twitter.com/gnios',
   linkedin: 'https://www.linkedin.com/in/gnios/',
   website: 'https://gnios.github.io',
   locale: 'pt-BR',
@@ -47,7 +47,7 @@ const siteMetadata = {
     },
   },
   socialAccount: {
-    twitter: 'gnios_dev',
+    twitter: 'gnios',
   },
 }
 
