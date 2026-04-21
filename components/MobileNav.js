@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Link from './Link'
 import { useRouter } from 'next/router'
 import { navItems } from '@/data/navItems'
+import Logo from '@/data/logo.svg'
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
@@ -34,8 +35,14 @@ const MobileNav = () => {
       >
         {/* Header */}
         <div className="flex h-16 items-center justify-between border-b border-stroke px-6 dark:border-[#292929]">
-          <span className="text-xl font-extrabold tracking-[-0.3px] text-ink dark:text-wash-subtle">
-            Gnios
+          <span className="flex items-center gap-1 text-ink dark:text-wash-subtle">
+            <Logo className="h-8 w-8 shrink-0 text-orange-500" aria-hidden="true" />
+            <span
+              className="text-2xl font-bold leading-none tracking-tight"
+              style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace" }}
+            >
+              Gnios
+            </span>
           </span>
           <button
             type="button"

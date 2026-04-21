@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { useRouter } from 'next/router'
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
+import Logo from '@/data/logo.svg'
 import ThemeSwitch from './ThemeSwitch'
 import MobileNav from './MobileNav'
 import { useSidebar } from './SidebarContext'
@@ -37,12 +38,16 @@ export default function Topbar() {
             <span className="block h-[1.5px] w-4 rounded bg-ink-light dark:bg-[#888]" />
           </button>
 
-          <Link
-            href="/"
-            className="text-xl font-extrabold tracking-[-0.3px] text-ink dark:text-wash-subtle"
-            aria-label={siteMetadata.headerTitle}
-          >
-            {siteMetadata.author || 'Gnios'}
+          <Link href="/" aria-label={siteMetadata.headerTitle}>
+            <span className="flex items-center gap-1 text-ink dark:text-wash-subtle">
+              <Logo className="h-8 w-8 shrink-0 text-orange-500" aria-hidden="true" />
+              <span
+                className="text-2xl font-bold leading-none tracking-tight"
+                style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace" }}
+              >
+                {siteMetadata.author || 'Gnios'}
+              </span>
+            </span>
           </Link>
 
           <div className="hidden items-center gap-2 rounded-full bg-wash px-4 py-2 dark:bg-[#1A1A1A] sm:flex">
