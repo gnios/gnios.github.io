@@ -11,7 +11,11 @@ async function main() {
     await page.setViewport({ width: 1200, height: 630, deviceScaleFactor: 1 })
     await page.goto('file://' + htmlPath.replace(/\\/g, '/'), { waitUntil: 'networkidle0' })
     await page.evaluateHandle('document.fonts.ready')
-    await page.screenshot({ path: outPath, type: 'png', clip: { x: 0, y: 0, width: 1200, height: 630 } })
+    await page.screenshot({
+      path: outPath,
+      type: 'png',
+      clip: { x: 0, y: 0, width: 1200, height: 630 },
+    })
     console.log('Wrote', outPath)
   } finally {
     await browser.close()

@@ -59,7 +59,9 @@ async function main() {
   const args = parseArgs(process.argv.slice(2))
 
   if (!args.input) {
-    console.error('Usage: node scripts/optimize-banner.js <input-image> [--slug <name>] [--max-kb 300]')
+    console.error(
+      'Usage: node scripts/optimize-banner.js <input-image> [--slug <name>] [--max-kb 300]'
+    )
     process.exit(1)
   }
 

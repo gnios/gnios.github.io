@@ -41,7 +41,13 @@ async function main() {
 
   await sharp(svg)
     .resize(150, 74, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
-    .extend({ top: 38, bottom: 38, left: 80, right: 80, background: { r: 0, g: 0, b: 0, alpha: 0 } })
+    .extend({
+      top: 38,
+      bottom: 38,
+      left: 80,
+      right: 80,
+      background: { r: 0, g: 0, b: 0, alpha: 0 },
+    })
     .png()
     .toFile(path.join(favDir, 'mstile-310x150.png'))
   console.log('  mstile-310x150.png  310x150')
