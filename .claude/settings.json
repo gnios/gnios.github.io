@@ -1,4 +1,20 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(node scripts/render-banner-documentacao.js)",
+      "Bash(npx --yes serve scripts -p 7331 --no-clipboard)",
+      "Bash(curl -s http://localhost:7331/brainstorm-personality.html)",
+      "Bash(node -e \"const sharp = require\\('sharp'\\); console.log\\('sharp ok'\\)\")",
+      "Bash(node -e \"const jimp = require\\('jimp'\\); console.log\\('jimp ok'\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(node d:/proj/gnios.github.io/scripts/optimize-banner.js \"d:/proj/gnios.github.io/public/static/images/Gemini_Generated_Image_rktv2brktv2brktv.png\" --slug \"documentacao-antes-das-ferramentas\")",
+      "Edit(~/.claude/skills/gnios-banner/**)",
+      "Edit(~/.claude/skills/gnios-mdx/**)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\eugen\\.claude\\skills"
+    ]
+  },
   "enabledPlugins": {
     "playwright@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true

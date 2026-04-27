@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0a0a0a;
+      font-family: 'Inter', sans-serif;
+      color: #f5f5f5;
+      padding: 48px;
+    }
+    h1 { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #F97316; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+    p.sub { font-size: 15px; color: #737373; margin-bottom: 48px; }
+    .options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .option {
+      background: #111; border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 20px; padding: 36px 28px 32px;
+      display: flex; flex-direction: column; align-items: center; gap: 0; position: relative;
+    }
+    .option:hover { border-color: rgba(249,115,22,0.35); }
+    .label { position: absolute; top: 20px; left: 20px; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; color: #F97316; letter-spacing: 0.08em; }
+    .char-name { font-size: 17px; font-weight: 700; color: #fff; margin-top: 20px; margin-bottom: 6px; }
+    .char-desc { font-size: 13px; color: #737373; text-align: center; line-height: 1.55; margin-bottom: 16px; }
+    .use-note { font-size: 12px; font-family: 'JetBrains Mono', monospace; color: #F97316; background: rgba(249,115,22,0.08); border: 1px solid rgba(249,115,22,0.18); border-radius: 6px; padding: 5px 12px; text-align: center; }
+    .canvas-wrap { height: 220px; display: flex; align-items: flex-end; justify-content: center; }
+  </style>
+</head>
+<body>
+  <h1>Pergunta 2 de 5 — Formato do corpo</h1>
+  <p class="sub">Qual o alcance visual do personagem?</p>
+
+  <div class="options">
+
+    <!-- A: Full body -->
+    <div class="option">
+      <span class="label">A</span>
+      <div class="canvas-wrap">
+        <svg width="120" height="210" viewBox="0 0 120 210" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="g1" x="-80%" y="-80%" width="260%" height="260%">
+              <feGaussianBlur stdDeviation="4" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <!-- antenna -->
+          <line x1="60" y1="26" x2="60" y2="6" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="60" cy="4" r="4" fill="#F97316" filter="url(#g1)"/>
+          <circle cx="60" cy="4" r="2" fill="#fff" opacity="0.8"/>
+          <!-- head -->
+          <rect x="26" y="26" width="68" height="56" rx="13" fill="#1c1c1c" stroke="#F97316" stroke-width="1.2"/>
+          <rect x="35" y="34" width="50" height="40" rx="8" fill="#101010"/>
+          <!-- eyes A style - calm half-lidded -->
+          <circle cx="48" cy="53" r="9" fill="#F97316" filter="url(#g1)"/>
+          <circle cx="48" cy="53" r="7" fill="#F97316"/>
+          <circle cx="48" cy="52" r="4" fill="#fff" opacity="0.9"/>
+          <circle cx="49" cy="51" r="1.8" fill="#111"/>
+          <path d="M 41 49 Q 48 46 55 49" fill="#101010"/>
+          <circle cx="72" cy="53" r="9" fill="#F97316" filter="url(#g1)"/>
+          <circle cx="72" cy="53" r="7" fill="#F97316"/>
+          <circle cx="72" cy="52" r="4" fill="#fff" opacity="0.9"/>
+          <circle cx="73" cy="51" r="1.8" fill="#111"/>
+          <path d="M 65 49 Q 72 46 79 49" fill="#101010"/>
+          <!-- mouth -->
+          <line x1="53" y1="66" x2="67" y2="66" stroke="#F97316" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+          <!-- neck -->
+          <rect x="53" y="81" width="14" height="9" rx="3" fill="#1c1c1c"/>
+          <!-- torso -->
+          <rect x="30" y="89" width="60" height="46" rx="12" fill="#1c1c1c" stroke="rgba(249,115,22,0.2)" stroke-width="1"/>
+          <rect x="41" y="99" width="38" height="24" rx="6" fill="#101010"/>
+          <circle cx="60" cy="111" r="5" fill="#F97316" opacity="0.7" filter="url(#g1)"/>
+          <circle cx="60" cy="111" r="2.5" fill="#fff" opacity="0.6"/>
+          <!-- arms -->
+          <rect x="14" y="94" width="17" height="32" rx="7" fill="#1c1c1c" stroke="rgba(249,115,22,0.15)" stroke-width="1"/>
+          <rect x="89" y="94" width="17" height="32" rx="7" fill="#1c1c1c" stroke="rgba(249,115,22,0.15)" stroke-width="1"/>
+          <!-- legs -->
+          <rect x="36" y="133" width="18" height="28" rx="7" fill="#1c1c1c"/>
+          <rect x="66" y="133" width="18" height="28" rx="7" fill="#1c1c1c"/>
+          <!-- feet -->
+          <rect x="32" y="155" width="24" height="9" rx="4" fill="#161616"/>
+          <rect x="64" y="155" width="24" height="9" rx="4" fill="#161616"/>
+        </svg>
+      </div>
+      <div class="char-name">Corpo completo</div>
+      <div class="char-desc">Cabeça, torso, braços e pernas. Personagem com mais presença e expressividade de postura.</div>
+      <div class="use-note">banners · ilustrações de cena</div>
+    </div>
+
+    <!-- B: Bust / torso up -->
+    <div class="option">
+      <span class="label">B</span>
+      <div class="canvas-wrap">
+        <svg width="140" height="220" viewBox="0 0 140 220" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="g2" x="-80%" y="-80%" width="260%" height="260%">
+              <feGaussianBlur stdDeviation="5" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <!-- Cut line at bottom -->
+          <line x1="0" y1="210" x2="140" y2="210" stroke="rgba(249,115,22,0.15)" stroke-width="1" stroke-dasharray="4,4"/>
+          <!-- ambient -->
+          <ellipse cx="70" cy="140" rx="60" ry="70" fill="#F97316" opacity="0.04"/>
+          <!-- antenna -->
+          <line x1="70" y1="30" x2="70" y2="8" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="70" cy="5" r="6" fill="#F97316" filter="url(#g2)"/>
+          <circle cx="70" cy="5" r="3" fill="#fff" opacity="0.8"/>
+          <!-- head — bigger -->
+          <rect x="22" y="30" width="96" height="78" rx="18" fill="#1c1c1c" stroke="#F97316" stroke-width="1.5"/>
+          <rect x="34" y="42" width="72" height="56" rx="12" fill="#101010"/>
+          <!-- ear panels -->
+          <rect x="12" y="58" width="12" height="28" rx="4" fill="#151515" stroke="rgba(249,115,22,0.15)" stroke-width="1"/>
+          <rect x="116" y="58" width="12" height="28" rx="4" fill="#151515" stroke="rgba(249,115,22,0.15)" stroke-width="1"/>
+          <!-- eyes -->
+          <circle cx="55" cy="70" r="13" fill="#F97316" filter="url(#g2)"/>
+          <circle cx="55" cy="70" r="10" fill="#F97316"/>
+          <circle cx="55" cy="68" r="6" fill="#fff" opacity="0.92"/>
+          <circle cx="57" cy="67" r="2.5" fill="#111"/>
+          <path d="M 45 65 Q 55 60 65 65" fill="#101010"/>
+          <circle cx="85" cy="70" r="13" fill="#F97316" filter="url(#g2)"/>
+          <circle cx="85" cy="70" r="10" fill="#F97316"/>
+          <circle cx="85" cy="68" r="6" fill="#fff" opacity="0.92"/>
+          <circle cx="87" cy="67" r="2.5" fill="#111"/>
+          <path d="M 75 65 Q 85 60 95 65" fill="#101010"/>
+          <!-- mouth line -->
+          <line x1="62" y1="87" x2="78" y2="87" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+          <!-- neck -->
+          <rect x="62" y="107" width="16" height="12" rx="4" fill="#1c1c1c"/>
+          <!-- torso wide, cut off at bottom -->
+          <rect x="28" y="118" width="84" height="80" rx="16" fill="#1c1c1c" stroke="rgba(249,115,22,0.2)" stroke-width="1"/>
+          <rect x="46" y="132" width="48" height="36" rx="10" fill="#101010"/>
+          <circle cx="70" cy="150" r="8" fill="#F97316" opacity="0.7" filter="url(#g2)"/>
+          <circle cx="70" cy="150" r="4" fill="#fff" opacity="0.6"/>
+          <!-- arms partial -->
+          <rect x="8" y="126" width="22" height="50" rx="10" fill="#1c1c1c" stroke="rgba(249,115,22,0.15)" stroke-width="1"/>
+          <rect x="110" y="126" width="22" height="50" rx="10" fill="#1c1c1c" stroke="rgba(249,115,22,0.15)" stroke-width="1"/>
+          <!-- fade at bottom -->
+          <rect x="0" y="185" width="140" height="30" fill="url(#fade)"/>
+          <defs>
+            <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#0a0a0a" stop-opacity="0"/>
+              <stop offset="100%" stop-color="#111111" stop-opacity="0.9"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="char-name">Busto (meio-corpo)</div>
+      <div class="char-desc">Cabeça e torso em destaque, braços visíveis, pernas cortadas. Mais focado no rosto e expressão.</div>
+      <div class="use-note">banners · cards · thumbnails</div>
+    </div>
+
+    <!-- C: Head only / icon -->
+    <div class="option">
+      <span class="label">C</span>
+      <div class="canvas-wrap">
+        <svg width="160" height="220" viewBox="0 0 160 220" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="g3" x="-60%" y="-60%" width="220%" height="220%">
+              <feGaussianBlur stdDeviation="8" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <!-- big ambient glow -->
+          <circle cx="80" cy="120" r="85" fill="#F97316" opacity="0.04"/>
+          <!-- antenna -->
+          <line x1="80" y1="32" x2="80" y2="4" stroke="#F97316" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="80" cy="0" r="8" fill="#F97316" filter="url(#g3)"/>
+          <circle cx="80" cy="0" r="4" fill="#fff" opacity="0.85"/>
+          <!-- head — large, centered, is the whole character -->
+          <rect x="18" y="32" width="124" height="106" rx="28" fill="#1c1c1c" stroke="#F97316" stroke-width="1.8"/>
+          <rect x="32" y="46" width="96" height="78" rx="18" fill="#101010"/>
+          <!-- ear panels -->
+          <rect x="5" y="68" width="16" height="40" rx="6" fill="#151515" stroke="rgba(249,115,22,0.2)" stroke-width="1"/>
+          <circle cx="13" cy="78" r="2" fill="#F97316" opacity="0.4"/>
+          <circle cx="13" cy="88" r="2" fill="#F97316" opacity="0.4"/>
+          <circle cx="13" cy="98" r="2" fill="#F97316" opacity="0.4"/>
+          <rect x="139" y="68" width="16" height="40" rx="6" fill="#151515" stroke="rgba(249,115,22,0.2)" stroke-width="1"/>
+          <circle cx="147" cy="78" r="2" fill="#F97316" opacity="0.4"/>
+          <circle cx="147" cy="88" r="2" fill="#F97316" opacity="0.4"/>
+          <circle cx="147" cy="98" r="2" fill="#F97316" opacity="0.4"/>
+          <!-- eyes — LARGE, expressive, fills the face -->
+          <circle cx="58" cy="82" r="20" fill="#F97316" filter="url(#g3)"/>
+          <circle cx="58" cy="82" r="16" fill="#F97316"/>
+          <circle cx="58" cy="79" r="9" fill="#fff" opacity="0.95"/>
+          <circle cx="61" cy="77" r="4" fill="#111"/>
+          <!-- half-lid -->
+          <path d="M 40 75 Q 58 68 76 75" fill="#101010"/>
+          <circle cx="102" cy="82" r="20" fill="#F97316" filter="url(#g3)"/>
+          <circle cx="102" cy="82" r="16" fill="#F97316"/>
+          <circle cx="102" cy="79" r="9" fill="#fff" opacity="0.95"/>
+          <circle cx="105" cy="77" r="4" fill="#111"/>
+          <path d="M 84 75 Q 102 68 120 75" fill="#101010"/>
+          <!-- mouth -->
+          <line x1="68" y1="111" x2="92" y2="111" stroke="#F97316" stroke-width="2" stroke-linecap="round" opacity="0.45"/>
+          <!-- floating shadow/base -->
+          <ellipse cx="80" cy="175" rx="52" ry="10" fill="#F97316" opacity="0.06" filter="url(#g3)"/>
+          <!-- small floating body suggestion — just neck stub -->
+          <rect x="66" y="137" width="28" height="16" rx="7" fill="#1c1c1c" opacity="0.7"/>
+        </svg>
+      </div>
+      <div class="char-name">Cabeça flutuante</div>
+      <div class="char-desc">Só a cabeça, grande e expressiva. Funciona como ícone, avatar e em espaços pequenos. Muito versátil.</div>
+      <div class="use-note">avatar · favicon · ícone · inline</div>
+    </div>
+
+  </div>
+</body>
+</html>

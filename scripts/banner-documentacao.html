@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body {
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        font-family: 'Inter', system-ui, sans-serif;
+        color: #f5f5f5;
+        background:
+          radial-gradient(ellipse 800px 500px at -5% 110%, rgba(249,115,22,0.22), transparent 60%),
+          radial-gradient(ellipse 600px 400px at 105% -10%, rgba(249,115,22,0.10), transparent 55%),
+          #0a0a0a;
+      }
+
+      .card {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 420px;
+        position: relative;
+        padding: 0;
+      }
+
+      .card::after {
+        content: '';
+        position: absolute;
+        inset: 22px;
+        border: 1px solid rgba(255,255,255,0.06);
+        border-radius: 20px;
+        pointer-events: none;
+      }
+
+      /* ── LEFT COLUMN ── */
+      .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 60px 56px 56px 72px;
+      }
+
+      .tags {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+      }
+
+      .tag {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 14px;
+        font-weight: 500;
+        color: #F97316;
+        background: rgba(249,115,22,0.12);
+        border: 1px solid rgba(249,115,22,0.25);
+        border-radius: 6px;
+        padding: 4px 12px;
+        letter-spacing: 0.04em;
+        text-transform: lowercase;
+      }
+
+      .title-block {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 32px 0 24px;
+      }
+
+      .pre-title {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 15px;
+        font-weight: 500;
+        color: rgba(249,115,22,0.75);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
+      .title {
+        font-size: 46px;
+        font-weight: 700;
+        line-height: 1.18;
+        letter-spacing: -0.025em;
+        color: #ffffff;
+        max-width: 580px;
+      }
+
+      .title em {
+        font-style: normal;
+        color: #F97316;
+      }
+
+      .summary {
+        margin-top: 22px;
+        font-size: 18px;
+        line-height: 1.55;
+        color: #737373;
+        max-width: 540px;
+      }
+
+      .footer {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .brand {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 20px;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: -0.02em;
+      }
+
+      .dot {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.2);
+      }
+
+      .url {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 16px;
+        color: #525252;
+        letter-spacing: 0.01em;
+      }
+
+      /* ── RIGHT COLUMN — Terminal ── */
+      .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 52px 60px 52px 20px;
+      }
+
+      .terminal {
+        width: 340px;
+        border-radius: 14px;
+        background: #111111;
+        border: 1px solid rgba(255,255,255,0.08);
+        overflow: hidden;
+        box-shadow:
+          0 0 0 1px rgba(249,115,22,0.05),
+          0 24px 64px rgba(0,0,0,0.6),
+          0 0 80px rgba(249,115,22,0.06);
+      }
+
+      .terminal-header {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        padding: 14px 18px;
+        background: #1a1a1a;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+      }
+
+      .dot-red   { width: 12px; height: 12px; border-radius: 50%; background: #ef4444; opacity: 0.7; }
+      .dot-yellow{ width: 12px; height: 12px; border-radius: 50%; background: #f59e0b; opacity: 0.7; }
+      .dot-green { width: 12px; height: 12px; border-radius: 50%; background: #22c55e; opacity: 0.7; }
+
+      .terminal-title {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 12px;
+        color: #525252;
+        margin-left: 8px;
+      }
+
+      .terminal-body {
+        padding: 20px 22px 24px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 13.5px;
+        line-height: 1.85;
+      }
+
+      .line { display: flex; align-items: baseline; gap: 0; }
+      .prompt { color: #F97316; user-select: none; }
+      .cmd    { color: #a3a3a3; margin-left: 6px; }
+      .cmd .hl { color: #ffffff; }
+
+      .tree-root   { color: #F97316; font-weight: 600; }
+      .tree-branch { color: #404040; }
+      .tree-dir    { color: #60a5fa; }
+      .tree-file   { color: #d4d4d4; }
+      .tree-file.highlight { color: #F97316; font-weight: 600; }
+      .tree-ext    { color: #525252; }
+
+      .spacer { height: 8px; }
+
+      .badge {
+        display: inline-block;
+        margin-top: 14px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11.5px;
+        color: #22c55e;
+        background: rgba(34,197,94,0.10);
+        border: 1px solid rgba(34,197,94,0.2);
+        border-radius: 5px;
+        padding: 3px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <!-- LEFT -->
+      <div class="left">
+        <div class="tags">
+          <span class="tag">ia</span>
+          <span class="tag">context-engineering</span>
+          <span class="tag">documentação</span>
+        </div>
+
+        <div class="title-block">
+          <div class="pre-title">Artigo</div>
+          <div class="title">
+            Antes de qualquer<br/>
+            ferramenta: como<br/>
+            documentar seu projeto<br/>
+            <em>para a IA</em>
+          </div>
+          <div class="summary">
+            A etapa que quase todo mundo pula — e o que muda quando ela existe.
+          </div>
+        </div>
+
+        <div class="footer">
+          <span class="brand">Gnios</span>
+          <div class="dot"></div>
+          <span class="url">gnios.github.io</span>
+        </div>
+      </div>
+
+      <!-- RIGHT — Terminal mockup -->
+      <div class="right">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="dot-red"></div>
+            <div class="dot-yellow"></div>
+            <div class="dot-green"></div>
+            <span class="terminal-title">bash</span>
+          </div>
+          <div class="terminal-body">
+            <div class="line">
+              <span class="prompt">$</span>
+              <span class="cmd"><span class="hl">tree</span> .catalog/</span>
+            </div>
+            <div class="spacer"></div>
+            <div class="line">
+              <span class="tree-root">.catalog/</span>
+            </div>
+            <div class="line">
+              <span class="tree-branch">├─ </span>
+              <span class="tree-file">project<span class="tree-ext">.md</span></span>
+            </div>
+            <div class="line">
+              <span class="tree-branch">├─ </span>
+              <span class="tree-file">architecture<span class="tree-ext">.md</span></span>
+            </div>
+            <div class="line">
+              <span class="tree-branch">├─ </span>
+              <span class="tree-file">conventions<span class="tree-ext">.md</span></span>
+            </div>
+            <div class="line">
+              <span class="tree-branch">├─ </span>
+              <span class="tree-file">domain<span class="tree-ext">.md</span></span>
+            </div>
+            <div class="line">
+              <span class="tree-branch">├─ </span>
+              <span class="tree-file">features<span class="tree-ext">.md</span></span>
+            </div>
+            <div class="line">
+              <span class="tree-branch">└─ </span>
+              <span class="tree-file">concerns<span class="tree-ext">.md</span></span>
+            </div>
+            <div class="spacer"></div>
+            <div class="line">
+              <span class="tree-file highlight">AGENTS<span class="tree-ext">.md</span></span>
+            </div>
+            <div class="spacer"></div>
+            <div class="line">
+              <span class="prompt">$</span>
+              <span class="cmd"><span class="hl">cat</span> AGENTS.md</span>
+            </div>
+            <div class="line">
+              <span class="cmd">&gt; roteamento de contexto</span>
+            </div>
+            <div class="line">
+              <span class="cmd">&gt; regras universais</span>
+            </div>
+            <div class="spacer"></div>
+            <div>
+              <span class="badge">✓ agente informado</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

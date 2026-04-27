@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0a0a0a;
+      font-family: 'Inter', sans-serif;
+      color: #f5f5f5;
+      padding: 48px;
+      min-height: 100vh;
+    }
+    h1 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      color: #F97316;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    p.sub {
+      font-size: 15px;
+      color: #737373;
+      margin-bottom: 48px;
+    }
+    .options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .option {
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 20px;
+      padding: 36px 28px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      position: relative;
+      transition: border-color 0.2s;
+    }
+    .option:hover { border-color: rgba(249,115,22,0.35); }
+    .label {
+      position: absolute;
+      top: 20px; left: 20px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      color: #F97316;
+      letter-spacing: 0.08em;
+    }
+    .char-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-top: 20px;
+      margin-bottom: 6px;
+    }
+    .char-desc {
+      font-size: 13px;
+      color: #737373;
+      text-align: center;
+      line-height: 1.55;
+      margin-bottom: 20px;
+    }
+    .traits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      justify-content: center;
+    }
+    .trait {
+      font-size: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      background: rgba(249,115,22,0.1);
+      border: 1px solid rgba(249,115,22,0.2);
+      color: #F97316;
+      border-radius: 5px;
+      padding: 3px 10px;
+    }
+    .trait.neutral {
+      background: rgba(255,255,255,0.04);
+      border-color: rgba(255,255,255,0.1);
+      color: #737373;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pergunta 1 de 5 — Personalidade</h1>
+  <p class="sub">Qual vibe o Gnios deve transmitir?</p>
+
+  <div class="options">
+
+    <!-- OPTION A -->
+    <div class="option">
+      <span class="label">A</span>
+      <svg width="160" height="200" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="gA" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="5" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <!-- ambient -->
+        <ellipse cx="80" cy="110" rx="55" ry="80" fill="#F97316" opacity="0.04"/>
+        <!-- antenna -->
+        <line x1="80" y1="36" x2="80" y2="10" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="80" cy="7" r="5" fill="#F97316" filter="url(#gA)"/>
+        <circle cx="80" cy="7" r="2.5" fill="#fff" opacity="0.7"/>
+        <!-- head -->
+        <rect x="38" y="36" width="84" height="68" rx="16" fill="#1c1c1c" stroke="#F97316" stroke-width="1.2"/>
+        <rect x="48" y="45" width="64" height="50" rx="10" fill="#101010"/>
+        <!-- eyes — calm, half-lidded -->
+        <circle cx="66" cy="68" r="11" fill="#F97316" filter="url(#gA)"/>
+        <circle cx="66" cy="68" r="8" fill="#F97316"/>
+        <circle cx="66" cy="67" r="4.5" fill="#fff" opacity="0.9"/>
+        <circle cx="67.5" cy="66" r="2" fill="#111"/>
+        <!-- upper eyelid — calm -->
+        <path d="M 57 63 Q 66 59 75 63" fill="#101010"/>
+        <circle cx="94" cy="68" r="11" fill="#F97316" filter="url(#gA)"/>
+        <circle cx="94" cy="68" r="8" fill="#F97316"/>
+        <circle cx="94" cy="67" r="4.5" fill="#fff" opacity="0.9"/>
+        <circle cx="95.5" cy="66" r="2" fill="#111"/>
+        <path d="M 85 63 Q 94 59 103 63" fill="#101010"/>
+        <!-- neutral mouth — small flat line -->
+        <line x1="72" y1="84" x2="88" y2="84" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+        <!-- neck -->
+        <rect x="72" y="103" width="16" height="10" rx="4" fill="#1c1c1c"/>
+        <!-- body -->
+        <rect x="46" y="112" width="68" height="54" rx="14" fill="#1c1c1c" stroke="rgba(249,115,22,0.2)" stroke-width="1"/>
+        <rect x="60" y="124" width="40" height="28" rx="7" fill="#101010"/>
+        <circle cx="80" cy="138" r="6" fill="#F97316" opacity="0.7" filter="url(#gA)"/>
+        <circle cx="80" cy="138" r="3" fill="#fff" opacity="0.6"/>
+        <!-- arms -->
+        <rect x="28" y="118" width="20" height="38" rx="9" fill="#1c1c1c" stroke="rgba(249,115,22,0.15)" stroke-width="1"/>
+        <rect x="112" y="118" width="20" height="38" rx="9" fill="#1c1c1c" stroke="rgba(249,115,22,0.15)" stroke-width="1"/>
+        <!-- legs -->
+        <rect x="54" y="164" width="20" height="30" rx="8" fill="#1c1c1c"/>
+        <rect x="86" y="164" width="20" height="30" rx="8" fill="#1c1c1c"/>
+        <rect x="50" y="188" width="28" height="10" rx="5" fill="#161616"/>
+        <rect x="82" y="188" width="28" height="10" rx="5" fill="#161616"/>
+      </svg>
+      <div class="char-name">O Engenheiro Reflexivo</div>
+      <div class="char-desc">Calmo, pensativo. Expressão neutra com olhos levemente semicerrados. Transmite competência e foco.</div>
+      <div class="traits">
+        <span class="trait">calmo</span>
+        <span class="trait">focado</span>
+        <span class="trait neutral">sério</span>
+        <span class="trait neutral">técnico</span>
+      </div>
+    </div>
+
+    <!-- OPTION B -->
+    <div class="option">
+      <span class="label">B</span>
+      <svg width="160" height="200" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="gB" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="5" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <ellipse cx="80" cy="110" rx="55" ry="80" fill="#F97316" opacity="0.05"/>
+        <!-- antenna — energético, dois lados -->
+        <line x1="70" y1="36" x2="62" y2="8" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="60" cy="5" r="5" fill="#F97316" filter="url(#gB)"/>
+        <circle cx="60" cy="5" r="2.5" fill="#fff" opacity="0.7"/>
+        <line x1="90" y1="36" x2="98" y2="8" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="100" cy="5" r="5" fill="#F97316" filter="url(#gB)"/>
+        <circle cx="100" cy="5" r="2.5" fill="#fff" opacity="0.7"/>
+        <!-- head — slightly wider, rounder -->
+        <rect x="36" y="36" width="88" height="68" rx="22" fill="#1c1c1c" stroke="#F97316" stroke-width="1.2"/>
+        <rect x="47" y="45" width="66" height="50" rx="14" fill="#101010"/>
+        <!-- eyes — big, open, happy -->
+        <circle cx="66" cy="67" r="13" fill="#F97316" filter="url(#gB)"/>
+        <circle cx="66" cy="67" r="10" fill="#F97316"/>
+        <circle cx="66" cy="65" r="6" fill="#fff" opacity="0.95"/>
+        <circle cx="68" cy="64" r="2.5" fill="#111"/>
+        <!-- sparkle -->
+        <circle cx="70" cy="61" r="1.5" fill="#fff" opacity="0.6"/>
+        <circle cx="94" cy="67" r="13" fill="#F97316" filter="url(#gB)"/>
+        <circle cx="94" cy="67" r="10" fill="#F97316"/>
+        <circle cx="94" cy="65" r="6" fill="#fff" opacity="0.95"/>
+        <circle cx="96" cy="64" r="2.5" fill="#111"/>
+        <circle cx="98" cy="61" r="1.5" fill="#fff" opacity="0.6"/>
+        <!-- smile -->
+        <path d="M 69 82 Q 80 90 91 82" fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+        <!-- neck -->
+        <rect x="72" y="103" width="16" height="10" rx="4" fill="#1c1c1c"/>
+        <!-- body -->
+        <rect x="44" y="112" width="72" height="54" rx="16" fill="#1c1c1c" stroke="rgba(249,115,22,0.25)" stroke-width="1"/>
+        <rect x="58" y="124" width="44" height="28" rx="8" fill="#101010"/>
+        <circle cx="80" cy="138" r="7" fill="#F97316" opacity="0.8" filter="url(#gB)"/>
+        <circle cx="80" cy="138" r="3.5" fill="#fff" opacity="0.7"/>
+        <!-- arms raised slightly -->
+        <rect x="24" y="112" width="22" height="36" rx="10" fill="#1c1c1c" stroke="rgba(249,115,22,0.15)" stroke-width="1" transform="rotate(-12 35 130)"/>
+        <rect x="114" y="112" width="22" height="36" rx="10" fill="#1c1c1c" stroke="rgba(249,115,22,0.15)" stroke-width="1" transform="rotate(12 125 130)"/>
+        <!-- legs -->
+        <rect x="54" y="164" width="20" height="30" rx="8" fill="#1c1c1c"/>
+        <rect x="86" y="164" width="20" height="30" rx="8" fill="#1c1c1c"/>
+        <rect x="50" y="188" width="28" height="10" rx="5" fill="#161616"/>
+        <rect x="82" y="188" width="28" height="10" rx="5" fill="#161616"/>
+      </svg>
+      <div class="char-name">O Companheiro Animado</div>
+      <div class="char-desc">Olhos grandes e abertos, sorriso visível, antenas duplas. Enérgico, acolhedor, parece empolgado em ajudar.</div>
+      <div class="traits">
+        <span class="trait">amigável</span>
+        <span class="trait">animado</span>
+        <span class="trait neutral">informal</span>
+        <span class="trait neutral">acessível</span>
+      </div>
+    </div>
+
+    <!-- OPTION C -->
+    <div class="option">
+      <span class="label">C</span>
+      <svg width="160" height="200" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="gC" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="5" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <ellipse cx="80" cy="110" rx="55" ry="80" fill="#F97316" opacity="0.03"/>
+        <!-- no antenna — cleaner -->
+        <!-- head — sharper corners -->
+        <rect x="38" y="30" width="84" height="72" rx="10" fill="#1c1c1c" stroke="#F97316" stroke-width="1"/>
+        <rect x="48" y="40" width="64" height="52" rx="6" fill="#101010"/>
+        <!-- eyes — narrow, cool, LED-style -->
+        <!-- left eye: horizontal bar -->
+        <rect x="55" y="62" width="20" height="6" rx="3" fill="#F97316" filter="url(#gC)"/>
+        <rect x="57" y="63" width="16" height="4" rx="2" fill="#F97316"/>
+        <!-- right eye -->
+        <rect x="85" y="62" width="20" height="6" rx="3" fill="#F97316" filter="url(#gC)"/>
+        <rect x="87" y="63" width="16" height="4" rx="2" fill="#F97316"/>
+        <!-- no mouth — minimal -->
+        <line x1="73" y1="82" x2="87" y2="82" stroke="rgba(249,115,22,0.3)" stroke-width="1" stroke-linecap="round"/>
+        <!-- neck -->
+        <rect x="72" y="101" width="16" height="12" rx="3" fill="#1c1c1c"/>
+        <!-- body — rectangular, structured -->
+        <rect x="44" y="112" width="72" height="56" rx="10" fill="#1c1c1c" stroke="rgba(249,115,22,0.2)" stroke-width="1"/>
+        <!-- grid pattern on chest -->
+        <line x1="56" y1="125" x2="104" y2="125" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
+        <line x1="56" y1="135" x2="104" y2="135" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
+        <line x1="56" y1="145" x2="104" y2="145" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
+        <line x1="70" y1="120" x2="70" y2="155" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
+        <line x1="80" y1="120" x2="80" y2="155" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
+        <line x1="90" y1="120" x2="90" y2="155" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
+        <!-- status dot -->
+        <circle cx="80" cy="140" r="4" fill="#F97316" opacity="0.7" filter="url(#gC)"/>
+        <!-- arms — straight down -->
+        <rect x="28" y="118" width="18" height="40" rx="6" fill="#1c1c1c" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
+        <rect x="114" y="118" width="18" height="40" rx="6" fill="#1c1c1c" stroke="rgba(249,115,22,0.12)" stroke-width="1"/>
+        <!-- legs -->
+        <rect x="54" y="166" width="20" height="28" rx="6" fill="#1c1c1c"/>
+        <rect x="86" y="166" width="20" height="28" rx="6" fill="#1c1c1c"/>
+        <rect x="50" y="188" width="28" height="9" rx="4" fill="#161616"/>
+        <rect x="82" y="188" width="28" height="9" rx="4" fill="#161616"/>
+      </svg>
+      <div class="char-name">O Expert Minimalista</div>
+      <div class="char-desc">Olhos em LED horizontal, sem antena, corpo anguloso. Frio, preciso, estilo mais próximo de um chip ou terminal.</div>
+      <div class="traits">
+        <span class="trait">minimalista</span>
+        <span class="trait">preciso</span>
+        <span class="trait neutral">distante</span>
+        <span class="trait neutral">técnico</span>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

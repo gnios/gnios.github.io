@@ -1,0 +1,181 @@
+---
+title: 'Antes de qualquer ferramenta: como documentar seu projeto para a IA'
+date: '2026-04-26'
+tags: [ia, contexto, documentacao, agents-md, onboarding, context-engineering, plan-mode]
+draft: false
+summary: Antes de instalar qualquer framework de SDD ou skill de IA, tem uma etapa que quase todo mundo pula — criar a documentação de contexto do projeto. Neste artigo mostro o que essa documentação precisa ter, como gerá-la com um único prompt no modo Plan, e como organizar tudo em um AGENTS.md que qualquer ferramenta pode usar.
+images: ['/static/images/banner-documentacao-antes-das-ferramentas.png']
+---
+
+Tem uma cena que vi se repetir em mais de um projeto. Alguém descobre um framework de spec-driven development, instala, roda `init` ou `start`, e em segundos tem uma pasta cheia de arquivos bem organizados: arquitetura, convenções, estrutura do projeto. Parece que o trabalho foi feito. Mas algumas semanas depois, quando o agente ainda erra nas decisões que importam para aquele projeto específico, a frustração aparece. E quando pergunto "o que tem nesse arquivo de contexto?", a resposta costuma ser "o framework gerou, não sei bem o que tem lá".
+
+Não é um problema de ferramenta. É uma etapa que foi pulada.
+
+---
+
+## A etapa pulada
+
+O que vi acontecer com mais frequência não é o dev usando a ferramenta errada. É o dev pulando a etapa que vem antes de qualquer ferramenta.
+
+O agente não conhece o projeto. Ele não sabe que seu time usa uma convenção específica de nomeação, que determinada pasta nunca deve ser modificada diretamente, que há uma regra de negócio que parece estranha mas existe por um motivo. Ele não sabe porque ninguém contou.
+
+Muitos frameworks de SDD têm comandos como `init` ou `setup` que geram uma documentação inicial a partir do código. Rodei esses comandos em projetos diferentes para entender o que cada um realmente produz. Queria responder três perguntas: o que o framework lê do projeto para gerar a documentação, o que ele cria de saída, e onde ele guarda. Os três que analisei com mais cuidado foram estes:
+
+| Framework | Pasta | O que gera | O que não gera |
+|---|---|---|---|
+| spec-kit | `.spec/` | Stack, estrutura, contratos de API | Domínio, linguagem ubíqua, regras de negócio |
+| Superpowers | `.agents/` | Roles, skills, hooks de comportamento | Bounded contexts, regras de negócio, porquê das decisões |
+| tlc-spec-driven | `.specs/` | STACK.md, ARCHITECTURE.md, CONVENTIONS.md, STRUCTURE.md, TESTING.md, INTEGRATIONS.md, CONCERNS.md | DOMAIN.md, linguagem ubíqua, bounded contexts |
+
+O que a tabela mostra é que nenhuma das três chega a ser suficiente para uma documentação de qualidade do projeto. O que geram tem valor parcial: captura o que está no código, mas fica longe do que o agente precisa para entender o domínio, as decisões e o raciocínio por trás do que foi construído. E o que produzem fica em pastas próprias, organizadas para resolver o contexto da ferramenta, não do projeto.
+
+O que proponho é diferente: uma documentação construída com cuidado, em uma pasta que faça sentido para o projeto, que os agentes vão consultar para encontrar o contexto preciso para cada tarefa. Sem `init`, sem `setup`. A documentação pertence ao projeto, não à ferramenta que a gerou.
+
+Para entender o que essa documentação precisa ter, a pergunta que mais me ajudou não foi técnica: foi pensar em como você apresenta um projeto para alguém que acabou de entrar no time.
+
+---
+
+## O agente como dev novo no time
+
+Pensa no que acontece quando uma pessoa nova entra no time. O fluxo ideal é esse: ela não vai direto para o código. Alguém senta com ela e explica o que o projeto faz, qual problema resolve, como o time trabalha, o que o time sabe mas nunca escreveu. Em alguns times isso acontece no primeiro dia. Em outros, acontece depois do primeiro incidente em produção. De qualquer forma, sem essa conversa, ela toma decisões que parecem corretas em abstrato, mas que não fazem sentido para aquele contexto.
+
+O agente está na mesma posição. Ele chegou agora. Não sabe nada sobre o projeto. A questão é: como você vai trabalhar com ele?
+
+Tem três caminhos possíveis.
+
+O primeiro é não dar contexto nenhum. Você pede pro agente fazer algo e ele vai precisar ler o projeto inteiro pra tentar entender o que existe antes de agir. Funciona às vezes, mas é lento, inconsistente, e cada vez que pede algo diferente ele parte do mesmo ponto de novo.
+
+O segundo é explicar tudo no prompt. Antes de cada pedido, você descreve o domínio, a arquitetura, as convenções, como se estivesse apresentando o projeto para um dev novo a cada manhã. O agente vai produzir algo com qualidade. Mas na próxima sessão, tudo some. Você explica de novo. E de novo. Isso acontece porque a sessão é a memória de curto prazo do agente: tudo que foi dito naquela conversa existe enquanto ela está aberta. Quando fecha, o agente esquece tudo.
+
+O terceiro caminho é o que quero mostrar neste artigo. Você cria a documentação do projeto uma vez, com cuidado, e entrega pro agente no início de cada sessão. Ele lê, entende o projeto, e trabalha a partir dessa base. Não precisa deduzir, não precisa que você explique de novo. Esse é o princípio da memória de longo prazo do agente: informação que persiste entre sessões porque está em arquivo, não na conversa. É a diferença entre um agente que acabou de chegar, sem saber nada sobre o que você construiu, e um que já aprendeu sobre o projeto e trabalha a partir do que entendeu.
+
+Os documentos que compõem esse contexto, na minha experiência, são estes:
+
+| Documento | O que registra | Por que importa pro agente |
+|---|---|---|
+| **O que é o projeto** | Propósito, domínio, problema que resolve | Sem isso, o agente infere pelo código — e a inferência costuma ser genérica demais |
+| **Stack** | Tecnologias, linguagens, dependências principais | A base técnica que o agente precisa conhecer antes de qualquer decisão de implementação |
+| **Arquitetura** | Estrutura, decisões técnicas e o porquê de cada uma | O "porquê" é o que mais reduz alucinação — é o que o agente nunca consegue inferir só pelo código |
+| **Convenções** | Padrões de nomenclatura, estilo de código, o que evitar | O que um dev novo aprenderia no primeiro code review, mas que não está escrito em lugar nenhum |
+| **Estrutura do projeto** | Como o projeto está organizado: pastas, módulos, responsabilidades | Evita que o agente crie arquivos no lugar errado ou duplique o que já existe |
+| **Testes** | Estratégia de testes, padrões de cobertura, como o time escreve e organiza | Sem isso, o agente testa do jeito dele, que raramente é o jeito do projeto |
+| **Integrações** | Serviços externos, APIs, dependências de runtime | O que o projeto consome e o que expõe |
+| **Preocupações técnicas** | Riscos conhecidos, débitos, partes frágeis | O que o time sabe que precisa de atenção e que o agente precisa respeitar ao mexer no código |
+| **Features atuais** | O que existe hoje no projeto, não o roadmap | O agente trabalha melhor quando sabe o que já está feito do que quando precisa deduzir lendo arquivo por arquivo |
+
+Para projetos que trabalham com DDD, a esses se somam os documentos de domínio:
+
+| Documento | O que registra | Por que importa pro agente |
+|---|---|---|
+| **Domínio** | Contextos delimitados, entidades, regras de negócio | Um agente que conhece o domínio erra muito menos do que um que precisa adivinhar o significado de cada termo |
+| **Linguagem ubíqua** | Vocabulário do projeto com o significado preciso de cada termo naquele contexto | Sem isso, o agente usa os próprios termos, que raramente coincidem com os do time |
+| **Agregados** | Agregados do domínio, limites de consistência e invariantes | O que o agente nunca vai inferir a partir do código, por mais que leia |
+| **Specs geradas** | OpenAPI, AsyncAPI ou outras especificações geradas automaticamente | Enriquecem o contexto consideravelmente quando existem — não são obrigatórias, mas vale referenciar |
+
+São muitos documentos. A questão que fica é como criar tudo isso sem transformar a tarefa em um projeto à parte, e como carregar esses arquivos pro agente de forma que não consuma toda a janela de contexto só com documentação antes mesmo de começar a trabalhar.
+
+---
+
+## O AGENTS.md como ponto central do projeto
+
+Carregar todos esses arquivos de uma vez consumiria a janela de contexto inteira. Por isso o AGENTS.md tem um papel diferente dos outros: não é mais um documento pro agente ler, é o mapa que define o que ele deve carregar dependendo do que vai fazer.
+
+Ele carrega duas coisas. Convenções universais do projeto, coisas que o agente precisa saber em qualquer sessão independente da tarefa. E uma tabela de roteamento que mapeia cada tipo de tarefa ao arquivo correspondente. Em vez de carregar tudo sempre, o agente consulta só o que é relevante. É o progressive discovery funcionando na prática.
+
+Uma estrutura que funciona bem:
+
+```markdown
+# AGENTS.md
+
+## Propósito
+[Uma linha descrevendo o que este projeto é e para que serve]
+
+## Regras universais
+- [regras que valem para qualquer tarefa neste projeto]
+
+## Roteamento de contexto
+Carregue apenas o arquivo correspondente à tarefa — nunca todos de uma vez.
+
+| Tarefa | Arquivo |
+|---|---|
+| Entender o projeto | .catalog/project.md |
+| Decisões de arquitetura | .catalog/architecture.md |
+| Escrever ou revisar código | .catalog/code-style.md |
+| Entender features existentes | .catalog/features.md |
+| Termos e regras de negócio | .catalog/domain.md |
+```
+
+Com esse arquivo no lugar, qualquer ferramenta, skill ou hook que o time quiser adicionar depois vai encontrar a base pronta. Um framework de SDD que você instalar no futuro vai ter contexto real pra trabalhar, não vai precisar inferir nada do zero.
+
+Com a estrutura definida, o que falta é criar tudo isso na prática.
+
+---
+
+## Gerando o contexto: o prompt e o modo Plan
+
+O que uso pra gerar toda essa documentação é um único prompt no modo Plan do Claude Code. Ele instrui o agente a perguntar antes de criar, ler o código pra complementar o que você respondeu, e só então escrever os arquivos.
+
+```
+Vamos criar a documentação de contexto deste projeto.
+
+Antes de criar qualquer arquivo, faça perguntas sobre o projeto, uma por vez.
+Foque no que não está no código: propósito, domínio, decisões que foram
+tomadas e por quê, convenções do time, riscos conhecidos, partes frágeis.
+
+Depois de coletar as respostas, analise o código para complementar e
+identificar o que ficou de fora.
+
+Com esse contexto completo, crie os arquivos abaixo dentro de uma pasta .catalog/:
+
+- project.md — o que é o projeto, propósito, domínio, problema que resolve
+- stack.md — tecnologias, linguagens, dependências principais
+- architecture.md — estrutura, decisões técnicas e o porquê de cada uma
+- conventions.md — padrões de nomenclatura, estilo de código, o que evitar
+- structure.md — organização de pastas, módulos e responsabilidades
+- testing.md — estratégia de testes, padrões de cobertura, como o time testa
+- integrations.md — serviços externos, APIs, dependências de runtime
+- concerns.md — riscos conhecidos, débitos técnicos, partes frágeis
+- features.md — o que existe hoje no projeto (não o roadmap)
+
+Se o projeto trabalhar com DDD, adicione também:
+
+- domain.md — contextos delimitados, entidades, regras de negócio
+- ubiquitous-language.md — vocabulário do projeto com o significado de cada termo
+- aggregates.md — agregados do domínio, limites de consistência e invariantes
+
+Se o projeto tiver OpenAPI, AsyncAPI ou outras especificações geradas,
+referencie-as no arquivo correspondente sem duplicar o conteúdo.
+
+Ao final, crie um AGENTS.md na raiz do projeto referenciando todos esses
+arquivos com uma tabela de roteamento de contexto.
+```
+
+É o que eu uso nos meus projetos. Adapte o que fizer sentido, remova o que não se aplica, adicione o que falta.
+
+Uma recomendação: use um modelo com janela de contexto grande. Eu uso o Claude Opus com 1 milhão de tokens, porque nesse momento o agente lê o projeto inteiro. Uma janela pequena fragmenta essa leitura e produz documentos inconsistentes.
+
+Nos meus projetos, os arquivos ficam em `.catalog/`, versionados junto com o código. As mesmas documentações que o agente consulta também alimentam o MkDocs, gerando um site navegável do projeto. Quem acessa como humano lê pelo site. Quem acessa via agente lê pelos arquivos. A fonte é a mesma. Nos times que usam Backstage, o `catalog-info.yaml` aponta pra essa mesma pasta, sem duplicar nada.
+
+Para projetos com domínios mais complexos, a documentação de texto é o ponto de partida, não o limite.
+
+---
+
+## Indo além: grafos de conhecimento
+
+Depois que a documentação de texto existe, há uma camada opcional que melhora ainda mais o desempenho do agente em projetos com domínios complexos: grafos de conhecimento.
+
+Documentos de texto descrevem o projeto de forma linear. Um grafo representa as relações entre conceitos, entidades, decisões e domínios de forma estruturada. Quando a pergunta envolve dependências e conexões, o agente navega melhor por um grafo do que por uma pilha de arquivos.
+
+O que explorei e achei interessante foi o [Graphify](https://graphify.net), que gera grafos de conhecimento a partir dos arquivos do projeto: documentação, código e qualquer outra coisa na pasta. Para código, faz extração estrutural via AST. Para documentação, extrai conceitos, entidades e relações semânticas. O resultado é um grafo persistente que o agente pode consultar entre sessões, com um rastro honesto do que foi extraído versus inferido.
+
+Com a documentação no lugar, o que muda são os erros que aparecem.
+
+---
+
+## O que muda quando a documentação existe
+
+O que percebi na prática é que o agente muda de patamar quando tem essa base pra trabalhar. Ele chega informado, entende o domínio, respeita as convenções e erra menos nas decisões que importam. O tempo que você gastava corrigindo o óbvio passa a ser tempo resolvendo o que de fato é difícil.
+
+Os frameworks de SDD são um caminho, não um pré-requisito. Com essa documentação criada, qualquer ferramenta que você adicionar depois vai trabalhar com contexto real. A base potencializa o que a ferramenta faz, em vez de a ferramenta tentar suprir o que a base deveria ter dado.
+
+A etapa que costuma ser pulada é essa, a que vem antes de qualquer ferramenta. Quando ela existe, tudo o mais funciona melhor.

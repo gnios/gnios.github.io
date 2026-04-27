@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0a0a0a; font-family: 'Inter', sans-serif; color: #f5f5f5; padding: 56px; }
+    h1 { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #F97316; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+    h2 { font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 32px; }
+    .row { display: flex; gap: 64px; align-items: flex-start; }
+    .col { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+    .label { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; }
+    .label.on { color: #F97316; }
+    .label.off { color: #444; }
+    .note { font-size: 12px; color: #525252; text-align: center; max-width: 180px; line-height: 1.55; }
+  </style>
+</head>
+<body>
+  <h1>Design — Rosto v2</h1>
+  <h2>Face inspirada em visor oval + olhos lente</h2>
+
+  <div class="row">
+
+    <!-- ESTADO CONFIANTE -->
+    <div class="col">
+      <span class="label on">CONFIANTE</span>
+      <svg width="220" height="290" viewBox="0 0 220 290" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <!-- main orange glow -->
+          <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="7" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <!-- soft wide glow -->
+          <filter id="glow-wide" x="-100%" y="-100%" width="300%" height="300%">
+            <feGaussianBlur stdDeviation="14" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <!-- visor inner gradient -->
+          <radialGradient id="visor-grad" cx="50%" cy="42%" r="55%">
+            <stop offset="0%"   stop-color="#F97316" stop-opacity="0.22"/>
+            <stop offset="100%" stop-color="#F97316" stop-opacity="0.0"/>
+          </radialGradient>
+          <!-- eye gradient: bright core to orange rim -->
+          <radialGradient id="eye-grad" cx="40%" cy="35%" r="60%">
+            <stop offset="0%"   stop-color="#ffffff" stop-opacity="1"/>
+            <stop offset="35%"  stop-color="#FDBA74" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#F97316" stop-opacity="1"/>
+          </radialGradient>
+          <!-- eye glow gradient -->
+          <radialGradient id="eye-glow-grad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#F97316" stop-opacity="0.5"/>
+            <stop offset="100%" stop-color="#F97316" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+
+        <!-- === ambient body glow === -->
+        <ellipse cx="110" cy="165" rx="85" ry="100" fill="#F97316" opacity="0.05" filter="url(#glow-wide)"/>
+
+        <!-- === ANTENNA — lightbulb shape === -->
+        <line x1="110" y1="48" x2="110" y2="18" stroke="#F97316" stroke-width="3" stroke-linecap="round"/>
+        <!-- bulb outer glow -->
+        <ellipse cx="110" cy="10" rx="16" ry="18" fill="#F97316" opacity="0.25" filter="url(#glow-wide)"/>
+        <!-- bulb glass shape -->
+        <path d="M 96 10 Q 96 -4 110 -4 Q 124 -4 124 10 Q 124 22 117.5 27 L 117.5 33 L 102.5 33 L 102.5 27 Q 96 22 96 10 Z" fill="#F97316" filter="url(#glow)"/>
+        <!-- bulb base rings -->
+        <rect x="103" y="33" width="14" height="4" rx="2" fill="#EA6A00"/>
+        <rect x="104" y="38" width="12" height="3" rx="1.5" fill="#C75A00"/>
+        <!-- filament inner -->
+        <path d="M 104 20 Q 110 14 116 20" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.5"/>
+        <!-- inner glow -->
+        <ellipse cx="110" cy="10" rx="8" ry="9" fill="#fff" opacity="0.5"/>
+
+        <!-- === HEAD — more organic, rounded === -->
+        <!-- outer head shape -->
+        <rect x="15" y="48" width="190" height="160" rx="36" fill="#1c1c1c"/>
+        <!-- orange border glow -->
+        <rect x="15" y="48" width="190" height="160" rx="36" fill="none" stroke="#F97316" stroke-width="1.8" opacity="0.9"/>
+        <rect x="15" y="48" width="190" height="160" rx="36" fill="none" stroke="#F97316" stroke-width="6" opacity="0.08" filter="url(#glow)"/>
+
+        <!-- ear panels -->
+        <rect x="2"   y="88" width="16" height="54" rx="7" fill="#181818" stroke="rgba(249,115,22,0.25)" stroke-width="1"/>
+        <circle cx="10" cy="102" r="3" fill="#F97316" opacity="0.55"/>
+        <circle cx="10" cy="115" r="3" fill="#F97316" opacity="0.55"/>
+        <circle cx="10" cy="128" r="3" fill="#F97316" opacity="0.55"/>
+        <rect x="202" y="88" width="16" height="54" rx="7" fill="#181818" stroke="rgba(249,115,22,0.25)" stroke-width="1"/>
+        <circle cx="210" cy="102" r="3" fill="#F97316" opacity="0.55"/>
+        <circle cx="210" cy="115" r="3" fill="#F97316" opacity="0.55"/>
+        <circle cx="210" cy="128" r="3" fill="#F97316" opacity="0.55"/>
+
+        <!-- === FACE VISOR — oval, centered === -->
+        <!-- visor dark bg -->
+        <ellipse cx="110" cy="130" rx="72" ry="64" fill="#080808"/>
+        <!-- visor inner glow -->
+        <ellipse cx="110" cy="126" rx="72" ry="64" fill="url(#visor-grad)"/>
+        <!-- visor rim -->
+        <ellipse cx="110" cy="130" rx="72" ry="64" fill="none" stroke="rgba(249,115,22,0.18)" stroke-width="1.5"/>
+        <!-- visor subtle reflection — top highlight -->
+        <ellipse cx="88" cy="80" rx="28" ry="8" fill="#ffffff" opacity="0.03" transform="rotate(-10 88 80)"/>
+
+        <!-- === LEFT EYE === -->
+        <!-- wide ambient glow -->
+        <ellipse cx="75" cy="122" rx="32" ry="36" fill="url(#eye-glow-grad)" opacity="0.7"/>
+        <!-- eye iris outer — orange glow ring -->
+        <ellipse cx="75" cy="122" rx="22" ry="26" fill="#F97316" opacity="0.25" filter="url(#glow)"/>
+        <!-- eye main shape — bright core -->
+        <ellipse cx="75" cy="122" rx="18" ry="22" fill="url(#eye-grad)"/>
+        <!-- pupil — dark oval -->
+        <ellipse cx="76" cy="126" rx="9" ry="11" fill="#111"/>
+        <!-- catchlight large — upper left quadrant -->
+        <ellipse cx="66" cy="112" rx="7" ry="8" fill="#ffffff" opacity="0.85"/>
+        <!-- catchlight small -->
+        <ellipse cx="61" cy="108" rx="3" ry="3.5" fill="#ffffff" opacity="0.7"/>
+        <!-- half-lid — subtle shadow over top -->
+        <path d="M 54 112 Q 75 102 96 112" fill="#1c1c1c" opacity="0.55"/>
+
+        <!-- === RIGHT EYE === -->
+        <ellipse cx="145" cy="122" rx="32" ry="36" fill="url(#eye-glow-grad)" opacity="0.7"/>
+        <ellipse cx="145" cy="122" rx="22" ry="26" fill="#F97316" opacity="0.25" filter="url(#glow)"/>
+        <ellipse cx="145" cy="122" rx="18" ry="22" fill="url(#eye-grad)"/>
+        <ellipse cx="146" cy="126" rx="9" ry="11" fill="#111"/>
+        <ellipse cx="136" cy="112" rx="7" ry="8" fill="#ffffff" opacity="0.85"/>
+        <ellipse cx="131" cy="108" rx="3" ry="3.5" fill="#ffffff" opacity="0.7"/>
+        <path d="M 124 112 Q 145 102 166 112" fill="#1c1c1c" opacity="0.55"/>
+
+        <!-- === MOUTH — calm line === -->
+        <path d="M 90 166 Q 110 170 130 166" fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+
+        <!-- neck stub -->
+        <rect x="92" y="207" width="26" height="18" rx="8" fill="#181818" opacity="0.9"/>
+      </svg>
+      <div class="note">Visor oval, olhos grandes com gradiente e catchlight. Antena-lâmpada acesa.</div>
+    </div>
+
+    <!-- ESTADO CONFUSO -->
+    <div class="col">
+      <span class="label off">CONFUSO</span>
+      <svg width="200" height="260" viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="glow-d" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="4" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <radialGradient id="eye-grad-d" cx="40%" cy="35%" r="60%">
+            <stop offset="0%"   stop-color="#777" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#3a3a3a" stop-opacity="1"/>
+          </radialGradient>
+        </defs>
+
+        <!-- dim ambient -->
+        <ellipse cx="100" cy="145" rx="72" ry="85" fill="#333" opacity="0.04"/>
+
+        <!-- antenna — UNLIT lightbulb -->
+        <line x1="100" y1="42" x2="100" y2="15" stroke="#383838" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M 88 12 Q 88 0 100 0 Q 112 0 112 12 Q 112 22 106.5 26 L 106.5 31 L 93.5 31 L 93.5 26 Q 88 22 88 12 Z" fill="#282828"/>
+        <rect x="94" y="31" width="12" height="3.5" rx="1.5" fill="#222"/>
+        <rect x="95" y="35" width="10" height="3" rx="1.5" fill="#1e1e1e"/>
+        <ellipse cx="100" cy="12" rx="6" ry="6" fill="#222" opacity="0.5"/>
+
+        <!-- head — same shape, darker -->
+        <rect x="12" y="42" width="176" height="150" rx="34" fill="#181818"/>
+        <rect x="12" y="42" width="176" height="150" rx="34" fill="none" stroke="#333" stroke-width="1.5"/>
+
+        <!-- ear panels dim -->
+        <rect x="0"   y="80" width="14" height="48" rx="6" fill="#141414" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+        <circle cx="7"  cy="93"  r="2.5" fill="#2a2a2a"/>
+        <circle cx="7"  cy="104" r="2.5" fill="#2a2a2a"/>
+        <circle cx="7"  cy="115" r="2.5" fill="#2a2a2a"/>
+        <rect x="186" y="80" width="14" height="48" rx="6" fill="#141414" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+        <circle cx="193" cy="93"  r="2.5" fill="#2a2a2a"/>
+        <circle cx="193" cy="104" r="2.5" fill="#2a2a2a"/>
+        <circle cx="193" cy="115" r="2.5" fill="#2a2a2a"/>
+
+        <!-- face visor — dim, no glow -->
+        <ellipse cx="100" cy="118" rx="66" ry="58" fill="#0b0b0b"/>
+        <ellipse cx="100" cy="118" rx="66" ry="58" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1.2"/>
+
+        <!-- LEFT EYE — smaller, worried -->
+        <ellipse cx="68" cy="111" rx="20" ry="22" fill="#3a3a3a" opacity="0.5" filter="url(#glow-d)"/>
+        <ellipse cx="68" cy="111" rx="15" ry="17" fill="url(#eye-grad-d)"/>
+        <ellipse cx="69" cy="114" rx="7" ry="9" fill="#0f0f0f"/>
+        <!-- dim catchlight -->
+        <ellipse cx="60" cy="103" rx="5" ry="6" fill="#ffffff" opacity="0.18"/>
+        <!-- worried inner brow — angled sharply inward -->
+        <path d="M 50 101 Q 62 95 74 103" fill="none" stroke="#444" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- eyelid droop -->
+        <path d="M 50 106 Q 68 98 86 106" fill="#181818" opacity="0.7"/>
+
+        <!-- RIGHT EYE — smaller, worried -->
+        <ellipse cx="132" cy="111" rx="20" ry="22" fill="#3a3a3a" opacity="0.5" filter="url(#glow-d)"/>
+        <ellipse cx="132" cy="111" rx="15" ry="17" fill="url(#eye-grad-d)"/>
+        <ellipse cx="133" cy="114" rx="7" ry="9" fill="#0f0f0f"/>
+        <ellipse cx="124" cy="103" rx="5" ry="6" fill="#ffffff" opacity="0.18"/>
+        <path d="M 126 103 Q 138 95 150 101" fill="none" stroke="#444" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M 114 106 Q 132 98 150 106" fill="#181818" opacity="0.7"/>
+
+        <!-- frown mouth -->
+        <path d="M 78 152 Q 100 146 122 152" fill="none" stroke="#3a3a3a" stroke-width="2" stroke-linecap="round"/>
+
+        <!-- floating ? -->
+        <text x="154" y="68" font-family="JetBrains Mono, monospace" font-size="26" fill="#303030" font-weight="700">?</text>
+
+        <!-- neck stub dim -->
+        <rect x="85" y="191" width="30" height="16" rx="7" fill="#161616" opacity="0.8"/>
+      </svg>
+      <div class="note">Mesma estrutura, cores frias. Olhos menores, sobrancelhas ansiosas, boca curvada. Lâmpada apagada.</div>
+    </div>
+
+    <!-- DETALHE OLHO -->
+    <div class="col" style="padding-top:24px">
+      <span class="label on" style="margin-bottom:20px">DETALHE — OLHO</span>
+      <svg width="160" height="200" viewBox="-10 -10 180 220" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="glow-e" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="8" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <radialGradient id="eye-grad-big" cx="38%" cy="33%" r="58%">
+            <stop offset="0%"   stop-color="#ffffff"/>
+            <stop offset="28%"  stop-color="#FDBA74"/>
+            <stop offset="100%" stop-color="#F97316"/>
+          </radialGradient>
+          <radialGradient id="eye-glow-big" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#F97316" stop-opacity="0.55"/>
+            <stop offset="100%" stop-color="#F97316" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- annotation lines -->
+        <line x1="112" y1="42" x2="145" y2="20" stroke="rgba(249,115,22,0.25)" stroke-width="1" stroke-dasharray="3,4"/>
+        <text x="148" y="18" font-family="JetBrains Mono, monospace" font-size="10" fill="#525252">catchlight</text>
+        <line x1="120" y1="100" x2="148" y2="90" stroke="rgba(249,115,22,0.25)" stroke-width="1" stroke-dasharray="3,4"/>
+        <text x="150" y="93" font-family="JetBrains Mono, monospace" font-size="10" fill="#525252">íris</text>
+        <line x1="88" y1="128" x2="148" y2="140" stroke="rgba(249,115,22,0.25)" stroke-width="1" stroke-dasharray="3,4"/>
+        <text x="150" y="143" font-family="JetBrains Mono, monospace" font-size="10" fill="#525252">pupila</text>
+        <line x1="28" y1="60" x2="0" y2="50" stroke="rgba(249,115,22,0.25)" stroke-width="1" stroke-dasharray="3,4"/>
+        <text x="-68" y="53" font-family="JetBrains Mono, monospace" font-size="10" fill="#525252">pálpebra</text>
+        <!-- eye glow wide -->
+        <ellipse cx="80" cy="95" rx="52" ry="60" fill="url(#eye-glow-big)" opacity="0.8"/>
+        <!-- eye outer glow ring -->
+        <ellipse cx="80" cy="95" rx="38" ry="44" fill="#F97316" opacity="0.2" filter="url(#glow-e)"/>
+        <!-- iris -->
+        <ellipse cx="80" cy="95" rx="32" ry="38" fill="url(#eye-grad-big)"/>
+        <!-- pupil -->
+        <ellipse cx="82" cy="100" rx="14" ry="18" fill="#0d0d0d"/>
+        <!-- catchlight main -->
+        <ellipse cx="63" cy="76" rx="12" ry="14" fill="#ffffff" opacity="0.88"/>
+        <!-- catchlight accent -->
+        <ellipse cx="55" cy="68" rx="5" ry="6" fill="#ffffff" opacity="0.75"/>
+        <!-- tiny catchlight -->
+        <ellipse cx="96" cy="114" rx="4" ry="5" fill="#ffffff" opacity="0.25"/>
+        <!-- half-lid shadow -->
+        <path d="M 44 80 Q 80 64 116 80" fill="#1c1c1c" opacity="0.5"/>
+      </svg>
+      <div class="note">Gradiente branco→âmbar→laranja, pupila oval, dois catchlights, pálpebra suave.</div>
+    </div>
+
+  </div>
+</body>
+</html>

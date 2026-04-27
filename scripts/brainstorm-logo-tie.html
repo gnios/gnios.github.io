@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0a0a0a; font-family: 'Inter', sans-serif; color: #f5f5f5; padding: 48px; }
+    h1 { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #F97316; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+    p.sub { font-size: 15px; color: #737373; margin-bottom: 48px; }
+    .options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .option {
+      background: #111; border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 20px; padding: 40px 28px 32px;
+      display: flex; flex-direction: column; align-items: center;
+      position: relative;
+    }
+    .option:hover { border-color: rgba(249,115,22,0.35); }
+    .label { position: absolute; top: 20px; left: 20px; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; color: #F97316; letter-spacing: 0.08em; }
+    .char-name { font-size: 17px; font-weight: 700; color: #fff; margin-top: 22px; margin-bottom: 6px; }
+    .char-desc { font-size: 13px; color: #737373; text-align: center; line-height: 1.6; margin-bottom: 16px; }
+    .badge { font-size: 11px; font-family: 'JetBrains Mono', monospace; background: rgba(249,115,22,0.08); border: 1px solid rgba(249,115,22,0.18); color: #F97316; border-radius: 5px; padding: 3px 10px; }
+    .logo-ref { font-size: 11px; color: #404040; text-align: center; margin-top: 10px; font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body>
+  <h1>Pergunta 4 de 4 — Conexão com o logo</h1>
+  <p class="sub">O Gnios deve referir ao logo da lâmpada que já existe no blog?</p>
+
+  <div class="options">
+
+    <!-- A: Antenna = lightbulb -->
+    <div class="option">
+      <span class="label">A</span>
+      <svg width="160" height="200" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="gA" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="6" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <ellipse cx="80" cy="120" rx="60" ry="70" fill="#F97316" opacity="0.05"/>
+
+        <!-- ANTENNA = lightbulb silhouette -->
+        <line x1="80" y1="40" x2="80" y2="14" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- Lightbulb shape on top -->
+        <ellipse cx="80" cy="8" rx="12" ry="14" fill="#F97316" filter="url(#gA)" opacity="0.6"/>
+        <path d="M 68 8 Q 68 -2 80 -2 Q 92 -2 92 8 Q 92 18 86 22 L 86 26 L 74 26 L 74 22 Q 68 18 68 8 Z" fill="#F97316"/>
+        <!-- filament lines -->
+        <line x1="74" y1="23" x2="86" y1="23" x2="86" y2="23" stroke="#F97316" stroke-width="1.5"/>
+        <line x1="75" y1="26" x2="85" y2="26" stroke="#1a1a1a" stroke-width="2"/>
+        <line x1="76" y1="29" x2="84" y2="29" stroke="#1a1a1a" stroke-width="2"/>
+        <!-- glow -->
+        <circle cx="80" cy="8" r="16" fill="#F97316" filter="url(#gA)" opacity="0.3"/>
+        <circle cx="80" cy="8" r="6" fill="#fff" opacity="0.7"/>
+
+        <!-- head -->
+        <rect x="22" y="40" width="116" height="96" rx="22" fill="#1c1c1c" stroke="#F97316" stroke-width="1.5"/>
+        <rect x="35" y="53" width="90" height="70" rx="15" fill="#101010"/>
+        <!-- ears -->
+        <rect x="10" y="64" width="14" height="36" rx="5" fill="#151515" stroke="rgba(249,115,22,0.2)" stroke-width="1"/>
+        <circle cx="17" cy="74" r="2" fill="#F97316" opacity="0.4"/>
+        <circle cx="17" cy="82" r="2" fill="#F97316" opacity="0.4"/>
+        <circle cx="17" cy="90" r="2" fill="#F97316" opacity="0.4"/>
+        <rect x="136" y="64" width="14" height="36" rx="5" fill="#151515" stroke="rgba(249,115,22,0.2)" stroke-width="1"/>
+        <circle cx="143" cy="74" r="2" fill="#F97316" opacity="0.4"/>
+        <circle cx="143" cy="82" r="2" fill="#F97316" opacity="0.4"/>
+        <circle cx="143" cy="90" r="2" fill="#F97316" opacity="0.4"/>
+        <!-- eyes -->
+        <circle cx="58" cy="84" r="18" fill="#F97316" filter="url(#gA)"/>
+        <circle cx="58" cy="84" r="13" fill="#F97316"/>
+        <circle cx="58" cy="82" r="7.5" fill="#fff" opacity="0.93"/>
+        <circle cx="60" cy="81" r="3.2" fill="#111"/>
+        <path d="M 43 78 Q 58 72 73 78" fill="#101010"/>
+        <circle cx="102" cy="84" r="18" fill="#F97316" filter="url(#gA)"/>
+        <circle cx="102" cy="84" r="13" fill="#F97316"/>
+        <circle cx="102" cy="82" r="7.5" fill="#fff" opacity="0.93"/>
+        <circle cx="104" cy="81" r="3.2" fill="#111"/>
+        <path d="M 87 78 Q 102 72 117 78" fill="#101010"/>
+        <line x1="68" y1="108" x2="92" y2="108" stroke="#F97316" stroke-width="1.5" opacity="0.35" stroke-linecap="round"/>
+
+        <!-- neck stub -->
+        <rect x="68" y="135" width="24" height="14" rx="6" fill="#1c1c1c"/>
+      </svg>
+      <div class="char-name">Antena = lâmpada</div>
+      <div class="char-desc">A antena do Gnios é a própria lâmpada do logo. Conecta diretamente o personagem à identidade visual do blog.</div>
+      <div class="badge">conexão direta com o logo</div>
+    </div>
+
+    <!-- B: Separate — autonomous character -->
+    <div class="option">
+      <span class="label">B</span>
+      <svg width="160" height="200" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="gB" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="6" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <ellipse cx="80" cy="120" rx="60" ry="70" fill="#F97316" opacity="0.05"/>
+        <!-- antenna — glowing orb, independent -->
+        <line x1="80" y1="40" x2="80" y2="12" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="80" cy="8" r="8" fill="#F97316" filter="url(#gB)"/>
+        <circle cx="80" cy="8" r="4" fill="#fff" opacity="0.85"/>
+
+        <!-- head -->
+        <rect x="22" y="40" width="116" height="96" rx="22" fill="#1c1c1c" stroke="#F97316" stroke-width="1.5"/>
+        <rect x="35" y="53" width="90" height="70" rx="15" fill="#101010"/>
+        <rect x="10" y="64" width="14" height="36" rx="5" fill="#151515" stroke="rgba(249,115,22,0.2)" stroke-width="1"/>
+        <circle cx="17" cy="74" r="2" fill="#F97316" opacity="0.4"/>
+        <circle cx="17" cy="82" r="2" fill="#F97316" opacity="0.4"/>
+        <circle cx="17" cy="90" r="2" fill="#F97316" opacity="0.4"/>
+        <rect x="136" y="64" width="14" height="36" rx="5" fill="#151515" stroke="rgba(249,115,22,0.2)" stroke-width="1"/>
+        <circle cx="143" cy="74" r="2" fill="#F97316" opacity="0.4"/>
+        <circle cx="143" cy="82" r="2" fill="#F97316" opacity="0.4"/>
+        <circle cx="143" cy="90" r="2" fill="#F97316" opacity="0.4"/>
+        <circle cx="58" cy="84" r="18" fill="#F97316" filter="url(#gB)"/>
+        <circle cx="58" cy="84" r="13" fill="#F97316"/>
+        <circle cx="58" cy="82" r="7.5" fill="#fff" opacity="0.93"/>
+        <circle cx="60" cy="81" r="3.2" fill="#111"/>
+        <path d="M 43 78 Q 58 72 73 78" fill="#101010"/>
+        <circle cx="102" cy="84" r="18" fill="#F97316" filter="url(#gB)"/>
+        <circle cx="102" cy="84" r="13" fill="#F97316"/>
+        <circle cx="102" cy="82" r="7.5" fill="#fff" opacity="0.93"/>
+        <circle cx="104" cy="81" r="3.2" fill="#111"/>
+        <path d="M 87 78 Q 102 72 117 78" fill="#101010"/>
+        <line x1="68" y1="108" x2="92" y2="108" stroke="#F97316" stroke-width="1.5" opacity="0.35" stroke-linecap="round"/>
+        <rect x="68" y="135" width="24" height="14" rx="6" fill="#1c1c1c"/>
+
+        <!-- small logo sitting separately in corner -->
+        <g transform="translate(110, 148) scale(0.28)" opacity="0.35">
+          <ellipse cx="50" cy="25" rx="22" ry="25" fill="#F97316"/>
+          <circle cx="50" cy="25" r="10" fill="#fff" opacity="0.5"/>
+          <rect x="38" y="46" width="24" height="6" rx="2" fill="#F97316"/>
+          <rect x="40" y="53" width="20" height="5" rx="2" fill="#F97316"/>
+          <rect x="42" y="59" width="16" height="5" rx="2" fill="#F97316"/>
+        </g>
+      </svg>
+      <div class="char-name">Personagem autônomo</div>
+      <div class="char-desc">Gnios tem identidade própria com antena glowing. O logo da lâmpada e o personagem coexistem como elementos separados do blog.</div>
+      <div class="badge">mais flexível</div>
+    </div>
+
+    <!-- C: Gnios IS the lightbulb — head shaped like bulb -->
+    <div class="option">
+      <span class="label">C</span>
+      <svg width="160" height="200" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="gC" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="7" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <!-- big ambient glow — ideia brilhante -->
+        <ellipse cx="80" cy="90" rx="65" ry="75" fill="#F97316" opacity="0.07" filter="url(#gC)"/>
+
+        <!-- HEAD shaped like lightbulb -->
+        <!-- bulb top round part -->
+        <ellipse cx="80" cy="75" rx="52" ry="58" fill="#1c1c1c" stroke="#F97316" stroke-width="1.5"/>
+        <!-- base/collar -->
+        <rect x="56" y="118" width="48" height="14" rx="4" fill="#222" stroke="rgba(249,115,22,0.3)" stroke-width="1"/>
+        <rect x="59" y="130" width="42" height="10" rx="3" fill="#1e1e1e" stroke="rgba(249,115,22,0.2)" stroke-width="1"/>
+        <rect x="62" y="138" width="36" height="8" rx="3" fill="#1a1a1a" stroke="rgba(249,115,22,0.15)" stroke-width="1"/>
+        <!-- face screen inside bulb -->
+        <ellipse cx="80" cy="72" rx="40" ry="44" fill="#101010"/>
+        <!-- glow from within -->
+        <ellipse cx="80" cy="72" rx="38" ry="42" fill="#F97316" opacity="0.04" filter="url(#gC)"/>
+        <!-- eyes — large, calm half-lidded -->
+        <circle cx="62" cy="72" r="16" fill="#F97316" filter="url(#gC)"/>
+        <circle cx="62" cy="72" r="12" fill="#F97316"/>
+        <circle cx="62" cy="70" r="7" fill="#fff" opacity="0.93"/>
+        <circle cx="64" cy="69" r="3" fill="#111"/>
+        <path d="M 48 66 Q 62 60 76 66" fill="#101010"/>
+        <circle cx="98" cy="72" r="16" fill="#F97316" filter="url(#gC)"/>
+        <circle cx="98" cy="72" r="12" fill="#F97316"/>
+        <circle cx="98" cy="70" r="7" fill="#fff" opacity="0.93"/>
+        <circle cx="100" cy="69" r="3" fill="#111"/>
+        <path d="M 84 66 Q 98 60 112 66" fill="#101010"/>
+        <line x1="70" y1="96" x2="90" y2="96" stroke="#F97316" stroke-width="1.5" opacity="0.35" stroke-linecap="round"/>
+
+        <!-- filament detail at top of bulb (visible, decorative) -->
+        <path d="M 72 30 Q 75 22 80 20 Q 85 22 88 30" fill="none" stroke="#F97316" stroke-width="1.5" opacity="0.4"/>
+        <circle cx="80" cy="18" r="4" fill="#F97316" opacity="0.5" filter="url(#gC)"/>
+      </svg>
+      <div class="char-name">Gnios É a lâmpada</div>
+      <div class="char-desc">A cabeça do Gnios tem a forma da própria lâmpada. Personagem e logo são a mesma coisa — máxima coesão de identidade.</div>
+      <div class="badge">identidade unificada</div>
+    </div>
+
+  </div>
+</body>
+</html>

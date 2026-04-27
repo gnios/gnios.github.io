@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0a0a0a; font-family: 'Inter', sans-serif; color: #f5f5f5; padding: 48px; }
+    h1 { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #F97316; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+    h2 { font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    p.sub { font-size: 14px; color: #737373; margin-bottom: 48px; }
+
+    .layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+
+    /* ── left: states side by side ── */
+    .states { display: flex; gap: 32px; align-items: flex-end; }
+    .state-card { display: flex; flex-direction: column; align-items: center; gap: 0; }
+    .state-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; margin-bottom: 14px; }
+    .state-label.after { color: #F97316; }
+    .state-label.before { color: #444; }
+
+    /* ── right: annotations ── */
+    .annotations { padding-top: 12px; display: flex; flex-direction: column; gap: 0; }
+    .anno-title { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #F97316; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 18px; }
+    .anno-item { display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .anno-item:last-child { border-bottom: none; }
+    .anno-dot { width: 8px; height: 8px; border-radius: 50%; background: #F97316; flex-shrink: 0; margin-top: 5px; }
+    .anno-dot.dim { background: #333; }
+    .anno-key { font-size: 13px; font-weight: 600; color: #fff; margin-bottom: 2px; }
+    .anno-val { font-size: 12px; color: #525252; line-height: 1.5; }
+    .color-row { display: flex; gap: 8px; margin-top: 24px; }
+    .swatch { width: 32px; height: 32px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08); }
+    .swatch-label { font-size: 10px; font-family: 'JetBrains Mono', monospace; color: #404040; margin-top: 4px; text-align: center; }
+    .swatch-group { display: flex; flex-direction: column; align-items: center; }
+
+    .section-divider { height: 1px; background: rgba(255,255,255,0.05); margin: 40px 0; }
+    .files-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+    .file-card { background: #111; border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 14px 16px; }
+    .file-name { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #F97316; font-weight: 600; margin-bottom: 4px; }
+    .file-desc { font-size: 12px; color: #525252; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <h1>Design — Seção 1</h1>
+  <h2>Anatomia do personagem Gnios</h2>
+  <p class="sub">Dois estados expressivos derivados do mesmo símbolo SVG.</p>
+
+  <div class="layout">
+
+    <!-- CHARACTERS -->
+    <div>
+      <div class="states">
+
+        <!-- ESTADO: CONFIANTE (depois) -->
+        <div class="state-card">
+          <div class="state-label after">ESTADO: CONFIANTE</div>
+          <svg width="170" height="220" viewBox="0 0 170 220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="g1" x="-80%" y="-80%" width="260%" height="260%">
+                <feGaussianBlur stdDeviation="6" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <!-- ambient glow -->
+            <ellipse cx="85" cy="130" rx="70" ry="80" fill="#F97316" opacity="0.06"/>
+
+            <!-- ANTENNA = lightbulb -->
+            <line x1="85" y1="42" x2="85" y2="14" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- bulb glass -->
+            <path d="M 73 14 Q 73 2 85 2 Q 97 2 97 14 Q 97 24 91 28 L 91 34 L 79 34 L 79 28 Q 73 24 73 14 Z" fill="#F97316" filter="url(#g1)"/>
+            <path d="M 75 14 Q 75 4 85 4 Q 95 4 95 14 Q 95 23 89.5 27 L 89.5 32 L 80.5 32 L 80.5 27 Q 75 23 75 14 Z" fill="#F97316"/>
+            <!-- filament -->
+            <line x1="80.5" y1="32" x2="89.5" y2="32" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+            <line x1="82" y1="35" x2="88" y2="35" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+            <!-- inner glow -->
+            <circle cx="85" cy="14" r="7" fill="#fff" opacity="0.45"/>
+
+            <!-- HEAD -->
+            <rect x="20" y="42" width="130" height="108" rx="24" fill="#1c1c1c" stroke="#F97316" stroke-width="1.8"/>
+            <rect x="34" y="56" width="102" height="80" rx="16" fill="#101010"/>
+            <!-- ear panels -->
+            <rect x="7" y="68" width="15" height="42" rx="6" fill="#151515" stroke="rgba(249,115,22,0.2)" stroke-width="1"/>
+            <circle cx="14.5" cy="80" r="2.5" fill="#F97316" opacity="0.5"/>
+            <circle cx="14.5" cy="90" r="2.5" fill="#F97316" opacity="0.5"/>
+            <circle cx="14.5" cy="100" r="2.5" fill="#F97316" opacity="0.5"/>
+            <rect x="148" y="68" width="15" height="42" rx="6" fill="#151515" stroke="rgba(249,115,22,0.2)" stroke-width="1"/>
+            <circle cx="155.5" cy="80" r="2.5" fill="#F97316" opacity="0.5"/>
+            <circle cx="155.5" cy="90" r="2.5" fill="#F97316" opacity="0.5"/>
+            <circle cx="155.5" cy="100" r="2.5" fill="#F97316" opacity="0.5"/>
+
+            <!-- EYES — calm, half-lidded -->
+            <circle cx="62" cy="94" r="20" fill="#F97316" filter="url(#g1)"/>
+            <circle cx="62" cy="94" r="15" fill="#F97316"/>
+            <circle cx="62" cy="91" r="9" fill="#fff" opacity="0.93"/>
+            <circle cx="64" cy="90" r="4" fill="#111"/>
+            <!-- half-lid -->
+            <path d="M 44 87 Q 62 80 80 87" fill="#101010"/>
+            <circle cx="108" cy="94" r="20" fill="#F97316" filter="url(#g1)"/>
+            <circle cx="108" cy="94" r="15" fill="#F97316"/>
+            <circle cx="108" cy="91" r="9" fill="#fff" opacity="0.93"/>
+            <circle cx="110" cy="90" r="4" fill="#111"/>
+            <path d="M 90 87 Q 108 80 126 87" fill="#101010"/>
+
+            <!-- mouth: subtle flat line -->
+            <line x1="74" y1="120" x2="96" y2="120" stroke="#F97316" stroke-width="1.8" stroke-linecap="round" opacity="0.4"/>
+
+            <!-- neck stub -->
+            <rect x="74" y="149" width="22" height="16" rx="7" fill="#1c1c1c" opacity="0.9"/>
+          </svg>
+        </div>
+
+        <!-- VS divider -->
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;padding-bottom:60px;opacity:0.3">
+          <div style="width:1px;height:40px;background:rgba(255,255,255,0.15)"></div>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#444">VS</span>
+          <div style="width:1px;height:40px;background:rgba(255,255,255,0.15)"></div>
+        </div>
+
+        <!-- ESTADO: CONFUSO (antes) -->
+        <div class="state-card">
+          <div class="state-label before">ESTADO: CONFUSO</div>
+          <svg width="140" height="180" viewBox="0 0 140 180" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="g2" x="-80%" y="-80%" width="260%" height="260%">
+                <feGaussianBlur stdDeviation="3" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <!-- dim ambient -->
+            <ellipse cx="70" cy="110" rx="55" ry="60" fill="#555" opacity="0.03"/>
+
+            <!-- antenna — dim, no glow -->
+            <line x1="70" y1="36" x2="70" y2="12" stroke="#444" stroke-width="2" stroke-linecap="round"/>
+            <!-- bulb — dark, unlit -->
+            <path d="M 60 12 Q 60 2 70 2 Q 80 2 80 12 Q 80 20 75.5 23.5 L 75.5 28 L 64.5 28 L 64.5 23.5 Q 60 20 60 12 Z" fill="#2a2a2a"/>
+            <circle cx="70" cy="12" r="5" fill="#333" opacity="0.5"/>
+
+            <!-- HEAD — muted -->
+            <rect x="16" y="36" width="108" height="90" rx="20" fill="#181818" stroke="#3a3a3a" stroke-width="1.5"/>
+            <rect x="28" y="48" width="84" height="66" rx="13" fill="#0f0f0f"/>
+            <!-- ear panels dim -->
+            <rect x="5" y="56" width="13" height="36" rx="5" fill="#141414" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            <rect x="122" y="56" width="13" height="36" rx="5" fill="#141414" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+            <!-- EYES — smaller, worried brows -->
+            <circle cx="52" cy="78" r="14" fill="#555" filter="url(#g2)"/>
+            <circle cx="52" cy="78" r="10" fill="#444"/>
+            <circle cx="52" cy="76" r="6" fill="#222" opacity="0.9"/>
+            <circle cx="53" cy="75" r="2.5" fill="#111"/>
+            <!-- worried brow — angled inward, raised center -->
+            <path d="M 40 70 Q 52 65 64 70" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="88" cy="78" r="14" fill="#555" filter="url(#g2)"/>
+            <circle cx="88" cy="78" r="10" fill="#444"/>
+            <circle cx="88" cy="76" r="6" fill="#222" opacity="0.9"/>
+            <circle cx="89" cy="75" r="2.5" fill="#111"/>
+            <path d="M 76 70 Q 88 65 100 70" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round"/>
+
+            <!-- worried mouth — slight frown -->
+            <path d="M 57 104 Q 70 110 83 104" fill="none" stroke="#444" stroke-width="1.5" stroke-linecap="round"/>
+
+            <!-- question mark floating -->
+            <text x="108" y="52" font-family="JetBrains Mono, monospace" font-size="22" fill="#333" opacity="0.7">?</text>
+
+            <!-- neck stub dim -->
+            <rect x="60" y="125" width="20" height="13" rx="6" fill="#181818" opacity="0.7"/>
+          </svg>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ANNOTATIONS -->
+    <div class="annotations">
+      <div class="anno-title">Elementos do personagem</div>
+
+      <div class="anno-item">
+        <div class="anno-dot"></div>
+        <div>
+          <div class="anno-key">Antena — lâmpada do logo</div>
+          <div class="anno-val">Forma idêntica ao SVG da lâmpada já existente no blog. No estado confuso: apagada (#2a2a2a). No estado confiante: acesa com glow laranja.</div>
+        </div>
+      </div>
+
+      <div class="anno-item">
+        <div class="anno-dot"></div>
+        <div>
+          <div class="anno-key">Olhos — expressão principal</div>
+          <div class="anno-val">Confiante: semicerrados (pálpebra superior), laranja vibrante, brilho branco. Confuso: menores, acastanhados, sobrancelha ansiosa (arco invertido).</div>
+        </div>
+      </div>
+
+      <div class="anno-item">
+        <div class="anno-dot"></div>
+        <div>
+          <div class="anno-key">Cabeça — tela/display</div>
+          <div class="anno-val">Retângulo arredondado com tela interna escura. Painéis laterais com dots em laranja (confiante) ou sem detalhe (confuso).</div>
+        </div>
+      </div>
+
+      <div class="anno-item">
+        <div class="anno-dot dim"></div>
+        <div>
+          <div class="anno-key">Paleta de cores — dois estados</div>
+          <div class="anno-val">Confiante: #F97316 + #ffffff + #1c1c1c. Confuso: #444 + #333 + #181818 (mesma estrutura, cores dessaturadas).</div>
+        </div>
+      </div>
+
+      <div class="color-row">
+        <div class="swatch-group">
+          <div class="swatch" style="background:#F97316"></div>
+          <div class="swatch-label">#F97316</div>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch" style="background:#1c1c1c;border-color:rgba(249,115,22,0.3)"></div>
+          <div class="swatch-label">#1c1c1c</div>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch" style="background:#101010"></div>
+          <div class="swatch-label">#101010</div>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch" style="background:#444"></div>
+          <div class="swatch-label">#444 dim</div>
+        </div>
+        <div class="swatch-group">
+          <div class="swatch" style="background:#2a2a2a"></div>
+          <div class="swatch-label">#2a2a2a</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <div class="anno-title" style="margin-bottom:16px">Arquivos que serão criados</div>
+  <div class="files-grid">
+    <div class="file-card">
+      <div class="file-name">public/static/gnios/gnios.svg</div>
+      <div class="file-desc">Fonte da verdade do personagem. SVG com &lt;symbol&gt; para cada estado.</div>
+    </div>
+    <div class="file-card">
+      <div class="file-name">scripts/illustration-documentacao.html</div>
+      <div class="file-desc">Banner 1200×630 com composição Antes/Depois usando os dois estados.</div>
+    </div>
+    <div class="file-card">
+      <div class="file-name">scripts/render-illustration-documentacao.js</div>
+      <div class="file-desc">Script Puppeteer para renderizar o banner em PNG.</div>
+    </div>
+    <div class="file-card">
+      <div class="file-name">public/static/images/gnios-character-reference.png</div>
+      <div class="file-desc">PNG do character sheet (este visual) para referência futura.</div>
+    </div>
+    <div class="file-card">
+      <div class="file-name">public/static/images/illustration-documentacao.png</div>
+      <div class="file-desc">Banner final do artigo, referenciado no frontmatter do MDX.</div>
+    </div>
+    <div class="file-card">
+      <div class="file-name">data/gnios-character-prompt.md</div>
+      <div class="file-desc">Prompt de consistência para uso com IA generativa em ilustrações futuras.</div>
+    </div>
+  </div>
+</body>
+</html>
