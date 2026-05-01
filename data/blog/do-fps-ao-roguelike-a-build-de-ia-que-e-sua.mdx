@@ -1,0 +1,96 @@
+---
+title: 'Do FPS ao roguelike: a "build" de IA que é sua'
+date: '2026-04-30'
+tags: [ia, skills, hooks, programacao-assistida, path-of-exile, ferramentas, personalizacao]
+draft: false
+summary: As skills, hooks, prompts e MCPs do projeto são o ponto de partida compartilhado. Mas quem para só aí está jogando com uma "build" que não é sua.
+images: ['/static/images/banner-do-fps-ao-roguelike-a-build-de-ia-que-e-sua.png']
+---
+
+<img
+  className="inline rounded-lg"
+  src="/static/images/banner-do-fps-ao-roguelike-a-build-de-ia-que-e-sua.png"
+  alt="Árvore de habilidades passivas do Path of Exile 2"
+/>
+
+Nos jogos de FPS (first-person shooter) como o Counter-Strike, todas as armas estão disponíveis para compra desde o início, mas o dinheiro é limitado. A estratégia começa antes do combate: decidir quais armas comprar no round, quando economizar, quando investir. O catálogo é o mesmo para todos. O que diferencia um time do outro é como ele gerencia esse recurso e coordena as escolhas ao longo do jogo.
+
+Nos jogos roguelike como o Path of Exile 2, o jogo te apresenta uma árvore de habilidades que vai se abrindo conforme você evolui. Novos caminhos aparecem, cada um levando para direções completamente diferentes. Dois personagens da mesma classe podem terminar completamente diferentes: um acumulando velocidade de invocação e dano em área, outro construindo resistência e sobrevivência. Não existe caminho certo. Existe a "build" que você escolheu montar.
+
+Esses dois jogos ficaram na minha cabeça quando comecei a observar como desenvolvedores diferentes usam assistentes de programação com IA no dia a dia.
+
+
+## Do FPS ao roguelike
+
+Para mim, trabalhar em um projeto de software sempre se pareceu muito com jogar um FPS como o Counter-Strike. O projeto definia o arsenal do time: linguagem, frameworks, convenções de arquitetura, code style. Dentro desse arsenal, cada pessoa decidia o que levar para o combate: quais partes do stack aplicar, quais ferramentas usar para implementar aquela solução específica, alinhada com o que o time precisava para aquele desafio, sempre dentro do que o projeto disponibilizava. O toolkit pessoal, quando existia, era escasso e pouco diferente de um developer para outro. O arsenal era praticamente o mesmo para todos.
+
+Os assistentes de programação com IA (Claude Code, GitHub Copilot, Cursor, Gemini CLI e similares) mudaram esse jogo. O arsenal do projeto continua lá: linguagem, frameworks, convenções, e agora também as **ferramentas de IA do projeto**: skills, hooks, prompts e MCPs configurados no repositório. Além desse arsenal compartilhado, cada pessoa passou a ter acesso a uma árvore de habilidades própria, que cresce conforme ela evolui e faz suas escolhas. Assim como no Path of Exile 2, onde dois personagens da mesma classe podem tomar caminhos completamente diferentes ao longo da árvore, dois developers no mesmo projeto podem ter formas de trabalhar radicalmente distintas dependendo do que cada um instalou na própria máquina. O projeto define a base. A "build" é sua.
+
+## A raiz da "build"
+
+No Path of Exile 2, todo personagem começa do mesmo ponto da árvore de habilidades. Alguns nós iniciais são praticamente obrigatórios para qualquer "build": resistências básicas, atributos fundamentais, sobrevivência mínima. Sem essa base, nenhuma "build" funciona. Esse é o nível 1, o acordo tácito de quem joga.
+
+Nos projetos com assistentes de programação, a lógica é a mesma. O que está versionado no repositório é o acordo do time: o mínimo para que todo mundo entre no projeto no mesmo nível. Na minha percepção, esse conjunto de ferramentas de IA tem duas camadas bem distintas.
+
+A primeira são as **ferramentas obrigatórias de IA**: o que o time decidiu versionar no repositório como acordo mínimo. Pode ser um conjunto de skills específicas da linguagem e do stack, como as do [dotnet/skills](https://github.com/dotnet/skills), para que o agente de IA já entenda como aquele time trabalha com NuGet ou OpenTelemetry. Podem ser skills de segurança que o time não quer deixar como responsabilidade individual. Ou hooks que disparam ao final de cada tarefa para manter a documentação do projeto atualizada. O que entra nessa camada depende do que o time acordou que não pode variar de pessoa para pessoa.
+
+A segunda são as **ferramentas de IA generalistas**: como criar novas skills, como debugar sistematicamente, como delegar tarefas para subagentes. São nós que o time entende que qualquer developer do projeto deveria ter desde o início, independente do problema que está resolvendo.
+
+Na minha percepção, o que não precisa estar versionado no projeto são as skills de metodologia, análise e criação de documentos: SDD, SPDD, BMAD, criação de ADRs, análise de domínio. Esses são exatamente os nós onde a árvore de cada pessoa começa a crescer de forma diferente. A comunidade já produziu uma quantidade grande dessas skills: repositórios como o [agent-skills](https://github.com/tech-leads-club/agent-skills) reúnem categorias que vão de planejamento e spec-driven development a automação de testes com Playwright, integração com Figma e orientação de arquitetura em cloud. É o espaço onde a "build" começa a ser sua.
+
+## A "build" pessoal
+
+Com a raiz definida, a árvore cresce de formas diferentes para cada pessoa. A "build" que cada uma monta a partir daí reflete tanto a preferência pessoal quanto o papel que exerce no time. O mesmo projeto pode ter "builds" completamente diferentes dependendo de quem está atuando:
+
+- **"Spec-Driven Sorcerer"** *(developer backend)* — *"Não existe código antes do spec."*: não escreve uma linha sem entender o problema por completo. Usa `tlc-spec-driven` para estruturar o discovery antes de qualquer implementação e `create-adr` para registrar cada decisão que tomou pelo caminho.
+
+- **"Code Tactician"** *(tech lead)* — *"Eu não reviso PR, eu dissequo PR."*: navega e revisa código o dia inteiro. Usa `codenavi` para entender partes desconhecidas da codebase rapidamente, `gh-address-comments` para resolver comentários de PR com o agente de IA e `coding-guidelines` para manter consistência nas revisões.
+
+- **"Documancer"** *(developer)* — *"Se não está documentado, não aconteceu."*: a documentação nunca fica desatualizada na mão dele. Conectou o MCP do Jira e do Confluence no agente de IA e combina `domain-analysis` com `docs-writer` para manter tudo registrado enquanto desenvolve, sem etapa separada.
+
+- **"Subagent Summoner"** *(developer sênior)* — *"Por que fazer sozinho quando posso convocar um exército?"*: não resolve problema grande sozinho. Usa o [Superpowers](https://github.com/obra/superpowers) para fazer brainstorming antes de qualquer tarefa complexa, praticar TDD com o agente de IA e invocar subagentes especializados quando o problema é grande demais para uma única conversa.
+
+- **"Regression Hunter"** *(QA engineer)* — *"Eu encontro o bug antes de você saber que ele existe."*: não deixa nada chegar em produção sem validação. Usa `playwright-skill` para automatizar testes de ponta a ponta, `web-accessibility` para garantir que nenhuma regressão de acessibilidade passou despercebida e `web-quality-audit` para auditar o estado geral da aplicação antes de qualquer release.
+
+- **"Domain Overlord"** *(staff engineer)* — *"Domínio bem mapeado é o melhor código que você nunca vai escrever."*: entra no projeto para discutir domínio, não para codar. Usa `tactical-ddd` para mapear bounded contexts, `component-identification-sizing` para dimensionar componentes e `create-adr` para registrar as decisões que ficam como herança para o time.
+
+- **"XP Farmer"** *(developer jr)* — *"Cada tarefa vira uma aula."*: não separa execução de aprendizado. Usa `learning-opportunities` para que o agente de IA aponte padrões e conceitos durante o trabalho, não só depois. Quando a tarefa termina, pede ao agente que explique por que a solução funciona, quais alternativas existiam e o que poderia ter dado errado. Com `superpowers:systematic-debugging`, aprende a debugar junto com o agente em vez de esperar alguém mais experiente aparecer. A build vai ficando mais sofisticada conforme a pessoa cresce, porque ela entende o que cada peça faz.
+
+- **"Inquisitor"** *(developer sênior)* — *"Me convença de que minha solução é a melhor."*: não quer um agente que concorde, quer um que resista. Usa `the-fool` para colocar o agente no papel de adversário: atacar a proposta, apontar onde ela quebra, sugerir o que foi ignorado. Quando a solução segura o questionamento do agente, usa `superpowers:brainstorming` para explorar as alternativas que sobraram e decidir entre elas. O confronto é o método. A IA não ajuda a implementar a solução, ajuda a destruir as ruins antes que virem código.
+
+O projeto é o mesmo. A raiz é a mesma. O que diferencia cada um é a "build" que escolheu montar a partir daí.
+
+Nos exemplos acima usei skills do [agent-skills](https://github.com/tech-leads-club/agent-skills) e do [Superpowers](https://github.com/obra/superpowers). Só com essas duas fontes já é possível montar "builds" completamente diferentes. Quando se abre para outras, como o [awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills), ou para metodologias como [sDD](https://specdriven.ai/), [BMAD](https://docs.bmad-method.org/) e [SPDD](https://martinfowler.com/articles/structured-prompt-driven/), as possibilidades crescem ainda mais, e a "build" vai ficando cada vez mais sua.
+
+Esse movimento entre pessoal e compartilhado funciona nos dois sentidos. Quando uma ferramenta da "build" pessoal passa a fazer parte do fluxo de todo o time, ela migra naturalmente para as ferramentas obrigatórias do projeto. É assim que a raiz da "build" cresce: não por decreto, mas pelo uso que prova valor.
+
+## Ferramentas não entregam. Pessoas entregam.
+
+No PoE2, você pode copiar uma "build" famosa nó a nó e ainda assim morrer em cada encontro. Porque uma "build" não é só uma lista de escolhas, é uma forma de jogar. Você precisa entender o que aquela "build" faz, quando usar cada habilidade, quais são os limites dela.
+
+Com assistentes de programação é o mesmo. Ter um conjunto de skills, hooks, prompts e MCPs instalados não garante nada. Já vi developers com setups impressionantes entregando menos do que developers com configurações simples mas bem entendidas. A criatividade e a personalidade de quem usa são o que transforma ferramenta em diferencial.
+
+As ferramentas de IA do projeto são o ponto de partida que todo mundo compartilha. O que acontece a partir daí é o que diferencia. Quem investe no próprio conjunto, mesmo que imperfeito e em constante ajuste, desenvolve um jeito próprio de jogar, que vai com você para qualquer projeto.
+
+---
+
+### Se você ainda não leu
+
+Antes de montar qualquer "build", tem uma etapa que define se o agente de IA vai conseguir trabalhar bem no projeto: a documentação. O CLAUDE.md, o AGENTS.md, as convenções, o contexto que o agente precisa ler antes de qualquer tarefa. Sem isso no lugar, nenhuma "build" vai performar como deveria.
+
+[Antes de qualquer ferramenta: como documentar seu projeto para a IA](/blog/documentacao-antes-das-ferramentas)
+
+---
+
+## Referências
+
+- **From Teacher to Colleague: How Coding Experience Shapes Developer Perceptions of AI Tools** — Zakharov, Koshchenko, Sergeyuk (2025) — [arXiv:2504.13903](https://arxiv.org/abs/2504.13903)
+- **To Copilot and Beyond: 22 AI Systems Developers Want Built** — Choudhuri, Bird, Badea, Sarma (2026) — [arXiv:2604.07830](https://arxiv.org/abs/2604.07830)
+- **Human-AI Programming Role Optimization: A Personality-Driven Self-Determination Framework** — Valovy (2025) — [arXiv:2511.00417](https://arxiv.org/abs/2511.00417)
+- **sDD (Spec-Driven Development)** — [specdriven.ai](https://specdriven.ai/) / [Martin Fowler - SDD Tools](https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html)
+- **BMAD (Breakthrough Method for Agile AI Driven Development)** — [docs.bmad-method.org](https://docs.bmad-method.org/)
+- **SPDD (Structured Prompt-Driven Development)** — [martinfowler.com/articles/structured-prompt-driven](https://martinfowler.com/articles/structured-prompt-driven/)
+- **Superpowers** — [github.com/obra/superpowers](https://github.com/obra/superpowers)
+- **agent-skills** — [github.com/tech-leads-club/agent-skills](https://github.com/tech-leads-club/agent-skills)
+- **dotnet/skills** — [github.com/dotnet/skills](https://github.com/dotnet/skills)
+- **awesome-agent-skills** — [github.com/VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills)
