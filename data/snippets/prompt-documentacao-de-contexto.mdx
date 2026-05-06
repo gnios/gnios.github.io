@@ -1,0 +1,77 @@
+---
+title: 'Prompt: documentação de contexto para agentes de IA'
+date: '2026-04-26'
+tags: [ia, prompt, claude-code, documentacao, context-engineering, agents-md]
+draft: false
+version: '1.0.1'
+summary: Prompt para gerar a documentação de contexto completa de um projeto no modo Plan do Claude Code, pergunta antes de criar, lê o código, e escreve os arquivos na pasta .catalog/.
+images: []
+layout: PostSimple
+---
+
+Para o contexto completo por trás dessa ideia, leia o artigo [Antes de qualquer ferramenta: como documentar seu projeto para a IA](/blog/documentacao-antes-das-ferramentas).
+
+---
+
+## O problema
+
+O agente de IA não conhece o projeto. Explicar tudo no prompt funciona, mas some quando a sessão fecha. Esse prompt cria a documentação uma vez e entrega como memória de longo prazo a cada sessão.
+
+## Como usar
+
+Cole num modo de planejamento (Plan mode no Claude Code, Agent mode no Cursor). Use um modelo com janela de contexto grande, nesse momento o agente lê o projeto inteiro.
+
+## Quando usar
+
+- Ao iniciar um projeto com apoio de IA
+- Antes de instalar frameworks de SDD
+- Quando o agente erra sempre nas mesmas decisões de contexto
+- Onboarding de alguém novo no time
+
+---
+
+```text
+Vamos criar a documentação de contexto deste projeto.
+
+Antes de criar qualquer arquivo, faça perguntas sobre o projeto, uma por vez.
+Foque no que não está no código: propósito, domínio, decisões que foram
+tomadas e por quê, convenções do time, riscos conhecidos, partes frágeis.
+
+Depois de coletar as respostas, analise o código para complementar e
+identificar o que ficou de fora.
+
+Com esse contexto completo:
+
+1. Crie os arquivos abaixo dentro de uma pasta .catalog/:
+
+- project.md: o que é o projeto, propósito, domínio, problema que resolve
+- stack.md: tecnologias, linguagens, dependências principais
+- architecture.md: estrutura, decisões técnicas e o porquê de cada uma
+- conventions.md: padrões de nomenclatura, estilo de código, o que evitar
+- structure.md: organização de pastas, módulos e responsabilidades
+- testing.md: estratégia de testes, padrões de cobertura, como o time testa
+- integrations.md: serviços externos, APIs, dependências de runtime
+- concerns.md: riscos conhecidos, débitos técnicos, partes frágeis
+- features.md: o que existe hoje no projeto (não o roadmap)
+
+Se o projeto trabalhar com DDD, adicione também:
+
+- domain.md: contextos delimitados, entidades, regras de negócio
+- ubiquitous-language.md: vocabulário do projeto com o significado de cada termo
+- aggregates.md: agregados do domínio, limites de consistência e invariantes
+
+Se o projeto tiver OpenAPI, AsyncAPI ou outras especificações geradas,
+referencie-as no arquivo correspondente sem duplicar o conteúdo.
+
+Para diagramas, use Mermaid dentro dos próprios arquivos de documentação.
+
+2. Crie um AGENTS.md na raiz do projeto com:
+- Regras universais do projeto (convenções que valem pra qualquer tarefa)
+- Uma tabela de roteamento de contexto mapeando cada tipo de tarefa ao arquivo
+  correspondente em .catalog/
+
+3. Se o projeto tiver um CLAUDE.md na raiz:
+- Mova as regras existentes para o AGENTS.md criado no passo anterior
+- Substitua o conteúdo do CLAUDE.md por uma única linha:
+  @AGENTS.md
+```

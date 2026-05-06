@@ -8,6 +8,7 @@
     "url": "https://gnios.github.io"
   },
   "scripts": {
+    "prepare": "husky install",
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",

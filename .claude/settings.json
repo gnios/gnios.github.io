@@ -9,7 +9,22 @@
       "Bash(node -e ' *)",
       "Bash(node d:/proj/gnios.github.io/scripts/optimize-banner.js \"d:/proj/gnios.github.io/public/static/images/Gemini_Generated_Image_rktv2brktv2brktv.png\" --slug \"documentacao-antes-das-ferramentas\")",
       "Edit(~/.claude/skills/gnios-banner/**)",
-      "Edit(~/.claude/skills/gnios-mdx/**)"
+      "Edit(~/.claude/skills/gnios-mdx/**)",
+      "Bash(gh run *)",
+      "Bash(npx prettier *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(curl -s http://localhost:3000/blog/documentacao-antes-das-ferramentas)",
+      "Bash(node --input-type=module)",
+      "Bash(python3 -c \"import sys; content=sys.stdin.read\\(\\); print\\('TABLE' if '<table' in content else 'NO TABLE'\\); print\\('PIPE' if '| Framework' in content else 'NO PIPE'\\)\")",
+      "Bash(python3 -c \"import sys; content=sys.stdin.read\\(\\); print\\(len\\(content\\), 'bytes'\\); print\\(content[:500]\\)\")",
+      "Bash(curl -sL http://localhost:3000/blog/documentacao-antes-das-ferramentas/)",
+      "Bash(python3 -c \"import sys; content=sys.stdin.read\\(\\); print\\('TABLE' if '<table' in content else 'NO TABLE'\\); print\\('PIPE' if '| Framework' in content else 'NO PIPE'\\); print\\(len\\(content\\), 'bytes'\\)\")",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 -c \"import sys,json; p=json.load\\(sys.stdin\\); print\\('version:', p['version']\\); print\\('peerDeps:', p.get\\('peerDependencies', {}\\)\\)\")",
+      "Bash(python3 -c \"import sys,json; p=json.load\\(sys.stdin\\); print\\('version:', p['version']\\); deps = {**p.get\\('dependencies',{}\\), **p.get\\('peerDependencies',{}\\)}; [print\\(k,v\\) for k,v in deps.items\\(\\) if 'remark' in k or 'mdx' in k or 'unified' in k]\")",
+      "Bash(python3 -c \"import sys,json; p=json.load\\(sys.stdin\\); print\\('version:', p['version']\\); [print\\(k,v\\) for k,v in {**p.get\\('dependencies',{}\\), **p.get\\('peerDependencies',{}\\)}.items\\(\\)]\")",
+      "Bash(python3 -c \"import sys,json; p=json.load\\(sys.stdin\\); print\\('version:', p['version']\\)\")",
+      "WebFetch(domain:www.todamateria.com.br)"
     ],
     "additionalDirectories": [
       "C:\\Users\\eugen\\.claude\\skills"
