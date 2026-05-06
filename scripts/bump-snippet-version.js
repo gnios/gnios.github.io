@@ -8,6 +8,7 @@ const snippets = stagedFiles.filter((f) => f.startsWith('data/snippets/') && f.e
 
 for (const file of snippets) {
   const filePath = path.join(process.cwd(), file)
+  if (!fs.existsSync(filePath)) continue
   let content = fs.readFileSync(filePath, 'utf8')
 
   const versionMatch = content.match(/^version:\s*'(\d+)\.(\d+)\.(\d+)'/m)
